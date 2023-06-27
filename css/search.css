@@ -1,0 +1,174 @@
+.page-content-body {
+  width: 100%;
+}
+.page-content-body .drag-item {
+  width: 100%;
+}
+.page-content-body .drag-item .search-box {
+  width: 100%;
+  height: 218px;
+  padding: 56px 10px;
+  margin: 0 -9px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.page-content-body .drag-item .search-box .search-title {
+  height: 40px;
+  padding: 0 9px;
+  margin: 0 0 24px;
+}
+.page-content-body .drag-item .search-box .search-title h1 {
+  font-weight: 400;
+  font-size: 32px;
+}
+.page-content-body .drag-item .search-box .input-box {
+  width: 700px;
+  height: 42px;
+  padding: 0 15px;
+  border: 1px solid #363636;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.page-content-body .drag-item .search-box .input-box .input-search {
+  width: 640px;
+  height: 40px;
+}
+.page-content-body .drag-item .search-box .input-box .input-search input {
+  width: 100%;
+  height: 100%;
+  padding: 0 20px;
+  border: 0;
+}
+.page-content-body .drag-item .search-box .input-box .input-search input::placeholder {
+  font-size: 16px;
+  color: #999;
+}
+.page-content-body .drag-item .search-box .input-box button {
+  display: block;
+  width: 40px;
+  height: 40px;
+  background-color: #fff;
+  border: 0;
+}
+.page-content-body .container {
+  display: block;
+  width: 1440px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.page-content-body .container .row {
+  width: 1200px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 40px auto;
+  align-items: center;
+  justify-content: start;
+}
+.page-content-body .container .row .col-li {
+  height: 500px;
+  width: 300px;
+  padding: 0 10px;
+  margin: 0 0 24px;
+}
+.page-content-body .container .row .col-li a {
+  margin: 0 0 40px;
+  display: block;
+  width: 247px;
+  height: 247px;
+  transition: all 0.3s;
+}
+.page-content-body .container .row .col-li a img {
+  width: 100%;
+  height: 100%;
+}
+.page-content-body .container .row .col-li a:hover {
+  transform: scale(1.02);
+}
+.page-content-body .container .row .col-li .info-box {
+  padding: 10px 0 0;
+  height: 100px;
+  width: 100%;
+}
+.page-content-body .container .row .col-li .info-box .pro-title {
+  height: 24px;
+  line-height: 24px;
+  font-size: 16px;
+}
+.page-content-body .container .row .col-li .info-box .price {
+  height: 24px;
+  line-height: 24px;
+  font-style: 18px;
+}
+.page-content-body .container .row .col-li .info-box .price span {
+  font-size: 14px;
+  text-decoration: line-through;
+}
+.page-content-body .container .row .col {
+  height: 500px;
+  width: 300px;
+  padding: 0 9px;
+  margin: 0 0 24px;
+}
+.page-content-body .container .row .col a {
+  display: block;
+  width: 100%;
+  height: 360px;
+  transition: all 0.3s;
+}
+.page-content-body .container .row .col a img {
+  width: 100%;
+  height: 100%;
+}
+.page-content-body .container .row .col a:hover {
+  transform: scale(1.02);
+}
+.page-content-body .container .row .col .info-box {
+  margin: 20px 0 0;
+  padding: 10px 0 0;
+  height: 100px;
+  width: 100%;
+}
+.page-content-body .container .row .col .info-box .pro-title {
+  height: 24px;
+  line-height: 24px;
+  font-size: 18px;
+}
+.page-content-body .container .row .col .info-box .price {
+  height: 24px;
+  line-height: 24px;
+  font-size: 16px;
+  margin: 0 0 10px;
+}
+.page-content-body .container .row .col .info-box .price span {
+  font-size: 14px;
+  text-decoration: line-through;
+}
+.page-content-body .not-found {
+  display: none;
+  width: 100%;
+  height: 292px;
+  padding: 0 0 48px;
+}
+.page-content-body .not-found .list-box {
+  width: 100%;
+  height: 100%;
+  padding: 28px 0 0;
+  margin: 10px 0 60px;
+}
+.page-content-body .not-found .list-box .text {
+  width: 100%;
+  height: 100%;
+  padding: 64px 0;
+  text-align: center;
+}
+.page-content-body .not-found .list-box .text p {
+  height: 28px;
+  line-height: 28px;
+  font-size: 20px;
+}
+.page-content-body .not-found .list-box .text p a {
+  text-decoration: underline;
+}

@@ -1,0 +1,403 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.content-box{
+    width: 100%;
+    height: 1276px;
+    .main{
+        width: 100%;
+        height: 100%;
+        .checkout-box{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            // left
+            .left-checkout{
+                flex: 1;
+                height: 100%;
+                display: flex;
+                justify-content: end;
+                border-right: 1px solid #c7c3c3;
+                .payment-info{
+                    width: 640px;
+                    height: 100%;
+                    padding: 56px 70px 0 0;
+                    .logo-box{
+                        height: 66px;
+                        width: 100%;
+                        padding: 0 0 14px 0;
+                        margin: 0;
+                        a{
+                            display: block;
+                            width: 100%;
+                            height: 100%;
+                            
+                            img{
+                                width: 173px;
+                                height: 45px;
+                            }
+                        }
+                    }
+                    .bread{
+                        width: 100%;
+                        height: 18px;
+                        margin:0 0 20px ;
+                        display: flex;
+                        align-items: center;
+                        .uppercase{
+                            color: rgb(89, 90, 90);
+                        }
+                    }
+                    .pay{
+                        width: 100%;
+                        height: 220px;
+                        
+                        .payment-box{
+                            width: 100%;
+                            height: 156px;
+                            padding: 20px 20px 0;
+                            margin: 20px 0 0;
+                            border: 1px solid rgb(187, 185, 185);
+                            border-radius: 5px;
+                            .col-md-12 {
+                                width: 100%;
+                                height: 135px;
+                                .paypal-button-container {
+                                  margin-top: 5px;
+                                  width: 100%;
+                                  height: 40px;
+                                  border-radius: 6px;
+                                  line-height: 40px;
+                                  font-size: 16px;
+                                  text-align: center;
+                                  background-color: #ffc439;
+                                  span {
+                                    font-size: 16px;
+                                  }
+                                }
+                                .paypal-button-container1 {
+                                  margin-top: 10px;
+                                  width: 100%;
+                                  height: 40px;
+                                  border-radius: 6px;
+                                  line-height: 40px;
+                                  font-size: 16px;
+                                  text-align: center;
+                                  background-color: #080808;
+                                  span {
+                                    font-size: 16px;
+                                    color: #fff;
+                                  }
+                                }
+                                .paypal-powered-by {
+                                  margin-top: 10px;
+                                  width: 100%;
+                                  height: 20px;
+                                  line-height: 20px;
+                                  font-size: 16px;
+                                  text-align: center;
+                                  img {
+                                    height: 20px;
+                                  }
+                                  span {
+                                    font-size: 16px;
+                                    color: #807f7f;
+                                  }
+                                }
+                              }
+                        }
+
+                        .divider{
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            width: 100%;
+                            height: 54px;
+                            .line{
+                                height: 0.5px;
+                                width: 50%;
+                                border-bottom: 1px solid rgb(199, 197, 197);
+                            }
+                            .or{
+                                font-size: 16px;
+                                padding: 0 10px;
+                            }
+                        }
+                    }
+                    .contact{
+                        width: 100%;
+                        height: 630px;
+                        h2{
+                            height: 20px;
+                            margin: 10px 0 10px;
+                            font-size: 18px;
+                            font-weight: normal;
+                        }
+                        form{
+                            input{
+                                width: 100%;
+                                height: 46px;
+                                margin: 10px 0;
+                                border: 1px solid #999999;
+                                padding: 0 10px;
+                            }
+                            select{
+                                width: 100%;
+                                height: 46px;
+                                border: 1px solid #999999;
+                                padding: 0 10px;
+                            }
+                            span{
+                                color: red;
+                            }
+                            .row{
+                                width: 100%;
+                                height: 100%;
+                                display: flex;
+                                align-items: center;
+                                justify-content: space-between;
+                                .col{
+                                    width: 33%;
+                                    select{
+                                        width: 100%;
+                                        height: 46px;
+                                        line-height: 46px;
+                                        border: 1px solid #999999;
+                                        padding: 0 5px;
+                                    }
+                                }
+                            }
+                            p{
+                                color: #807f7f;
+                            }
+                            .agree{
+                                margin: 20px 0 0;
+                                display: flex;
+                                align-items: center;
+                                height: 24px;
+                                input{
+                                    width: 15px;
+                                    height: 15px;
+                                    margin: 0 10px;
+                                }
+                                p{
+                                    height: 24px;
+                                    line-height: 24px;
+                                    color: #000;
+                                    font-weight: 600;
+                                }
+                            }
+                        }
+
+                        .pay-btn{
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            height: 110px;
+                            padding: 25px 0;
+                            margin: 15px 0 20px;
+                            border-bottom: 1px solid #999999;
+                            .return{
+                                color:  #2277cc;
+                                font-size: 16px;
+                                font-weight: 550;
+                            }
+                            .ctin{
+                                height: 60px;
+                                width: 180px;
+                                background-color:  #2277cc;
+                                padding: 20px 10px;
+                                border-radius: 5px;
+                                color: #fff;
+                                font-size: 16px;
+                                text-align: center;
+                                button{
+                                    border: 0;
+                                    width: 100%;
+                                    height: 100%;
+                                    background-color: transparent;
+                                }
+                            }
+                        }
+                        .footer{
+                            width: 100%;
+                            ul{
+                                display: flex;
+                                align-content: center;
+                                justify-content: space-around;
+                                li{
+                                    font-size: 14px;
+                                    color:#807f7f;
+                                }
+                            }
+                            .icon-list{
+                                padding: 0 20px;
+                                width: 100%;
+                                margin: 10px 0 0;
+                                .item-payment-box{
+                                    text-align: center;
+                                    width: 100%;
+                                    img{
+                                        width: 40px;
+                                        height: 18px;
+                                        margin: 5px 0 0;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            
+            // right
+            .right-checkout{
+                flex: 1;
+                height: 100%;
+                display: flex;
+                justify-content: start;
+                background-color: #f8f7f7;
+                .checkout-price{
+                    width: 480px;
+                    height: 100%;
+                    padding: 56px 0 0 20px;
+                    .product-list{
+                        width: 100%;
+                        .product-item{
+                            height: 97px;
+                            padding: 10px 0 21px;
+                            border-bottom: 1px solid #999999;
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: start;
+                            .left{
+                                height: 100%;
+                                display: flex;
+                                .img-box{
+                                    position: relative;
+                                    width: 65px;
+                                    height: 100%;
+                                    border: 1px solid rgb(182, 180, 180);
+                                    padding: 0 7px;
+                                    background-color: #fff;
+                                    img{
+                                        width: 100%;
+                                        height: 100%;
+                                    }
+                                    i{
+                                        position: absolute;
+                                        top: -10px;
+                                        right: -10px;
+                                        width: 21px;
+                                        height: 21px;
+                                        text-align: center;
+                                        line-height: 21px;
+                                        border-radius: 50%;
+                                        background-color: #5e5c5c;
+                                        color: #fff;
+                                    }
+                                }
+                                .info{
+                                    padding: 0 0 0 10px;
+                                    .title{
+                                        height: 18px;
+                                        padding: 0 10px 0 0;
+                                        margin: 0 0 10px;
+                                        font-size: 14px;
+                                    }
+                                    .color{
+                                        font-size: 12px;
+                                        color: #818080;
+                                    }
+                                }
+                            }
+                            .right{
+                                width: 65px;
+                                height: 100%;
+                                .price{
+                                    font-size: 14px;
+                                    font-weight: 600;
+                                }
+                            }
+                        }
+                    }
+                    .discount-box{
+                        width: 100%;
+                        height: 87px;
+                        padding: 21px 0 9px;
+                        border-bottom: 1px solid #999999;
+                        form{
+                            display: flex;
+                            justify-content: space-between;
+                            input{
+                                width: 360px;
+                                height: 46px;
+                                border-radius: 5px;
+                                border: 1px solid #999999;
+                                padding: 0 10px;
+                            }
+                            .btn{
+                                width: 80px;
+                                height: 46px;
+                                line-height: 46px;
+                                text-align: center;
+                                border-radius: 5px;
+                                background-color: #c7c3c3;
+                                color: #fff;
+                                font-size: 16px;
+                            }
+                        }
+                    }
+                    .price-info{
+                        width: 100%;
+                        height: 139px;
+                        padding: 15px 0;
+                        border-bottom: 1px solid #999999;
+                        .price-item{
+                            width: 100%;
+                            height: 36px;
+                            .label{
+                                width: 100%;
+                                display: flex;
+                                align-items: center;
+                                justify-content: space-between;
+                                font-size: 12px;
+                                color: #535353;
+                                .txt{
+                                    font-size: 14px;
+                                    color: #000;
+                                    font-weight: 545;
+                                }
+                            }
+                        }
+                    }
+                    .total-price{
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        width: 100%;
+                        height: 81px;
+                        padding: 20px 0 25px;
+                        span{
+                            font-size: 16px;
+                        }
+                        .price{
+                            i{
+                                color: #7c7b7b;
+                                margin: 0 6px 0 0;
+                            }
+                            span{
+                                font-size: 24px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

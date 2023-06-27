@@ -1,0 +1,179 @@
+.page-content-body{
+    width: 100%;
+    .drag-item{
+        width: 100%;
+        .search-box{
+            width: 100%;
+            height: 218px;
+            padding: 56px 10px;
+            margin: 0 -9px;
+           display: flex;
+           flex-direction: column;
+           align-items: center;
+            .search-title{
+                height: 40px;
+                padding: 0 9px;
+                margin: 0 0 24px;
+                h1{
+                    font-weight: 400;
+                    font-size: 32px;
+                }
+            }
+            .input-box{
+                width: 700px;
+                height: 42px;
+                padding: 0 15px;
+                border: 1px solid #363636;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                .input-search{
+                    width: 640px;
+                    height: 40px;
+
+                    input{
+                        width: 100%;
+                        height: 100%;
+                        padding: 0 20px;
+                        border: 0;
+                        &::placeholder{
+                            font-size: 16px;
+                            color: #999;
+                        }
+                    }
+                }
+                button{
+                    display: block;
+                    width: 40px;
+                    height: 40px;
+                    background-color: #fff;
+                    border: 0;
+                }
+            }
+        }
+    }
+    .container{
+        display: block;
+        width: 1440px;
+        margin: 0 auto;
+        padding: 0 20px;
+        
+        // row
+        .row{
+            width: 1200px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap:wrap;
+            margin: 40px auto;
+            align-items: center;
+            justify-content: start;
+            .col-li{
+                height: 500px;
+                width: 300px;
+                padding: 0 10px;
+                margin: 0 0 24px;
+                a{  
+                    margin: 0 0 40px;
+                    display: block;
+                    width: 247px;
+                    height: 247px;
+                    transition: all 0.3s;
+                    img{
+                        width: 100%;
+                        height: 100%;
+                    }
+                    &:hover{
+                        transform: scale(1.02);
+                    }
+                }
+                .info-box{
+                    padding: 10px 0 0;
+                    height: 100px;
+                    width: 100%;
+                    .pro-title{
+                        height: 24px;
+                        line-height: 24px;
+                        font-size: 16px;
+                    }
+                    .price{
+                        height: 24px;
+                        line-height: 24px;
+                        font-style: 18px;
+                        span{
+                            font-size: 14px;
+                            text-decoration: line-through;
+                        }
+                    }
+                }
+            }
+            .col{
+                height: 500px;
+                width: 300px;
+                padding: 0 9px;
+                margin: 0 0 24px;
+                a{
+                    display: block;
+                    width: 100%;
+                    height: 360px;
+                    transition: all 0.3s;
+                    img{
+                        width: 100%;
+                        height: 100%;
+                    }
+                    &:hover{
+                        transform: scale(1.02)
+                    }
+                }
+                .info-box{
+                    margin: 20px 0 0;
+                    padding: 10px 0 0;
+                    height: 100px;
+                    width: 100%;
+                    .pro-title{
+                        height: 24px;
+                        line-height: 24px;
+                        font-size: 18px;
+                    }
+                    .price{
+                        height: 24px;
+                        line-height: 24px;
+                        font-size: 16px;
+                        margin: 0 0 10px;
+                        span{
+                            font-size: 14px;
+                            text-decoration: line-through;
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+    .not-found{
+        display: none;
+        width: 100%;
+        height: 292px;
+        
+        padding: 0 0 48px;
+        .list-box{
+            width: 100%;
+            height: 100%; 
+            padding: 28px 0 0;
+            margin: 10px 0 60px;
+            .text{
+                width: 100%;
+                height: 100%;
+                padding: 64px 0;
+                text-align: center;
+                p{
+                    height: 28px;
+                    line-height: 28px;
+                    font-size: 20px;
+                    a{
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,26 @@
+#app .content-box .page-content-header,
+#app .content-box .bottom-nav {
+  width: 100%;
+  margin: 0 auto;
+}
+#app .content-box .page-content-body {
+  width: 100%;
+  margin: 0 auto;
+}
+#app .content-box .drag-item1 {
+  width: 100%;
+  
+}
+#app .content-box .drag-item2 {
+  width: 100%;
+}
+#app .content-box .container {
+  width: 100%;
+}
+#app .content-box .page-content-footer {
+  width: 100%;
+  margin: 0 auto;
+}
+#app .content-box .item-box {
+  width: 100%;
+}

@@ -1,0 +1,146 @@
+*{
+    box-sizing: border-box;
+}
+
+header{
+    height: 71px;
+    width: 100%;
+    border-bottom: 1px solid #d4d2d2;
+    .container{
+        padding: 0 20px;
+        width: 800px;
+        height: 100%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        h1{
+            a{
+            display: block;
+            height: 100%;
+                img{
+                    height: 40px;
+                }
+            }
+        }
+        a{
+            color: #000;
+            font-size: 16px;
+            text-decoration: none;
+        }
+    }
+}
+
+.content{
+    width: 800px;
+    height: 590px;
+    margin: 0 auto;
+    .form-box{
+        width: 400px;
+        height: 100%;
+        padding:100px 0 0;
+        margin: 0 auto;
+        .form-title{
+            height: 36px;
+            font-size: 24px;
+            margin: 0 0 22px;
+        }
+        .tip-box{
+            height: 59px;
+            padding: 0 0 20px;
+            .info-tip{
+                font-size: 16px;
+                color: #666666;
+            }
+        }
+        form{
+            width: 400px;
+            height: 274px;
+            .form-item{
+                width: 100%;
+                height: 46px;
+                padding: 0 0 22px;
+                margin: 0 0 22px;
+                .input{
+                    width: 400px;
+                    height: 46px;
+                    input{
+                        padding: 0 15px;
+                        width: 400px;
+                        height: 100%;
+                        border: 1px solid #bdbbbb;
+                        &::placeholder{
+                            color: #bdbbbb;
+                        }
+                    }
+                }
+            }
+            .button-box{
+                width: 100%;
+                height: 138px;
+                .flex{
+                    a{
+                        color: #000;
+                    }
+                    .fec-btn{
+                        width: 100%;
+                        height: 45px;
+                        padding: 10px 30px;
+                        margin: 30px 0 0;
+                        background-color: #000;
+                        border-radius: 5px;
+                        transition: all 0.3s;
+                        &:hover{
+                            transform: scale(1.05);
+                        }
+                        .login{
+                            color: #fff;
+                            text-align: center;
+                            height: 16px;
+                            line-height: 16px;
+                        }
+                    }
+                    .msg{
+                        height: 39px;
+                        padding: 15px 0 0;
+                        display: flex;
+                        align-items: center;
+                        a{
+                            padding-left: 10px;
+                        }
+                    }
+                }
+            }
+        }
+        .quick_login{
+            height: 80px;
+            margin: 40px -10px -10px 0;
+            .title{
+                height: 18px;
+                font-size: 12px;
+                color: #999999;
+                text-align: center;
+            }
+            .quick_login_button{
+                height: 40px;
+                margin: 20px 0 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                .login-item{
+                    flex: 1;
+                    height:40px;
+                    padding: 7px;
+                    margin: 0 10px;
+                    border: 1px solid #666666;
+                    border-radius: 5px;
+                    text-align: center;
+                    img{
+                        width: 20px;
+                        height: 20px;
+                    }
+                }
+            }
+        }
+    }
+}

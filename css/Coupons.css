@@ -1,0 +1,124 @@
+.page-content-body {
+  width: 100%;
+}
+.page-content-body .drag-item {
+  width: 100%;
+}
+.page-content-body .drag-item .banner {
+  width: 100%;
+  height: 495px;
+}
+.page-content-body .drag-item .banner img {
+  width: 100%;
+  height: 100%;
+}
+.page-content-body .drag-item .coupon-view {
+  height: 82px;
+  width: 100%;
+  background-image: linear-gradient(to right, #ff4848, #ff0d7d);
+  text-align: center;
+}
+.page-content-body .drag-item .coupon-view img {
+  height: 100%;
+}
+.page-content-body .container {
+  width: 1440px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.page-content-body .container .sort-box {
+  width: 100%;
+  height: 84px;
+  padding: 24px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.page-content-body .container .sort-box .item {
+  height: 100%;
+  font-size: 16px;
+}
+.page-content-body .container .sort-box .box {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  position: relative;
+}
+.page-content-body .container .sort-box .box span {
+  font-size: 16px;
+}
+.page-content-body .container .sort-box .box .item-select {
+  width: 200px;
+  height: 36px;
+  line-height: 36px;
+  padding: 0 10px;
+  border: 1px solid #dcdfe6;
+  margin-left: 20px;
+}
+.page-content-body .container .sort-box .box .select-box {
+  display: none;
+  position: absolute;
+  top: 50px;
+  right: 0;
+  width: 200px;
+  border: 1px solid #dcdfe6;
+  background-color: #fff;
+}
+.page-content-body .container .sort-box .box .select-box .sort-item {
+  height: 46px;
+  line-height: 45px;
+  text-align: left;
+  padding: 0 16px;
+  font-size: 16px;
+  border-bottom: 1px solid #dcdfe6;
+}
+.page-content-body .container .sort-box .box .select-box .sort-item:hover {
+  background-color: #dcdfe6;
+}
+.page-content-body .container .row {
+  width: 1440px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  align-items: center;
+}
+.page-content-body .container .col {
+  height: 480px;
+  width: 265px;
+  padding: 0 9px;
+  margin: 0 0 24px;
+}
+.page-content-body .container .col a {
+  display: block;
+  width: 100%;
+  height: 360px;
+  transition: all 0.3s;
+}
+.page-content-body .container .col a img {
+  width: 100%;
+  height: 100%;
+}
+.page-content-body .container .col a:hover {
+  transform: scale(1.02);
+}
+.page-content-body .container .col .info-box {
+  padding: 10px 0 0;
+  height: 100px;
+  width: 100%;
+}
+.page-content-body .container .col .info-box .pro-title {
+  height: 24px;
+  line-height: 24px;
+  font-size: 18px;
+}
+.page-content-body .container .col .info-box .price {
+  height: 24px;
+  line-height: 24px;
+  font-size: 16px;
+  margin: 0 0 10px;
+}
+.page-content-body .container .col .info-box .price span {
+  font-size: 14px;
+  text-decoration: line-through;
+}
