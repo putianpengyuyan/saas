@@ -1,26 +1,3 @@
-// first name
-const FirstName = document.querySelector('[name=first-name]')
-FirstName.addEventListener('blur',VerifyFirst)
-function VerifyFirst(e){
-    const FirstNameValue = e.target.value
-    if(FirstNameValue.trim()===""){
-        LastName.style.borderColor = 'red';
-    }
-    console.log(FirstNameValue);
-}
-
-
-// last name
-const LastName = document.querySelector('[name=last-name]')
-LastName.addEventListener('blur',VerifyLast)
-function VerifyLast(e){
-    const LastNameValue = e.target.value
-    if(LastNameValue.trim()===""){
-        LastName.style.borderColor = 'red';
-    }
-    console.log(LastNameValue);
-}
-
 
 const emailComponent = document.querySelector('[name=email]')
 emailComponent.addEventListener('change',verifyEmail)
@@ -75,7 +52,14 @@ function Register(username, password) {
     axios.post("https://goods.adteam.info/api/user/register", { username, password })
       .then(
         function (response) {
+            var msg = response.data.msg
+            console.log(msg);
           console.log(response);
+          if(msg==='用户已经存在'){
+            alert('用户已经存在')
+          }else if(msg==='注册成功'){
+            alert('注册成功')
+          }
         },
         function (err) {
           console.log(err);

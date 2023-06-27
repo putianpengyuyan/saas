@@ -41,7 +41,19 @@ function loginUser(username, password) {
     .post("https://goods.adteam.info/api/user/login", { username, password })
     .then(
       function (response) {
+        var msg = response.data.msg;
+        console.log(msg);
         console.log(response);
+        if(msg==='账户不正确'){
+          alert('账号错误')
+        }else if(msg==='密码不正确'){
+          alert('密码不正确')
+        }
+        else if(msg==='登录成功'){
+          alert('登录成功')
+          location.href="index.html"
+        }
+        
       },
       function (err) {
         console.log(err);
