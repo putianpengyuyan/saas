@@ -458,10 +458,10 @@ function bindProductDetailEvent(data, url) {
     for (let i = 0; i < removeNodeList.length; i++) {
       const remove = removeNodeList[i];
       remove.addEventListener("click", function (e) {
-        // const id = remove.getAttribute("data-id");
-        // const color = remove.getAttribute("data-color") || '';
-        // const size = remove.getAttribute("data-size")  || '';
-        // localStorageUtil.removeWholeProductFromShoppingCartLocal(id, color, size);
+        const id = remove.getAttribute("data-id");
+        const color = remove.getAttribute("data-color") || '';
+        const size = remove.getAttribute("data-size")  || '';
+        localStorageUtil.removeWholeProductFromShoppingCartLocal(id, color, size);
       });
     }
   });

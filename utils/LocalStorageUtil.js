@@ -124,6 +124,10 @@ class localStorageUtil {
     });
     if (deletedIndex >= 0) {
       productArr.splice(deletedIndex, 1);
+      console.log(productArr);
+      this.setItem(LOCAL_CONSTANTS.shoppingCartTotal,shoppingCartTotal.toFixed(2));
+      this.setItem(LOCAL_CONSTANTS.shoppingCartTotalNum, shoppingCartTotalNum);
+      this.setItem(LOCAL_CONSTANTS.shoppingCart, JSON.stringify(productArr));
       document.querySelector(".table-body").children[deletedIndex].remove()
       const container1 =  document.querySelector(".container1")
       const container2 =  document.querySelector(".container2")
@@ -139,10 +143,7 @@ class localStorageUtil {
         // document.querySelector(".container1").style.display='block'
       }
     }
-    this.setItem(
-      LOCAL_CONSTANTS.shoppingCartTotal,
-      shoppingCartTotal.toFixed(2)
-    );
+    this.setItem(LOCAL_CONSTANTS.shoppingCartTotal,shoppingCartTotal.toFixed(2));
     this.setItem(LOCAL_CONSTANTS.shoppingCartTotalNum, shoppingCartTotalNum);
     this.setItem(LOCAL_CONSTANTS.shoppingCart, JSON.stringify(productArr));
     document.querySelectorAll(".c-total-item").innerHTML=`$${productArr[item].total}`;
