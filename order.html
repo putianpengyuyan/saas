@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./layui/css/layui.css">
+    <link rel="stylesheet" href="./css/初始化.css">
+    <link rel="stylesheet" href="./css/checkout.css">
+    <title>order</title>
+</head>
+<body>
+    <div id="app">
+        <div class="content-box">
+            <div class="main">
+                <div class="checkout-box">
+                    <div class="left-checkout">
+                        <div class="payment-info">
+                            <h1 class="logo-box">
+                                <a href="./index.html"><img src="./images/logo.webp" alt=""></a>
+                            </h1>
+                            <div class="bread">
+                                <div class="current">Information</div>
+                                <i class="layui-icon layui-icon-right" style="padding: 0 5px; color: rgb(173, 173, 172);"></i>
+                                <div class="uppercase">payment method</div>
+                            </div>
+                            <div class="pay">
+                                <div class="payment-box">
+                                    <div class="col-md-12">
+                                    <div class="row">
+                                        <h2>Contact</h2> <p class="user-email">3341782596@qq.com</p> <a href="./checkout.html">Change</a>
+                                    </div>
+                                    <div class="row">
+                                        <h2>Place of delivery</h2> <p class="user-info">tom black 13827893678 country city</p> <a href="./checkout.html">Change</a>
+                                    </div>
+                                    <div class="row">
+                                        <h2>Shipping & Delivery</h2> <p class="freight">Fedex . $20.00</p> 
+                                    </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            <div class="contact">
+                                <h2>Shipping & Delivery</h2>
+                                    <div class="ship ship-active shipping">
+                                        <p class="type"><i class="ship-i i-active"></i>DHL</p><span class="freight-amount">$ 5.00</span>
+                                    </div>
+                                    <div class="ship shipping">
+                                        <p class="type"><i class="ship-i"></i>Fedex</p><span class="freight-amount">$ 20.00</span>
+                                    </div>
+                                    <h2>Payment method</h2>
+                                    <p>All transactions are secure and encrypted</p>
+                                    <div class="ship pay-ship pay-active">
+                                        <p><i class="pay-i pay-i-active"></i>Stripe Credit Card</p>
+                                        <span><img src="./images/visa.svg" alt=""><img src="./images/amex.svg" alt=""><img src="./images/mastercard.svg" alt=""></span>
+                                    </div>
+                                    <div class="ship pay-ship">
+                                        <p><i class="pay-i"></i>Stripe Credit Card</p>
+                                        <span><img src="./images/visa.svg" alt=""><img src="./images/amex.svg" alt=""><img src="./images/mastercard.svg" alt=""></span>
+                                    </div>
+                                <div class="pay-btn">
+                                    <div class="return">
+                                        <i class="layui-icon layui-icon-left"></i>
+                                        Return
+                                    </div>
+                                    <div class="ctin"><button type="submit">Complete order</button></div>
+                                </div>
+                                <div class="footer">
+                                    <ul>
+                                        <li>Privacy Policy</li>
+                                        <li>Shipping & Return</li>
+                                        <li>Shipping Policies</li>
+                                    </ul>
+                                    <div class="icon-list">
+                                        <div class="item-payment-box">
+                                            <img src="./images/visa.svg" alt="">
+                                            <img src="./images/mastercard.svg" alt="">
+                                            <img src="./images/amex.svg" alt="">
+                                            <img src="./images/discover.svg" alt="">
+                                            <img src="./images/alipay.svg" alt="">
+                                            <img src="./images/jcb.svg" alt="">
+                                            <img src="./images/diners.svg" alt="">
+                                            <img src="./images/ideal.svg" alt="">
+                                            <img src="./images/giropay.svg" alt="">
+                                            <img src="./images/eps.svg" alt="">
+                                            <img src="./images/bancontact.svg" alt="">
+                                            <img src="./images/cod_1.svg" alt="">
+                                            <img src="./images/paypal.svg" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right-checkout">
+                        <div class="checkout-price">
+                            <div class="product-list">
+                                <!-- <div class="product-item">
+                                    <div class="left">
+                                        <div class="img-box">
+                                            <i>1</i>
+                                            <img src="./upload/tin1.webp" alt="">
+                                        </div>
+                                        <div class="info">
+                                            <div class="title">Polarised Sunglasses</div>
+                                            <div class="color">Black</div>
+                                        </div>
+                                    </div>
+                                    <div class="right">
+                                        <div class="price">$199.00</div>
+                                    </div>
+                                </div>
+                                <div class="product-item">
+                                    <div class="left">
+                                        <div class="img-box">
+                                            <i>1</i>
+                                            <img src="./upload/tin1.webp" alt="">
+                                        </div>
+                                        <div class="info">
+                                            <div class="title">Polarised Sunglasses</div>
+                                            <div class="color">Black</div>
+                                        </div>
+                                    </div>
+                                    <div class="right">
+                                        <div class="price">$199.00</div>
+                                    </div>
+                                </div> -->
+                            </div>
+                            <div class="discount-box">
+                                <form action="">
+                                    <input type="text" placeholder="Coupon Code">
+                                    <div class="btn">Apply</div>
+                                </form>
+                            </div>
+                            <div class="price-info">
+                                <div class="price-item">
+                                    <div class="label">Subtotal
+                                        <span class="txt">$0</span>
+                                    </div>
+                                </div>
+                                <div class="price-item">
+                                    <div class="label">Discount
+                                        <span class="txt">- $0.00</span>
+                                    </div>
+                                </div>
+                                <div class="price-item">
+                                    <div class="label">Shipping
+                                        <span class="txt ship-txt"> $0</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="total-price">
+                                <span>Total</span>
+                                <div class="price">
+                                    <i>USD</i>
+                                    <span class="price-total">$0</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./utils/LocalStorageUtil.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./js/order.js"></script>
+    <!-- <script src="./js/checkbox.js"></script> -->
+</body>
+</html>

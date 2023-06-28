@@ -61,13 +61,49 @@
                         .payment-box{
                             width: 100%;
                             height: 156px;
-                            padding: 20px 20px 0;
+                            padding: 0 20px;
                             margin: 20px 0 0;
                             border: 1px solid rgb(187, 185, 185);
                             border-radius: 5px;
                             .col-md-12 {
                                 width: 100%;
                                 height: 135px;
+                                .row{
+                                    display: flex;
+                                    align-items: center;
+                                    height: 50px;
+                                    line-height: 50px;
+                                    border-bottom: 1px solid #b4b2b2;
+                                    &:last-child{
+                                        justify-content: start;
+                                        align-items: center;
+                                        border-bottom: none;
+                                    }
+                                    h2{
+                                       
+                                        font-size: 14px;
+                                        font-weight: normal;
+                                        color: #737373;
+                                        padding-right: 20px;
+                                    }
+                                    p{
+                                        width: 300px;
+                                        display: inline-block;
+                                        height: 40px;
+                                        color: #545454;
+                                        overflow : hidden;
+                                        text-overflow: ellipsis;
+                                        display: -webkit-box;
+                                        -webkit-line-clamp: 2;
+                                        -webkit-box-orient: vertical;
+                                        text-align: left;
+                                    }
+                                    a{
+                                        flex: 1;
+                                        text-align: right;
+                                        color: #2277cc;
+                                    }
+                                }
                                 .paypal-button-container {
                                   margin-top: 5px;
                                   width: 100%;
@@ -137,7 +173,63 @@
                             height: 20px;
                             margin: 10px 0 10px;
                             font-size: 18px;
-                            font-weight: normal;
+                            font-weight: 400;
+                        }
+                        p{
+                            color: #737373;
+                            font-size: 13px;
+                        }
+                        .ship{
+                            width: 100%;
+                            height: 46px;
+                            border: 1px solid #999999;
+                            padding: 0 10px;
+                            margin: 20px 0;
+                            border-radius: 5px;
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            img{
+                                width: 35px;
+                                height: 22px;
+                            }
+                            p{
+                                display: inline-block;
+                                align-items: baseline;
+                                font-size: 14px;
+                                color: #1b1b1b;
+                                i{
+                                    display: inline-block;
+                                    width: 15px;
+                                    height: 15px;
+                                    border-radius: 15px;
+                                    border: 1px solid #999999;
+                                    margin-right: 10px;
+
+                                }
+                                .i-active{
+                                    border: 1px solid #2277cc;
+                                    background-color: #2277cc;
+                                }
+                                .pay-i-active{
+                                    border: 1px solid #2277cc;
+                                    background-color: #2277cc;
+                                }
+                                
+                                line-height: 15px;
+                            }
+                            span{
+                                display: inline-block;
+                                font-size: 15px;
+                                font-weight: 550;
+                                
+                            }
+                        }
+                        .ship-active{
+                            border: 2px solid #2277cc;
+                        }
+                        .pay-active{
+                            border: 2px solid #2277cc;
                         }
                         form{
                             input{

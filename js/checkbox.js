@@ -23,6 +23,9 @@ email.addEventListener("input", () => {
 const country = document.querySelector("[name=country]");
 country.addEventListener("change", function (e) {
   console.log(e.target.value);
+  // console.log(country.innerHTML);
+  // console.log(country.value);
+  console.log(e.target.tagName);
 });
 
 // first name
@@ -141,7 +144,33 @@ button.addEventListener("click", function () {
   console.log(province.value);
   console.log(postCode.value);
   console.log(telephone.value);
+  console.log(country.innerText);
   console.log("========================");
+  const emailComponent = email.value;
+  const first_name = FirstName.value;
+  const last_name = LastName.value;
+  const addressComponent = address.value;
+  const cityComponent = city.value;
+  const countryComponent2 = country.innerText;
+  const countryComponent = country.value;
+  const provinceComponent = province.value;
+  const postCodeComponent = postCode.value;
+  const telephoneComponent = telephone.value;
+  // 本地
+  const user_order = {
+    email:emailComponent,
+    first_name:first_name,
+    last_name:last_name,
+    address:addressComponent,
+    city:cityComponent,
+    country:countryComponent,
+    province:provinceComponent,
+    postCode:postCodeComponent,
+    telephone:telephoneComponent,
+    country1:countryComponent2,
+  }
+  localStorage.setItem('user_order',JSON.stringify(user_order))
+  location.href="order.html"
 });
 
 //   // 依次判断上面的每个模块是否通过
@@ -152,7 +181,8 @@ button.addEventListener("click", function () {
 //   if(!verifyTelephone()) e.preventDefault()
 
 // 立即购买
-if (!localStorage.getItem("shopping_cart")) {
+const LocalShoppingCart = localStorage.getItem("shopping_cart") && JSON.parse(localStorage.getItem("shopping_cart"));
+if (!LocalShoppingCart || LocalShoppingCart.length === 0) {
   console.log(JSON.parse(localStorage.getItem("newProduct")));
   const BuyArr = JSON.parse(localStorage.getItem("newProduct"));
   console.log("======buyarr=======");
@@ -213,14 +243,19 @@ if (!localStorage.getItem("shopping_cart")) {
   document.querySelector(".price-total").innerText = `$${shoppingCartTotal}`;
 }
 
-// api
-function PlaceOrder() {
-  axios.post("https://goods.adteam.info/api/products/addOrder", {}).then(
-    function (response) {
-      console.log(response);
-    },
-    function (err) {
-      console.log(err);
-    }
-  );
+function Render(){
+  const userManagement = JSON.parse(localStorage.getItem('user_order'))
+  console.log(userManagement);
+  console.log(userManagement.email);
+  email.value = userManagement.email
+  country.value = userManagement.country
+  FirstName.value = userManagement.first_name
+  LastName.value = userManagement.last_name
+  postCode.value = userManagement.postCode
+  telephone.value = userManagement.telephone
+  address.value = userManagement.address
+  city.value = userManagement.city
 }
+Render()
+
+console.log(email.innerText);
