@@ -40,7 +40,6 @@ function getProductDetails(id) {
     },
     function (err) {
       console.log(err);
-      
     }
   );
 }
@@ -348,6 +347,48 @@ function bindProductDetailEvent(data, url) {
     console.log(num);
   });
 
+  // 立即购买
+  const buyNow = document.querySelector(".buynow");
+  buyNow.addEventListener("click", function (e) {
+    console.log("==========buynow===========");
+    console.log(num);
+    console.log(data);
+    console.log(data.price);
+    console.log(data.title);
+    console.log(data.images[0]);
+    console.log("==========buynow===========");
+    const productList = document.querySelector(".product-list");
+    let Arr = [];
+    Arr.push(num)
+    Arr.push(data.price)
+    Arr.push(data.title)
+    Arr.push(data.images[0])
+    Arr.push(data.color)
+    console.log(Arr);
+    Arr.map((item)=>{
+      const num = parseInt(Arr[0]);
+      const price = parseFloat(Arr[1]);
+      const title = Arr[2];
+      const total = num*price;
+      const img = Arr[3];
+      const nowProduct = {
+        num:num,
+        price:price,
+        title:title,
+        img:img,
+        total:total,
+        color:color,
+      }
+      
+      console.log(nowProduct)
+      localStorage.setItem("newProduct",JSON.stringify(nowProduct))
+      
+      
+    })
+   
+    
+  });
+
   // 出现弹窗，禁止页面滚动
   const shoppingCartCom = document.querySelectorAll(".shopping-cart-mask")[0];
   const addToCartBtn = document.querySelectorAll(".add-to-cart")[0];
@@ -382,23 +423,23 @@ function bindProductDetailEvent(data, url) {
       console.log(product);
       localStorageUtil.addProductToShoppingCartLocal(product);
       console.log(id);
-      console.log( typeof total);
+      console.log(typeof total);
     });
-    
+
     // 2.渲染数据到小购物车
     const localProductArr = JSON.parse(localStorageUtil.getProductArr());
-    console.group('bendishuju-----')
-    console.log(localProductArr)
-    console.groupEnd('bendishuju-----')
+    console.group("bendishuju-----");
+    console.log(localProductArr);
+    console.groupEnd("bendishuju-----");
     const shoppingCartTable = document.querySelector(".table-body");
-    console.log(shoppingCartTable)
-    let shoppingCartInnerHtml = '';
+    console.log(shoppingCartTable);
+    let shoppingCartInnerHtml = "";
     localProductArr.map((item, index) => {
       console.log(item.color);
       shoppingCartInnerHtml += `
       <li class="table-item  li">
         <div class="img-box">
-          <img src=${ item.img} alt="">
+          <img src=${item.img} alt="">
         </div>
         <div class="table-info">
           <div class="title">${item.title}</div>
@@ -459,9 +500,13 @@ function bindProductDetailEvent(data, url) {
       const remove = removeNodeList[i];
       remove.addEventListener("click", function (e) {
         const id = remove.getAttribute("data-id");
-        const color = remove.getAttribute("data-color") || '';
-        const size = remove.getAttribute("data-size")  || '';
-        localStorageUtil.removeWholeProductFromShoppingCartLocal(id, color, size);
+        const color = remove.getAttribute("data-color") || "";
+        const size = remove.getAttribute("data-size") || "";
+        localStorageUtil.removeWholeProductFromShoppingCartLocal(
+          id,
+          color,
+          size
+        );
       });
     }
   });
@@ -475,35 +520,38 @@ function bindProductDetailEvent(data, url) {
 }
 
 // you may also like
-const likeRow = document.querySelector('.likeRow')
-function getProductList(){
-  axios.post(url+"/api/products/getProducts")
-  .then(function(response){
-      var data =response.data.data.list;
+const likeRow = document.querySelector(".likeRow");
+function getProductList() {
+  axios.post(url + "/api/products/getProducts").then(
+    function (response) {
+      var data = response.data.data.list;
       console.log(data);
-      if(data.length){
-        likeRow.innerHTML='';
-          data.map((item)=>{
-              const div = document.createElement("div");
-              div.innerHTML = `
+      if (data.length) {
+        likeRow.innerHTML = "";
+        data.map((item) => {
+          const div = document.createElement("div");
+          div.innerHTML = `
                 <div class="col" id=${item.id}>
                     <a href="./productDetail.html">
                         <div class="common-img-box">
-                            <img src=${url+item.images[0]} alt="">
+                            <img src=${url + item.images[0]} alt="">
                         </div>
                         <div class="pro-title">${item.title}</div>
                         <div class="star"><div id=${item.star}></div></div>
-                        <div class="price">$${item.price}<span>$${item.costprice}</span></div>
+                        <div class="price">$${item.price}<span>$${
+            item.costprice
+          }</span></div>
                     </a>
                 </div> 
             `;
-            likeRow.appendChild(div);
-          })
-
+          likeRow.appendChild(div);
+        });
       }
       console.log(response);
-  },function(err){
+    },
+    function (err) {
       console.log(err);
-  })
+    }
+  );
 }
-getProductList()
+getProductList();

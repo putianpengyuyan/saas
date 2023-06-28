@@ -285,3 +285,4 @@ class localStorageUtil {
     return parseInt(this.getItem(LOCAL_CONSTANTS.shoppingCartTotal));
   }
 }
+
