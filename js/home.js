@@ -73,7 +73,7 @@ homeList1.map((item,index)=>{
     const div = document.createElement("div");
     div.innerHTML = `
     <div class="col homeCol" id=${item.id}>
-      <a href="./productDetail.html">
+      <a href="#">
             <div class="common-img-box">
                 <img src=${item.img} alt="">
             </div>
@@ -109,6 +109,7 @@ homeList2.map((item,index)=>{
         </div>
       `;
       homeRow2.appendChild(div);
+      
 })
 
 

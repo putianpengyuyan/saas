@@ -41,6 +41,19 @@ function getProductList(){
                 `;
                 row.appendChild(col)
             })
+            const colArr = document.querySelectorAll(".col");
+            console.log("!!!!!!!!!!!!!");
+            console.log(colArr);
+            for (let i = 0; i < colArr.length; i++) {
+              const col = colArr[i];
+              col.addEventListener("click", function () {
+                console.log(colArr[i].id);
+                let ProductId = []
+                const id = colArr[i].id
+                const Id = id
+                localStorage.setItem('ProductId',JSON.stringify(Id))
+              });
+            }
         }
     })
 }

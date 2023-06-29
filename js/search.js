@@ -72,7 +72,19 @@ function Product(keywords) {
                   `;
           row.appendChild(col);
         });
-        console.log(22222222222222);
+        const colArr = document.querySelectorAll(".col");
+        console.log("!!!!!!!!!!!!!");
+        console.log(colArr);
+        for (let i = 0; i < colArr.length; i++) {
+          const col = colArr[i];
+          col.addEventListener("click", function () {
+            console.log(colArr[i].id);
+            let ProductId = []
+            const id = colArr[i].id
+            const Id = id
+            localStorage.setItem('ProductId',JSON.stringify(Id))
+          });
+        }
       } else if (!data.length) {
         notDefined.style.display = "block";
         find.style.display = "none";
