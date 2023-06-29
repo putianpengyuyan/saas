@@ -14,18 +14,19 @@ app2.addEventListener('click',function(e){
     selectBox.style.display = 'none'
 })
 
-function productList(){
-    axios.post("https://goods.adteam.info/api/products/getProducts")
+
+function getProductList(){
+    axios.post(url+"/api/products/getProducts")
     .then(function(response){
         var data = response.data.data.list;
         if(data.length){
-            const row = document.querySelector('.row')
+            const row = document.querySelector('.rowProduct')
             row.innerHTML= ''
             data.map((item)=>{
                 const col = document.createElement('div')
                 col.innerHTML=`
                 <div class="col">
-                    <a href="#">
+                    <a href="./productDetail.html">
                         <div class="common-img-box">
                             <img src=${url+item.images[0]} alt="">
                         </div>
@@ -43,4 +44,4 @@ function productList(){
         }
     })
 }
-productList()
+getProductList()

@@ -78,11 +78,11 @@ city.addEventListener("blur", function (e) {
 });
 
 // province
-const province = document.querySelector("[name=province]");
-province.addEventListener("change", function (e) {
-  const provinceValue = e.target.value;
-  console.log(provinceValue);
-});
+// const province = document.querySelector("[name=province]");
+// province.addEventListener("change", function (e) {
+//   const provinceValue = e.target.value;
+//   console.log(provinceValue);
+// });
 
 // post code
 const postCode = document.querySelector("[name=post-code]");
@@ -141,7 +141,7 @@ button.addEventListener("click", function () {
   console.log(LastName.value);
   console.log(address.value);
   console.log(city.value);
-  console.log(province.value);
+  // console.log(province.value);
   console.log(postCode.value);
   console.log(telephone.value);
   console.log(country.innerText);
@@ -153,7 +153,7 @@ button.addEventListener("click", function () {
   const cityComponent = city.value;
   const countryComponent2 = country.innerText;
   const countryComponent = country.value;
-  const provinceComponent = province.value;
+  // const provinceComponent = province.value;
   const postCodeComponent = postCode.value;
   const telephoneComponent = telephone.value;
   // 本地
@@ -164,7 +164,7 @@ button.addEventListener("click", function () {
     address:addressComponent,
     city:cityComponent,
     country:countryComponent,
-    province:provinceComponent,
+    // province:provinceComponent,
     postCode:postCodeComponent,
     telephone:telephoneComponent,
     country1:countryComponent2,

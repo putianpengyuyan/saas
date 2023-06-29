@@ -156,19 +156,19 @@
                     </div>
                     <div class="input-box">
                         <div class="input-search">
-                            <input type="text" autocomplete="off" placeholder="Search product">
+                            <input type="text" autocomplete="off" placeholder="Search product" name="search-input">
                         </div>
-                        <button type="button">
+                        <button type="button" name="search-btn">
                             <span><i class="layui-icon layui-icon-search" style="font-size: 20px;"></i></span>
                         </button>
                     </div>
                 </div>
             </div>
-            <div class="container">
+            <div class="container find">
                 <!-- row -->
-                <div class="row">
+                <div class="row searchrow">
                     <!-- 3 -->
-                    <div class="col">
+                    <!-- <div class="col">
                         <a href="#">
                             <div class="common-img-box">
                                 <img src="./upload/C3.webp" alt="">
@@ -179,9 +179,9 @@
                             <div class="star"><div id="ID-rate-demo-readonly-1"></div></div>
                             <div class="price">$65.00 <span>$87.00</span></div>
                         </div>
-                    </div>
+                    </div> -->
                     <!-- 4 -->
-                    <div class="col">
+                    <!-- <div class="col">
                         <a href="#">
                             <div class="common-img-box">
                                 <img src="./upload/C4.webp" alt="">
@@ -192,9 +192,9 @@
                             <div class="star"></div>
                             <div class="price">$199.00 <span>$213.00</span></div>
                         </div>
-                    </div>
+                    </div> -->
                     <!-- 5 -->
-                    <div class="col">
+                    <!-- <div class="col">
                         <a href="#">
                             <div class="common-img-box">
                                 <img src="./upload/c5.webp" alt="">
@@ -205,9 +205,9 @@
                             <div class="star"><div id="ID-rate-demo-readonly-2"></div></div>
                             <div class="price">$23.12 <span>$54.00</span></div>
                         </div>
-                    </div>
+                    </div> -->
                     <!-- 6 -->
-                    <div class="col">
+                    <!-- <div class="col">
                         <a href="#">
                             <div class="common-img-box">
                                 <img src="./upload/C6.webp" alt="">
@@ -218,9 +218,9 @@
                             <div class="star"></div>
                             <div class="price">$34.89 <span>$45.89</span></div>
                         </div>
-                    </div>
+                    </div> -->
                     <!-- 7 -->
-                    <div class="col">
+                    <!-- <div class="col">
                         <a href="#">
                             <div class="common-img-box">
                                 <img src="./upload/C7.webp" alt="">
@@ -231,9 +231,9 @@
                             <div class="star"></div>
                             <div class="price">$21.43 <span>$34.89</span></div>
                         </div>
-                    </div>
+                    </div> -->
                     <!-- 8 -->
-                    <div class="col">
+                    <!-- <div class="col">
                         <a href="#">
                             <div class="common-img-box">
                                 <img src="./upload/C8.webp" alt="">
@@ -244,9 +244,9 @@
                             <div class="star"></div>
                             <div class="price">$165.56 <span>$187.56</span></div>
                         </div>
-                    </div>
+                    </div> -->
                     <!-- 9 -->
-                    <div class="col">
+                    <!-- <div class="col">
                         <a href="#">
                             <div class="common-img-box">
                                 <img src="./upload/C9.webp" alt="">
@@ -257,9 +257,9 @@
                             <div class="star"><div id="ID-rate-demo-readonly-3"></div></div>
                             <div class="price">$108.00 <span>$180.00</span></div>
                         </div>
-                    </div>
+                    </div> -->
                     <!-- 10 -->
-                    <div class="col">
+                    <!-- <div class="col">
                         <a href="#">
                             <div class="common-img-box">
                                 <img src="./upload/C10.webp" alt="">
@@ -270,9 +270,9 @@
                             <div class="star"><div id="ID-rate-demo-readonly-4"></div></div>
                             <div class="price">$58.00 <span>$69.00</span></div>
                         </div>
-                    </div>
+                    </div> -->
                     <!-- 11 -->
-                    <div class="col">
+                    <!-- <div class="col">
                         <a href="#">
                             <div class="common-img-box">
                                 <img src="./upload/C11.webp" alt="">
@@ -283,9 +283,9 @@
                             <div class="star"></div>
                             <div class="price">$21.43 <span>$34.89</span></div>
                         </div>
-                    </div>
+                    </div> -->
                     <!-- 12 -->
-                    <div class="col">
+                    <!-- <div class="col">
                         <a href="#">
                             <div class="common-img-box">
                                 <img src="./upload/C12.webp" alt="">
@@ -296,7 +296,7 @@
                             <div class="star"></div>
                             <div class="price">$21.43 <span>$34.89</span></div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
             <!-- 找不到 -->
@@ -413,9 +413,12 @@
     
 
     <script src="./layui/layui.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./utils/LocalStorageUtil.js"></script>
     <script src="./js/root.js"></script>
     <script src="./js/tab.js"></script>
-    <script src="./js/coupons.js"></script>
+    <script src="./js/search.js"></script>
+    <!-- <script src="./js/coupons.js"></script> -->
     <script>
         layui.use(function(){
         var rate = layui.rate;
