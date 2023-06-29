@@ -1,3 +1,7 @@
+console.log($);
+console.log('jquery-----------')
+// loginUser()
+const Token = 0
 const emailComponent = document.querySelector("[name=email]");
 emailComponent.addEventListener("change", verifyEmail);
 function verifyEmail(e) {
@@ -41,16 +45,30 @@ function loginUser(username, password) {
     .post("https://goods.adteam.info/api/user/login", { username, password })
     .then(
       function (response) {
+        console.log('登录成功``````````````````')
+        console.log(response)
         var msg = response.data.msg;
         console.log(msg);
-        console.log(response);
+        // console.log(response);
         if(msg==='账户不正确'){
           alert('账号错误')
+          console.log(response);
         }else if(msg==='密码不正确'){
           alert('密码不正确')
+          console.log(response);
         }
         else if(msg==='登录成功'){
+          const userinfo = response.data.data.userinfo;
+          var token = userinfo.token
+          const expires_in = userinfo.expires_in;
+          // localStorage.setItem('Token',JSON.stringify(token))
+          let currentTime = new Date().getTime();
+          let expiresTime = currentTime + (expires_in * 1000);
+          $.cookie('Token', token, { expires: new Date(expiresTime), path: '/' });
           alert('登录成功')
+          console.log(token);
+          console.log(response);
+          
           location.href="index.html"
         }
         

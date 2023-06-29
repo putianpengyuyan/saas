@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="./layui/css/layui.css">
     <link rel="stylesheet" href="./css/初始化.css">
     <link rel="stylesheet" href="./css/checkout.css">
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.4/jquery.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"></script>
     <title>order</title>
 </head>
 <body>
@@ -42,11 +44,13 @@
                             </div>
                             <div class="contact">
                                 <h2>Shipping & Delivery</h2>
-                                    <div class="ship ship-active shipping">
-                                        <p class="type"><i class="ship-i i-active"></i>DHL</p><span class="freight-amount">$ 5.00</span>
-                                    </div>
-                                    <div class="ship shipping">
-                                        <p class="type"><i class="ship-i"></i>Fedex</p><span class="freight-amount">$ 20.00</span>
+                                    <div class="courier">
+                                        <!-- <div class="ship ship-active shipping">
+                                            <p class="type"><i class="ship-i i-active"></i>DHL</p><span class="freight-amount">$ 5.00</span>
+                                        </div>
+                                        <div class="ship shipping">
+                                            <p class="type"><i class="ship-i"></i>Fedex</p><span class="freight-amount">$ 20.00</span>
+                                        </div> -->
                                     </div>
                                     <h2>Payment method</h2>
                                     <p>All transactions are secure and encrypted</p>
@@ -63,7 +67,7 @@
                                         <i class="layui-icon layui-icon-left"></i>
                                         Return
                                     </div>
-                                    <div class="ctin"><button type="submit">Complete order</button></div>
+                                    <div class="ctin" name="order"><button type="submit">Complete order</button></div>
                                 </div>
                                 <div class="footer">
                                     <ul>
@@ -145,7 +149,7 @@
                                 </div>
                                 <div class="price-item">
                                     <div class="label">Shipping
-                                        <span class="txt ship-txt"> $0</span>
+                                        <span class="txt ship-txt"> $10</span>
                                     </div>
                                 </div>
                             </div>

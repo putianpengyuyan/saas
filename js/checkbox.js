@@ -1,5 +1,29 @@
 const url='https://goods.adteam.info';
 
+//
+function getCountryList() {
+  axios.get(`${url}/api/products/country`)
+  .then(res => {
+    console.log(res);
+    if (res.status === 200) {
+      const countrySelectorComponent = document.getElementById('checkout-country-selector');
+      const countryObj = res.data.data;
+      for (const key in countryObj) {
+        let optionData = {
+          country_code: key,
+          country_name: countryObj[key]
+        };
+        let option = document.createElement('option');
+        option.value = JSON.stringify(optionData) ;
+        option.innerText = optionData.country_name;
+        countrySelectorComponent.appendChild(option);
+      }
+    }
+  })
+}
+
+getCountryList();
+
 // email
 const email = document.querySelector("#email");
 email.addEventListener("change", verifyEmail);
@@ -21,11 +45,14 @@ email.addEventListener("input", () => {
 
 // country
 const country = document.querySelector("[name=country]");
+let countryCode, countryName;
 country.addEventListener("change", function (e) {
+  console.log('country--------------')
   console.log(e.target.value);
-  // console.log(country.innerHTML);
-  // console.log(country.value);
-  console.log(e.target.tagName);
+  let country = JSON.parse(e.target.value);
+  countryCode = country.country_code;
+  countryName = country.country_name;
+  
 });
 
 // first name
@@ -125,15 +152,16 @@ agree.addEventListener("click", function (e) {
   }
 });
 // 点击提交
-const button = document.querySelector("button");
+const button = document.querySelector(".continue");
 button.addEventListener("click", function () {
   if (!agree.checked) {
     alert("请勾选");
+    if (!verifyEmail(e))
+    if (!verifyPost(e)) 
+    if (!verifyTelephone(e)) 
     return;
   }
-  // if (!verifyEmail(e)) alert("1");
-  // if (!verifyPost(e)) alert("2");
-  // if (!verifyTelephone(e)) alert("3");
+  
   console.log("========================");
   console.log(email.value);
   console.log(country.value);
@@ -151,8 +179,7 @@ button.addEventListener("click", function () {
   const last_name = LastName.value;
   const addressComponent = address.value;
   const cityComponent = city.value;
-  const countryComponent2 = country.innerText;
-  const countryComponent = country.value;
+  
   // const provinceComponent = province.value;
   const postCodeComponent = postCode.value;
   const telephoneComponent = telephone.value;
@@ -163,11 +190,13 @@ button.addEventListener("click", function () {
     last_name:last_name,
     address:addressComponent,
     city:cityComponent,
-    country:countryComponent,
+    country: {
+      countryCode,
+      countryName
+    },
     // province:provinceComponent,
     postCode:postCodeComponent,
     telephone:telephoneComponent,
-    country1:countryComponent2,
   }
   localStorage.setItem('user_order',JSON.stringify(user_order))
   location.href="order.html"
@@ -255,7 +284,14 @@ function Render(){
   telephone.value = userManagement.telephone
   address.value = userManagement.address
   city.value = userManagement.city
+  country.value = userManagement.country
 }
 Render()
 
 console.log(email.innerText);
+
+// return
+const Return = document.querySelector('.return')
+Return.addEventListener('click',function(){
+  location.href='productDetail.html'
+})

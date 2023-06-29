@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="./css/初始化.css">
     <link rel="stylesheet" href="./layui/css/layui.css">
     <link rel="stylesheet" href="./css/product.css">
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.4/jquery.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"></script>
     <script src="./art-template/template-web.js"></script>
     <title>product</title>
 </head>
@@ -130,21 +132,19 @@
                         </div>
 
                         <ul class="yonghu">
-                            <li><a href="./search.html"><i class="layui-icon layui-icon-search"
-                                        style="font-size: 20px;background-color: #fff;"></i></a></li>
-                            <li><i class="layui-icon layui-icon-username username"
-                                    style="font-size: 20px;background-color: #fff;"></i></li>
+                            <li><a href="./search.html"><i class="layui-icon layui-icon-search" style="font-size: 20px;background-color: #fff;"></i></a></li>
+                            <li class="user-root"><i class="layui-icon layui-icon-username username" style="font-size: 20px;background-color: #fff;"></i></li>
+                            <li class="user-user"><i class="layui-icon layui-icon-username username" style="font-size: 20px;background-color: #fff;"></i></li>
                             <li>
                                 <i class="products"><span class="products-num">0</span></i>
-                                <a href="./shopping-cart.html"><i class="layui-icon layui-icon-cart"
-                                        style="font-size: 20px;background-color: #fff;"></i></a>
-                            </li>
+                                <a href="./shopping-cart.html"><i class="layui-icon layui-icon-cart" style="font-size: 20px;background-color: #fff;"></i></a></li>
                             <div class="root">
                                 <div class="row">
                                     <a href="./login.html">Log in</a>
                                     <a href="./register.html">Register</a>
                                 </div>
                             </div>
+                            
                         </ul>
 
                     </nav>
@@ -374,21 +374,21 @@
                         </div>
                         <div class="button-box">
                             <a href="./checkout.html"><div class="col-md-12">Checkout</div></a>
-                            <div class="payment-box">
+                            <!-- <div class="payment-box">
                                 <div class="col-md-12">
                                     <div class="paypal-button-container">
                                         <img src="./upload/paypal.svg" alt=""><span> 立即购买</span>
                                     </div>
-                                    <div class="paypal-button-container1">
+                                    <!-- <div class="paypal-button-container1">
                                         <img src="./upload/银行卡.svg" alt="">
                                         <span> 借记卡或信用卡</span>
                                     </div>
                                     <div class="paypal-powered-by">
                                         <span>技术提供方：</span>
                                         <img src="./upload/paypal.svg" alt="">
-                                    </div>
-                                </div>
-                            </div>
+                                    </div> -->
+                                <!-- </div>
+                            </div> -->
                         </div>
 
                     </div>
@@ -592,7 +592,7 @@
                             </div>
                         </div>
                         {{/if}}
-                        <div class="product-options">
+                        <div class="product-options product-options1">
                             <div class="row">
                                 <div class="product-quantity">
                                     <label class="name uppercase"> Quantity </label>
@@ -616,7 +616,7 @@
                                 <div class="margin-top-btn">
                                     <a href="./checkout.html"><div class="col-md-12 buynow">Buy it now</div></a>
                                 </div>
-                                <div class="col-md-12">
+                                <!-- <div class="col-md-12">
                                     <div class="paypal-button-container">
                                         <img src="./upload/paypal.svg" alt=""><span> 立即购买</span>
                                     </div>
@@ -628,7 +628,7 @@
                                         <span>技术提供方：</span>
                                         <img src="./upload/paypal.svg" alt="">
                                     </div>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                     </div>

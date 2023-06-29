@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="./layui/css/layui.css">
     <link rel="stylesheet" href="./css/初始化.css">
     <link rel="stylesheet" href="./css/checkout.css">
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.4/jquery.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"></script>
     <title>checkout</title>
 </head>
 <body>
@@ -54,8 +56,8 @@
                                     <span></span>
                                     <!-- country -->
                                     <h2>Shipping address</h2>
-                                    <select name="country" id="">
-                                        <option value="AF"> Afghanistan </option>
+                                    <select name="country" id="checkout-country-selector">
+                                        <!-- <option value="AF"> Afghanistan </option>
                                         <option value="AX"> Aland Islands </option>
                                         <option value="AL"> Albania </option>
                                         <option value="DZ"> Algeria </option>
@@ -302,7 +304,7 @@
                                         <option value="EH"> Western Sahara </option>
                                         <option value="YE"> Yemen </option>
                                         <option value="ZM"> Zambia </option>
-                                        <option value="ZW"> Zimbabwe </option>
+                                        <option value="ZW"> Zimbabwe </option> -->
                                     </select>
                                     <div class="row">
                                         <div class="col">
@@ -418,7 +420,7 @@
                                         <i class="layui-icon layui-icon-left"></i>
                                         Return
                                     </div>
-                                    <div class="ctin"><button type="submit">Continue to shipping</button></div>
+                                    <div class="ctin continue"><button type="submit">Continue to shipping</button></div>
                                 </div>
                                 <div class="footer">
                                     <ul>

@@ -1,5 +1,8 @@
+
+
+
 function Banner(){
-    axios.post(url+"/api/products/getBander")
+    axios.post("https://goods.adteam.info/api/products/getBander")
     .then(function(response){
         var data =response.data.data.list;
         if(data.length){
@@ -23,7 +26,7 @@ Banner()
 
 
 function getProductList(){
-    axios.post(url+"/api/products/getProducts")
+    axios.post("https://goods.adteam.info/api/products/getProducts")
     .then(function(response){
         var data =response.data.data.list;
         console.log(data);

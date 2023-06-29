@@ -351,6 +351,8 @@ function bindProductDetailEvent(data, url) {
   const buyNow = document.querySelector(".buynow");
   buyNow.addEventListener("click", function (e) {
     console.log("==========buynow===========");
+    console.log(data.id);
+    console.log('---------------');
     console.log(num);
     console.log(data);
     console.log(data.price);
@@ -359,19 +361,17 @@ function bindProductDetailEvent(data, url) {
     console.log("==========buynow===========");
     const productList = document.querySelector(".product-list");
     let Arr = [];
-    Arr.push(num)
-    Arr.push(data.price)
-    Arr.push(data.title)
-    Arr.push(data.images[0])
-    Arr.push(data.color)
+    Arr.push(num,data.price,data.title,data.images[0],data.color,data.id)
     console.log(Arr);
     Arr.map((item)=>{
+      const id = Arr[5]
       const num = parseInt(Arr[0]);
       const price = parseFloat(Arr[1]);
       const title = Arr[2];
       const total = num*price;
       const img = Arr[3];
       const nowProduct = {
+        id:id,
         num:num,
         price:price,
         title:title,
