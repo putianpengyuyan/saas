@@ -42,7 +42,7 @@ if(Token){
     userUser.style.display = 'block'
 
     userUser.addEventListener('click',function(){
-        location.href='root.html'
+        location.href='order-list.html'
     })
 }
 else{

@@ -12,10 +12,10 @@
     <!-- 初始化 -->
     <link rel="stylesheet" href="./css/初始化.css">
     <link rel="stylesheet" href="./layui/css/layui.css">
-    <link rel="stylesheet" href="./css/root.css">
+    <link rel="stylesheet" href="./css/order-list.css">
     <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.4/jquery.js"></script>
     <script src="https://cdn.bootcdn.net/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"></script>
-    <title>root</title>
+    <title>order-list</title>
 </head>
 
 <body>
@@ -54,68 +54,43 @@
                             <div class="container">
                                 <div class="left">
                                     <ul>
-                                        <h2><a href="#">Tops</a></h2>
-                                        <li><a href="#">Blouses & Shirts</a></li>
-                                        <li><a href="#">T-shirts</a></li>
-                                        <li><a href="#">Tank Tops & Camis</a></li>
-                                        <li><a href="#">Crop Tops</a></li>
-                                        <li><a href="#">Kimonos</a></li>
+                                        <h2><a href="./shop.html">Tops</a></h2>
+                                        <li><a href="./shop.html">Blouses & Shirts</a></li>
+                                        <li><a href="./shop.html">T-shirts</a></li>
+                                        <li><a href="./shop.html">Tank Tops & Camis</a></li>
+                                        <li><a href="./shop.html">Crop Tops</a></li>
+                                        <li><a href="./shop.html">Kimonos</a></li>
                                     </ul>
                                     <ul>
-                                        <h2><a href="#">Outwear & Sweaters</a></h2>
-                                        <li><a href="#">Coats</a></li>
-                                        <li><a href="#">Sweaters</a></li>
-                                        <li><a href="#">Blazers</a></li>
-                                        <li><a href="#">Jackers</a></li>
-                                        <li><a href="#">Cardigans</a></li>
+                                        <h2><a href="./shop.html">Outwear & Sweaters</a></h2>
+                                        <li><a href="./shop.html">Coats</a></li>
+                                        <li><a href="./shop.html">Sweaters</a></li>
+                                        <li><a href="./shop.html">Blazers</a></li>
+                                        <li><a href="./shop.html">Jackers</a></li>
+                                        <li><a href="./shop.html">Cardigans</a></li>
                                     </ul>
                                     <ul>
-                                        <h2><a href="#">Hoodies</a></h2>
-                                        <li><a href="#">Hoodies</a></li>
-                                        <li><a href="#">Sweat Shirts</a></li>
+                                        <h2><a href="./shop.html">Hoodies</a></h2>
+                                        <li><a href="./shop.html">Hoodies</a></li>
+                                        <li><a href="./shop.html">Sweat Shirts</a></li>
                                     </ul>
                                     <ul>
-                                        <h2><a href="#">Cover Ups</a></h2>
+                                        <h2><a href="./shop.html">Cover Ups</a></h2>
                                     </ul>
 
                                 </div>
-                                <div class="right">
-                                    <div class="row">
-                                        <div class="col">
-                                            <a href="#">
-                                                <div class="common-img-box">
-                                                    <img src="./upload/裙.webp" alt="">
-                                                </div>
-                                            </a>
-                                            <div class="text">
-                                                <h2>Long-sleeve Maxi Dress</h2>
-                                                <p>$108.00</p>
-                                            </div>
-                                        </div>
-                                        <div class="col">
-                                            <a href="#">
-                                                <div class="common-img-box">
-                                                    <img src="./upload/裤.webp" alt="">
-                                                </div>
-                                            </a>
-                                            <div class="text">
-                                                <h2>Light Denim Jacket</h2>
-                                                <p>$58.00</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                
                             </div>
                         </div>
                         <!-- product -->
                         <div class="product-item">
                             <div class="container">
                                 <ul>
-                                    <li><a href="#">Dresses</a></li>
-                                    <li><a href="#">OuterWears</a></li>
-                                    <li><a href="#">Bottoms</a></li>
-                                    <li><a href="#">Tops</a></li>
-                                    <li><a href="#">New in</a></li>
+                                    <li><a href="./productDetail.html">Dresses</a></li>
+                                    <li><a href="./productDetail.html">OuterWears</a></li>
+                                    <li><a href="./productDetail.html">Bottoms</a></li>
+                                    <li><a href="./productDetail.html">Tops</a></li>
+                                    <li><a href="./productDetail.html">New in</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -156,33 +131,32 @@
             <!-- 内容 -->
             <div class="page-content-body">
                 <div class="drag-item">
-                    <!-- 有订单 -->
+                    <!-- 无订单 -->
                     <div class="container1">
+                        <h2>No Order</h2>
                         <a href="./index.html">Go shopping</a>
                     </div>
-                    <!-- 无订单 -->
+                    <!-- 有订单 -->
                     <div class="container2">
                         <div class="main">
-                            <div class="table-header">                        
+                            <div class="table-header">
+                                <div class="title">全部订单</div>
                             </div>
                             <ul class="table-body">
-                                <li>
-                                    <div class="c-product-item">
-                                        <div class="top">
-                                            <a href="#">
-                                                <div class="img-box">
-                                                    <img src="./upload/tin1.webp" alt="">
-                                                </div>
-                                            </a>
-                                        </div>
-                                        <div class="info">
-                                            <a href="#" class="title">Tinted Sunglasses</a>
-                                            <div class="c-color">Black <span class="num">× 2</span></div>
-                                            <div class="price">$21.43 </div>
-                                        </div>
+                                <!-- <li>
+                                    <div class="order-number">3412564565</div>
+                                    <div class="right-box">
+                                        <div class="order-price">$2355.00</div>
+                                        <div class="order-status">已支付</div>
                                     </div>
-                                    <div class="c-total-item">$42.86</div>
                                 </li>
+                                <li>
+                                    <div class="order-number">3412564565</div>
+                                    <div class="right-box">
+                                        <div class="order-price">$2355.00</div>
+                                        <div class="order-status">已支付</div>
+                                    </div>
+                                </li> -->
                             </ul>
                         </div>
                     </div>
@@ -193,11 +167,12 @@
 
 
     <script src="./layui/layui.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="./utils/LocalStorageUtil.js"></script>
-    <script src="./js/root.js"></script>
+    <!-- <script src="./js/root.js"></script> -->
     <script src="./js/tab.js"></script>
     <script src="./js/Logout.js"></script>
-    <!-- <script src="./js/shopping-cart.js "></script> -->
+    <script src="./js/order-list.js"></script>
     <script>
     
 

@@ -45,7 +45,7 @@ function getProductList() {
                         <div class="star">
                             <div id=${item.star}></div>
                         </div>
-                        <div class="price">$${item.price}</div>
+                        <div class="price">$${item.price} <span>$${item.costprice}</span></div>
                         </div>
                     </a>
                 </div>
@@ -63,7 +63,7 @@ function getProductList() {
                         <div class="star">
                             <div id=${item.star}></div>
                         </div>
-                        <div class="price">$${item.price}</div>
+                        <div class="price">$${item.price} <span>$${item.costprice}</span></div>
                         </div>
                     </a>
                 </div>

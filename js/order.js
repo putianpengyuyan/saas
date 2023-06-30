@@ -1,6 +1,6 @@
 const url = "https://goods.adteam.info";
 const freight = document.querySelector(".freight");
-console.log(freight.innerText);
+
 const shipTxt = document.querySelector(".ship-txt");
 const courier = document.querySelector(".courier");
 let EndProduct = []
@@ -28,10 +28,12 @@ function getCourier() {
         const ships = document.querySelectorAll(".shipping");
         const shipIs = document.querySelectorAll(".ship-i");
         const freightAmounts = document.querySelectorAll(".freight-amount");
+        
         for (let i = 0; i < ships.length; i++) {
           const ship = ships[i];
           const shipI = shipIs[i];
           const freightAmount = freightAmounts[i];
+         
           ship.addEventListener("click", function (e) {
             console.log(e.target);
             let innerText, parentDiv;
@@ -63,16 +65,21 @@ function getCourier() {
             var shipFreight = parseFloat(shipTxt.innerText.replace("$", ""));
             let totalAmount = shipFreight;
 
-            if (localStorage.getItem("shopping_cart-total")) {
+            if (localStorage.getItem("EndProduct")) {
               totalAmount += parseFloat(
                 localStorage.getItem("shopping_cart-total")
               );
+              const subtotal = JSON.parse(localStorage.getItem('shopping_cart-total'))
+              document.querySelector(".subtotal").innerText = `$${subtotal}`
             } else {
               const newProduct =
                 localStorage.getItem("newProduct") &&
                 JSON.parse(localStorage.getItem("newProduct"));
               totalAmount += parseFloat(newProduct.total);
+              const BuyArr = JSON.parse(localStorage.getItem("newProduct"));
+              document.querySelector(".subtotal").innerText = `$${BuyArr.total.toFixed(2)}`
             }
+
             document.querySelector(
               ".price-total"
             ).innerText = `$${totalAmount.toFixed(2)}`;
@@ -98,6 +105,8 @@ function getCourier() {
         num:BuyArr.num,
         title:BuyArr.title,
         img:url + BuyArr.img,
+        price:BuyArr.price,
+        total:BuyArr.total
       }
       EndProduct.push(EndProductItem)
       localStorage.setItem('EndProduct',JSON.stringify(EndProduct))
@@ -132,7 +141,7 @@ function getCourier() {
       console.log(selectedFreight);
       console.groupEnd("new Product------");
       productList.appendChild(productItem);
-      document.querySelector(".txt").innerText = `$${BuyArr.total}`;
+      document.querySelector(".subtotal").innerText = `$${BuyArr.total}`;
       const ToTal = parseFloat(BuyArr.total) + parseFloat(selectedFreight);
       document.querySelector(".price-total").innerText = `$${ToTal}`;
       } else if (localStorage.getItem("shopping_cart")) {
@@ -162,15 +171,18 @@ function getCourier() {
           id:item.id,
           num:item.num,
           title:item.title,
-          img:item.img
+          img:item.img,
+          price:item.price,
+          total:item.total
         }
         EndProduct.push(EndProductItem)
+        console.log(EndProductItem);
         localStorage.setItem('EndProduct',JSON.stringify(EndProduct))
         console.log('------end-------');
         console.log(EndProduct);
         productList.appendChild(productItem);
         const ToTal = parseFloat(item.total) + parseFloat(selectedFreight);
-        document.querySelector(".txt").innerText = `$${item.total.toFixed(2)}`;
+        document.querySelector(".subtotal").innerText = `$${item.total.toFixed(2)}`;
         document.querySelector(".price-total").innerText = `$${ToTal.toFixed(2)}`;
       });
       // const shoppingCartTotal = JSON.parse(localStorageUtil.getShoppingCartTotal());
@@ -227,12 +239,19 @@ ${userManagement.telephone}
 `;
 
 // order
+
+
+let goods = []
 const orderBtn = document.querySelector("[name=order]");
+const token = $.cookie('Token')
 orderBtn.addEventListener("click", function () {
   
   console.log("========================");
   console.log(userManagement);
-  console.log(freight.innerText.replace('$',''));
+  console.log("========================");
+  const freight = document.querySelector('.ship-txt').innerHTML.replace('$','')
+  console.log(freight);
+  console.log("========================");
   console.log(document.querySelector(".price-total").innerText.replace('$',''));
   const EndProduct = JSON.parse(localStorage.getItem('EndProduct'))
   console.log(EndProduct);
@@ -245,12 +264,14 @@ orderBtn.addEventListener("click", function () {
   const postCodeComponent = userManagement.postCode
   const telephoneComponent = userManagement.telephone
   const emailComponent = userManagement.email
-  const id = EndProduct.id
-  const num = EndProduct.num
-  const token = $.cookie('Token')
+  goods = EndProduct
+  console.log("========================");
+  console.log(goods);
+  console.log("=-=--=-=-=-=goods=-=-=-=-=-=-");
+  
   if(token){
     PlaceOrder(firstName,lastName,addressComponent, cityComponent,
-    countryComponent, emailComponent,postCodeComponent,telephoneComponent,id,num,token)
+    countryComponent, emailComponent,postCodeComponent,telephoneComponent,goods,token,freight)
   }
   else{
     location.href='login.html'
@@ -264,6 +285,10 @@ orderBtn.addEventListener("click", function () {
   
 });
 
+
+const config = {
+  headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
+}
 // api
 function PlaceOrder(
   firstName,
@@ -274,9 +299,9 @@ function PlaceOrder(
   emailComponent,
   postCodeComponent,
   telephoneComponent,
-  id,
-  num,
-  token
+  goods,
+  token,
+  freight
 ) {
   axios
     .post("https://goods.adteam.info/api/products/addOrder", {
@@ -288,13 +313,16 @@ function PlaceOrder(
       "code": postCodeComponent,
       "email": emailComponent,
       "telephone": telephoneComponent,
-      "goods[][id]":id,
-      "goods[][num]":num,
-      token
-    })
+      "goods":JSON.stringify(goods),
+      token,
+      courier:freight
+    },config)
     .then(
       function (response) {
+        var orderNumber = response.data.data.data
         console.log(response);
+        pay(orderNumber,token)
+
       },
       function (err) {
         console.log(err);
@@ -310,3 +338,29 @@ function Shipping(){
   })
 }
 Shipping()
+
+
+function pay(orderNumber){
+  axios.post("https://goods.adteam.info/api/products/pay",{
+    orderNo:orderNumber,
+    token
+  },config)
+  .then(
+    res=>{
+      var url = res.data.data.data
+      console.log(res);
+      console.log(url);
+      location.href=url
+      localStorage.removeItem('shopping_cart-total');
+      localStorage.removeItem('newProduct');
+      localStorage.removeItem('newProduct');
+      localStorage.removeItem('shopping_cart');
+      localStorage.removeItem('ProductId');
+      localStorage.removeItem('user_order');
+      localStorage.removeItem('shopping_cart_total_num');
+    },
+    err=>{
+      console.log(err);
+    }
+  )
+}

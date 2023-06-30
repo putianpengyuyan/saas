@@ -129,6 +129,7 @@
 .page-content-body .drag-item .collection-box .container .info .list-box .main-box .operation-box .infinite-list .row .col a .bottom-text .price {
   height: 24px;
   font-size: 16px;
+  color: #f03d3d;
 }
 .page-content-body .drag-item .collection-box .container .info .list-box .main-box .operation-box .infinite-list .row .col a .bottom-text .price span {
   text-decoration: line-through;
@@ -179,6 +180,7 @@
 .page-content-body .drag-item .collection-box .container .info .list-box .main-box .operation-box .infinite-list2 .row .col a .bottom-text .price {
   height: 24px;
   font-size: 16px;
+  color: #f03d3d;
 }
 .page-content-body .drag-item .collection-box .container .info .list-box .main-box .operation-box .infinite-list2 .row .col a .bottom-text .price span {
   text-decoration: line-through;

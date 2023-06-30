@@ -64,7 +64,7 @@
 }
 .page-content-body .drag-item2 .container .row .col {
   flex: 1;
-  height: 600%;
+  height: 600px;
   width: 374px;
   padding: 0 10px 27px;
 }
@@ -72,10 +72,13 @@
   display: block;
   height: 100%;
   width: 100%;
+  overflow: hidden;
   background-color: #fff;
 }
 .page-content-body .drag-item2 .container .row .col a .common-img-box {
   padding: 0 0 20px;
+  height: 450px;
+  width: 100%;
 }
 .page-content-body .drag-item2 .container .row .col a .common-img-box img {
   width: 100%;
@@ -98,6 +101,12 @@
   margin: 10px 0 0;
   font-size: 16px;
   font-weight: normal;
+  color: #f03d3d;
+}
+.page-content-body .drag-item2 .container .row .col a .info-box .price span {
+  font-size: 15px;
+  color: #666666;
+  text-decoration: line-through;
 }
 .page-content-body .drag-item3 {
   margin: 0 auto;
@@ -305,7 +314,8 @@
 }
 .page-content-body .drag-item6 .container .row .col a .common-img-box {
   padding: 0 0 20px;
-  overflow: hidden;
+  height: 450px;
+  width: 100%;
 }
 .page-content-body .drag-item6 .container .row .col a .common-img-box img {
   width: 100%;
@@ -331,7 +341,13 @@
 .page-content-body .drag-item6 .container .row .col a .info-box .price {
   margin: 10px 0 0;
   font-size: 16px;
+  color: #f03d3d;
   font-weight: normal;
+}
+.page-content-body .drag-item6 .container .row .col a .info-box .price span {
+  font-size: 15px;
+  color: #666666;
+  text-decoration: line-through;
 }
 .page-content-body .drag-item7 {
   height: 655px;

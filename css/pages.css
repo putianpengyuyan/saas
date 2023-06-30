@@ -4,12 +4,12 @@
 }
 .page-content-body .drag-item {
   width: 1200px;
-  height: 100%;
+  height: 600px;
   margin: 0 auto;
 }
 .page-content-body .drag-item .container {
   width: 100%;
-  height: 100%;
+  height: 600px;
   padding: 0 20px;
 }
 .page-content-body .drag-item .container h4 {

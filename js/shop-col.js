@@ -24,8 +24,12 @@ function getProductDetails(id) {
     }
   );
 }
+if(localStorage.getItem('ProductId')){
+  getProductDetails(JSON.parse(localStorage.getItem('ProductId')));
+}else{
+  getProductDetails(1);
+}
 
-getProductDetails(JSON.parse(localStorage.getItem('ProductId')));
 
 const shopProductList = [
   {

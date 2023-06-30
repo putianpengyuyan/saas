@@ -1,18 +1,18 @@
 // select
-const itemSelect = document.querySelector('.item-select')
-const selectBox = document.querySelector('.select-box')
-const app2 = document.querySelector('#app')
-itemSelect.addEventListener('click',function(e){
-    e.stopPropagation()
-    selectBox.style.display = 'block'
-})
-selectBox.addEventListener('click',function(){
-    selectBox.style.display = 'none'
-})
-app2.addEventListener('click',function(e){
-    e.stopPropagation()
-    selectBox.style.display = 'none'
-})
+// const itemSelect = document.querySelector('.item-select')
+// const selectBox = document.querySelector('.select-box')
+// const app2 = document.querySelector('#app')
+// itemSelect.addEventListener('click',function(e){
+//     e.stopPropagation()
+//     selectBox.style.display = 'block'
+// })
+// selectBox.addEventListener('click',function(){
+//     selectBox.style.display = 'none'
+// })
+// app2.addEventListener('click',function(e){
+//     e.stopPropagation()
+//     selectBox.style.display = 'none'
+// })
 
 
 function getProductList(){

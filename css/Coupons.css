@@ -117,8 +117,10 @@
   line-height: 24px;
   font-size: 16px;
   margin: 0 0 10px;
+  color: #f03d3d;
 }
 .page-content-body .container .col .info-box .price span {
   font-size: 14px;
+  color: #666666;
   text-decoration: line-through;
 }
