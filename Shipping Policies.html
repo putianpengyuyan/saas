@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- icon -->
+    <link rel="shortcut icon" href="#" type="image/x-icon">
     <!-- 判断屏幕尺寸 -->
     <!-- <link rel="stylesheet" href="./css/style720.css" media="screen and min-width:720px"> -->
     <!--公共区 -->
@@ -128,12 +130,12 @@
         <!-- 内容 -->
         <div class="page-content-body">
             <div class="drag-item">
-                <div class="container">
-                    <h4>Shopping Policies</h4>
+                <div class="container shipping-policies">
+                    <!-- <h4>Shopping Policies</h4>
                     <div class="mb-4">
                         <p>Shipping cost is based on weight. Just add products to your cart and use the Shipping Calculator to see the shipping price.</p>
                         <p>We want you to be 100% satisfied with your purchase. Items can be returned or exchanged within 30 days of delivery.</p>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
@@ -190,9 +192,7 @@
                             <div class="menu-link">
                                 <p>Newsletter</p>
                                 <div class="mb-10">
-                                    <span>Use this text to describe products,share details
-                                        on availability and style,or as a space to
-                                        display recent reviews or FAQs.</span>
+                                    <span class="address"></span>
                                 </div>
                                 <form action="">
                                     <div class="from-content">
@@ -241,8 +241,10 @@
     
 
     <script src="./layui/layui.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="./utils/LocalStorageUtil.js"></script>
     <script src="./js/root.js"></script>
     <script src="./js/tab.js"></script>
+    <script src="./js/shipping-policies.js"></script>
 </body>
 </html>

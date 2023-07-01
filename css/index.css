@@ -2,13 +2,13 @@
   box-sizing: border-box;
 }
 .page-content-body .drag-item1 {
-  height: 600px;
+  height: 400px;
   width: 100%;
   margin: 0 auto;
 }
 .page-content-body .drag-item1 .banner {
   width: 100%;
-  height: 600px;
+  height: 400px;
 }
 .page-content-body .drag-item1 .banner .swiper {
   width: 100%;

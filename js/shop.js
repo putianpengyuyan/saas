@@ -103,3 +103,16 @@ next.addEventListener("click", function (e) {
 // clear.addEventListener('click',function(){
 //     filter.style.display = 'none'
 // })
+
+function ShopList(){
+  axios.post('https://goods.adteam.info/api/products/category')
+  .then(res=>{
+    console.log(res);
+  }
+  ,err=>{
+    console.log(err);
+  }
+
+  )
+}
+ShopList()
