@@ -6,14 +6,14 @@
 }
 .page-content-body .drag-item .banner {
   width: 100%;
-  height: 495px;
+  height: 21.875rem;
 }
 .page-content-body .drag-item .banner img {
   width: 100%;
   height: 100%;
 }
 .page-content-body .drag-item .coupon-view {
-  height: 82px;
+  height: 5.125rem;
   width: 100%;
   background-image: linear-gradient(to right, #ff4848, #ff0d7d);
   text-align: center;
@@ -22,21 +22,21 @@
   height: 100%;
 }
 .page-content-body .container {
-  width: 1440px;
+  width: 90rem;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 1.25rem;
 }
 .page-content-body .container .sort-box {
   width: 100%;
-  height: 84px;
-  padding: 24px 0;
+  height: 5.25rem;
+  padding: 1.5rem 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 .page-content-body .container .sort-box .item {
   height: 100%;
-  font-size: 16px;
+  font-size: 1rem;
 }
 .page-content-body .container .sort-box .box {
   display: flex;
@@ -45,38 +45,38 @@
   position: relative;
 }
 .page-content-body .container .sort-box .box span {
-  font-size: 16px;
+  font-size: 1rem;
 }
 .page-content-body .container .sort-box .box .item-select {
-  width: 200px;
-  height: 36px;
-  line-height: 36px;
-  padding: 0 10px;
-  border: 1px solid #dcdfe6;
-  margin-left: 20px;
+  width: 12.5rem;
+  height: 2.25rem;
+  line-height: 2.25rem;
+  padding: 0 0.625rem;
+  border: 0.0625rem solid #dcdfe6;
+  margin-left: 1.25rem;
 }
 .page-content-body .container .sort-box .box .select-box {
   display: none;
   position: absolute;
-  top: 50px;
+  top: 3.125rem;
   right: 0;
-  width: 200px;
-  border: 1px solid #dcdfe6;
+  width: 12.5rem;
+  border: 0.0625rem solid #dcdfe6;
   background-color: #fff;
 }
 .page-content-body .container .sort-box .box .select-box .sort-item {
-  height: 46px;
-  line-height: 45px;
+  height: 2.875rem;
+  line-height: 2.8125rem;
   text-align: left;
-  padding: 0 16px;
-  font-size: 16px;
-  border-bottom: 1px solid #dcdfe6;
+  padding: 0 1rem;
+  font-size: 1rem;
+  border-bottom: 0.0625rem solid #dcdfe6;
 }
 .page-content-body .container .sort-box .box .select-box .sort-item:hover {
   background-color: #dcdfe6;
 }
 .page-content-body .container .row {
-  width: 1440px;
+  width: 90rem;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -84,15 +84,15 @@
   align-items: center;
 }
 .page-content-body .container .col {
-  height: 480px;
-  width: 265px;
-  padding: 0 9px;
-  margin: 0 0 24px;
+  height: 31.25rem;
+  width: 16.5625rem;
+  padding: 0 0.5625rem;
+  margin: 0 0 1.5rem;
 }
 .page-content-body .container .col a {
   display: block;
   width: 100%;
-  height: 360px;
+  height: 22.5rem;
   transition: all 0.3s;
 }
 .page-content-body .container .col a img {
@@ -103,24 +103,24 @@
   transform: scale(1.02);
 }
 .page-content-body .container .col .info-box {
-  padding: 10px 0 0;
-  height: 100px;
+  padding: 0.625rem 0 0;
+  height: 6.25rem;
   width: 100%;
 }
 .page-content-body .container .col .info-box .pro-title {
-  height: 24px;
-  line-height: 24px;
-  font-size: 18px;
+  height: 1.5rem;
+  line-height: 1.5rem;
+  font-size: 1.125rem;
 }
 .page-content-body .container .col .info-box .price {
-  height: 24px;
-  line-height: 24px;
-  font-size: 16px;
-  margin: 0 0 10px;
+  height: 1.5rem;
+  line-height: 1.5rem;
+  font-size: 1rem;
+  margin: 0 0 0.625rem;
   color: #f03d3d;
 }
 .page-content-body .container .col .info-box .price span {
-  font-size: 14px;
+  font-size: 0.875rem;
   color: #666666;
   text-decoration: line-through;
 }

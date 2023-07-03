@@ -273,7 +273,8 @@ if (!LocalShoppingCart || LocalShoppingCart.length === 0) {
 }
 
 function Render(){
-  const userManagement = JSON.parse(localStorage.getItem('user_order'))
+  if(localStorage.getItem('user_order')){
+    const userManagement = JSON.parse(localStorage.getItem('user_order'))
   console.log(userManagement);
   console.log(userManagement.email);
   email.value = userManagement.email
@@ -285,6 +286,8 @@ function Render(){
   address.value = userManagement.address
   city.value = userManagement.city
   country.value = userManagement.country
+  }
+  
 }
 Render()
 

@@ -44,24 +44,26 @@ function OrderList() {
                     const li = document.createElement("li");
                     
                     li.innerHTML = `
-                    <div class="left-box">
-                        
-                            <div class="img-box">
-                                <img src="./upload/tin1.webp" alt="">
-                            </div>
-                       
-                        <div class="info">
-                            <div class="order-number">订单编号：${item.orderOn}</div>
-                            <div class="title">Tinted Sunglasses</div>
-                            <div class="color">Black</div>
-                            <div class="size">L</div>
-                        </div>
+                    <div class="top">
+                    <div class="order-number">订单编号：${item.orderOn}</div>
                     </div>
-                    <div class="right-box">
-                        <div class="order-price">$${item.accout}</div>
-                        <div class="order-status">已支付</div>
-                    <div>
-                </div>
+                    
+                    <div class="bottom">
+                        <div class="left-box">
+                                <div class="img-box">
+                                    <img src="./upload/sun.webp" alt="">
+                                </div>
+                            <div class="info">
+                                <div class="title">商品名称: Tinted Sunglasses</div>
+                                <div class="color">颜色: Black</div>
+                                <div class="size">尺码: L</div>
+                            </div>
+                        </div>
+                        <div class="right-box">
+                            <div class="order-price">应付款： $${item.accout}</div>
+                            <div class="order-status">已支付</div>
+                        <div>
+                    </div>
                     
                     `;
                     ul.appendChild(li)
@@ -93,34 +95,3 @@ function OrderList() {
 }
 OrderList();
 
-let icon = "iocn";
-function Icon() {
-  axios
-    .post(`https://goods.adteam.info/api/products/getConfingText`, {"type":icon})
-    .then((res) => {
-      var text = res.data.data.list;
-      if (text) {
-        document.querySelector('link[type="image/x-icon"]').href= `${url}${text}`
-        // logo.src=`${url}+${text}`
-        console.log(text);
-      }
-    });
-}
-Icon();
-
-
-let ShangName = 'name'
-function Name(){
-    axios
-    .post(`https://goods.adteam.info/api/products/getConfingText`, {"type":ShangName})
-    .then((res) => {
-      var text = res.data.data.list;
-      if (text) {
-        const title = document.querySelector('title')
-        title.innerText= `${text}`
-        console.log(text);
-      }
-    });
-
-}
-Name()

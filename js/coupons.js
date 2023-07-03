@@ -25,7 +25,7 @@ function getProductList(){
             data.map((item)=>{
                 const col = document.createElement('div')
                 col.innerHTML=`
-                <div class="col">
+                <div class="col" id="${item.id}">
                     <a href="./productDetail.html">
                         <div class="common-img-box">
                             <img src=${url+item.images[0]} alt="">
@@ -47,6 +47,7 @@ function getProductList(){
             for (let i = 0; i < colArr.length; i++) {
               const col = colArr[i];
               col.addEventListener("click", function () {
+                console.log('--------------');
                 console.log(colArr[i].id);
                 let ProductId = []
                 const id = colArr[i].id

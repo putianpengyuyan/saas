@@ -6,27 +6,27 @@
 }
 .page-content-body .drag-item .container1 {
   display: none;
-  width: 1440px;
+  width: 90rem;
   margin: 0 auto;
-  height: 600px;
+  height: 37.5rem;
   text-align: center;
 }
 .page-content-body .drag-item .container1 h2 {
-  height: 152px;
-  padding: 56px 16px;
-  font-size: 36px;
+  height: 9.5rem;
+  padding: 3.5rem 1rem;
+  font-size: 2.25rem;
   font-weight: normal;
 }
 .page-content-body .drag-item .container1 a {
   display: block;
-  width: 200px;
-  height: 44px;
-  line-height: 44px;
-  border-radius: 6px;
-  margin: 300px auto;
+  width: 12.5rem;
+  height: 2.75rem;
+  line-height: 2.75rem;
+  border-radius: 0.375rem;
+  margin: 18.75rem auto;
   background-color: black;
   color: #fff;
-  font-size: 16px;
+  font-size: 1rem;
   transition: all 0.3s;
 }
 .page-content-body .drag-item .container1 a:hover {
@@ -34,14 +34,14 @@
 }
 .page-content-body .drag-item .container2 {
   display: block;
-  width: 1440px;
+  width: 90rem;
   margin: 0 auto;
   text-align: center;
 }
 .page-content-body .drag-item .container2 h2 {
-  height: 152px;
-  padding: 56px 16px;
-  font-size: 36px;
+  height: 9.5rem;
+  padding: 3.5rem 1rem;
+  font-size: 2.25rem;
   font-weight: normal;
 }
 .page-content-body .drag-item .container2 .main {
@@ -49,14 +49,14 @@
 }
 .page-content-body .drag-item .container2 .main .table-header {
   width: 100%;
-  height: 50px;
+  height: 3.125rem;
   display: flex;
   justify-content: start;
   align-items: center;
-  padding: 32px 10px;
-  font-size: 16px;
-  border-bottom: 1px solid #b8b8b8;
-  margin-bottom: 20px;
+  padding: 2rem 0.625rem;
+  font-size: 1rem;
+  border-bottom: 0.0625rem solid #b8b8b8;
+  margin-bottom: 1.25rem;
 }
 .page-content-body .drag-item .container2 .main .table-body {
   width: 100%;
@@ -65,61 +65,67 @@
   flex-direction: column;
 }
 .page-content-body .drag-item .container2 .main .table-body li {
-  margin-top: 10px;
-  display: flex;
-  justify-content: space-between;
+  margin-top: 1.25rem;
   width: 100%;
-  height: 150px;
-  padding: 32px 10px;
-  font-size: 16px;
+  padding: 0.625rem;
+  font-size: 1rem;
   text-align: left;
   background-color: transparent;
-  border-radius: 5px;
-  border-bottom: 1px solid #b8b8b8;
+  border-radius: 0.125rem;
+  border-bottom: 0.0625rem solid #b8b8b8;
 }
-.page-content-body .drag-item .container2 .main .table-body li .left-box {
+.page-content-body .drag-item .container2 .main .table-body li .top {
+  padding: 0.625rem;
+}
+.page-content-body .drag-item .container2 .main .table-body li .top .order-number {
+  color: #3160c4;
+  font-size: 1rem;
+}
+.page-content-body .drag-item .container2 .main .table-body li .bottom {
+  margin-top: 0.625rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+.page-content-body .drag-item .container2 .main .table-body li .bottom .left-box {
   display: flex;
   align-items: center;
 }
-.page-content-body .drag-item .container2 .main .table-body li .left-box .img-box {
-  margin: 0 10px;
-  width: 70px;
-  height: 90px;
-  background-color: brown;
+.page-content-body .drag-item .container2 .main .table-body li .bottom .left-box .img-box {
+  margin: 0 0.625rem;
+  width: 4.375rem;
+  height: 5.625rem;
 }
-.page-content-body .drag-item .container2 .main .table-body li .left-box .img-box img {
+.page-content-body .drag-item .container2 .main .table-body li .bottom .left-box .img-box img {
   width: 100%;
   height: 100%;
 }
-.page-content-body .drag-item .container2 .main .table-body li .left-box .info {
-  margin: 0 20px;
-  height: 90px;
+.page-content-body .drag-item .container2 .main .table-body li .bottom .left-box .info {
+  margin: 0 0.625rem;
+  height: 5.625rem;
+  color: #5a5a5a;
 }
-.page-content-body .drag-item .container2 .main .table-body li .left-box .info .order-number {
-  color: #3160c4;
-  font-size: 16px;
+.page-content-body .drag-item .container2 .main .table-body li .bottom .left-box .info .title {
+  margin-top: 0.625rem;
+  font-size: 1rem;
 }
-.page-content-body .drag-item .container2 .main .table-body li .left-box .info .title {
-  margin-top: 10px;
-  font-size: 14px;
+.page-content-body .drag-item .container2 .main .table-body li .bottom .left-box .info .color {
+  font-size: 0.9375rem;
 }
-.page-content-body .drag-item .container2 .main .table-body li .left-box .info .color {
-  font-size: 14px;
+.page-content-body .drag-item .container2 .main .table-body li .bottom .left-box .info .size {
+  font-size: 0.875rem;
 }
-.page-content-body .drag-item .container2 .main .table-body li .left-box .info .size {
-  font-size: 14px;
-}
-.page-content-body .drag-item .container2 .main .table-body li .right-box .order-price {
-  margin-top: 30px;
+.page-content-body .drag-item .container2 .main .table-body li .bottom .right-box .order-price {
+  margin-top: 1.875rem;
   color: #070707;
-  font-size: 20px;
+  font-size: 1.125rem;
 }
-.page-content-body .drag-item .container2 .main .table-body li .right-box .order-status {
-  margin-top: 20px;
+.page-content-body .drag-item .container2 .main .table-body li .bottom .right-box .order-status {
+  margin-top: 1.25rem;
   text-align: right;
   color: #34cf7a;
 }
-.page-content-body .drag-item .container2 .main .table-body li .right-box .err-status {
+.page-content-body .drag-item .container2 .main .table-body li .bottom .right-box .err-status {
   text-align: right;
   color: #ec3d1e;
 }

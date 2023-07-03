@@ -3,9 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <!-- icon -->
     <link rel="shortcut icon" href="#" type="image/x-icon">
+    <!-- 判断屏幕尺寸 -->
+    <link rel="stylesheet" href="./css/style1440.css" media="screen and (max-width:1440px)">
     <link rel="stylesheet" href="./layui/css/layui.css">
     <link rel="stylesheet" href="./css/初始化.css">
     <link rel="stylesheet" href="./css/checkout.css">
@@ -28,7 +30,7 @@
                                 <i class="layui-icon layui-icon-right" style="padding: 0 5px; color: rgb(173, 173, 172);"></i>
                                 <div class="uppercase">payment method</div>
                             </div>
-                            <div class="pay">
+                            <!-- <div class="pay">
                                 <div class="payment-box">
                                     <div class="col-md-12">
                                         <div class="paypal-button-container">
@@ -49,7 +51,7 @@
                                     <div class="or">or</div>
                                     <div class="line"></div>
                                 </div>
-                            </div>
+                            </div> -->
                             <div class="contact">
                                 <h2>Contact</h2>
                                 <form action="" autocomplete="off">
@@ -524,5 +526,6 @@
     <script src="./utils/LocalStorageUtil.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="./js/checkbox.js"></script>
+    <script src="./js/icon-title.js"></script>
 </body>
 </html>
