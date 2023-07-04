@@ -1,11 +1,10 @@
 #app .content-box {
-
   .page-content-header,
   .bottom-nav,
   .top-nav {
     width: 100%;
     margin: 0 auto;
-    padding: 0 .625rem;
+    padding: 0 0.625rem;
   }
 
   .page-content-body {
@@ -189,7 +188,7 @@
                 .common-img-box {
                   width: 100%;
                   height: 25rem;
-                  img{
+                  img {
                     width: 100%;
                     height: 100%;
                   }
@@ -391,7 +390,7 @@
 
               .left-swiper {
                 width: 4.375rem;
-                margin-right: .625rem;
+                margin-right: 0.625rem;
               }
 
               .right-swiper {
@@ -421,10 +420,9 @@
 
                 .discount-tag {
                   width: 4.375rem;
-                  padding: 0 .3125rem;
+                  padding: 0 0.3125rem;
                 }
               }
-
             }
 
             .coupon-box {
@@ -436,7 +434,11 @@
               width: 100%;
 
               .product-options1 {
-                margin-top: 6.875rem;
+                position: absolute;
+                top: 11.875rem;
+                height: 5rem;
+                width: 100%;
+                margin: 0 0;
               }
             }
           }
@@ -458,7 +460,6 @@
               .info-box {
                 width: 100%;
                 margin: 0;
-
               }
             }
           }
@@ -488,7 +489,6 @@
 
               .main-box {
                 width: 100%;
-
                 .infinite-list {
                   width: 100%;
 
@@ -497,19 +497,56 @@
                     height: 31.25rem;
                     display: flex;
                     flex-wrap: nowrap;
+                    div {
+                      .col {
+                        flex: 1;
+                        height: 25rem;
+                        a {
+                          display: block;
+                          width: 100%;
+                          height: 100%;
+                          .img-box {
+                            width: 100%;
+                            height: 22.5rem;
+                            img {
+                              width: 100%;
+                              height: 100%;
+                            }
+                          }
+                        }
 
-                  }
-                }
+                        .infinite-list2 {
+                          width: 100%;
 
-                .infinite-list2 {
-                  width: 100%;
-
-                  .row {
-                    width: 100%;
-                    height: 31.25rem;
-                    display: flex;
-                    flex-wrap: nowrap;
-
+                          .row {
+                            width: 100%;
+                            height: 31.25rem;
+                            display: flex;
+                            flex-wrap: nowrap;
+                            div {
+                              flex: 1;
+                              .col {
+                                width: 100%;
+                                height: 25rem;
+                                a {
+                                  display: block;
+                                  width: 100%;
+                                  height: 100%;
+                                  .img-box {
+                                    width: 100%;
+                                    height: 22.5rem;
+                                    img {
+                                      width: 100%;
+                                      height: 100%;
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
                   }
                 }
               }
@@ -518,8 +555,7 @@
         }
       }
     }
-
-    // search 
+    // search
     .drag-item {
       width: 100%;
     }
@@ -557,7 +593,6 @@
       width: 100%;
     }
 
-
     // shopping-cart
     .drag-item {
       .container1 {
@@ -569,10 +604,6 @@
         padding: 0 1.25rem;
       }
     }
-
-    
-
-
   }
 
   .page-content-footer {
@@ -589,7 +620,7 @@
         height: 100%;
 
         .item-content {
-          padding: .625rem;
+          padding: 0.625rem;
 
           .from-content {
             width: 13.75rem;
@@ -619,64 +650,63 @@
     }
   }
 
-  
-}
-
-#app {
-  .shop-item{
-    display: none;
-    width: 100% !important;
-    height: 18.75rem;
-    .container{
-      width: 100%;
-      padding: 0 1.25rem;
-    }
-  }
-  .product-item{
-    display: none;
-    .container{
-      width: 100%;
-    }
-  }
-  .pages-item{
-    display: none;
-    .container{
-      width: 100%;
-    }
-  }
-}
-
-
-#app , .content-box{
-  width: 100%;
-  height: 100%;
-  .main{
-    width: 100%;
-    .checkout-box{
-      width: 100%;
-      display: flex;
-      .left-checkout{
-        flex: 1;
-        .payment-info{
-          width: 100%;
-          padding: 3.5rem 1.25rem  0 1.25rem;
-        }
+  #app {
+    .shop-item {
+      display: none;
+      width: 100% !important;
+      height: 18.75rem;
+      .container {
+        width: 100%;
+        padding: 0 1.25rem;
       }
-      .right-checkout{
-        flex: 1;
-        padding: 3.5rem 1.25rem  0 1.25rem;
-        .checkout-price{
-          width: 100%;
-          height: 100%;
-          padding: 0;
-          .product-list{
+    }
+    .product-item {
+      display: none;
+      .container {
+        width: 100%;
+      }
+    }
+    .pages-item {
+      display: none;
+      .container {
+        width: 100%;
+      }
+    }
+  }
+
+  #app,
+  .content-box {
+    width: 100%;
+    height: 100%;
+    .main {
+      width: 100%;
+      .checkout-box {
+        width: 100%;
+        display: flex;
+        .left-checkout {
+          flex: 1;
+          .payment-info {
             width: 100%;
-            height: 7.5rem;
-            div{
-              height: 100%;
-              .product-item{
-                height:100%;
-                background-color: brown;
+            padding: 3.5rem 1.25rem 0 1.25rem;
+          }
+        }
+        .right-checkout {
+          flex: 1;
+          padding: 3.5rem 1.25rem 0 1.25rem;
+          .checkout-price {
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            .product-list {
+              width: 100%;
+              height: 7.5rem;
+              div {
+                width: 100%;
+                height: 100%;
+                .product-item {
+                  width: 100%;
+                  height: 100%;
+                }
               }
             }
           }

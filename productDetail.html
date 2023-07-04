@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="fecify is a privatized saas system, a system to build N e-commerce malls">
     <!-- icon -->
     <link rel="shortcut icon" href="#" type="image/x-icon">
     <!-- 判断屏幕尺寸 -->
@@ -18,7 +19,7 @@
     <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.4/jquery.js"></script>
     <script src="https://cdn.bootcdn.net/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"></script>
     <script src="./art-template/template-web.js"></script>
-    <title>product</title>
+    <title></title>
 </head>
 
 <body>
@@ -36,7 +37,7 @@
                         <a href="#"><img src="./images/TikTok.png" alt=""></a>
                     </nav>
                     <nav class="bottom-nav">
-                        <a href="#" class="logo"><img src="./images/logo.webp" alt=""></a>
+                        <a href="#" class="logo"><img src="#" alt="" class="logo-img"></a>
                         <ul class="tab">
                             <li><a href="./index.html">Home</a></li>
                             <li>
@@ -164,7 +165,7 @@
                                         For in free time, when we have the option of choosing nothing
                                     </p>
                                 </div>
-                                <div class="tab-item-content2 tab-item-content">
+                                <div class="tab-item-content2 tab-item-content ">
                                     <div class="review-box">
                                         <div class="list-box">
                                             <div class="write-review">
@@ -174,7 +175,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="tab-item-content3 tab-item-content">
+                                <div class="tab-item-content3 tab-item-content shipping-return">
                                     <p>Shipping cost is based on weight.
                                         Just add products to your cart and use the Shipping Calculator to see the
                                         shipping price.
@@ -182,7 +183,7 @@
                                     <p>We want you to be 100% satisfied with your purchase.
                                         Items can be returned or exchanged within 30 days of delivery.</p>
                                 </div>
-                                <div class="tab-item-content4 tab-item-content">
+                                <div class="tab-item-content4 tab-item-content shipping-policies">
                                     <p>Shipping cost is based on weight.
                                         Just add products to your cart and use the Shipping Calculator to see the
                                         shipping price.
@@ -190,7 +191,7 @@
                                     <p>We want you to be 100% satisfied with your purchase.
                                         Items can be returned or exchanged within 30 days of delivery.</p>
                                 </div>
-                                <div class="tab-item-content5 tab-item-content">
+                                <div class="tab-item-content5 tab-item-content about-us">
                                     <h4>A Registered Merchant Since 2015</h4>
                                     <p>&nbsp;</p>
                                     <p>fecify, established in June 2015, a reliable wholesale and retail online shop
@@ -438,13 +439,13 @@
                                             <i class="layui-icon layui-icon-email"
                                                 style="font-size: 20px; color: black;margin-left: 10px;"></i>
                                             <div class="input">
-                                                <input type="email" name="" id="" autocomplete="off"
+                                                <input type="email" name="Email" id="" autocomplete="off"
                                                     placeholder="Email">
                                             </div>
-                                            <button>
+                                            <div class="btn">
                                                 <i class="layui-icon layui-icon-right"
                                                     style="font-size: 20px;margin-left: 10px;"></i>
-                                            </button>
+                                            </div>
                                         </div>
                                         <div class="err">Please input the email address</div>
                                     </form>
@@ -532,35 +533,37 @@
                         </div>
                     </div>
                     <div class="product-specification">
+                        {{if colorArr.length}}
                         <div class="product-options">
                             <label class="name upppercase">
-                                Color:<span class="color">{{specialProduct.color}}</span>
+                                Color:<span class="color">{{colorArr[0]}}</span>
                             </label>
                             <div class="item-box">
                                 
                                 <!-- <div class="product-options-item color-item"> {{specialProduct.color2}} </div> -->
-                                {{each specialProduct.colorArr color}}
-                                {{if color === specialProduct.color}}
+                                {{each colorArr color}}
+                                {{if color === colorArr[0]}}
                                 <div class="product-options-item color-item color-active"> {{color}} </div>
                                 {{/if}}
-                                {{if color !== specialProduct.color}}
+                                {{if color !== colorArr[0]}}
                                 <div class="product-options-item color-item "> {{color}} </div>
                                 {{/if}}
                                 {{/each}}
                             </div>
                         </div>
-                        {{if specialProduct.sizeArr}}
+                        {{/if}}
+                        {{if sizeArr.length}}
                         <div class="product-options">
                             <label class="name upppercase">
-                                Size:<span class="size">{{specialProduct.size}}</span>
+                                Size:<span class="size">{{sizeArr[0]}}</span>
                             </label>
                             <div class="item-box">
                                 <!-- <div class="product-options-item size-active size-item" > M </div> -->
-                                {{each specialProduct.sizeArr size}}
-                                {{if size === specialProduct.size}}
+                                {{each sizeArr size}}
+                                {{if size === sizeArr[0]}}
                                 <div class="product-options-item size-item size-active"> {{size}} </div>
                                 {{/if}}
-                                {{if size !== specialProduct.size}}
+                                {{if size !== sizeArr[0]}}
                                     <div class="product-options-item size-item"> {{size}} </div>
                                 {{/if}}    
                                 {{/each}}
@@ -619,8 +622,10 @@
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="./utils/LocalStorageUtil.js"></script>
     <script src="./js/root.js"></script>
-    
-    <!-- <script src="./js/API.js"></script> -->
+    <script src="./js/about-us.js"></script>
+    <script src="./js/shipping return.js"></script>
+    <script src="./js/shipping-policies.js"></script>
+    <script src="./js/icon-title.js"></script>
     <script src="./js/tab.js"></script>
     <script src="./js/shop-col.js"></script>
 

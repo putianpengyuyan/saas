@@ -1,0 +1,103 @@
+@media (max-width: 1023px) {
+  .page-content-header {
+    position: relative;
+  }
+  .page-content-header .bottom-nav .logo,
+  .page-content-header .bottom-nav .tab,
+  .page-content-header .bottom-nav .yonghu {
+    display: none !important;
+  }
+  .page-content-header .bottom-nav .hs-mobile-home-nav-toggle {
+    position: relative;
+    display: inline-block !important;
+    width: 100%;
+    height: 4rem;
+  }
+  .page-content-header .bottom-nav .hs-mobile-home-nav-toggle .flex {
+    display: flex;
+    width: 100%;
+    height: 4rem;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .page-content-header .bottom-nav .hs-mobile-home-nav-toggle .flex .menu {
+    width: 3.125rem;
+    height: 100%;
+    padding: 0.8438rem 0;
+  }
+  .page-content-header .bottom-nav .hs-mobile-home-nav-toggle .flex .menu img {
+    width: 100%;
+    height: 100%;
+  }
+  .page-content-header .bottom-nav .hs-mobile-home-nav-toggle .flex .mobile-logo {
+    width: 9.0625rem;
+    height: 100%;
+    padding: 0.8438rem 0;
+  }
+  .page-content-header .bottom-nav .hs-mobile-home-nav-toggle .flex .mobile-logo img {
+    width: 100%;
+    height: 100%;
+  }
+  .page-content-header .bottom-nav .hs-mobile-home-nav-toggle .flex .search-shopping {
+    display: flex;
+  }
+  .page-content-header .bottom-nav .hs-mobile-home-nav-toggle .flex .search-shopping li {
+    position: relative;
+    width: 1.875rem;
+    height: 1.375rem;
+  }
+  .page-content-header .bottom-nav .hs-mobile-home-nav-toggle .flex .search-shopping li .products {
+    position: absolute;
+    display: block;
+    padding: 0 0.3125rem;
+    border-radius: 0.9375rem;
+    color: #fff;
+    text-align: center;
+    background-color: #f56c6c;
+    top: -0.625rem;
+    right: 0;
+  }
+  .page-content-header .menu-mask {
+    position: absolute;
+    display: none;
+    width: 100%;
+    height: 125rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    top: 0;
+    left: 0;
+    z-index: 20;
+    padding: 0;
+  }
+  .page-content-header .menu-mask .menu-body {
+    width: 90%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+  }
+  .page-content-header .menu-mask .menu-body .menu-ul {
+    padding: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-between;
+  }
+  .page-content-header .menu-mask .menu-body .menu-ul li {
+    height: 3.125rem;
+    padding-left: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.125rem;
+  }
+  .page-content-header .menu-mask .menu-body .menu-ul li a {
+    display: block;
+    flex: 1;
+    height: 100%;
+  }
+  .page-content-header .menu-mask .menu-body .menu-ul li i {
+    padding-right: 1rem;
+    flex: 9;
+    text-align: right;
+  }
+}

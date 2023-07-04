@@ -21,15 +21,21 @@ app.addEventListener("click", function () {
   root.style.display = "none";
 });
 let shoppingCartNum = 0;
-const productNum = document.querySelector(".products-num");
-if (localStorageUtil.getShoppingCartTotalNum()) {
-  shoppingCartNum = JSON.parse(localStorageUtil.getShoppingCartTotalNum());
-  console.log("========================");
-  console.log(shoppingCartNum);
-  console.log("========================");
-}
+const productNumArr = document.querySelectorAll(".products-num");
+for (let i = 0; i < productNumArr.length; i++) {
+  const productNum = productNumArr[i];
+  if (localStorageUtil.getShoppingCartTotalNum()) {
+    console.log(productNum);
+    console.log("~~~~~~~~~~~~~~~");
+    shoppingCartNum = JSON.parse(localStorageUtil.getShoppingCartTotalNum());
+    console.log("========================");
+    console.log(shoppingCartNum);
+    productNum.innerText = shoppingCartNum;
+    console.log("========================");
+  }
 
-productNum.innerText = shoppingCartNum;
+  productNum.innerText = shoppingCartNum;
+}
 
 let Token = $.cookie("Token");
 console.log(Token);
@@ -67,4 +73,3 @@ function Contact() {
     });
 }
 Contact();
-

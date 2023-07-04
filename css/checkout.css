@@ -409,6 +409,9 @@
   font-size: 0.875rem;
   font-weight: 600;
 }
+.content-box .main .checkout-box .right-checkout .checkout-price .product-list .checkout-product-item {
+  display: block !important;
+}
 .content-box .main .checkout-box .right-checkout .checkout-price .discount-box {
   width: 100%;
   height: 5.4375rem;

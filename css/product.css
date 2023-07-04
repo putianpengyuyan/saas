@@ -152,7 +152,7 @@ body {
 .page-content-body .drag-item .product-info .top-box .info-box div .coupon-box .item-coupon .left-info {
   flex: 2;
   height: 5rem;
-  padding: 1.25rem 1.25rem 20pc 2rem;
+  padding: 1.25rem 1.25rem 0.625rem 2rem;
   display: flex;
   flex-direction: column;
   align-items: left;
@@ -191,6 +191,7 @@ body {
   cursor: pointer;
 }
 .page-content-body .drag-item .product-info .top-box .info-box div .product-specification {
+  position: relative;
   margin: 1.25rem 0 0;
 }
 .page-content-body .drag-item .product-info .top-box .info-box div .product-specification .product-options {
@@ -361,9 +362,11 @@ body {
   color: #807f7f;
 }
 .page-content-body .drag-item .product-info .top-box .info-box div .product-specification .product-options1 {
+  position: absolute;
+  top: 16.875rem;
   height: 5rem;
   width: 100%;
-  margin: 11.5625rem 0 0;
+  margin: 0 0;
 }
 .page-content-body .drag-item .product-info .top-box .info-box div .product-specification .product-options1 .name {
   display: block;
@@ -667,7 +670,7 @@ body {
 .page-content-body .drag-item .product-info .tab-box .like-box {
   width: 75rem;
   padding: 0 0 0.5rem;
-  margin: 0 0 1rem;
+  margin: 2.25rem 0 1rem;
 }
 .page-content-body .drag-item .product-info .tab-box .like-box .title {
   height: 3.9375rem;

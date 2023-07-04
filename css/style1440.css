@@ -344,7 +344,11 @@
   width: 100%;
 }
 #app .content-box .page-content-body .drag-item .product-info .top-box .info-box .product-specification .product-options1 {
-  margin-top: 6.875rem;
+  position: absolute;
+  top: 11.875rem;
+  height: 5rem;
+  width: 100%;
+  margin: 0 0;
 }
 #app .content-box .page-content-body .drag-item .product-info .tab-box {
   width: 100%;
@@ -392,14 +396,51 @@
   display: flex;
   flex-wrap: nowrap;
 }
-#app .content-box .page-content-body .drag-item .collection-box .container .info .list-box .main-box .infinite-list2 {
+#app .content-box .page-content-body .drag-item .collection-box .container .info .list-box .main-box .infinite-list .row div .col {
+  flex: 1;
+  height: 25rem;
+}
+#app .content-box .page-content-body .drag-item .collection-box .container .info .list-box .main-box .infinite-list .row div .col a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+#app .content-box .page-content-body .drag-item .collection-box .container .info .list-box .main-box .infinite-list .row div .col a .img-box {
+  width: 100%;
+  height: 22.5rem;
+}
+#app .content-box .page-content-body .drag-item .collection-box .container .info .list-box .main-box .infinite-list .row div .col a .img-box img {
+  width: 100%;
+  height: 100%;
+}
+#app .content-box .page-content-body .drag-item .collection-box .container .info .list-box .main-box .infinite-list .row div .col .infinite-list2 {
   width: 100%;
 }
-#app .content-box .page-content-body .drag-item .collection-box .container .info .list-box .main-box .infinite-list2 .row {
+#app .content-box .page-content-body .drag-item .collection-box .container .info .list-box .main-box .infinite-list .row div .col .infinite-list2 .row {
   width: 100%;
   height: 31.25rem;
   display: flex;
   flex-wrap: nowrap;
+}
+#app .content-box .page-content-body .drag-item .collection-box .container .info .list-box .main-box .infinite-list .row div .col .infinite-list2 .row div {
+  flex: 1;
+}
+#app .content-box .page-content-body .drag-item .collection-box .container .info .list-box .main-box .infinite-list .row div .col .infinite-list2 .row div .col {
+  width: 100%;
+  height: 25rem;
+}
+#app .content-box .page-content-body .drag-item .collection-box .container .info .list-box .main-box .infinite-list .row div .col .infinite-list2 .row div .col a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+#app .content-box .page-content-body .drag-item .collection-box .container .info .list-box .main-box .infinite-list .row div .col .infinite-list2 .row div .col a .img-box {
+  width: 100%;
+  height: 22.5rem;
+}
+#app .content-box .page-content-body .drag-item .collection-box .container .info .list-box .main-box .infinite-list .row div .col .infinite-list2 .row div .col a .img-box img {
+  width: 100%;
+  height: 100%;
 }
 #app .content-box .page-content-body .drag-item {
   width: 100%;
@@ -473,72 +514,73 @@
 #app .content-box .page-content-footer .footer-bottom-container .bottom-box .item-copyright-box {
   flex: 1;
 }
-#app .shop-item {
+#app .content-box #app .shop-item {
   display: none;
   width: 100% !important;
   height: 18.75rem;
 }
-#app .shop-item .container {
+#app .content-box #app .shop-item .container {
   width: 100%;
   padding: 0 1.25rem;
 }
-#app .product-item {
+#app .content-box #app .product-item {
   display: none;
 }
-#app .product-item .container {
+#app .content-box #app .product-item .container {
   width: 100%;
 }
-#app .pages-item {
+#app .content-box #app .pages-item {
   display: none;
 }
-#app .pages-item .container {
+#app .content-box #app .pages-item .container {
   width: 100%;
 }
-#app,
-.content-box {
+#app .content-box #app,
+#app .content-box .content-box {
   width: 100%;
   height: 100%;
 }
-#app .main,
-.content-box .main {
+#app .content-box #app .main,
+#app .content-box .content-box .main {
   width: 100%;
 }
-#app .main .checkout-box,
-.content-box .main .checkout-box {
+#app .content-box #app .main .checkout-box,
+#app .content-box .content-box .main .checkout-box {
   width: 100%;
   display: flex;
 }
-#app .main .checkout-box .left-checkout,
-.content-box .main .checkout-box .left-checkout {
+#app .content-box #app .main .checkout-box .left-checkout,
+#app .content-box .content-box .main .checkout-box .left-checkout {
   flex: 1;
 }
-#app .main .checkout-box .left-checkout .payment-info,
-.content-box .main .checkout-box .left-checkout .payment-info {
+#app .content-box #app .main .checkout-box .left-checkout .payment-info,
+#app .content-box .content-box .main .checkout-box .left-checkout .payment-info {
   width: 100%;
   padding: 3.5rem 1.25rem 0 1.25rem;
 }
-#app .main .checkout-box .right-checkout,
-.content-box .main .checkout-box .right-checkout {
+#app .content-box #app .main .checkout-box .right-checkout,
+#app .content-box .content-box .main .checkout-box .right-checkout {
   flex: 1;
   padding: 3.5rem 1.25rem 0 1.25rem;
 }
-#app .main .checkout-box .right-checkout .checkout-price,
-.content-box .main .checkout-box .right-checkout .checkout-price {
+#app .content-box #app .main .checkout-box .right-checkout .checkout-price,
+#app .content-box .content-box .main .checkout-box .right-checkout .checkout-price {
   width: 100%;
   height: 100%;
   padding: 0;
 }
-#app .main .checkout-box .right-checkout .checkout-price .product-list,
-.content-box .main .checkout-box .right-checkout .checkout-price .product-list {
+#app .content-box #app .main .checkout-box .right-checkout .checkout-price .product-list,
+#app .content-box .content-box .main .checkout-box .right-checkout .checkout-price .product-list {
   width: 100%;
   height: 7.5rem;
 }
-#app .main .checkout-box .right-checkout .checkout-price .product-list div,
-.content-box .main .checkout-box .right-checkout .checkout-price .product-list div {
+#app .content-box #app .main .checkout-box .right-checkout .checkout-price .product-list div,
+#app .content-box .content-box .main .checkout-box .right-checkout .checkout-price .product-list div {
+  width: 100%;
   height: 100%;
 }
-#app .main .checkout-box .right-checkout .checkout-price .product-list div .product-item,
-.content-box .main .checkout-box .right-checkout .checkout-price .product-list div .product-item {
+#app .content-box #app .main .checkout-box .right-checkout .checkout-price .product-list div .product-item,
+#app .content-box .content-box .main .checkout-box .right-checkout .checkout-price .product-list div .product-item {
+  width: 100%;
   height: 100%;
-  background-color: brown;
 }

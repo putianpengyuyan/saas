@@ -222,7 +222,7 @@ if (!LocalShoppingCart || LocalShoppingCart.length === 0) {
 
   const productItem = document.createElement("div");
   productItem.innerHTML = `
-          <div class="product-item">
+          <div class="product-item checkout-product-item">
               <div class="left">
                   <div class="img-box">
                       <i>${BuyArr.num}</i>
@@ -248,7 +248,7 @@ if (!LocalShoppingCart || LocalShoppingCart.length === 0) {
   localProductArr.map((item, index) => {
     const productItem = document.createElement("div");
     productItem.innerHTML = `
-    <div class="product-item">
+    <div class="product-item checkout-product-item">
         <div class="left">
             <div class="img-box">
                 <i>${item.num}</i>

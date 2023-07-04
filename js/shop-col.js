@@ -2,7 +2,39 @@ function getProductDetails(id) {
   axios.post(url + "/api/products/getProduct", { id: id }).then(
     function (response) {
       var data = response.data.data.list;
+      var color = JSON.parse(data.skudata1);
+      var size = JSON.parse(data.skudata2);
+      console.log();
+      console.log(data);
+      console.log(color);
+      console.log(size);
+      let colorArr = [];
+      let sizeArr = [];
+      if (color) {
+        color.map((item) => {
+          const name = item.name;
+
+          console.log(name);
+          console.log("name------------------");
+          colorArr.push(name);
+          console.log(colorArr);
+          console.log("colorArr------------------");
+        });
+      }
+
+      console.log(colorArr);
+      if (size) {
+        size.map((item)=>{
+          const name = item.name
+          sizeArr.push(name)
+        })
+      }
+
+      console.log(sizeArr);
+      console.log(response);
+      console.log("========== res ================");
       if (data) {
+        console.log(data);
         const productPrimary = document.querySelector(
           ".product-detail-primary"
         );
@@ -10,12 +42,11 @@ function getProductDetails(id) {
         const html = template("product_detail_template", {
           url: url,
           specialProduct: data,
+          colorArr: colorArr ? colorArr : "",
+          sizeArr: sizeArr ? sizeArr : "",
         });
         productPrimary.innerHTML = html;
-        bindProductDetailEvent(data, url);
-        
-        
-       
+        bindProductDetailEvent(data, url, colorArr, sizeArr);
       }
       console.log(response);
     },
@@ -24,12 +55,11 @@ function getProductDetails(id) {
     }
   );
 }
-if(localStorage.getItem('ProductId')){
-  getProductDetails(JSON.parse(localStorage.getItem('ProductId')));
-}else{
+if (localStorage.getItem("ProductId")) {
+  getProductDetails(JSON.parse(localStorage.getItem("ProductId")));
+} else {
   getProductDetails(1);
 }
-
 
 const shopProductList = [
   {
@@ -338,7 +368,7 @@ function bindProductDetailEvent(data, url) {
   buyNow.addEventListener("click", function (e) {
     console.log("==========buynow===========");
     console.log(data.id);
-    console.log('---------------');
+    console.log("---------------");
     console.log(num);
     console.log(data);
     console.log(data.price);
@@ -347,32 +377,28 @@ function bindProductDetailEvent(data, url) {
     console.log("==========buynow===========");
     const productList = document.querySelector(".product-list");
     let Arr = [];
-    Arr.push(num,data.price,data.title,data.images[0],data.color,data.id)
+    Arr.push(num, data.price, data.title, data.images[0], data.color, data.id);
     console.log(Arr);
-    Arr.map((item)=>{
-      const id = Arr[5]
+    Arr.map((item) => {
+      const id = Arr[5];
       const num = parseInt(Arr[0]);
       const price = parseFloat(Arr[1]);
       const title = Arr[2];
-      const total = num*price;
+      const total = num * price;
       const img = Arr[3];
       const nowProduct = {
-        id:id,
-        num:num,
-        price:price,
-        title:title,
-        img:img,
-        total:total,
-        color:color,
-      }
-      
-      console.log(nowProduct)
-      localStorage.setItem("newProduct",JSON.stringify(nowProduct))
-      
-      
-    })
-   
-    
+        id: id,
+        num: num,
+        price: price,
+        title: title,
+        img: img,
+        total: total,
+        color: color,
+      };
+
+      console.log(nowProduct);
+      localStorage.setItem("newProduct", JSON.stringify(nowProduct));
+    });
   });
 
   // 出现弹窗，禁止页面滚动
@@ -539,10 +565,10 @@ function getProductList() {
           const col = colArr[i];
           col.addEventListener("click", function () {
             console.log(colArr[i].id);
-            let ProductId = []
-            const id = colArr[i].id
-            const Id = id
-            localStorage.setItem('ProductId',JSON.stringify(Id))
+            let ProductId = [];
+            const id = colArr[i].id;
+            const Id = id;
+            localStorage.setItem("ProductId", JSON.stringify(Id));
           });
         }
       }
@@ -554,3 +580,4 @@ function getProductList() {
   );
 }
 getProductList();
+
