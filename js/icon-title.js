@@ -1,15 +1,16 @@
-const url1 = "https://goods.adteam.info";
-
+const url= "https://www.ccreoostlbam.xyz"
 let icon = "iocn";
 function Icon() {
   axios
-    .post(`https://goods.adteam.info/api/products/getConfingText`, {"type":icon})
+    .post(`${url}/api/products/getConfingText`, {"type":icon})
     .then((res) => {
       var text = res.data.data.list;
       console.log(res);
       if (text) {
-        document.querySelector('link[type="image/x-icon"]').href= `${url1}${text}`
-        document.querySelector('.logo .logo-img').src=''
+        console.log('-------------icon----------------');
+        document.querySelector('link[type="image/x-icon"]').href= `${url}${text}`
+        document.querySelector('.logo-img').src=`${url}${text}`
+        document.querySelector('.logo .logo-img').src=`${url}${text}`
         
 
         // logo.src=`${url}+${text}`
@@ -23,7 +24,7 @@ Icon();
 let ShangName = 'name'
 function Name(){
     axios
-    .post(`https://goods.adteam.info/api/products/getConfingText`, {"type":ShangName})
+    .post(`${url}/api/products/getConfingText`, {"type":ShangName})
     .then((res) => {
       var text = res.data.data.list;
       if (text) {
@@ -40,7 +41,7 @@ Name()
 let serveEmail = 'serveEmail'
 function ServeEmail(){
   axios
-    .post(`https://goods.adteam.info/api/products/getConfingText`, {"type":serveEmail})
+    .post(`${url}/api/products/getConfingText`, {"type":serveEmail})
     .then((res) => {
       var text = res.data.data.list;
       if (text) {

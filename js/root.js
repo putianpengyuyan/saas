@@ -1,4 +1,4 @@
-const url = "https://goods.adteam.info";
+
 
 // 登录
 const username = document.querySelector(".username");
@@ -58,7 +58,7 @@ if (Token) {
 let contact = "contact";
 function Contact() {
   axios
-    .post(`https://goods.adteam.info/api/products/getConfingText`, {
+    .post(url+"/api/products/getConfingText", {
       type: contact,
     })
     .then((res) => {

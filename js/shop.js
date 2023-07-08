@@ -81,22 +81,33 @@
 // });
 
 // 切换页面
-const prev = document.querySelector(".prev");
-const next = document.querySelector(".next");
-const infiniteList1 = document.querySelector(".infinite-list");
-const infiniteList2 = document.querySelector(".infinite-list2");
+// const prev = document.querySelector(".prev");
+// const next = document.querySelector(".next");
+// const infiniteList1 = document.querySelector(".infinite-list");
+// const infiniteList2 = document.querySelector(".infinite-list2");
+// const lis = document.querySelectorAll(".yuan")
 
-// prev
-prev.addEventListener("click", function (e) {
-  infiniteList1.style.display = "block";
-  infiniteList2.style.display = "none";
-});
+// // prev
+// prev.addEventListener("click", function (e) {
+//   infiniteList1.style.display = "block";
+//   infiniteList2.style.display = "none";
+//   lis[0].classList.add('li-active')
+//   lis[1].classList.remove('li-active')
+//   console.log(1111);
+//   console.log(infiniteList1);
+//   console.log('0000000000000000');
+// });
 
-// next
-next.addEventListener("click", function (e) {
-  infiniteList2.style.display = "block";
-  infiniteList1.style.display = "none";
-});
+// // next
+// next.addEventListener("click", function (e) {
+//   infiniteList2.style.display = "block";
+//   infiniteList1.style.display = "none";
+//   lis[0].classList.remove('li-active')
+//   lis[1].classList.add('li-active')
+//   console.log(22222);
+//   console.log(infiniteList2);
+//   console.log('11111111111111111');
+// });
 
 //  clear
 // const clear = document.querySelector('.clear')
@@ -105,7 +116,7 @@ next.addEventListener("click", function (e) {
 // })
 
 function ShopList(){
-  axios.post('https://goods.adteam.info/api/products/category')
+  axios.post(url+'/api/products/category')
   .then(res=>{
     console.log(res);
   }

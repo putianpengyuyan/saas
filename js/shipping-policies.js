@@ -1,7 +1,7 @@
 let shipping_policies='shipping_policies';
 console.log(shipping_policies);
 function ShippingPolicies(){
-  axios.post(`https://goods.adteam.info/api/products/getConfingText`,{'type':shipping_policies})
+  axios.post(url+"/api/products/getConfingText",{'type':shipping_policies})
   .then(res=>{
     var text = res.data.data.list
     console.log(text);

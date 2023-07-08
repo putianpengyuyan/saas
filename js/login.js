@@ -42,7 +42,7 @@ function loginUser(username, password) {
   console.log(password);
   console.log("~~~~~~~~~~~~~");
   axios
-    .post("https://goods.adteam.info/api/user/login", { username, password })
+    .post(url+"/api/user/login", { username, password })
     .then(
       function (response) {
         console.log('登录成功``````````````````')

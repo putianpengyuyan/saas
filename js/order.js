@@ -1,16 +1,15 @@
-const url = "https://goods.adteam.info";
 const freight = document.querySelector(".freight");
 
 const shipTxt = document.querySelector(".ship-txt");
 const courier = document.querySelector(".courier");
-let EndProduct = []
+let EndProduct = [];
 // 快递获取
 
 function getCourier() {
   axios.post(`${url}/api/products/getCourier`).then(
     (res) => {
       if (res.status === 200) {
-        freight.innerHTML='德玛快递 · $ 10'
+        freight.innerHTML = "德玛快递 · $ 10";
         const courierList = res.data.data.list;
 
         for (let [index, key] of Object.keys(courierList).entries()) {
@@ -19,8 +18,14 @@ function getCourier() {
             courier_price: courierList[key],
           };
           let courierItem = `
-          <div class="ship ${index === 0 ? 'ship-active' : ''} shipping">
-            <p class="type"><i class="ship-i ${index === 0 ? 'i-active' : ''}"></i>${courierData.courier_name}</p><span class="freight-amount">$ ${courierData.courier_price}</span>
+          <div class="ship ${index === 0 ? "ship-active" : ""} shipping">
+            <p class="type"><i class="ship-i ${
+              index === 0 ? "i-active" : ""
+            }"></i>${
+            courierData.courier_name
+          }</p><span class="freight-amount">$ ${
+            courierData.courier_price
+          }</span>
           </div>
           `;
           courier.innerHTML += courierItem;
@@ -28,12 +33,12 @@ function getCourier() {
         const ships = document.querySelectorAll(".shipping");
         const shipIs = document.querySelectorAll(".ship-i");
         const freightAmounts = document.querySelectorAll(".freight-amount");
-        
+
         for (let i = 0; i < ships.length; i++) {
           const ship = ships[i];
           const shipI = shipIs[i];
           const freightAmount = freightAmounts[i];
-         
+
           ship.addEventListener("click", function (e) {
             console.log(e.target);
             let innerText, parentDiv;
@@ -65,19 +70,20 @@ function getCourier() {
             var shipFreight = parseFloat(shipTxt.innerText.replace("$", ""));
             let totalAmount = shipFreight;
 
-            if (localStorage.getItem("EndProduct")) {
-              totalAmount += parseFloat(
-                localStorage.getItem("shopping_cart-total")
+            if (localStorage.getItem("shopping_cart")) {
+              totalAmount += parseFloat(localStorage.getItem("shopping_cart-total")
               );
-              const subtotal = JSON.parse(localStorage.getItem('shopping_cart-total'))
-              document.querySelector(".subtotal").innerText = `$${subtotal}`
+              console.log(111111111111111111);
+              const subtotal = JSON.parse(localStorage.getItem("shopping_cart-total"));
+              document.querySelector(".subtotal").innerText = `$${subtotal}`;
             } else {
-              const newProduct =
-                localStorage.getItem("newProduct") &&
-                JSON.parse(localStorage.getItem("newProduct"));
+              console.log(2222222222222222222222);
+              const newProduct =localStorage.getItem("newProduct") && JSON.parse(localStorage.getItem("newProduct"));
               totalAmount += parseFloat(newProduct.total);
               const BuyArr = JSON.parse(localStorage.getItem("newProduct"));
-              document.querySelector(".subtotal").innerText = `$${BuyArr.total.toFixed(2)}`
+              document.querySelector(
+                ".subtotal"
+              ).innerText = `$${BuyArr.total.toFixed(2)}`;
             }
 
             document.querySelector(
@@ -89,107 +95,89 @@ function getCourier() {
           .querySelector(".ship-active .freight-amount")
           .innerText.replace("$", "");
 
-        // 立即购买
-      const LocalShoppingCart =
-      localStorage.getItem("shopping_cart") &&
-      JSON.parse(localStorage.getItem("shopping_cart"));
-      const freightPrice = parseFloat(
-      JSON.parse(localStorage.getItem("shipFreight"))
-      );
-      const productList = document.querySelector(".product-list");
-      if (!LocalShoppingCart || LocalShoppingCart.length === 0) {
-      console.log(JSON.parse(localStorage.getItem("newProduct")));
-      const BuyArr = JSON.parse(localStorage.getItem("newProduct"));
-      const EndProductItem = {
-        id:BuyArr.id,
-        num:BuyArr.num,
-        title:BuyArr.title,
-        img:url + BuyArr.img,
-        price:BuyArr.price,
-        total:BuyArr.total
-      }
-      EndProduct.push(EndProductItem)
-      localStorage.setItem('EndProduct',JSON.stringify(EndProduct))
-      console.log('------end-------');
-      console.log(EndProduct);
-      console.log("======buyarr=======");
-      console.log(BuyArr);
-      console.log(BuyArr.num);
-      console.log("======buyarr=======");
+        const locationUrl = window.location.href;
+        if (locationUrl.indexOf("checkout_flag") > 0) {
+          const checkout_method = locationUrl.split("checkout_flag=")[1];
+          if (checkout_method === "new_product") {
+            console.log(JSON.parse(localStorage.getItem("newProduct")));
+            const BuyArr = JSON.parse(localStorage.getItem("newProduct"));
+            console.log("======buyarr=======");
+            console.log(BuyArr);
+            console.log(BuyArr.num);
+            console.log("======buyarr=======");
+            const productList = document.querySelector(".product-list");
 
-      const productItem = document.createElement("div");
-      productItem.innerHTML = `
-              <div class="product-item">
-                  <div class="left">
-                      <div class="img-box" id=${BuyArr.id}>
-                          <i>${BuyArr.num}</i>
-                          <img src=${url + BuyArr.img}  alt="">
+            const productItem = document.createElement("div");
+            productItem.innerHTML = `
+                      <div class="product-item checkout-product-item">
+                          <div class="left">
+                              <div class="img-box">
+                                  <i>${BuyArr.num}</i>
+                                  <img src=${url + BuyArr.img}  alt="">
+                              </div>
+                              <div class="info">
+                                  <div class="title">${BuyArr.title}</div>
+                                  <div class="color"></div>
+                              </div>
+                          </div>
+                          <div class="right">
+                              <div class="price">$${BuyArr.price}</div>
+                          </div>
                       </div>
-                      <div class="info">
-                          <div class="title">${BuyArr.title}</div>
-                          <div class="color"></div>
-                      </div>
-                  </div>
-                  <div class="right">
-                      <div class="price">$${BuyArr.price}</div>
-                  </div>
-              </div>
-              `;
-
-      console.group("new Product------");
-      console.log(BuyArr.total);
-      console.log(selectedFreight);
-      console.groupEnd("new Product------");
-      productList.appendChild(productItem);
-      document.querySelector(".subtotal").innerText = `$${BuyArr.total}`;
-      const ToTal = parseFloat(BuyArr.total) + parseFloat(selectedFreight);
-      document.querySelector(".price-total").innerText = `$${ToTal}`;
-      } else if (localStorage.getItem("shopping_cart")) {
-      // shopping cart
-      const localProductArr = JSON.parse(localStorageUtil.getProductArr());
-      
-      localProductArr.map((item, index) => {
-        const productItem = document.createElement("div");
-        productItem.innerHTML = `
-        <div class="product-item">
-            <div class="left">
-                <div class="img-box" id=${item.id}>
-                    <i>${item.num}</i>
-                    <img src=${item.img}  alt="">
+                      `;
+            productList.appendChild(productItem);
+            document.querySelector(".txt").innerText = `$${BuyArr.total}`;
+            console.log(freight.innerText);
+            let FreightCount = parseFloat(freight.innerHTML.replace('德玛快递 · $',''))
+            console.log(FreightCount);
+            FreightCount += (BuyArr.total)
+            FreightCountA = FreightCount.toFixed(2)
+            console.log(BuyArr.total);
+            console.log(FreightCountA);
+            document.querySelector(".price-total").innerText = `$${FreightCountA}`;
+            
+          }
+        } else {
+          console.log("购物车~~~~~~~~~~~~");
+          // shopping cart
+          const localProductArr = JSON.parse(localStorageUtil.getProductArr());
+          const productList = document.querySelector(".product-list");
+          localProductArr.map((item, index) => {
+            const productItem = document.createElement("div");
+            productItem.innerHTML = `
+            <div class="product-item checkout-product-item">
+                <div class="left">
+                    <div class="img-box">
+                        <i>${item.num}</i>
+                        <img src=${item.img}  alt="">
+                    </div>
+                    <div class="info">
+                        <div class="title">${item.title}</div>
+                        <div class="color">${item.color}</div>
+                    </div>
                 </div>
-                <div class="info">
-                    <div class="title">${item.title}</div>
-                    <div class="color">${item.color}</div>
+                <div class="right">
+                    <div class="price">$${item.price}</div>
                 </div>
             </div>
-            <div class="right">
-                <div class="price">$${item.price}</div>
-            </div>
-        </div>
-        `;
-        const EndProductItem = {
-          id:item.id,
-          num:item.num,
-          title:item.title,
-          img:item.img,
-          price:item.price,
-          total:item.total
+            `;
+            productList.appendChild(productItem);
+            
+          });
+          const shoppingCartTotal = parseFloat(
+            JSON.parse(localStorageUtil.getShoppingCartTotal())
+          ).toFixed(2);
+          console.log(shoppingCartTotal);
+          console.log(freight.innerText);
+            let FreightCount = parseFloat(freight.innerHTML.replace('德玛快递 · $',''))
+            console.log(FreightCount);
+            shoppingTotal = parseFloat(shoppingCartTotal)
+            FreightCount += shoppingTotal
+            FreightCountA = FreightCount.toFixed(2)
+            console.log(FreightCount);
+          document.querySelector(".txt").innerText = `$${shoppingCartTotal}`;
+          document.querySelector(".price-total").innerText = `$${FreightCountA}`;
         }
-        EndProduct.push(EndProductItem)
-        console.log(EndProductItem);
-        localStorage.setItem('EndProduct',JSON.stringify(EndProduct))
-        console.log('------end-------');
-        console.log(EndProduct);
-        productList.appendChild(productItem);
-        const ToTal = parseFloat(item.total) + parseFloat(selectedFreight);
-        document.querySelector(".subtotal").innerText = `$${item.total.toFixed(2)}`;
-        document.querySelector(".price-total").innerText = `$${ToTal.toFixed(2)}`;
-      });
-      // const shoppingCartTotal = JSON.parse(localStorageUtil.getShoppingCartTotal());
-      // console.log(shoppingCartTotal);
-      // document.querySelector(".price-total").innerText = `$${shoppingCartTotal}`;
-      }
-
       }
     },
     (err) => {
@@ -214,12 +202,10 @@ for (let i = 0; i < payShips.length; i++) {
   });
 }
 
-
-
 // return
 const Return = document.querySelector(".return");
 Return.addEventListener("click", function () {
-  location.href = "checkout.html";
+  location.href = `checkout.html${window.location.search}`;
 });
 
 // 用户信息
@@ -240,55 +226,72 @@ ${userManagement.telephone}
 
 // order
 
-
-let goods = []
+let goods = [];
 const orderBtn = document.querySelector("[name=order]");
-const token = $.cookie('Token')
+const token = $.cookie("Token");
+console.log(token);
+console.log('token--------------------------');
 orderBtn.addEventListener("click", function () {
-  
   console.log("========================");
   console.log(userManagement);
   console.log("========================");
-  const freight = document.querySelector('.ship-txt').innerHTML.replace('$','')
+  const freight = document
+    .querySelector(".ship-txt")
+    .innerHTML.replace("$", "");
   console.log(freight);
   console.log("========================");
-  console.log(document.querySelector(".price-total").innerText.replace('$',''));
-  const EndProduct = JSON.parse(localStorage.getItem('EndProduct'))
-  console.log(EndProduct);
-  console.log("========================");
-  const firstName = userManagement.first_name
-  const lastName = userManagement.last_name
-  const addressComponent = userManagement.address
-  const countryComponent = userManagement.country.countryName
-  const cityComponent = userManagement.city
-  const postCodeComponent = userManagement.postCode
-  const telephoneComponent = userManagement.telephone
-  const emailComponent = userManagement.email
-  goods = EndProduct
+  console.log(
+    document.querySelector(".price-total").innerText.replace("$", "")
+  );
+  const locationUrl = window.location.href;
+if (locationUrl.indexOf("checkout_flag") > 0) {
+  const checkout_method = locationUrl.split("checkout_flag=")[1];
+  if (checkout_method === "new_product") {
+    goods = JSON.parse(localStorage.getItem('newProduct'));
+  }
+} else {
+  goods = JSON.parse(localStorage.getItem('shopping_cart'))
+}
+  const firstName = userManagement.first_name;
+  const lastName = userManagement.last_name;
+  const addressComponent = userManagement.address;
+  const countryComponent = userManagement.country.countryName;
+  const cityComponent = userManagement.city;
+  const postCodeComponent = userManagement.postCode;
+  const telephoneComponent = userManagement.telephone;
+  const emailComponent = userManagement.email;
   console.log("========================");
   console.log(goods);
   console.log("=-=--=-=-=-=goods=-=-=-=-=-=-");
-  
-  if(token){
-    PlaceOrder(firstName,lastName,addressComponent, cityComponent,
-    countryComponent, emailComponent,postCodeComponent,telephoneComponent,goods,token,freight)
+
+  if (token) {
+    PlaceOrder(
+      firstName,
+      lastName,
+      addressComponent,
+      cityComponent,
+      countryComponent,
+      emailComponent,
+      postCodeComponent,
+      telephoneComponent,
+      goods,
+      token,
+      freight
+    );
+  } else {
+    location.href = "login.html";
+    localStorage.removeItem("user_order");
+    localStorage.removeItem("newProduct");
+    localStorage.removeItem("shopping_cart-total");
+    localStorage.removeItem("EndProduct");
+    localStorage.removeItem("shopping_cart");
+    localStorage.removeItem("shopping_cart_total_num");
   }
-  else{
-    location.href='login.html'
-    localStorage.removeItem('user_order')
-    localStorage.removeItem('newProduct')
-    localStorage.removeItem('shopping_cart-total')
-    localStorage.removeItem('EndProduct')
-    localStorage.removeItem('shopping_cart')
-    localStorage.removeItem('shopping_cart_total_num')
-  }
-  
 });
 
-
 const config = {
-  headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
-}
+  headers: { "Content-Type": "application/x-www-form-urlencoded" },
+};
 // api
 function PlaceOrder(
   firstName,
@@ -304,25 +307,28 @@ function PlaceOrder(
   freight
 ) {
   axios
-    .post("https://goods.adteam.info/api/products/addOrder", {
-      "first_name": firstName,
-      "last_name": lastName,
-      "address": addressComponent,
-      "country": countryComponent,
-      "city": cityComponent,
-      "code": postCodeComponent,
-      "email": emailComponent,
-      "telephone": telephoneComponent,
-      "goods":JSON.stringify(goods),
-      token,
-      courier:freight
-    },config)
+    .post(
+      url + "/api/products/addOrder",
+      {
+        first_name: firstName,
+        last_name: lastName,
+        address: addressComponent,
+        country: countryComponent,
+        city: cityComponent,
+        code: postCodeComponent,
+        email: emailComponent,
+        telephone: telephoneComponent,
+        goods: JSON.stringify(goods),
+        token,
+        courier: freight,
+      },
+      config
+    )
     .then(
       function (response) {
-        var orderNumber = response.data.data.data
+        var orderNumber = response.data.data.data;
         console.log(response);
-        pay(orderNumber,token)
-
+        pay(orderNumber, token);
       },
       function (err) {
         console.log(err);
@@ -330,37 +336,40 @@ function PlaceOrder(
     );
 }
 
-console.log('----------------');
-function Shipping(){
-  axios.post(`https://goods.adteam.info/api/products/getConfingText`)
-  .then(res=>{
+console.log("----------------");
+function Shipping() {
+  axios.post(url + "/api/products/getConfingText").then((res) => {
     console.log(res);
-  })
+  });
 }
-Shipping()
+Shipping();
 
-
-function pay(orderNumber){
-  axios.post("https://goods.adteam.info/api/products/pay",{
-    orderNo:orderNumber,
-    token
-  },config)
-  .then(
-    res=>{
-      var url = res.data.data.data
-      console.log(res);
-      console.log(url);
-      location.href=url
-      localStorage.removeItem('shopping_cart-total');
-      localStorage.removeItem('newProduct');
-      localStorage.removeItem('newProduct');
-      localStorage.removeItem('shopping_cart');
-      localStorage.removeItem('ProductId');
-      localStorage.removeItem('user_order');
-      localStorage.removeItem('shopping_cart_total_num');
-    },
-    err=>{
-      console.log(err);
-    }
-  )
+function pay(orderNumber) {
+  axios
+    .post(
+      url + "/api/products/pay",
+      {
+        orderNo: orderNumber,
+        token,
+      },
+      config
+    )
+    .then(
+      (res) => {
+        var url = res.data.data.data;
+        console.log(res);
+        console.log(url);
+        location.href = url;
+        localStorage.removeItem("shopping_cart-total");
+        localStorage.removeItem("newProduct");
+        localStorage.removeItem("newProduct");
+        localStorage.removeItem("shopping_cart");
+        localStorage.removeItem("ProductId");
+        localStorage.removeItem("user_order");
+        localStorage.removeItem("shopping_cart_total_num");
+      },
+      (err) => {
+        console.log(err);
+      }
+    );
 }

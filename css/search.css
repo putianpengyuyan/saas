@@ -68,7 +68,6 @@
   justify-content: start;
 }
 .page-content-body .container .row .col-li {
-  height: 31.25rem;
   width: 18.75rem;
   padding: 0 0.625rem;
   margin: 0 0 1.5rem;
@@ -78,14 +77,10 @@
   display: block;
   width: 15.4375rem;
   height: 15.4375rem;
-  transition: all 0.3s;
 }
 .page-content-body .container .row .col-li a img {
   width: 100%;
   height: 100%;
-}
-.page-content-body .container .row .col-li a:hover {
-  transform: scale(1.02);
 }
 .page-content-body .container .row .col-li .info-box {
   padding: 0.625rem 0 0;
@@ -106,24 +101,31 @@
   font-size: 0.875rem;
   text-decoration: line-through;
 }
+.page-content-body .container .row > div {
+  width: 25%;
+  height: 35.625rem;
+  margin-bottom: 4.375rem;
+}
 .page-content-body .container .row .col {
-  height: 31.25rem;
-  width: 18.75rem;
+  width: 100%;
   padding: 0 0.5625rem;
   margin: 0 0 1.5rem;
 }
 .page-content-body .container .row .col a {
   display: block;
   width: 100%;
-  height: 22.5rem;
-  transition: all 0.3s;
 }
-.page-content-body .container .row .col a img {
+.page-content-body .container .row .col a .common-img-box {
   width: 100%;
-  height: 100%;
+  height: 25rem;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  overflow: hidden;
 }
-.page-content-body .container .row .col a:hover {
-  transform: scale(1.02);
+.page-content-body .container .row .col a .common-img-box img {
+  max-width: 100%;
+  max-height: 100%;
 }
 .page-content-body .container .row .col .info-box {
   margin: 1.25rem 0 0;
@@ -132,15 +134,23 @@
   width: 100%;
 }
 .page-content-body .container .row .col .info-box .pro-title {
-  height: 1.5rem;
-  line-height: 1.5rem;
-  font-size: 1.125rem;
+  width: 100%;
+  height: 5rem;
+  margin: 0 0 0.3125rem;
+  font-size: 1rem;
+  color: #000;
+  padding: 0.625rem 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
 }
 .page-content-body .container .row .col .info-box .price {
   height: 1.5rem;
   line-height: 1.5rem;
-  font-size: 1rem;
-  margin: 0 0 0.625rem;
+  font-size: 1.25rem;
+  margin: 1.25rem 0;
   color: #f03d3d;
 }
 .page-content-body .container .row .col .info-box .price span {

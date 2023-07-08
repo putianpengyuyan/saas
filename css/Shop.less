@@ -1,445 +1,488 @@
-.page-content-body{
-    width: 100%;
-    height: 100%;
-    .drag-item{
-        width: 88.75rem;
-        margin: 0 auto;
-        
-        .collection-box{
-            margin: 1.875rem 0;
-            height: 100%;
+.page-content-body {
+  width: 100%;
+  height: auto !important;
+  .drag-item {
+    width: 88.75rem;
+    margin: 0 auto;
+
+    .collection-box {
+      margin: 1.875rem 0;
+      height: auto !important;
+      width: 100%;
+
+      .container {
+        // height: 1500px;
+        .info {
+          // height: 80px;
+          border-bottom: 0.0625rem solid #e9edef;
+          h1 {
+            font-size: 2.25rem;
+            height: 3.625rem;
+            line-height: 3.625rem;
+            margin: 0 0 1.25rem;
+            font-weight: 400;
+          }
+          .list-box {
             width: 100%;
-            
-            .container{
-                // height: 1500px;
-                .info{
-                    // height: 80px;
-                    border-bottom: .0625rem solid #e9edef;
-                    h1{
-                        font-size: 2.25rem;
-                        height: 3.625rem;
-                        line-height: 3.625rem;
-                        margin: 0 0 1.25rem;
-                        font-weight: 400;    
-                    }
-                    .list-box{
-                        width: 100%;
-                        padding: 1.5rem 0;
-                        .main-box{
-                            width: 100%;
-                            height: 100%;
-                            .operation-box{
-                                width: 100%;
-                                // height: 108px;
-                                padding: 0 0 1.5rem;
-                                
-                                .total{
-                                    height: 1.5rem;
-                                    font-size: 1rem;
-                                }
-                                .pt-4{
-                                    width: 100%;
-                                    height: 3.75rem;
-                                    padding: 1.5rem 0 0;
-                                    display: flex;
-                                    justify-content: space-between;
-                                    align-items: center;
-                                    .filter-box{
-                                        position: relative;
-                                        display: flex;
-                                        align-items: center;
-                                        height: 2.25rem;
-                                        span{
-                                            padding: 0 .625rem;
-                                            font-size: 1rem;
-                                        }
-                                        .flex{
-                                            display: flex;
-                                            align-items: center;
-                                            div{
-                                                padding: .3125rem .5rem;
-                                                border: .0625rem solid #dcdfe6;
-                                                margin: 0 .375rem;
-                                                font-size: .9375rem;
-                                            }
-                                        }
-                                    }
-                                    .sort-box{
-                                        position: relative;
-                                        display: flex;
-                                        align-items: center;
-                                        height: 2.25rem;
-                                        span{
-                                            padding: 0 .625rem;
-                                            font-size: 1rem;
-                                        }
-                                        .flex{
-                                            
-                                            display: flex;
-                                            align-items: center;
-                                            div{
-                                                padding: .3125rem .5rem;
-                                                border: .0625rem solid #dcdfe6;
-                                                margin: 0 .375rem;
-                                                font-size: .9375rem;    
-                                            }
-                                            
-                                        }
-                                    }
-                                }
-                                // 第一页
-                                .infinite-list{
-                                    display: block;
-                                    margin-top: 1.25rem;
-                                    width: 100%;
-                                    .row{
-                                        width: 88.75rem;
-                                        display: flex;
-                                        align-content: center;
-                                        margin: 0 0 1.25rem;
-                                        flex-wrap: wrap;
-                                        .col{
-                                            width: 22.1875rem;
-                                            margin: 0 0 1.5rem;
-                                            padding:0 .625rem;
-                                            height: 34.1875rem;
-                                            a{
-                                                width: 100%;
-                                                height: 100%;
-                                                display: block;
-                                                .img-box{
-                                                    width: 100%;
-                                                    height: 28rem;
-                                                    
-                                                    img{
-                                                        width: 100%;
-                                                        height: 100%;
-                                                    }
-                                                }
-                                                .bottom-text{
-                                                    width: 100%;
-                                                    height: 5rem;
+            padding: 1.5rem 0;
+            .main-box {
+              width: 100%;
+              height: 100%;
+              .operation-box {
+                width: 100%;
+                // height: 108px;
+                padding: 0 0 1.5rem;
 
-                                                    .title{
-                                                        height: 1.5rem;
-                                                        font-size: 1rem;
-                                                        font-weight: 500;
-                                                        margin: 1.25rem 0 0;
-                                                    }
-                                                    .price{
-                                                        height: 1.5rem;
-                                                        font-size: 1rem;
-                                                        color: #f03d3d;
-                                                        span{
-                                                            text-decoration: line-through;
-                                                            font-size: .875rem;
-                                                            padding: 0 .3125rem;
-                                                            color: #999999;
-                                                        }
-                                                    }
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                                // 第二页
-                                .infinite-list2{
-                                    display: none;
-                                    margin-top: 1.25rem;
-                                    width: 100%;
-                                    height: 34.1875rem;
-                                    .row{
-                                        height: 34.1875rem;
-                                        display: flex;
-                                        align-content: center;
-                                        margin: 0 0 1.25rem;
-                                        .col{
-                                            flex: 1;
-                                            margin: 0 0 1.5rem;
-                                            padding:0 .625rem;
-                                            height: 34.1875rem;
-                                            a{
-                                                
-                                                height: 100%;
-                                                display: block;
-                                                .img-box{
-                                                    width: 100%;
-                                                    height: 28rem;
-                                                    
-                                                    img{
-                                                        width: 100%;
-                                                        height: 100%;
-                                                    }
-                                                }
-                                                .bottom-text{
-                                                    width: 100%;
-                                                    height: 5rem;
-
-                                                    .title{
-                                                        height: 1.5rem;
-                                                        font-size: 1rem;
-                                                        font-weight: 500;
-                                                        margin: 1.25rem 0 0;
-                                                    }
-                                                    .price{
-                                                        height: 1.5rem;
-                                                        font-size: 1rem;
-                                                        color: #f03d3d;
-                                                        span{
-                                                            text-decoration: line-through;
-                                                            font-size: .875rem;
-                                                            padding: 0 .3125rem;
-                                                            color: #999999;
-                                                        }
-                                                    }
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                                .mt-20{
-                                    width: 100%;
-                                    height: 2rem;
-                                    margin: 2.5rem 0 0;
-                                    .pagination{
-                                        height: 100%;
-                                        display: flex;
-                                        justify-content: center;
-                                        align-items: center;
-                                        button{
-                                            width: 2.25rem;
-                                            height: 1.75rem;
-                                            padding: 0 .375rem;
-                                            border: 0;
-                                            background-color: #fff;
-                                        }
-                                        ul{
-                                            display: flex;
-                                            align-items: center;
-                                            justify-content: center;
-                                            li{
-                                                width: 2.25rem;
-                                                height: 1.75rem;
-                                                line-height: 1.75rem;
-                                                padding:0 .25rem;
-                                                font-size: 1rem;
-                                                text-align: center;
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
+                .total {
+                  height: 1.5rem;
+                  font-size: 1rem;
                 }
-            }
-        }
+                .pt-4 {
+                  width: 100%;
+                  height: 3.75rem;
+                  padding: 1.5rem 0 0;
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                  .filter-box {
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+                    height: 2.25rem;
+                    span {
+                      padding: 0 0.625rem;
+                      font-size: 1rem;
+                    }
+                    .flex {
+                      display: flex;
+                      align-items: center;
+                      div {
+                        padding: 0.3125rem 0.5rem;
+                        border: 0.0625rem solid #dcdfe6;
+                        margin: 0 0.375rem;
+                        font-size: 0.9375rem;
+                      }
+                    }
+                  }
+                  .sort-box {
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+                    height: 2.25rem;
+                    span {
+                      padding: 0 0.625rem;
+                      font-size: 1rem;
+                    }
+                    .flex {
+                      display: flex;
+                      align-items: center;
+                      div {
+                        padding: 0.3125rem 0.5rem;
+                        border: 0.0625rem solid #dcdfe6;
+                        margin: 0 0.375rem;
+                        font-size: 0.9375rem;
+                      }
+                    }
+                  }
+                }
+                
+                // 第一页
+                .infinite-list.shop-product-list {
+                  // height: 200px;
+                  
+                  // margin: 3.125rem;
+                  display: block;
+                  margin-top: 1.25rem;
+                  width: 100%;
+                  .row {
+                    width: 88.75rem;
+                    display: flex;
+                    align-content: center;
+                    margin: 0 0 1.25rem;
+                    flex-wrap: wrap;
+                    
+                    .shop-product-item {
+                      width: 25%;
+                      height: 36.625rem;
+                      
+                      margin: 0 0 1.5rem;
+                      padding: 0 0.625rem;
+                      a {
+                        width: 100%;
+                        display: block;
+                        .img-box {
+                          width: 100%;
+                          height: 25rem;
+                          display: flex;
+                          justify-content: center;
+                          align-content: center;
+                          overflow: hidden;
+                          img {
+                            max-width: 100%;
+                            max-height: 100%;
+                          }
+                        }
+                        .bottom-text {
+                          width: 100%;
+                          margin-top: 1.875rem;
+                          .title {
+                            width: 100%;
+                            height: 5rem;
+                            margin: 0 0 0.3125rem;
+                            font-size: 1rem;
+                            color: #000;
+                            padding: 0.625rem 0;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            display: -webkit-box;
+                            -webkit-line-clamp: 4;
+                            -webkit-box-orient: vertical;
+                          }
+                          .star{
+                            height: 1.5rem;
+                          }
+                          .price {
+                            margin: .625rem 0;
+                            height: 1.5625rem;
+                            font-size: 1.25rem;
+                            color: #f03d3d;
+                            span {
+                              text-decoration: line-through;
+                              font-size: 0.875rem;
+                              padding: 0 0.3125rem;
+                              color: #999999;
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+                // 第二页
+                .infinite-list2 {
+                  display: none;
+                  margin-top: 1.25rem;
+                  width: 100%;
 
+                  .row {
+                    display: flex;
+                    align-content: center;
+                    margin: 0 0 1.25rem;
+                    flex-wrap: wrap;
+                    > div{
+                        width: 25%;
+                        height: 35.625rem;
+                        margin-bottom: 4.375rem;
+                    }
+                    .col {
+                      width: 100%;
+                      margin: 0 0 1.5rem;
+                      padding: 0 0.625rem;
+                      a {
+                        width: 100%;
+                        height: 100%;
+                        display: block;
+                        .img-box {
+                          width: 100%;
+                          height: 25rem;
+                          display: flex;
+                          align-items: center;
+                          justify-content: center;
+                          overflow: hidden;
+                          img {
+                            max-width: 100%;
+                            max-height: 100%;
+                          }
+                        }
+                        .bottom-text {
+                          width: 100%;
+                          margin-top: 1.875rem;
+                          .title {
+                            width: 100%;
+                            height: 5rem;
+                            margin: 0 0 0.3125rem;
+                            font-size: 1rem;
+                            color: #000;
+                            padding: 0.625rem 0;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            display: -webkit-box;
+                            -webkit-line-clamp: 4;
+                            -webkit-box-orient: vertical;
+                          }
+                          .star{
+                            height: 1.5rem;
+                          }
+                          .price {
+                            margin: .625rem 0;
+                            height: 1.5625rem;
+                            font-size: 1.25rem;
+                            color: #f03d3d;
+                            span {
+                              text-decoration: line-through;
+                              font-size: 0.875rem;
+                              padding: 0 0.3125rem;
+                              color: #999999;
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+                .mt-20.page-container{
+                  width: 100%;
+                  height: 2rem;
+                  margin: 2.5rem 0 0;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  // .pagination {
+                  //   height: 100%;
+                  //   display: flex;
+                  //   justify-content: center;
+                  //   align-items: center;
+                  //   button {
+                  //     width: 2.25rem;
+                  //     height: 1.75rem;
+                  //     padding: 0 0.375rem;
+                  //     border: 0;
+                  //     background-color: #fff;
+                  //   }
+                  //   ul {
+                  //     display: flex;
+                  //     align-items: center;
+                  //     justify-content: center;
+                  //     li {
+                  //       width: 2.25rem;
+                  //       height: 2.25rem;
+                  //       line-height: 2.25rem;
+                  //       padding: 0 0.25rem;
+                  //       font-size: 1rem;
+                  //       text-align: center;
+                  //       margin: 0 5px;
+                  //     }
+                  //     .li-active{
+                  //       width: 2.25rem;
+                  //       height: 2.25rem;
+                  //       line-height: 2.25rem;
+                  //       padding: 0 0.25rem;
+                  //       font-size: 1rem;
+                  //       text-align: center;
+                  //       border-radius: 50%;
+                  //       background-color: #979595;
+                  //       margin: 0 5px;
+                  //     }
+                  //   }
+                  // }
+                }
+              }
+            }
+          }
+        }
+      }
     }
+  }
 }
 
 // price
-.price-box{
-    display: none;
-    position: absolute;
-    top: 3.125rem;
-    left: 3.75rem;
-    background-color: #fff;
-    width: 18.75rem;
-    height: 9.375rem;
-    border: .0625rem solid #dcdfe6;
-    .top{
-        height: 3.125rem;
-        line-height: 3.125rem;
-        font-size: 1.125rem;
-        border-bottom: .0625rem solid #dcdfe6;
-        .reset{
-            text-align: right;
-            padding: 0 1.25rem;
-            color: #555454;
-        }    
+.price-box {
+  display: none;
+  position: absolute;
+  top: 3.125rem;
+  left: 3.75rem;
+  background-color: #fff;
+  width: 18.75rem;
+  height: 9.375rem;
+  border: 0.0625rem solid #dcdfe6;
+  .top {
+    height: 3.125rem;
+    line-height: 3.125rem;
+    font-size: 1.125rem;
+    border-bottom: 0.0625rem solid #dcdfe6;
+    .reset {
+      text-align: right;
+      padding: 0 1.25rem;
+      color: #555454;
     }
-    .bottom{
-        padding: 0 .625rem;
-        display: flex;
-        height: 6.25rem;
-        align-items: center;
-        .div-left{
-            display: flex;
-            flex:1;
-            i{
-                padding: 0 .625rem;
-                height: 2.1875rem;
-                line-height: 2.1875rem;
-            }
-            input{
-                text-align: left;
-                padding-left: 1.25rem;
-                width: 5rem;
-                height: 2.1875rem;
-                border: .0625rem solid #dcdfe6;
-            }
-
-        }
-        .div-center{
-            padding: 0 .625rem;
-        }
-        .div-right{
-            display: flex;
-            flex: 1;
-            i{
-                padding: 0 .625rem;
-                height: 2.1875rem;
-                line-height: 2.1875rem;
-            }
-            input{
-                text-align: left;
-                padding-left: 1.25rem;
-                width: 5rem;
-                height: 2.1875rem;
-                border: .0625rem solid #dcdfe6;
-                
-            }
-        }
+  }
+  .bottom {
+    padding: 0 0.625rem;
+    display: flex;
+    height: 6.25rem;
+    align-items: center;
+    .div-left {
+      display: flex;
+      flex: 1;
+      i {
+        padding: 0 0.625rem;
+        height: 2.1875rem;
+        line-height: 2.1875rem;
+      }
+      input {
+        text-align: left;
+        padding-left: 1.25rem;
+        width: 5rem;
+        height: 2.1875rem;
+        border: 0.0625rem solid #dcdfe6;
+      }
     }
+    .div-center {
+      padding: 0 0.625rem;
+    }
+    .div-right {
+      display: flex;
+      flex: 1;
+      i {
+        padding: 0 0.625rem;
+        height: 2.1875rem;
+        line-height: 2.1875rem;
+      }
+      input {
+        text-align: left;
+        padding-left: 1.25rem;
+        width: 5rem;
+        height: 2.1875rem;
+        border: 0.0625rem solid #dcdfe6;
+      }
+    }
+  }
 }
 // supplier
-.supplier-box{
-    display: none;
-    position: absolute;
-    top: 3.125rem;
-    left: 9.6875rem;
-    width: 18.75rem;
-    background-color: #fff;
-    border: .0625rem solid #dcdfe6;
-    .top{
-        padding: 0 .625rem;
-        width: 100%;
-        height: 2.8125rem;
-        border-bottom: .0625rem solid #dcdfe6;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        font-size: 1rem;
-        .select{
-            
-            span{
-                padding: 0 .625rem;
-            }
-        }
-        .reset{
-            text-decoration: underline;
-        }
+.supplier-box {
+  display: none;
+  position: absolute;
+  top: 3.125rem;
+  left: 9.6875rem;
+  width: 18.75rem;
+  background-color: #fff;
+  border: 0.0625rem solid #dcdfe6;
+  .top {
+    padding: 0 0.625rem;
+    width: 100%;
+    height: 2.8125rem;
+    border-bottom: 0.0625rem solid #dcdfe6;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1rem;
+    .select {
+      span {
+        padding: 0 0.625rem;
+      }
     }
-    .bottom-content{
-        font-size: .9375rem;
-        .item{
-            padding: 0 1.25rem;
-            height: 2.5rem;
-            line-height: 2.5rem;
-            border-bottom: .0625rem solid #dcdfe6;
-        }
+    .reset {
+      text-decoration: underline;
     }
+  }
+  .bottom-content {
+    font-size: 0.9375rem;
+    .item {
+      padding: 0 1.25rem;
+      height: 2.5rem;
+      line-height: 2.5rem;
+      border-bottom: 0.0625rem solid #dcdfe6;
+    }
+  }
 }
 // condition
-.condition-box{
-    position: absolute;
-    display: none;
-    top: 3.125rem;
-    left: 17rem;
-    width: 18.75rem;
-    background-color: #fff;
-    border: .0625rem solid #dcdfe6;
-    .top{
-        padding: 0 .625rem;
-        width: 100%;
-        height: 2.8125rem;
-        border-bottom: .0625rem solid #dcdfe6;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        font-size: 1rem;
-        .select{
-            
-            span{
-                padding: 0 .625rem;
-            }
-        }
-        .reset{
-            text-decoration: underline;
-        }
+.condition-box {
+  position: absolute;
+  display: none;
+  top: 3.125rem;
+  left: 17rem;
+  width: 18.75rem;
+  background-color: #fff;
+  border: 0.0625rem solid #dcdfe6;
+  .top {
+    padding: 0 0.625rem;
+    width: 100%;
+    height: 2.8125rem;
+    border-bottom: 0.0625rem solid #dcdfe6;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1rem;
+    .select {
+      span {
+        padding: 0 0.625rem;
+      }
     }
-    .bottom-content{
-        font-size: .9375rem;
-        .stock{
-            padding: 0 1.25rem;
-            height: 2.5rem;
-            line-height: 2.5rem;
-            border-bottom: .0625rem solid #dcdfe6;
-        }
-        
+    .reset {
+      text-decoration: underline;
     }
+  }
+  .bottom-content {
+    font-size: 0.9375rem;
+    .stock {
+      padding: 0 1.25rem;
+      height: 2.5rem;
+      line-height: 2.5rem;
+      border-bottom: 0.0625rem solid #dcdfe6;
+    }
+  }
 }
 // recommend
-.select-box{
-    display: none;
-    position: absolute;
-    top: 3.125rem;
-    right: 0;
-    width: 12.5rem;
-    border: .0625rem solid #dcdfe6;
-    background-color: #fff;
-    .sort-item{
-        height: 2.875rem;
-        line-height: 2.8125rem;
-        text-align: left;
-        padding: 0 1rem;
-        font-size: 1rem;
-        border-bottom: .0625rem solid #dcdfe6;
-        &:hover{
-            background-color: #dcdfe6;
-        }
+.select-box {
+  display: none;
+  position: absolute;
+  top: 3.125rem;
+  right: 0;
+  width: 12.5rem;
+  border: 0.0625rem solid #dcdfe6;
+  background-color: #fff;
+  .sort-item {
+    height: 2.875rem;
+    line-height: 2.8125rem;
+    text-align: left;
+    padding: 0 1rem;
+    font-size: 1rem;
+    border-bottom: 0.0625rem solid #dcdfe6;
+    &:hover {
+      background-color: #dcdfe6;
     }
+  }
 }
 
-.clearfix:after{
-    content: '';
-    display: block;
-    height: 0;
-    clear: both;
-    visibility: hidden;
-  }
-  .clearfix{
-    *zoom:1;
-  }
+.clearfix:after {
+  content: "";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.clearfix {
+  *zoom: 1;
+}
 
-  html, body, #app {
-    height: 100%;
-  }
-
+html,
+body,
+#app {
+  height: 100%;
+}
 
 //   filter
 
-.filter{
-    display: none;
-    width: 100%;
-    margin: 1.25rem 0;
-    .filter-item{
-        display: inline-block;
-        // 上 右 下 左
-        padding: .3125rem 0 .3125rem .625rem;
-        margin: 0 .625rem;
-        border-radius: 3.125rem;
-        background-color: #fff;
-        border: .0625rem solid #dcdfe6;
-        span{
-            font-size: 1rem;
-        }
+.filter {
+  display: none;
+  width: 100%;
+  margin: 1.25rem 0;
+  .filter-item {
+    display: inline-block;
+    // 上 右 下 左
+    padding: 0.3125rem 0 0.3125rem 0.625rem;
+    margin: 0 0.625rem;
+    border-radius: 3.125rem;
+    background-color: #fff;
+    border: 0.0625rem solid #dcdfe6;
+    span {
+      font-size: 1rem;
     }
-    .clear{
-        display: inline-block;
-        font-size: 1rem;
-        text-decoration: underline;
-        padding: .3125rem .625rem;
-    }
+  }
+  .clear {
+    display: inline-block;
+    font-size: 1rem;
+    text-decoration: underline;
+    padding: 0.3125rem 0.625rem;
+  }
 }

@@ -13,14 +13,14 @@ body {
 }
 .page-content-body .drag-item .product-info {
   width: 77.5rem;
-  padding: 0 1.25rem;
+  padding: 0.625rem 1.25rem;
   margin: 0 auto;
 }
 .page-content-body .drag-item .product-info .top-box {
   display: flex;
   align-items: center;
   width: 100%;
-  height: 44.25rem;
+  height: 800px;
   padding: 1.25rem 0 0;
   margin: 0 0 3rem;
   background-color: #fff;
@@ -44,6 +44,10 @@ body {
 .page-content-body .drag-item .product-info .top-box .swiper-box .sticky-box .left-swiper .side {
   width: 100%;
   height: 100%;
+  overflow: scroll;
+}
+.page-content-body .drag-item .product-info .top-box .swiper-box .sticky-box .left-swiper .side::-webkit-scrollbar {
+  display: none;
 }
 .page-content-body .drag-item .product-info .top-box .swiper-box .sticky-box .left-swiper .side .swiper-list {
   display: flex;
@@ -59,8 +63,8 @@ body {
   background-color: #fff;
 }
 .page-content-body .drag-item .product-info .top-box .swiper-box .sticky-box .left-swiper .side .swiper-list .swiper-item img {
-  width: 100%;
-  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
 }
 .page-content-body .drag-item .product-info .top-box .swiper-box .sticky-box .left-swiper .side .swiper-list .active {
   width: 4.375rem;
@@ -68,34 +72,41 @@ body {
   border: 0.0625rem solid black;
 }
 .page-content-body .drag-item .product-info .top-box .swiper-box .sticky-box .right-swiper {
-  width: 30.9375rem;
+  width: 28.125rem;
   height: 100%;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  overflow: hidden;
 }
 .page-content-body .drag-item .product-info .top-box .swiper-box .sticky-box .right-swiper img {
-  width: 100%;
-  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
 }
 .page-content-body .drag-item .product-info .top-box .info-box {
   flex: 1;
   height: 100%;
-  padding-left: 0.9375rem;
+  padding-left: 1.875rem;
+  overflow: scroll;
+  border: 0;
+}
+.page-content-body .drag-item .product-info .top-box .info-box::-webkit-scrollbar {
+  display: none;
 }
 .page-content-body .drag-item .product-info .top-box .info-box div {
   width: 100%;
-  height: 8.0625rem;
+  height: 100%;
 }
 .page-content-body .drag-item .product-info .top-box .info-box div .title {
-  height: 2.625rem;
   padding: 0 5rem 0 0;
   font-size: 1.875rem;
   font-weight: normal;
 }
 .page-content-body .drag-item .product-info .top-box .info-box div .subtitle {
-  height: 1.25rem;
   padding: 0 5rem 0 0;
   margin: 0.3125rem 0 0;
   font-size: 0.875rem;
-  color: #666666;
+  color: #818080;
 }
 .page-content-body .drag-item .product-info .top-box .info-box div .price-box {
   display: flex;
@@ -195,16 +206,17 @@ body {
   margin: 1.25rem 0 0;
 }
 .page-content-body .drag-item .product-info .top-box .info-box div .product-specification .product-options {
-  height: 5rem;
+  height: 7.5rem;
   width: 100%;
-  margin: 0 0 1.25rem;
+  padding: 0 10px ;
 }
 .page-content-body .drag-item .product-info .top-box .info-box div .product-specification .product-options .name {
   display: block;
   height: 1.5rem;
   margin: 0 0 0.4375rem;
-  font-size: 1rem;
+  font-size: 1.125rem;
   font-weight: 700;
+  padding: 0 10px ;
 }
 .page-content-body .drag-item .product-info .top-box .info-box div .product-specification .product-options .name span {
   font-weight: normal;
@@ -213,11 +225,12 @@ body {
   width: 100%;
   height: 3.125rem;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: flex-start;
 }
 .page-content-body .drag-item .product-info .top-box .info-box div .product-specification .product-options .item-box .product-options-item {
-  width: 9.375rem;
+  width: auto;
   height: 2.5rem;
   line-height: 2.5rem;
   padding: 0 0.625rem;
@@ -362,11 +375,9 @@ body {
   color: #807f7f;
 }
 .page-content-body .drag-item .product-info .top-box .info-box div .product-specification .product-options1 {
-  position: absolute;
-  top: 16.875rem;
   height: 5rem;
   width: 100%;
-  margin: 0 0;
+  margin-top: 100px;
 }
 .page-content-body .drag-item .product-info .top-box .info-box div .product-specification .product-options1 .name {
   display: block;
@@ -627,7 +638,7 @@ body {
   transform: scale(1.02);
 }
 .page-content-body .drag-item .product-info .tab-box .tab-content .tab-item-content3 {
-  display: none;
+  display: block;
   width: 100%;
   height: 10.25rem;
   padding: 2.5rem 0;
@@ -678,39 +689,55 @@ body {
   font-size: 2.625rem;
 }
 .page-content-body .drag-item .product-info .tab-box .like-box .row {
-  height: 34.375rem;
   width: 100%;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
 }
-.page-content-body .drag-item .product-info .tab-box .like-box .row .col {
-  flex: 1;
-  height: 100%;
-  padding: 0 0.625rem;
+.page-content-body .drag-item .product-info .tab-box .like-box .row > div {
+  width: 25%;
+  height: 570px;
   margin: 0 0 1.5rem;
+}
+.page-content-body .drag-item .product-info .tab-box .like-box .row .col {
+  width: 100%;
+  padding: 0 0.625rem;
 }
 .page-content-body .drag-item .product-info .tab-box .like-box .row .col a {
   display: block;
   width: 100%;
-  height: 34.375rem;
 }
 .page-content-body .drag-item .product-info .tab-box .like-box .row .col a .common-img-box {
-  height: 26.875rem;
+  padding: 0 0 1.25rem;
+  height: 25rem;
   width: 100%;
-  background-color: #fa986d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
 }
 .page-content-body .drag-item .product-info .tab-box .like-box .row .col a .common-img-box img {
-  width: 100%;
-  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
 }
 .page-content-body .drag-item .product-info .tab-box .like-box .row .col a .pro-title {
-  margin: 1.25rem 0 0;
-  height: 1.5rem;
   font-size: 1rem;
+  width: 100%;
+  height: 80px;
+  margin: 0.625rem 0.3125rem;
+  color: #000;
+  padding: 0.625rem 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
 }
 .page-content-body .drag-item .product-info .tab-box .like-box .row .col a .price {
-  height: 1.5rem;
-  font-size: 1.125rem;
+  padding: 0.625rem;
+  height: 1.5625rem;
+  font-size: 1.25rem;
+  color: #f10215;
 }
 .page-content-body .drag-item .product-info .tab-box .like-box .row .col a .price span {
   font-size: 0.875rem;
@@ -811,6 +838,10 @@ body {
   width: 100%;
   height: 100%;
   padding: 0 1.5rem;
+  overflow: scroll;
+}
+.shopping-cart-mask .shopping-cart .body::-webkit-scrollbar {
+  display: none;
 }
 .shopping-cart-mask .shopping-cart .body .main-box {
   width: 100%;
@@ -830,23 +861,35 @@ body {
 }
 .shopping-cart-mask .shopping-cart .body .main-box .table-body .table-item .img-box {
   padding: 0 0.625rem;
-  width: 7.1875rem;
+  width: 5.625rem;
   height: 6.5625rem;
   border: 0.0625rem solid #cecccc;
   margin: 0 0.625rem 0 0;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  overflow: hidden;
 }
 .shopping-cart-mask .shopping-cart .body .main-box .table-body .table-item .img-box img {
-  width: 100%;
-  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
 }
 .shopping-cart-mask .shopping-cart .body .main-box .table-body .table-item .table-info {
   width: 21.875rem;
   height: 100%;
   padding: 0 0 0 0.625rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .shopping-cart-mask .shopping-cart .body .main-box .table-body .table-item .table-info .title {
   height: 1.25rem;
-  font-size: 1rem;
+  font-size: 0.875rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
 }
 .shopping-cart-mask .shopping-cart .body .main-box .table-body .table-item .table-info .p {
   height: 1.125rem;
@@ -854,7 +897,8 @@ body {
   margin: 0 0 0.25rem;
 }
 .shopping-cart-mask .shopping-cart .body .main-box .table-body .table-item .table-info .price {
-  height: 1.5rem;
+  margin-top: 0.3125rem;
+  height: 1rem;
   font-size: 1rem;
 }
 .shopping-cart-mask .shopping-cart .body .main-box .table-body .table-item .table-info .count {
@@ -862,7 +906,7 @@ body {
   align-items: center;
   justify-content: space-between;
   margin: 0.3125rem 0 0;
-  height: 2.25rem;
+  height: 2rem;
 }
 .shopping-cart-mask .shopping-cart .body .main-box .table-body .table-item .table-info .count .input-box {
   width: 6.25rem;

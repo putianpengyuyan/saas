@@ -1,292 +1,304 @@
-.page-content-body{
-    width: 100%;
-    height: 600px;
-    .drag-item{
-        // 购物车无内容
-        .container1{
-            display: none;
-            width: 90rem;
-            margin: 0 auto;
-            height: 37.5rem;
-            text-align: center;
-            h2{
-                height: 9.5rem;
-                padding: 3.5rem 1rem;
-                font-size: 2.25rem;
-                font-weight: normal;
-            }
-            .title{
-                height: 4rem;
-                padding: 0 0 2.5rem;
-                font-size: 1rem;
-            }
-            a{
-                display: block;
-                width: 12.5rem;
-                height: 2.75rem;
-                line-height: 2.75rem;
-                border-radius: .375rem;
-                margin: 0 auto;
-                background-color: black;
-                color: #fff;
-                font-size: 1rem;
-                transition: all 0.3s;
-                &:hover{
-                    transform: scale(1.02);
-                }
-            }
+.page-content-body {
+  width: 100%;
+  
+  .drag-item {
+    // 购物车无内容
+    .container1 {
+      display: none;
+      width: 90rem;
+      margin: 0 auto;
+      height: 37.5rem;
+      text-align: center;
+      h2 {
+        height: 9.5rem;
+        padding: 3.5rem 1rem;
+        font-size: 2.25rem;
+        font-weight: normal;
+      }
+      .title {
+        height: 4rem;
+        padding: 0 0 2.5rem;
+        font-size: 1rem;
+      }
+      a {
+        display: block;
+        width: 12.5rem;
+        height: 2.75rem;
+        line-height: 2.75rem;
+        border-radius: 0.375rem;
+        margin: 0 auto;
+        background-color: black;
+        color: #fff;
+        font-size: 1rem;
+        transition: all 0.3s;
+        &:hover {
+          transform: scale(1.02);
         }
-
-        // 购物车有内容
-        .container2{
-            display: block;
-            width: 90rem;
-            margin: 0 auto;
-            text-align: center;
-            h2{
-                height: 9.5rem;
-                padding: 3.5rem 1rem;
-                font-size: 2.25rem;
-                font-weight: normal;
-            }
-            // main
-            .main{
-                width: 100%;
-                .table-header{
-                    width: 100%;
-                    height: 3.125rem;
-                    border-bottom: .0625rem solid #b8b8b8;
-                    display: flex;
-                    align-items: center;
-                    justify-content: space-between;
-                    font-size: 1rem;
-                    font-weight: 550;
-                    text-align: left;
-                    .c-product{
-                        width: 42rem;
-                        padding: 0 1.25rem 0 0;
-                    }
-                    .c-price{
-                        width: 17.5rem;
-                        padding: 0 1.25rem;
-                    }
-                    .c-qty{
-                        width: 17.5rem;
-                    }
-                    .c-total{
-                        width: 10.5rem;
-                        text-align: right;
-                    }
-                }
-                .table-body{
-                    width: 100%;
-                    display: flex;
-                    align-items: center;
-                    flex-direction: column;
-                    li{
-                        display: flex;
-                        justify-content: space-between;
-                        align-items: center;
-                        width: 100%;
-                        height: 13.25rem;
-                        padding: 2rem 0;
-                        font-size: 1rem;
-                        text-align: left;
-                        border-bottom: .0625rem solid #b8b8b8;
-                        .c-product-item{
-                            height: 100%;
-                            width: 42rem;
-                            padding: 0 1.25rem 0 0;
-                            display: flex;
-                            justify-content: start;
-                            .top{
-                                height: 100%;
-                                width: 6.875rem;
-                                
-                                a{
-                                    display: block;
-                                    width: 100%;
-                                    height: 100%;
-                                    background-color: pink;
-                                    .img-box{
-                                        width: 100%;
-                                        height: 100%;
-                                        img{
-                                            width: 100%;
-                                            height: 100%;
-                                        }
-                                    }
-                                }
-                            }
-                            .info{
-                                width: 50%;
-                                padding: 0 0 0 1.5rem;
-                                .title{
-                                    display: block;
-                                    height: 1.5rem;
-                                    font-size: 1rem;
-                                    font-weight: 510;
-                                }
-                                .c-color{
-                                    height: 1.3125rem;
-                                    font-size: .875rem;
-                                    color: #999999;
-                                }
-                                .remove{
-                                    margin: .5rem 0 0;
-                                    width: 2.25rem;
-                                    height: 2.25rem;
-                                    line-height: 2.25rem;
-                                    border-radius: 50%;
-                                    background-color: #f5f5f8;
-                                    text-align: center;
-                                }
-                            }
-                        }
-                        .c-price-item{
-                            width: 17.5rem;
-                            padding: 0 1.25rem;
-                        }
-                        .c-qty-item{
-                            width: 17.5rem;
-                            .c-input-box {
-                                width: 11.25rem;
-                                height: 2.5rem;
-                                display: flex;
-                                align-items: center;
-                                justify-content: space-between;
-                                .c-input-number {
-                                  display: flex;
-                                  align-items: center;
-                                  justify-content: space-between;
-                                  width: 11.25rem;
-                                  height: 2.5rem;
-                                  border: .0625rem solid rgb(158, 157, 157);
-                                  span {
-                                    display: block;
-                                    width: 2.5rem;
-                                    height: 2.5rem;
-                                    line-height: 2.75rem;
-                                    text-align: center;
-                                  }
-                                  .c-input {
-                                    width: 3.75rem;
-                                    height: 2.5rem;
-                                    line-height: 2.75rem;
-                                    text-align: center;
-                                  }
-                                }
-                              }
-                        }
-                        .c-total-item{
-                            width: 10.5rem;
-                            text-align: right;
-                        }
-                    }
-                }
-
-                // 支付
-                .checkout{
-                    height: 25rem;
-                    width: 100%;
-                    display: flex;
-                    justify-content: end;
-                    .checkout-box{
-                        width: 25rem;
-                        height: 20rem;
-                        padding: 3rem 3rem .625rem;
-                        margin: 0 -3rem;
-                        .item-price{
-                            display: flex;
-                            justify-content: space-between;
-                            height: 2.125rem;
-                            padding: .3125rem 0;
-                            .page-title{
-                                font-size: 1rem;
-                                font-weight: 510;
-                            }
-                            .price-title-total{
-                                font-size: 1rem;
-                                font-weight: 600;
-                            }
-                        }
-                        .node{
-                            line-height: 1.3125rem;
-                            font-size: .875rem;
-                            color: #757577;
-                            text-align: left;
-                        }
-                        .check-out{
-                            width: 100%;
-                            padding: .3125rem;
-                            margin: 1.25rem 0 0;
-                            .margin-top-btn {
-                                width: 100%;
-                                height: 3rem;
-                                .col-md-12 {
-                                  height: 3rem;
-                                  line-height: 3rem;
-                                  font-size: 1rem;
-                                  text-align: center;
-                                  background-color: #000;
-                                  border-radius: .375rem;
-                                  transition: all 0.3s;
-                                  color: #fff;
-                                  &:hover {
-                                    transform: scale(1.02);
-                                  }
-                                }
-                              }
-                              .col-md-12 {
-                                width: 100%;
-                                height: 8.4375rem;
-                                .paypal-button-container {
-                                  margin-top: .625rem;
-                                  width: 100%;
-                                  height: 2.5rem;
-                                  border-radius: .375rem;
-                                  line-height: 2.5rem;
-                                  font-size: 1rem;
-                                  text-align: center;
-                                  background-color: #ffc439;
-                                  span {
-                                    font-size: 1rem;
-                                  }
-                                }
-                                .paypal-button-container1 {
-                                  margin-top: .625rem;
-                                  width: 100%;
-                                  height: 2.5rem;
-                                  border-radius: .375rem;
-                                  line-height: 2.5rem;
-                                  font-size: 1rem;
-                                  text-align: center;
-                                  background-color: #080808;
-                                  span {
-                                    font-size: 1rem;
-                                    color: #fff;
-                                  }
-                                }
-                                .paypal-powered-by {
-                                  margin-top: .625rem;
-                                  width: 100%;
-                                  height: 1.875rem;
-                                  line-height: 1.875rem;
-                                  font-size: 1rem;
-                                  text-align: center;
-                                  img {
-                                    height: 1.875rem;
-                                  }
-                                  span {
-                                    font-size: 1rem;
-                                    color: #807f7f;
-                                  }
-                                }
-                              }
-                        }
-                    }
-                }
-            }
-        }
+      }
     }
+
+    // 购物车有内容
+    .container2 {
+      display: block;
+      width: 90rem;
+      margin: 0 auto;
+      text-align: center;
+      h2 {
+        height: 9.5rem;
+        padding: 3.5rem 1rem;
+        font-size: 2.25rem;
+        font-weight: normal;
+      }
+      // main
+      .main {
+        width: 100%;
+        .table-header {
+          width: 100%;
+          height: 3.125rem;
+          border-bottom: 0.0625rem solid #b8b8b8;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          font-size: 1rem;
+          font-weight: 550;
+          text-align: left;
+          .c-product {
+            width: 42rem;
+            padding: 0 1.25rem 0 0;
+          }
+          .c-price {
+            width: 17.5rem;
+            padding: 0 1.25rem;
+          }
+          .c-qty {
+            width: 17.5rem;
+          }
+          .c-total {
+            width: 10.5rem;
+            text-align: right;
+          }
+        }
+        .table-body {
+          width: 100%;
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+          li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            height: 13.25rem;
+            padding: 2rem 0;
+            font-size: 1rem;
+            text-align: left;
+            border-bottom: 0.0625rem solid #b8b8b8;
+            .c-product-item {
+              height: 100%;
+              width: 42rem;
+              padding: 0 1.25rem 0 0;
+              display: flex;
+              justify-content: start;
+              .top {
+                height: 100%;
+                width: 6.875rem;
+
+                a {
+                  display: block;
+                  width: 100%;
+                  height: 100%;
+                  .img-box {
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    img {
+                     max-width: 100%;
+                     max-height: 100%;
+                    }
+                  }
+                }
+              }
+              .info {
+                width: 50%;
+                padding: 0 0 0 1.5rem;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-content: start;
+                .title {
+                  display: block;
+                  padding: 5px;
+                  font-size: 0.875rem;
+                  font-weight: 510;
+                  height: 55px;
+                  overflow: hidden;
+                  text-overflow: ellipsis;
+                  display: -webkit-box;
+                  -webkit-line-clamp: 3;
+                  -webkit-box-orient: vertical;
+                }
+                .c-color {
+                  height: 1.3125rem;
+                  font-size: 1rem;
+                  color: #999999;
+                }
+                .remove {
+                  margin: 0.5rem 0 0;
+                  width: 2.25rem;
+                  height: 2.25rem;
+                  line-height: 2.25rem;
+                  border-radius: 50%;
+                  background-color: #f5f5f8;
+                  text-align: center;
+                }
+              }
+            }
+            .c-price-item {
+              width: 17.5rem;
+              padding: 0 1.25rem;
+            }
+            .c-qty-item {
+              width: 17.5rem;
+              .c-input-box {
+                width: 11.25rem;
+                height: 2.5rem;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                .c-input-number {
+                  display: flex;
+                  align-items: center;
+                  justify-content: space-between;
+                  width: 11.25rem;
+                  height: 2.5rem;
+                  border: 0.0625rem solid rgb(158, 157, 157);
+                  span {
+                    display: block;
+                    width: 2.5rem;
+                    height: 2.5rem;
+                    line-height: 2.75rem;
+                    text-align: center;
+                  }
+                  .c-input {
+                    width: 3.75rem;
+                    height: 2.5rem;
+                    line-height: 2.75rem;
+                    text-align: center;
+                  }
+                }
+              }
+            }
+            .c-total-item {
+              width: 10.5rem;
+              text-align: right;
+            }
+          }
+        }
+
+        // 支付
+        .checkout {
+          height: 25rem;
+          width: 100%;
+          display: flex;
+          justify-content: end;
+          .checkout-box {
+            width: 25rem;
+            height: 20rem;
+            padding: 3rem 3rem 0.625rem;
+            margin: 0 -3rem;
+            .item-price {
+              display: flex;
+              justify-content: space-between;
+              height: 2.125rem;
+              padding: 0.3125rem 0;
+              .page-title {
+                font-size: 1rem;
+                font-weight: 510;
+              }
+              .price-title-total {
+                font-size: 1rem;
+                font-weight: 600;
+              }
+            }
+            .node {
+              line-height: 1.3125rem;
+              font-size: 0.875rem;
+              color: #757577;
+              text-align: left;
+            }
+            .check-out {
+              width: 100%;
+              padding: 0.3125rem;
+              margin: 1.25rem 0 0;
+              .margin-top-btn {
+                width: 100%;
+                height: 3rem;
+                .col-md-12 {
+                  height: 3rem;
+                  line-height: 3rem;
+                  font-size: 1rem;
+                  text-align: center;
+                  background-color: #000;
+                  border-radius: 0.375rem;
+                  transition: all 0.3s;
+                  color: #fff;
+                  &:hover {
+                    transform: scale(1.02);
+                  }
+                }
+              }
+              .col-md-12 {
+                width: 100%;
+                height: 8.4375rem;
+                .paypal-button-container {
+                  margin-top: 0.625rem;
+                  width: 100%;
+                  height: 2.5rem;
+                  border-radius: 0.375rem;
+                  line-height: 2.5rem;
+                  font-size: 1rem;
+                  text-align: center;
+                  background-color: #ffc439;
+                  span {
+                    font-size: 1rem;
+                  }
+                }
+                .paypal-button-container1 {
+                  margin-top: 0.625rem;
+                  width: 100%;
+                  height: 2.5rem;
+                  border-radius: 0.375rem;
+                  line-height: 2.5rem;
+                  font-size: 1rem;
+                  text-align: center;
+                  background-color: #080808;
+                  span {
+                    font-size: 1rem;
+                    color: #fff;
+                  }
+                }
+                .paypal-powered-by {
+                  margin-top: 0.625rem;
+                  width: 100%;
+                  height: 1.875rem;
+                  line-height: 1.875rem;
+                  font-size: 1rem;
+                  text-align: center;
+                  img {
+                    height: 1.875rem;
+                  }
+                  span {
+                    font-size: 1rem;
+                    color: #807f7f;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }

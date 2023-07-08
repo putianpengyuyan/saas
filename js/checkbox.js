@@ -1,25 +1,24 @@
-const url='https://goods.adteam.info';
-
 //
 function getCountryList() {
-  axios.get(`${url}/api/products/country`)
-  .then(res => {
+  axios.get(`${url}/api/products/country`).then((res) => {
     console.log(res);
     if (res.status === 200) {
-      const countrySelectorComponent = document.getElementById('checkout-country-selector');
+      const countrySelectorComponent = document.getElementById(
+        "checkout-country-selector"
+      );
       const countryObj = res.data.data;
       for (const key in countryObj) {
         let optionData = {
           country_code: key,
-          country_name: countryObj[key]
+          country_name: countryObj[key],
         };
-        let option = document.createElement('option');
-        option.value = JSON.stringify(optionData) ;
+        let option = document.createElement("option");
+        option.value = JSON.stringify(optionData);
         option.innerText = optionData.country_name;
         countrySelectorComponent.appendChild(option);
       }
     }
-  })
+  });
 }
 
 getCountryList();
@@ -47,12 +46,11 @@ email.addEventListener("input", () => {
 const country = document.querySelector("[name=country]");
 let countryCode, countryName;
 country.addEventListener("change", function (e) {
-  console.log('country--------------')
+  console.log("country--------------");
   console.log(e.target.value);
   let country = JSON.parse(e.target.value);
   countryCode = country.country_code;
   countryName = country.country_name;
-  
 });
 
 // first name
@@ -156,12 +154,9 @@ const button = document.querySelector(".continue");
 button.addEventListener("click", function () {
   if (!agree.checked) {
     alert("请勾选");
-    if (!verifyEmail(e))
-    if (!verifyPost(e)) 
-    if (!verifyTelephone(e)) 
-    return;
+    if (!verifyEmail(e)) if (!verifyPost(e)) if (!verifyTelephone(e)) return;
   }
-  
+
   console.log("========================");
   console.log(email.value);
   console.log(country.value);
@@ -179,27 +174,28 @@ button.addEventListener("click", function () {
   const last_name = LastName.value;
   const addressComponent = address.value;
   const cityComponent = city.value;
-  
+
   // const provinceComponent = province.value;
   const postCodeComponent = postCode.value;
   const telephoneComponent = telephone.value;
   // 本地
   const user_order = {
-    email:emailComponent,
-    first_name:first_name,
-    last_name:last_name,
-    address:addressComponent,
-    city:cityComponent,
+    email: emailComponent,
+    first_name: first_name,
+    last_name: last_name,
+    address: addressComponent,
+    city: cityComponent,
     country: {
       countryCode,
-      countryName
+      countryName,
     },
     // province:provinceComponent,
-    postCode:postCodeComponent,
-    telephone:telephoneComponent,
-  }
-  localStorage.setItem('user_order',JSON.stringify(user_order))
-  location.href="order.html"
+    postCode: postCodeComponent,
+    telephone: telephoneComponent,
+  };
+  localStorage.setItem("user_order", JSON.stringify(user_order));
+  console.log(window.location)
+  location.href = `order.html${window.location.search}`;
 });
 
 //   // 依次判断上面的每个模块是否通过
@@ -210,91 +206,107 @@ button.addEventListener("click", function () {
 //   if(!verifyTelephone()) e.preventDefault()
 
 // 立即购买
-const LocalShoppingCart = localStorage.getItem("shopping_cart") && JSON.parse(localStorage.getItem("shopping_cart"));
-if (!LocalShoppingCart || LocalShoppingCart.length === 0) {
-  console.log(JSON.parse(localStorage.getItem("newProduct")));
-  const BuyArr = JSON.parse(localStorage.getItem("newProduct"));
-  console.log("======buyarr=======");
-  console.log(BuyArr);
-  console.log(BuyArr.num);
-  console.log("======buyarr=======");
-  const productList = document.querySelector(".product-list");
+// 获取 url 参数判断当前订单来自立即购买或购物车结算
 
-  const productItem = document.createElement("div");
-  productItem.innerHTML = `
-          <div class="product-item checkout-product-item">
-              <div class="left">
-                  <div class="img-box">
-                      <i>${BuyArr.num}</i>
-                      <img src=${url+BuyArr.img}  alt="">
-                  </div>
-                  <div class="info">
-                      <div class="title">${BuyArr.title}</div>
-                      <div class="color"></div>
-                  </div>
-              </div>
-              <div class="right">
-                  <div class="price">$${BuyArr.price}</div>
-              </div>
-          </div>
-          `;
-  productList.appendChild(productItem);
-  document.querySelector(".txt").innerText = `$${BuyArr.total}`;
-  document.querySelector(".price-total").innerText = `$${BuyArr.total}`;
-} else if(localStorage.getItem("shopping_cart")) {
+// const LocalShoppingCart = localStorage.getItem("shopping_cart") && JSON.parse(localStorage.getItem("shopping_cart"));
+const locationUrl = window.location.href;
+if (locationUrl.indexOf("checkout_flag") > 0) {
+  const checkout_method = locationUrl.split("checkout_flag=")[1];
+  if (checkout_method === "new_product") {
+    console.log(JSON.parse(localStorage.getItem("newProduct")));
+    const BuyArr = JSON.parse(localStorage.getItem("newProduct"));
+    console.log("======buyarr=======");
+    console.log(BuyArr);
+    console.log(BuyArr.num);
+    console.log("======buyarr=======");
+    const productList = document.querySelector(".product-list");
+
+    const productItem = document.createElement("div");
+    productItem.innerHTML = `
+            <div class="product-item checkout-product-item">
+                <div class="left">
+                    <div class="img-box">
+                        <i>${BuyArr.num}</i>
+                        <img src=${url + BuyArr.img}  alt="">
+                    </div>
+                    <div class="info">
+                        <div class="title">${BuyArr.title}</div>
+                        <div class="color"></div>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="price">$${BuyArr.price}</div>
+                </div>
+            </div>
+            `;
+    productList.appendChild(productItem);
+    document.querySelector(".txt").innerText = `$${BuyArr.total}`;
+    document.querySelector(".price-total").innerText = `$${BuyArr.total}`;
+  }
+} else {
+  console.log("购物车~~~~~~~~~~~~");
   // shopping cart
   const localProductArr = JSON.parse(localStorageUtil.getProductArr());
   const productList = document.querySelector(".product-list");
+  let total = 0;
   localProductArr.map((item, index) => {
     const productItem = document.createElement("div");
     productItem.innerHTML = `
-    <div class="product-item checkout-product-item">
-        <div class="left">
-            <div class="img-box">
-                <i>${item.num}</i>
-                <img src=${item.img}  alt="">
-            </div>
-            <div class="info">
-                <div class="title">${item.title}</div>
-                <div class="color">${item.color}</div>
-            </div>
-        </div>
-        <div class="right">
-            <div class="price">$${item.price}</div>
-        </div>
-    </div>
-    `;
+  <div class="product-item checkout-product-item">
+      <div class="left">
+          <div class="img-box">
+              <i>${item.num}</i>
+              <img src=${item.img}  alt="">
+          </div>
+          <div class="info">
+              <div class="title">${item.title}</div>
+              <div class="color">${item.color}</div>
+          </div>
+      </div>
+      <div class="right">
+          <div class="price">$${item.price}</div>
+      </div>
+  </div>
+  `;
     productList.appendChild(productItem);
-    document.querySelector(".txt").innerText = `$${item.total}`;
   });
-  const shoppingCartTotal = JSON.parse(localStorageUtil.getShoppingCartTotal());
+  const shoppingCartTotal = parseFloat(
+    JSON.parse(localStorageUtil.getShoppingCartTotal())
+  ).toFixed(2);
   console.log(shoppingCartTotal);
-  document.querySelector(".price-total").innerText = `$${shoppingCartTotal}`;
-}
 
-function Render(){
-  if(localStorage.getItem('user_order')){
-    const userManagement = JSON.parse(localStorage.getItem('user_order'))
-  console.log(userManagement);
-  console.log(userManagement.email);
-  email.value = userManagement.email
-  country.value = userManagement.country
-  FirstName.value = userManagement.first_name
-  LastName.value = userManagement.last_name
-  postCode.value = userManagement.postCode
-  telephone.value = userManagement.telephone
-  address.value = userManagement.address
-  city.value = userManagement.city
-  country.value = userManagement.country
-  }
-  
+ document.querySelector(".txt").innerText = `$${shoppingCartTotal}`;
+  document.querySelector(".price-total").innerText = `$${shoppingCartTotal}`;
+
 }
-Render()
+// if (!LocalShoppingCart || LocalShoppingCart.length === 0) {
+
+// } else if(localStorage.getItem("shopping_cart")) {
+
+// }
+
+function Render() {
+  if (localStorage.getItem("user_order")) {
+    const userManagement = JSON.parse(localStorage.getItem("user_order"));
+    console.log(userManagement);
+    console.log(userManagement.email);
+    email.value = userManagement.email;
+    country.value = userManagement.country;
+    FirstName.value = userManagement.first_name;
+    LastName.value = userManagement.last_name;
+    postCode.value = userManagement.postCode;
+    telephone.value = userManagement.telephone;
+    address.value = userManagement.address;
+    city.value = userManagement.city;
+    country.value = userManagement.country;
+  }
+}
+Render();
 
 console.log(email.innerText);
 
 // return
-const Return = document.querySelector('.return')
-Return.addEventListener('click',function(){
-  location.href='productDetail.html'
-})
+const Return = document.querySelector(".return");
+Return.addEventListener("click", function () {
+  location.href = "productDetail.html";
+});

@@ -1,7 +1,7 @@
 let shippingReturns='shipping_and_returns'
 
 function ShippingReturn(){
-  axios.post(`https://goods.adteam.info/api/products/getConfingText`,{"type":shippingReturns})
+  axios.post(url+"/api/products/getConfingText",{"type":shippingReturns})
   .then(res=>{
     var text = res.data.data.list
     console.log(res);

@@ -1,5 +1,5 @@
 function Banner() {
-  axios.post("https://goods.adteam.info/api/products/getBander").then(
+  axios.post(url+"/api/products/getBander").then(
     function (response) {
       var data = response.data.data.list;
       if (data.length) {
@@ -13,6 +13,20 @@ function Banner() {
         });
       }
       console.log(response);
+      var swiper = new Swiper(".mySwiper", {
+        // 小圆点
+        pagination: {
+          el: ".swiper-pagination",
+        },
+        //自动轮播
+        autoplay: {
+            delay: 1000,//1秒切换一次
+        },
+        keyboard: {
+            enabled: true,
+            onlyInViewport: true,
+    },
+    });
     },
     function (err) {
       console.log(err);
@@ -23,7 +37,7 @@ function Banner() {
 Banner();
 
 function getProductList() {
-  axios.post("https://goods.adteam.info/api/products/getProducts").then(
+  axios.post(url+"/api/products/getProducts").then(
     function (response) {
       var data = response.data.data.list;
       console.log(data);
@@ -70,7 +84,7 @@ function getProductList() {
                 `;
           homeRow2.appendChild(PList);
         });
-        const colArr = document.querySelectorAll(".col");
+        const colArr = document.querySelectorAll(".homeCol");
         console.log("!!!!!!!!!!!!!");
         console.log(colArr);
         for (let i = 0; i < colArr.length; i++) {
@@ -135,3 +149,26 @@ getProductList();
 //     })
 // }
 // // getProductDetails(1)
+
+let homeImage = 'homeImage'
+function HomeImage(){
+  axios.post(url+"/api/products/getConfingText",{"type":homeImage})
+  .then(res=>{
+    console.log('---------------------');
+    console.log(res.data.data.list);
+    console.log('---------------------');
+    var data = res.data.data.list
+    if(data){
+      const chain = document.querySelector('.chain-img')
+      chain.src=`${url}${data}`
+    }
+    
+    console.log(res);
+  },
+  err=>{
+    console.log(err);
+  }
+  )
+}
+
+HomeImage()

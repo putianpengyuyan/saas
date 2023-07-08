@@ -2,9 +2,12 @@ function getProductDetails(id) {
   axios.post(url + "/api/products/getProduct", { id: id }).then(
     function (response) {
       var data = response.data.data.list;
-      var color = JSON.parse(data.skudata1);
-      var size = JSON.parse(data.skudata2);
-      console.log();
+      var color = data.skudata1 && JSON.parse(data.skudata1);
+      var size = data.skudata2 && JSON.parse(data.skudata2);
+      var discountTag = data.discount_tag
+
+      console.log(discountTag);
+      console.log('------discountTag---------');
       console.log(data);
       console.log(color);
       console.log(size);
@@ -31,6 +34,7 @@ function getProductDetails(id) {
       }
 
       console.log(sizeArr);
+      console.log("========== res ================");
       console.log(response);
       console.log("========== res ================");
       if (data) {
@@ -44,9 +48,10 @@ function getProductDetails(id) {
           specialProduct: data,
           colorArr: colorArr ? colorArr : "",
           sizeArr: sizeArr ? sizeArr : "",
+          discountTag: discountTag,
         });
         productPrimary.innerHTML = html;
-        bindProductDetailEvent(data, url, colorArr, sizeArr);
+        bindProductDetailEvent(data, url, colorArr, sizeArr, discountTag);
       }
       console.log(response);
     },
@@ -550,9 +555,7 @@ function getProductList() {
                         </div>
                         <div class="pro-title">${item.title}</div>
                         <div class="star"><div id=${item.star}></div></div>
-                        <div class="price">$${item.price}<span>$${
-            item.costprice
-          }</span></div>
+                        <div class="price">$${item.price}<span>$${item.costprice}</span></div>
                     </a>
                 </div> 
             `;

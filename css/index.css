@@ -2,13 +2,13 @@
   box-sizing: border-box;
 }
 .page-content-body .drag-item1 {
-  height: 25rem;
+  height: 37.5rem;
   width: 100%;
   margin: 0 auto;
 }
 .page-content-body .drag-item1 .banner {
   width: 100%;
-  height: 25rem;
+  height: 37.5rem;
 }
 .page-content-body .drag-item1 .banner .swiper {
   width: 100%;
@@ -19,7 +19,6 @@
 .page-content-body .drag-item1 .banner .swiper .swiper-slide {
   text-align: center;
   font-size: 1.125rem;
-  background: #e4acac;
   /* Center slide text vertically */
   display: -webkit-box;
   display: -ms-flexbox;
@@ -36,71 +35,86 @@
 }
 .page-content-body .drag-item1 .banner .swiper .swiper-slide img {
   display: block;
-  width: 100%;
+  max-width: 100%;
   height: 100%;
   object-fit: cover;
 }
 .page-content-body .drag-item2 {
-  margin-top: 1.25rem;
-  height: 45rem;
+  margin: 3.125rem auto;
 }
 .page-content-body .drag-item2 .container {
   width: 88.75rem;
   margin: 0 auto;
-  height: 100%;
 }
 .page-content-body .drag-item2 .container h2 {
   height: 2.5rem;
   line-height: 2.5rem;
-  margin-bottom: 0.625rem;
+  margin-bottom: 1.875rem;
   text-align: center;
   font-size: 1.875rem;
   font-weight: normal;
 }
 .page-content-body .drag-item2 .container .row {
-  height: 39.375rem;
   display: flex;
   align-items: center;
+  height: 570px;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+.page-content-body .drag-item2 .container .row > div {
+  width: 25%;
+  height: 570px;
+  margin-bottom: 4.375rem;
 }
 .page-content-body .drag-item2 .container .row .col {
-  flex: 1;
-  height: 37.5rem;
-  width: 23.375rem;
+  width: 100%;
+  height: 100%;
   padding: 0 0.625rem 1.6875rem;
 }
 .page-content-body .drag-item2 .container .row .col a {
   display: block;
-  height: 100%;
   width: 100%;
-  overflow: hidden;
   background-color: #fff;
 }
 .page-content-body .drag-item2 .container .row .col a .common-img-box {
   padding: 0 0 1.25rem;
-  height: 28.125rem;
+  height: 25rem;
   width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
 }
 .page-content-body .drag-item2 .container .row .col a .common-img-box img {
-  width: 100%;
-  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
 }
 .page-content-body .drag-item2 .container .row .col a .info-box {
-  height: 5rem;
   padding: 0.625rem;
 }
 .page-content-body .drag-item2 .container .row .col a .info-box .title {
+  width: 100%;
+  height: 5rem;
   margin: 0 0 0.3125rem;
   font-size: 1rem;
   font-weight: 510;
   color: #000;
+  padding: 0.625rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
 }
 .page-content-body .drag-item2 .container .row .col a .info-box .star {
   margin: 0 0 0.3125rem;
+  height: 1.5625rem;
 }
 .page-content-body .drag-item2 .container .row .col a .info-box .price {
-  margin: 0.625rem 0 0;
-  font-size: 1rem;
+  margin: 0.625rem 0;
+  font-size: 1.25rem;
   font-weight: normal;
+  height: 1.5625rem;
   color: #f03d3d;
 }
 .page-content-body .drag-item2 .container .row .col a .info-box .price span {
@@ -109,7 +123,7 @@
   text-decoration: line-through;
 }
 .page-content-body .drag-item3 {
-  margin: 0 auto;
+  margin: 3.125rem auto;
   height: 28.75rem;
 }
 .page-content-body .drag-item3 .container {
@@ -197,7 +211,7 @@
 .page-content-body .drag-item4 .container .row .col .card-body .text-menu {
   margin: 0 0 0.5rem;
   font-size: 0.875rem;
-  color: #9B9B98;
+  color: #9b9b98;
 }
 .page-content-body .drag-item4 .container .row .col .card-body .text-menu i {
   padding: 0 0.3125rem;
@@ -218,13 +232,12 @@
 }
 .page-content-body .drag-item5 {
   margin: 0 0 3.125rem;
-  height: 31.25rem;
   width: 100%;
 }
 .page-content-body .drag-item5 .container {
   position: relative;
   width: 100%;
-  height: 31.25rem;
+  height: 18.75rem;
 }
 .page-content-body .drag-item5 .container a {
   display: block;
@@ -235,9 +248,13 @@
   width: 100%;
   height: 100%;
   overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .page-content-body .drag-item5 .container a .common-img-box img {
-  width: 100%;
+  max-width: 100%;
+  max-height: 100%;
 }
 .page-content-body .drag-item5 .container .main-box {
   position: absolute;
@@ -280,12 +297,10 @@
 }
 .page-content-body .drag-item6 {
   margin: 1.25rem 0 3.125rem;
-  height: 760px;
 }
 .page-content-body .drag-item6 .container {
   width: 88.75rem;
   margin: 0 auto;
-  height: 100%;
 }
 .page-content-body .drag-item6 .container h2 {
   height: 2.5rem;
@@ -296,53 +311,66 @@
   font-weight: normal;
 }
 .page-content-body .drag-item6 .container .row {
-  height: 39.375rem;
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
+  height: 76.25rem;
+  overflow: hidden;
+}
+.page-content-body .drag-item6 .container .row > div {
+  width: 25%;
+  height: 35.625rem;
+  margin-bottom: 4.375rem;
 }
 .page-content-body .drag-item6 .container .row .col {
-  flex: 1;
-  height: 100%;
-  width: 23.375rem;
+  width: 100%;
   padding: 0 0.625rem 1.6875rem;
 }
 .page-content-body .drag-item6 .container .row .col a {
   display: block;
-  height: 100%;
   width: 100%;
   background-color: #fff;
 }
 .page-content-body .drag-item6 .container .row .col a .common-img-box {
   padding: 0 0 1.25rem;
-  height: 28.125rem;
+  height: 25rem;
   width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
 }
 .page-content-body .drag-item6 .container .row .col a .common-img-box img {
-  width: 100%;
-  height: 100%;
-  transition: all 0.3s;
-}
-.page-content-body .drag-item6 .container .row .col a .common-img-box img:hover {
-  transform: scale(1.05);
+  max-width: 100%;
+  max-height: 100%;
 }
 .page-content-body .drag-item6 .container .row .col a .info-box {
-  height: 5rem;
   padding: 0.625rem;
 }
 .page-content-body .drag-item6 .container .row .col a .info-box .title {
+  width: 100%;
+  height: 5rem;
   margin: 0 0 0.3125rem;
   font-size: 1rem;
   font-weight: 510;
   color: #000;
+  padding: 0.625rem 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
 }
 .page-content-body .drag-item6 .container .row .col a .info-box .star {
   margin: 0 0 0.3125rem;
+  height: 1.875rem;
 }
 .page-content-body .drag-item6 .container .row .col a .info-box .price {
-  margin: 0.625rem 0 0;
-  font-size: 1rem;
+  margin: 0.625rem 0;
+  font-size: 1.25rem;
   color: #f03d3d;
   font-weight: normal;
+  height: 1.5625rem;
 }
 .page-content-body .drag-item6 .container .row .col a .info-box .price span {
   font-size: 0.9375rem;
@@ -354,7 +382,7 @@
 }
 .page-content-body .drag-item7 .container {
   width: 90rem;
-  margin: 0 auto;
+  margin: 3.125rem auto;
   height: 100%;
 }
 .page-content-body .drag-item7 .container .row {
@@ -380,7 +408,8 @@
   margin: 3.125rem 0;
   font-size: 1rem;
   color: #666666;
-  line-height: 1.75rem;
+  padding: 0.625rem;
+  height: 5rem;
 }
 .page-content-body .drag-item7 .container .row .info-box .text a {
   display: block;
@@ -393,7 +422,6 @@
 }
 .page-content-body .drag-item8 {
   margin: 1.25rem 0 3.125rem;
-  height: 47.5rem;
 }
 .page-content-body .drag-item8 .container {
   width: 88.75rem;
@@ -409,13 +437,15 @@
   font-weight: normal;
 }
 .page-content-body .drag-item8 .container .row {
-  height: 39.375rem;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
 }
-.page-content-body .drag-item8 .container .row .col {
+.page-content-body .drag-item8 .container .row > div {
   flex: 1;
+}
+.page-content-body .drag-item8 .container .row .col {
+  width: 100%;
   height: 100%;
   padding: 0 0.625rem 1.6875rem;
 }
@@ -423,15 +453,21 @@
   display: block;
 }
 .page-content-body .drag-item8 .container .row .col a .common-img-box {
-  padding: 0 0 1.25rem;
+  width: 100%;
+  height: 25rem;
+  display: flex;
+  justify-content: center;
+  align-content: center;
   overflow: hidden;
 }
 .page-content-body .drag-item8 .container .row .col a .common-img-box img {
-  width: 100%;
-  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
 }
 .page-content-body .drag-item8 .container .row .col .mt-4 {
   margin: 1.5rem 0 1rem 0;
+  text-align: center;
+  padding: 0.625rem 1.25rem;
 }
 .page-content-body .drag-item8 .container .row .col .mt-4 h3 {
   margin: 0 0 0.5rem;
@@ -441,7 +477,11 @@
 .page-content-body .drag-item8 .container .row .col .mt-4 .t-text {
   font-size: 1rem;
   color: #666666;
-  line-height: 1.5rem;
+  height: 5rem;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
 }
 .page-content-body .drag-item9 {
   height: 18.3125rem;
@@ -465,16 +505,23 @@
   align-items: center;
   flex-wrap: wrap;
 }
-.page-content-body .drag-item9 .container .row .col {
+.page-content-body .drag-item9 .container .row .div {
   flex: 1;
+}
+.page-content-body .drag-item9 .container .row .col {
+  width: 100%;
   height: 100%;
   padding: 0 0.625rem 1.6875rem;
 }
 .page-content-body .drag-item9 .container .row .col .common-img-box {
-  padding: 0 0 1.25rem;
+  width: 100%;
+  height: 25rem;
   overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-content: center;
 }
 .page-content-body .drag-item9 .container .row .col .common-img-box img {
-  width: 100%;
-  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
 }

@@ -1,129 +1,144 @@
-.page-content-body{
+.page-content-body {
+  width: 100%;
+  .drag-item {
     width: 100%;
-    .drag-item{
+    .banner {
+      width: 100%;
+      height: 21.875rem;
+      img {
         width: 100%;
-            .banner{
-                width: 100%;
-                height: 21.875rem;
-                img{
-                    width: 100%;
-                    height: 100%;
-                }
-            }
-            .coupon-view{
-                
-                height: 5.125rem;
-                width: 100%;
-                background-image: linear-gradient(to right, rgb(255, 72, 72), rgb(255, 13, 125));
-                text-align: center;
-                img{
-                    height: 100%;
-                }
-            
-        }
+        height: 100%;
+      }
     }
-    .container{
-        width: 90rem;
-        margin: 0 auto;
-        padding: 0 1.25rem;
-        .sort-box{
+    .coupon-view {
+      height: 5.125rem;
+      width: 100%;
+      background-image: linear-gradient(
+        to right,
+        rgb(255, 72, 72),
+        rgb(255, 13, 125)
+      );
+      text-align: center;
+      img {
+        height: 100%;
+      }
+    }
+  }
+  .container {
+    height: 53.125rem;
+    width: 90rem;
+    margin: 0 auto;
+    padding: 0 1.25rem;
+    .sort-box {
+      width: 100%;
+      height: 5.25rem;
+      padding: 1.5rem 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .item {
+        height: 100%;
+        font-size: 1rem;
+      }
+      .box {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        position: relative;
+        span {
+          font-size: 1rem;
+        }
+        .item-select {
+          width: 12.5rem;
+          height: 2.25rem;
+          line-height: 2.25rem;
+          padding: 0 0.625rem;
+          border: 0.0625rem solid #dcdfe6;
+          margin-left: 1.25rem;
+        }
+        .select-box {
+          display: none;
+          position: absolute;
+          top: 3.125rem;
+          right: 0;
+          width: 12.5rem;
+          border: 0.0625rem solid #dcdfe6;
+          background-color: #fff;
+          .sort-item {
+            height: 2.875rem;
+            line-height: 2.8125rem;
+            text-align: left;
+            padding: 0 1rem;
+            font-size: 1rem;
+            border-bottom: 0.0625rem solid #dcdfe6;
+            &:hover {
+              background-color: #dcdfe6;
+            }
+          }
+        }
+      }
+    }
+    // row
+    .row {
+      width: 90rem;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      margin: 0 auto;
+      align-items: center;
+      > div {
+        width: 25%;
+        height: 570px;
+      }
+      .col {
+        width: 100%;
+        padding: 0 0.5625rem;
+        margin: 0 0 1.5rem;
+        a {
+          display: block;
+          width: 100%;
+          .common-img-box {
             width: 100%;
-            height: 5.25rem;
-            padding: 1.5rem 0;
+            height: 25rem;
             display: flex;
-            align-items: center;
-            justify-content: space-between;
-            .item{
-                height: 100%;
-                font-size: 1rem;
+            justify-content: center;
+            align-content: center;
+            overflow: hidden;
+            img {
+              max-width: 100%;
+              max-height: 100%;
             }
-            .box{
-                display: flex;
-                align-items: center;
-                height: 100%;
-                position: relative;
-                span{
-                    font-size: 1rem;
-                }
-                .item-select{
-                    width: 12.5rem;
-                    height: 2.25rem;
-                    line-height: 2.25rem;
-                    padding: 0 .625rem;
-                    border: .0625rem solid #dcdfe6;
-                    margin-left: 1.25rem;
-                }
-                .select-box{
-                    display: none;
-                    position: absolute;
-                    top: 3.125rem;
-                    right: 0;
-                    width: 12.5rem;
-                    border: .0625rem solid #dcdfe6;
-                    background-color: #fff;
-                    .sort-item{
-                        height: 2.875rem;
-                        line-height: 2.8125rem;
-                        text-align: left;
-                        padding: 0 1rem;
-                        font-size: 1rem;
-                        border-bottom: .0625rem solid #dcdfe6;
-                        &:hover{
-                            background-color: #dcdfe6;
-                        }
-                    }
-                }
-            }
+          }
         }
-        // row
-        .row{
-            width: 90rem;
-            display: flex;
-            flex-direction: row;
-            flex-wrap:wrap;
-            margin: 0 auto;
-            align-items: center;
-        }
-        .col{
-            height: 31.25rem;
-            width: 16.5625rem;
-            padding: 0 .5625rem;
-            margin: 0 0 1.5rem;
-            a{
-                display: block;
-                width: 100%;
-                height: 22.5rem;
-                transition: all 0.3s;
-                img{
-                    width: 100%;
-                    height: 100%;
-                }
-                &:hover{
-                    transform: scale(1.02)
-                }
+        .info-box {
+          padding: 0.625rem 0 0;
+          width: 100%;
+          .pro-title {
+            width: 100%;
+            height: 5.3125rem;
+            margin: 0 0 0.3125rem;
+            font-size: 1rem;
+            color: #000;
+            padding: 0.625rem 0;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 4;
+            -webkit-box-orient: vertical;
+          }
+          .price {
+            height: 1.5625rem;
+            font-size: 1.25rem;
+            margin: 0.625rem 0;
+            color: #f03d3d;
+            span {
+              font-size: 0.875rem;
+              color: #666666;
+              text-decoration: line-through;
             }
-            .info-box{
-                padding: .625rem 0 0;
-                height: 6.25rem;
-                width: 100%;
-                .pro-title{
-                    height: 1.5rem;
-                    line-height: 1.5rem;
-                    font-size: 1.125rem;
-                }
-                .price{
-                    height: 1.5rem;
-                    line-height: 1.5rem;
-                    font-size: 1rem;
-                    margin: 0 0 .625rem;
-                    color: #f03d3d;
-                    span{
-                        font-size: .875rem;
-                        color: #666666;
-                        text-decoration: line-through;
-                    }
-                }
-            }
+          }
         }
+      }
     }
+  }
 }

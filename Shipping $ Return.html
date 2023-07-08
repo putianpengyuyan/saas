@@ -8,6 +8,8 @@
     <!-- icon -->
     <link rel="shortcut icon" href="#" type="image/x-icon">
     <!-- 判断屏幕尺寸 -->
+    <link rel="stylesheet" href="./css/style820.css" media="screen and (max-width:820px)">
+    <link rel="stylesheet" href="./css/style1024.css" media="screen and (max-width:1024px)">
     <link rel="stylesheet" href="./css/style1440.css" media="screen and (max-width:1440px)">
     <!--公共区 -->
     <link rel="stylesheet" href="./css/commom.css">
@@ -34,6 +36,33 @@
                     <a href="#"><img src="./images/TikTok.png" alt=""></a>
                 </nav>
                 <nav class="bottom-nav">
+                    <div class="hs-mobile-home-nav-toggle" style="display: none;">
+                        <div class="flex">
+                            <div class="menu"><img src="./upload/menu-button.svg" alt=""></div>
+                            <a href="./index.html" class="mobile-logo">
+                                <img src="#" alt=""class="logo-img">
+                            </a>
+                            <ul class="search-shopping">
+                                <li>
+                                    <a href="./search.html">
+                                        <i class="layui-icon layui-icon-search"style="font-size: 20px;background-color: #fff;"></i>
+                                    </a>
+                                </li>
+                                <li class="user-li" style="display: none;">
+                                    <a href="./order-list.html">
+                                        <i class="layui-icon layui-icon-username "style="font-size: 20px;background-color: #fff;"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <i class="products"><span class="products-num">0</span></i>
+                                    <a href="./shopping-cart.html">
+                                        <i class="layui-icon layui-icon-cart"style="font-size: 20px;background-color: #fff;"></i>
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
                     <a href="#" class="logo"><img src="#" alt="" class="logo-img"></a>
                         <ul class="tab">
                             <li><a href="./index.html">Home</a></li>
@@ -46,7 +75,7 @@
                                 <a href="./productDetail.html" class="product">Product</a>
                             </li>
                             <li><a href="./About Us.html" class="pages">Pages</a></li>
-                            <li><a href="./Coupons.html">Coupons</a></li>
+                            <!-- <li><a href="./Coupons.html">Coupons</a></li> -->
                             
                         </ul>
                         
@@ -107,19 +136,27 @@
                         </div>
                         
                         <ul class="yonghu">
-                            <li><a href="./search.html"><i class="layui-icon layui-icon-search" style="font-size: 20px;background-color: #fff;"></i></a></li>
-                            <li class="user-root"><i class="layui-icon layui-icon-username username" style="font-size: 20px;background-color: #fff;"></i></li>
-                            <li class="user-user"><i class="layui-icon layui-icon-username username" style="font-size: 20px;background-color: #fff;"></i></li>
+                            <li><a href="./search.html"><i class="layui-icon layui-icon-search"
+                                        style="font-size: 20px;background-color: #fff;"></i></a></li>
+                            <li class="user-root">
+                                <i class="layui-icon layui-icon-username username"
+                                style="font-size: 20px;background-color: #fff;"></i>
+                                    <div class="root">
+                                        <div class="row">
+                                            <a href="./login.html">Log in</a>
+                                            <a href="./register.html">Register</a>
+                                        </div>
+                                    </div>
+                                </li>
+                            <li class="user-user"><i class="layui-icon layui-icon-username username"
+                                    style="font-size: 20px;background-color: #fff;"></i></li>
                             <li>
                                 <i class="products"><span class="products-num">0</span></i>
-                                <a href="./shopping-cart.html"><i class="layui-icon layui-icon-cart" style="font-size: 20px;background-color: #fff;"></i></a></li>
-                            <div class="root">
-                                <div class="row">
-                                    <a href="./login.html">Log in</a>
-                                    <a href="./register.html">Register</a>
-                                </div>
-                            </div>
+                                <a href="./shopping-cart.html"><i class="layui-icon layui-icon-cart"
+                                        style="font-size: 20px;background-color: #fff;"></i></a>
+                            </li>
                             
+
                         </ul>
                         
                 </nav>
@@ -150,10 +187,10 @@
                             <div class="menu-link">
                                 <p>SUPPORT</p>
                                 <ul>
-                                    <li class="menu-item"><a href="#">About us</a></li>
-                                    <li class="menu-item"><a href="#">FAQs</a></li>
-                                    <li class="menu-item"><a href="#">Shipping Policies</a></li>
-                                    <li class="menu-item"><a href="#">Shipping & return</a></li>
+                                    <li class="menu-item"><a href="./About Us.html">About us</a></li>
+                                    <!-- <li class="menu-item"><a href="#">FAQs</a></li> -->
+                                    <li class="menu-item"><a href="./Shipping Policies.html">Shipping Policies</a></li>
+                                    <li class="menu-item"><a href="./Shipping $ Return.html">Shipping & return</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -163,10 +200,10 @@
                             <div class="menu-link">
                                 <p>Quick links</p>
                                 <ul>
-                                    <li class="menu-item"><a href="#">My account</a></li>
-                                    <li class="menu-item"><a href="#">Cart</a></li>
-                                    <li class="menu-item"><a href="#">Coupon</a></li>
-                                    <li class="menu-item"><a href="#">Query Order</a></li>
+                                    <li class="menu-item"><a href="#" class="my-account">My account</a></li>
+                                    <li class="menu-item"><a href="./shopping-cart.html">Cart</a></li>
+                                    <!-- <li class="menu-item"><a href="#">Coupon</a></li> -->
+                                    <!-- <li class="menu-item"><a href="#">Query Order</a></li> -->
                                 </ul>
                             </div>
                         </div>
@@ -231,21 +268,108 @@
                         <img src="./images/cod_1.svg" alt="">
                         <img src="./images/paypal.svg" alt="">
                     </div>
-                    <div class="item-copyright-box">
-                        <p>@2022 Fecify 版权信息 鲁ICP备19015289号-6</p>
-                    </div>
+                    
                 </div>
             </div>
         </div>
+        </div>
+        <div class="menu-mask" style="display: none;">
+            <div class="menu-body" style="display: none;">
+                <ul class="menu-ul">
+                    <li><a href="./index.html" class="menu-li">Home</a></li>
+                    <li><a href="./shop.html" class="menu-li">Shop</a>
+                        <i class="layui-icon layui-icon-right shop-i" style="font-size: 20px; "></i>
+                    </li>
+                    <li><a href="./productDetail.html" class="menu-li">Product</a>
+                        <i class="layui-icon layui-icon-right product-i" style="font-size: 20px; "></i>
+                    </li>
+                    <li><a href="./About Us.html" class="menu-li">Pages</a>
+                        <i class="layui-icon layui-icon-right page-i" style="font-size: 20px; "></i>
+                    </li>
+                    <li><a href="./Coupons.html" class="menu-li">Coupons</a></li>
+                </ul>
+                <a href="./login.html" class="login">Log in</a>
+                <a href="./register.html" class="register">Register</a>
+                <a href="#" class="logout" style="display: none;">Log out</a>
+            </div>
+            <!-- shop -->
+            <div class="shop-body" style="display: none;"> 
+                <ul class="shop-ul">
+                    <a href="#" class="menu-return"><i class="layui-icon layui-icon-return"></i> Return</a>
+                    <li><a href="#">Tops</a>
+                        <i class="layui-icon layui-icon-right tops-i" style="font-size: 20px; "></i>
+                    </li>
+                    <li><a href="#">Outwear & Sweaters</a>
+                        <i class="layui-icon layui-icon-right outwear-i" style="font-size: 20px; "></i>
+                    </li>
+                    <li><a href="#">Hoodies</a>
+                        <i class="layui-icon layui-icon-right hoodies-i" style="font-size: 20px; "></i>
+                    </li>
+                    <li><a href="#">Cover Ups</a></li>
+                </ul>
+            </div>
+            <!-- tops -->
+            <div class="tops-body" style="display: none;">
+                <ul class="tops-ul" >
+                    <a href="#" class="shop-return"><i class="layui-icon layui-icon-return"></i> Return</a>
+                    <li><a href="#">Blouses & Shirts</a></li>
+                    <li><a href="#">T-Shirts</a></li>
+                    <li><a href="#">Tank Tops & Camis</a></li>
+                    <li><a href="#">Crop Tops</a></li>
+                    <li><a href="#">Kimonos</a></li>
+                </ul>
+            </div>
+            <!-- outerwear -->
+            <div class="outwear-body"  style="display: none;">
+                <ul class="outwear-ul">
+                    <a href="#" class="shop-return"><i class="layui-icon layui-icon-return"></i> Return</a>
+                    <li><a href="#">Coats</a></li>
+                    <li><a href="#">Sweaters</a></li>
+                    <li><a href="#">Blazers</a></li>
+                    <li><a href="#">Jackets</a></li>
+                    <li><a href="#">Cardigans</a></li>
+                </ul>
+            </div>
+            <!-- hoodies -->
+            <div class="hoodies-body" style="display: none;">
+                <ul class="hoodies-ul">
+                    <a href="#" class="shop-return"><i class="layui-icon layui-icon-return"></i> Return</a>
+                    <li><a href="#">Hoodies</a></li>
+                    <li><a href="#">Sweat Shirts</a></li>
+                </ul>
+            </div>
+            <!-- product -->
+            <div class="product-body" style="display: none;">
+                <ul class="product-ul">
+                    <a href="#" class="menu-return"><i class="layui-icon layui-icon-return"></i> Return</a>
+                    <li><a href="#">Dresses</a></li>
+                    <li><a href="#">Outerwears</a></li>
+                    <li><a href="#">Bottoms</a></li>
+                    <li><a href="#">Tops</a></li>
+                    <li><a href="#">New In</a></li>
+                </ul>
+            </div>
+            <!-- page -->
+            <div class="page-body" style="display: none;">
+                <ul class="page-ul">
+                    <a href="#" class="menu-return"><i class="layui-icon layui-icon-return"></i> Return</a>
+                    <li><a href="#">Shipping & Return</a></li>
+                    <li><a href="#">Shipping Policies</a></li>
+                    <li><a href="#">About Us</a></li>
+                </ul>
+            </div>
         </div>
     </div>
     
 
     <script src="./layui/layui.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./js/icon-title.js"></script>
     <script src="./utils/LocalStorageUtil.js"></script>
     <script src="./js/root.js"></script>
     <script src="./js/tab.js"></script>
     <script src="./js/shipping return.js"></script>
+    <script src="./js/mobile-nav.js"></script>
+    <script src="./js/my account.js"></script>
 </body>
 </html>

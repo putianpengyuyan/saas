@@ -1,4 +1,3 @@
-const url = "https://goods.adteam.info";
 
 // 登录
 const username = document.querySelector(".username");
@@ -27,12 +26,12 @@ productNum.innerText = shoppingCartNum;
 const container1 = document.querySelector('.container1')
 const container2 = document.querySelector('.container2')
 
-const token = $.cookie('Token')
+console.log(token);
 const config = {
     headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
   }
 function OrderList() {
-    axios.post("https://goods.adteam.info/api/products/getOrders",{token:token},config).then(
+    axios.post(url+"/api/products/getOrders",{token:token},config).then(
         (res) => {
             var list = res.data.data.list;
             console.log(res);

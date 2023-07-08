@@ -1,3 +1,10 @@
+const productNumS = document.querySelectorAll('.products-num');
+  for(let i=0;i<productNumS.length;i++){
+    const productNum = productNumS[i]
+    productNum.innerText = localStorageUtil.getShoppingCartTotalNum();
+  }
+
+
 // swiper图片切换
 const swiperS = document.querySelectorAll(".swiper-item");
 const rightSwiper = document.querySelector(".right-swiper");
@@ -326,8 +333,8 @@ close.addEventListener("click", () => {
   //   // 转换数据类型
   // });
   // console.log(proNum);
-  const productNum = document.querySelector('.products-num');
-  productNum.innerText = localStorageUtil.getShoppingCartTotalNum();
+  
+  
   ul.innerHTML=''
 
 });

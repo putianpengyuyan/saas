@@ -1,499 +1,512 @@
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.content-box{
+.content-box {
+  width: 100%;
+  
+  .main {
     width: 100%;
-    height: 79.75rem;
-    .main{
-        width: 100%;
+    height: 100%;
+    .checkout-box {
+      width: 100%;
+      height: 1100px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      // left
+      .left-checkout {
+        flex: 1;
         height: 100%;
-        .checkout-box{
+        display: flex;
+        justify-content: end;
+        border-right: 0.0625rem solid #c7c3c3;
+        .payment-info {
+          width: 40rem;
+          height: 100%;
+          padding: 3.5rem 4.375rem 0 0;
+          .logo-box {
+            height: 4.125rem;
             width: 100%;
-            height: 100%;
+            padding: 0 0 0.875rem 0;
+            margin: 0;
+            a {
+              display: block;
+              width: 100%;
+              height: 100%;
+
+              img {
+                width: 10.8125rem;
+                height: 2.8125rem;
+              }
+            }
+          }
+          .bread {
+            width: 100%;
+            height: 1.125rem;
+            margin: 0 0 1.25rem;
             display: flex;
-            justify-content: center;
             align-items: center;
-            
-            // left
-            .left-checkout{
-                flex: 1;
+            .uppercase {
+              color: rgb(89, 90, 90);
+            }
+          }
+          .pay {
+            width: 100%;
+            // height: 13.75rem;
+            .payment-box {
+              width: 100%;
+              height: 9.75rem;
+              padding: 0 1.25rem;
+              margin: 1.25rem 0 0;
+              border: 0.0625rem solid rgb(187, 185, 185);
+              border-radius: 0.3125rem;
+              .col-md-12 {
+                width: 100%;
+                height: 8.4375rem;
+                .row {
+                  display: flex;
+                  align-items: center;
+                  height: 3.125rem;
+                  line-height: 3.125rem;
+                  border-bottom: 0.0625rem solid #b4b2b2;
+                  &:last-child {
+                    justify-content: start;
+                    align-items: center;
+                    border-bottom: none;
+                  }
+                  h2 {
+                    font-size: 0.875rem;
+                    font-weight: normal;
+                    color: #737373;
+                    padding-right: 1.25rem;
+                  }
+                  p {
+                    width: 40%;
+                    display: inline-block;
+                    height: 3.125rem;
+                    color: #545454;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    -webkit-box-orient: vertical;
+                    text-align: left;
+                    white-space: nowrap;
+                    
+                  }
+                  a {
+                    flex: 1;
+                    text-align: right;
+                    color: #2277cc;
+                  }
+                }
+                .paypal-button-container {
+                  margin-top: 0.3125rem;
+                  width: 100%;
+                  height: 2.5rem;
+                  border-radius: 0.375rem;
+                  line-height: 2.5rem;
+                  font-size: 1rem;
+                  text-align: center;
+                  background-color: #ffc439;
+                  span {
+                    font-size: 1rem;
+                  }
+                }
+                .paypal-button-container1 {
+                  margin-top: 0.625rem;
+                  width: 100%;
+                  height: 2.5rem;
+                  border-radius: 0.375rem;
+                  line-height: 2.5rem;
+                  font-size: 1rem;
+                  text-align: center;
+                  background-color: #080808;
+                  span {
+                    font-size: 1rem;
+                    color: #fff;
+                  }
+                }
+                .paypal-powered-by {
+                  margin-top: 0.625rem;
+                  width: 100%;
+                  height: 1.25rem;
+                  line-height: 1.25rem;
+                  font-size: 1rem;
+                  text-align: center;
+                  img {
+                    height: 1.25rem;
+                  }
+                  span {
+                    font-size: 1rem;
+                    color: #807f7f;
+                  }
+                }
+              }
+            }
+
+            .divider {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              width: 100%;
+              height: 3.375rem;
+              .line {
+                height: 0.0313rem;
+                width: 50%;
+                border-bottom: 0.0625rem solid rgb(199, 197, 197);
+              }
+              .or {
+                font-size: 1rem;
+                padding: 0 0.625rem;
+              }
+            }
+          }
+          .contact {
+            width: 100%;
+            height: 39.375rem;
+            h2 {
+              height: 1.25rem;
+              margin: 0.625rem 0 0.625rem;
+              font-size: 1.125rem;
+              font-weight: 400;
+            }
+            p {
+              color: #737373;
+              font-size: 0.8125rem;
+            }
+            .ship {
+              width: 100%;
+              height: 2.875rem;
+              border: 0.0625rem solid #999999;
+              padding: 0 0.625rem;
+              margin: 1.25rem 0;
+              border-radius: 0.3125rem;
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              img {
+                width: 2.1875rem;
+                height: 1.375rem;
+              }
+              p {
+                display: inline-block;
+                align-items: center;
+                font-size: 0.875rem;
+                color: #1b1b1b;
+                i {
+                  display: inline-block;
+                  width: 0.9375rem;
+                  height: 0.9375rem;
+                  border-radius: 0.9375rem;
+                  border: 0.0625rem solid #999999;
+                  margin-right: 0.625rem;
+                }
+                .i-active {
+                  border: 0.0625rem solid #2277cc;
+                  background-color: #2277cc;
+                }
+                .pay-i-active {
+                  border: 0.0625rem solid #2277cc;
+                  background-color: #2277cc;
+                }
+
+                line-height: 0.9375rem;
+              }
+              span {
+                display: inline-block;
+                font-size: 0.9375rem;
+                font-weight: 550;
+              }
+            }
+            .ship-active {
+              border: 0.125rem solid #2277cc;
+            }
+            .pay-active {
+              border: 0.125rem solid #2277cc;
+            }
+            form {
+              input {
+                width: 100%;
+                height: 2.875rem;
+                margin: 0.625rem 0;
+                border: 0.0625rem solid #999999;
+                padding: 0 10px;
+              }
+              select {
+                width: 100%;
+                height: 2.875rem;
+                border: 0.0625rem solid #999999;
+                padding: 0 10px;
+              }
+              span {
+                color: red;
+              }
+              .row {
+                width: 100%;
                 height: 100%;
                 display: flex;
-                justify-content: end;
-                border-right: .0625rem solid #c7c3c3;
-                .payment-info{
-                    width: 40rem;
-                    height: 100%;
-                    padding: 3.5rem 4.375rem 0 0;
-                    .logo-box{
-                        height: 4.125rem;
-                        width: 100%;
-                        padding: 0 0 .875rem 0;
-                        margin: 0;
-                        a{
-                            display: block;
-                            width: 100%;
-                            height: 100%;
-                            
-                            img{
-                                width: 10.8125rem;
-                                height: 2.8125rem;
-                            }
-                        }
-                    }
-                    .bread{
-                        width: 100%;
-                        height: 1.125rem;
-                        margin:0 0 1.25rem ;
-                        display: flex;
-                        align-items: center;
-                        .uppercase{
-                            color: rgb(89, 90, 90);
-                        }
-                    }
-                    .pay{
-                        width: 100%;
-                        height: 13.75rem;
-                        
-                        .payment-box{
-                            width: 100%;
-                            height: 9.75rem;
-                            padding: 0 1.25rem;
-                            margin: 1.25rem 0 0;
-                            border: .0625rem solid rgb(187, 185, 185);
-                            border-radius: .3125rem;
-                            .col-md-12 {
-                                width: 100%;
-                                height: 8.4375rem;
-                                .row{
-                                    display: flex;
-                                    align-items: center;
-                                    height: 3.125rem;
-                                    line-height: 3.125rem;
-                                    border-bottom: .0625rem solid #b4b2b2;
-                                    &:last-child{
-                                        justify-content: start;
-                                        align-items: center;
-                                        border-bottom: none;
-                                    }
-                                    h2{
-                                       
-                                        font-size: .875rem;
-                                        font-weight: normal;
-                                        color: #737373;
-                                        padding-right: 1.25rem;
-                                    }
-                                    p{
-                                        width: 18.75rem;
-                                        display: inline-block;
-                                        height: 3.125rem;
-                                        color: #545454;
-                                        overflow : hidden;
-                                        text-overflow: ellipsis;
-                                        display: -webkit-box;
-                                        -webkit-line-clamp: 2;
-                                        -webkit-box-orient: vertical;
-                                        text-align: left;
-                                        white-space: nowrap;
-                                    }
-                                    a{
-                                        flex: 1;
-                                        text-align: right;
-                                        color: #2277cc;
-                                    }
-                                }
-                                .paypal-button-container {
-                                  margin-top: .3125rem;
-                                  width: 100%;
-                                  height: 2.5rem;
-                                  border-radius: .375rem;
-                                  line-height: 2.5rem;
-                                  font-size: 1rem;
-                                  text-align: center;
-                                  background-color: #ffc439;
-                                  span {
-                                    font-size: 1rem;
-                                  }
-                                }
-                                .paypal-button-container1 {
-                                  margin-top: .625rem;
-                                  width: 100%;
-                                  height: 2.5rem;
-                                  border-radius: .375rem;
-                                  line-height: 2.5rem;
-                                  font-size: 1rem;
-                                  text-align: center;
-                                  background-color: #080808;
-                                  span {
-                                    font-size: 1rem;
-                                    color: #fff;
-                                  }
-                                }
-                                .paypal-powered-by {
-                                  margin-top: .625rem;
-                                  width: 100%;
-                                  height: 1.25rem;
-                                  line-height: 1.25rem;
-                                  font-size: 1rem;
-                                  text-align: center;
-                                  img {
-                                    height: 1.25rem;
-                                  }
-                                  span {
-                                    font-size: 1rem;
-                                    color: #807f7f;
-                                  }
-                                }
-                              }
-                        }
-
-                        .divider{
-                            display: flex;
-                            align-items: center;
-                            justify-content: center;
-                            width: 100%;
-                            height: 3.375rem;
-                            .line{
-                                height: .0313rem;
-                                width: 50%;
-                                border-bottom: .0625rem solid rgb(199, 197, 197);
-                            }
-                            .or{
-                                font-size: 1rem;
-                                padding: 0 .625rem;
-                            }
-                        }
-                    }
-                    .contact{
-                        width: 100%;
-                        height: 39.375rem;
-                        h2{
-                            height: 1.25rem;
-                            margin: .625rem 0 .625rem;
-                            font-size: 1.125rem;
-                            font-weight: 400;
-                        }
-                        p{
-                            color: #737373;
-                            font-size: .8125rem;
-                        }
-                        .ship{
-                            width: 100%;
-                            height: 2.875rem;
-                            border: .0625rem solid #999999;
-                            padding: 0 .625rem;
-                            margin: 1.25rem 0;
-                            border-radius: .3125rem;
-                            display: flex;
-                            justify-content: space-between;
-                            align-items: center;
-                            img{
-                                width: 2.1875rem;
-                                height: 1.375rem;
-                            }
-                            p{
-                                display: inline-block;
-                                align-items: center;
-                                font-size: .875rem;
-                                color: #1b1b1b;
-                                i{
-                                    display: inline-block;
-                                    width: .9375rem;
-                                    height: .9375rem;
-                                    border-radius: .9375rem;
-                                    border: .0625rem solid #999999;
-                                    margin-right: .625rem;
-
-                                }
-                                .i-active{
-                                    border: .0625rem solid #2277cc;
-                                    background-color: #2277cc;
-                                }
-                                .pay-i-active{
-                                    border: .0625rem solid #2277cc;
-                                    background-color: #2277cc;
-                                }
-                                
-                                line-height: .9375rem;
-                            }
-                            span{
-                                display: inline-block;
-                                font-size: .9375rem;
-                                font-weight: 550;
-                                
-                            }
-                        }
-                        .ship-active{
-                            border: .125rem solid #2277cc;
-                        }
-                        .pay-active{
-                            border: .125rem solid #2277cc;
-                        }
-                        form{
-                            input{
-                                width: 100%;
-                                height: 2.875rem;
-                                margin: .625rem 0;
-                                border: .0625rem solid #999999;
-                                padding: 0 10px;
-                            }
-                            select{
-                                width: 100%;
-                                height: 2.875rem;
-                                border: .0625rem solid #999999;
-                                padding: 0 10px;
-                            }
-                            span{
-                                color: red;
-                            }
-                            .row{
-                                width: 100%;
-                                height: 100%;
-                                display: flex;
-                                align-items: center;
-                                justify-content: space-between;
-                                .col{
-                                    width: 33%;
-                                    select{
-                                        width: 100%;
-                                        height: 2.875rem;
-                                        line-height: 2.875rem;
-                                        border: .0625rem solid #999999;
-                                        padding: 0 .3125rem;
-                                    }
-                                }
-                            }
-                            p{
-                                color: #807f7f;
-                            }
-                            .agree{
-                                margin: 1.25rem 0 0;
-                                display: flex;
-                                align-items: center;
-                                height: 1.5rem;
-                                input{
-                                    width: .9375rem;
-                                    height: .9375rem;
-                                    margin: 0 .625rem;
-                                }
-                                p{
-                                    height: 1.5rem;
-                                    line-height: 1.5rem;
-                                    color: #000;
-                                    font-weight: 600;
-                                }
-                            }
-                        }
-
-                        .pay-btn{
-                            display: flex;
-                            justify-content: space-between;
-                            align-items: center;
-                            height: 6.875rem;
-                            padding: 1.5625rem 0;
-                            margin: .9375rem 0 20px;
-                            border-bottom: .0625rem solid #999999;
-                            .return{
-                                color:  #2277cc;
-                                font-size: 1rem;
-                                font-weight: 550;
-                            }
-                            .ctin{
-                                height: 3.75rem;
-                                width: 11.25rem;
-                                background-color:  #2277cc;
-                                padding: 1.25rem .625rem;
-                                border-radius: .3125rem;
-                                color: #fff;
-                                font-size: 1rem;
-                                text-align: center;
-                                button{
-                                    border: 0;
-                                    width: 100%;
-                                    height: 100%;
-                                    background-color: transparent;
-                                }
-                            }
-                        }
-                        .footer{
-                            width: 100%;
-                            ul{
-                                display: flex;
-                                align-content: center;
-                                justify-content: space-around;
-                                li{
-                                    font-size: .875rem;
-                                    color:#807f7f;
-                                }
-                            }
-                            .icon-list{
-                                padding: 0 1.25rem;
-                                width: 100%;
-                                margin: .625rem 0 0;
-                                .item-payment-box{
-                                    text-align: center;
-                                    width: 100%;
-                                    img{
-                                        width: 2.5rem;
-                                        height: 1.125rem;
-                                        margin: .3125rem 0 0;
-                                    }
-                                }
-                            }
-                        }
-                    }
+                align-items: center;
+                justify-content: space-between;
+                .col {
+                  width: 33%;
+                  select {
+                    width: 100%;
+                    height: 2.875rem;
+                    line-height: 2.875rem;
+                    border: 0.0625rem solid #999999;
+                    padding: 0 0.3125rem;
+                  }
                 }
-            }
-            
-            // right
-            .right-checkout{
-                flex: 1;
-                height: 100%;
+              }
+              p {
+                color: #807f7f;
+              }
+              .agree {
+                margin: 1.25rem 0 0;
                 display: flex;
-                justify-content: start;
-                background-color: #f8f7f7;
-                .checkout-price{
-                    width: 30rem;
-                    height: 100%;
-                    padding: 3.5rem 0 0 1.25rem;
-                    .product-list{
-                        width: 100%;
-                        .product-item{
-                            height: 6.0625rem;
-                            padding: .625rem 0 1.3125rem;
-                            border-bottom: .0625rem solid #999999;
-                            display: flex;
-                            justify-content: space-between;
-                            align-items: start;
-                            .left{
-                                height: 100%;
-                                display: flex;
-                                .img-box{
-                                    position: relative;
-                                    width: 4.0625rem;
-                                    height: 100%;
-                                    border: .0625rem solid rgb(182, 180, 180);
-                                    padding: 0 .4375rem;
-                                    background-color: #fff;
-                                    img{
-                                        width: 100%;
-                                        height: 100%;
-                                    }
-                                    i{
-                                        position: absolute;
-                                        top: -0.625rem;
-                                        right: -0.625rem;
-                                        width: 1.3125rem;
-                                        height: 1.3125rem;
-                                        text-align: center;
-                                        line-height: 1.3125rem;
-                                        border-radius: 50%;
-                                        background-color: #5e5c5c;
-                                        color: #fff;
-                                    }
-                                }
-                                .info{
-                                    padding: 0 0 0 .625rem;
-                                    .title{
-                                        height: 1.125rem;
-                                        padding: 0 .625rem 0 0;
-                                        margin: 0 0 .625rem;
-                                        font-size: .875rem;
-                                    }
-                                    .color{
-                                        font-size: .75rem;
-                                        color: #818080;
-                                    }
-                                }
-                            }
-                            .right{
-                                width: 4.0625rem;
-                                height: 100%;
-                                .price{
-                                    font-size: .875rem;
-                                    font-weight: 600;
-                                }
-                            }
-                        }
-                        .checkout-product-item {
-                            display: block !important;
-                        }
-                    }
-                    .discount-box{
-                        width: 100%;
-                        height: 5.4375rem;
-                        padding: 1.3125rem 0 9px;
-                        border-bottom: .0625rem solid #999999;
-                        form{
-                            display: flex;
-                            justify-content: space-between;
-                            input{
-                                width: 22.5rem;
-                                height: 2.875rem;
-                                border-radius: .3125rem;
-                                border: .0625rem solid #999999;
-                                padding: 0 .625rem;
-                            }
-                            .btn{
-                                width: 5rem;
-                                height: 2.875rem;
-                                line-height: 2.875rem;
-                                text-align: center;
-                                border-radius: .3125rem;
-                                background-color: #c7c3c3;
-                                color: #fff;
-                                font-size: 1rem;
-                            }
-                        }
-                    }
-                    .price-info{
-                        width: 100%;
-                        height: 8.6875rem;
-                        padding: .9375rem 0;
-                        border-bottom: .0625rem solid #999999;
-                        .price-item{
-                            width: 100%;
-                            height: 2.25rem;
-                            .label{
-                                width: 100%;
-                                display: flex;
-                                align-items: center;
-                                justify-content: space-between;
-                                font-size: .75rem;
-                                color: #535353;
-                                .txt{
-                                    font-size: .875rem;
-                                    color: #000;
-                                    font-weight: 545;
-                                }
-                            }
-                        }
-                    }
-                    .total-price{
-                        display: flex;
-                        align-items: center;
-                        justify-content: space-between;
-                        width: 100%;
-                        height: 5.0625rem;
-                        padding: 1.25rem 0 1.5625rem;
-                        span{
-                            font-size: 1rem;
-                        }
-                        .price{
-                            i{
-                                color: #7c7b7b;
-                                margin: 0 .375rem 0 0;
-                            }
-                            span{
-                                font-size: 1.5rem;
-                            }
-                        }
-                    }
+                align-items: center;
+                height: 1.5rem;
+                input {
+                  width: 0.9375rem;
+                  height: 0.9375rem;
+                  margin: 0 0.625rem;
                 }
+                p {
+                  height: 1.5rem;
+                  line-height: 1.5rem;
+                  color: #000;
+                  font-weight: 600;
+                }
+              }
             }
+
+            .pay-btn {
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              height: 6.875rem;
+              padding: 1.5625rem 0;
+              margin: 0.9375rem 0 20px;
+              border-bottom: 0.0625rem solid #999999;
+              .return {
+                color: #2277cc;
+                font-size: 1rem;
+                font-weight: 550;
+              }
+              .ctin {
+                height: 3.75rem;
+                width: 11.25rem;
+                background-color: #2277cc;
+                padding: 1.25rem 0.625rem;
+                border-radius: 0.3125rem;
+                color: #fff;
+                font-size: 1rem;
+                text-align: center;
+                button {
+                  border: 0;
+                  width: 100%;
+                  height: 100%;
+                  background-color: transparent;
+                }
+              }
+            }
+            .footer {
+              width: 100%;
+              ul {
+                display: flex;
+                align-content: center;
+                justify-content: space-around;
+                li {
+                  font-size: 0.875rem;
+                  color: #807f7f;
+                }
+              }
+              .icon-list {
+                padding: 0 1.25rem;
+                width: 100%;
+                margin: 0.625rem 0 0;
+                .item-payment-box {
+                  text-align: center;
+                  width: 100%;
+                  img {
+                    width: 2.5rem;
+                    height: 1.125rem;
+                    margin: 0.3125rem 0 0;
+                  }
+                }
+              }
+            }
+          }
         }
+      }
+
+      // right
+      .right-checkout {
+        flex: 1;
+        height: 100%;
+        display: flex;
+        justify-content: start;
+        background-color: #f8f7f7;
+        .checkout-price {
+          width: 42.5rem;
+          height: 100%;
+          padding: 75px 0 0 1.25rem;
+          .product-list {
+            width: 100%;
+            > div {
+              width: 100%;
+            }
+            .product-item {
+              width: 100%;
+              height: 6.25rem;
+              padding: 0.625rem 0 1.3125rem;
+              border-bottom: 0.0625rem solid #999999;
+              display: flex;
+              justify-content: space-between;
+              align-items: start;
+
+              .left {
+                width: 25rem;
+                height: 100%;
+                display: flex;
+                .img-box {
+                  position: relative;
+                  width: 4.0625rem;
+                  height: 100%;
+                  border: 0.0625rem solid rgb(182, 180, 180);
+                  padding: 0.3125rem;
+                  background-color: #fff;
+                  display: flex;
+                  justify-content: center;
+                  align-content: center;
+                  img {
+                    max-width: 100%;
+                    max-height: 100%;
+                  }
+                  i {
+                    position: absolute;
+                    top: -0.625rem;
+                    right: -0.625rem;
+                    width: 1.3125rem;
+                    height: 1.3125rem;
+                    text-align: center;
+                    line-height: 1.3125rem;
+                    border-radius: 50%;
+                    background-color: #5e5c5c;
+                    color: #fff;
+                  }
+                }
+                .info {
+                  width: 18.75rem;
+                  padding: 0 0 0 0.625rem;
+                  .title {
+                    width: 25rem;
+                    height: 38px;
+                    padding: 5px;
+                    margin: 0 0 0.625rem;
+                    font-size: 0.875rem;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 2;
+                    -webkit-box-orient: vertical;
+                  }
+                  .color {
+                    font-size: 0.75rem;
+                    color: #818080;
+                  }
+                }
+              }
+              .right {
+                width: 100px;
+                text-align: right;
+                .price {
+                  width: 100px;
+                  padding: 0.625rem;
+                  font-size: 1rem;
+                  font-weight: 600;
+                }
+              }
+            }
+            // .checkout-product-item {
+            // //   display: block !important;
+            // }
+          }
+          .discount-box {
+            width: 100%;
+            height: 5.4375rem;
+            padding: 1.3125rem 0 9px;
+            border-bottom: 0.0625rem solid #999999;
+            form {
+              display: flex;
+              justify-content: space-between;
+              input {
+                width: 22.5rem;
+                height: 2.875rem;
+                border-radius: 0.3125rem;
+                border: 0.0625rem solid #999999;
+                padding: 0 0.625rem;
+              }
+              .btn {
+                width: 5rem;
+                height: 2.875rem;
+                line-height: 2.875rem;
+                text-align: center;
+                border-radius: 0.3125rem;
+                background-color: #c7c3c3;
+                color: #fff;
+                font-size: 1rem;
+              }
+            }
+          }
+          .price-info {
+            width: 100%;
+            height: 8.6875rem;
+            padding: 0.9375rem 0;
+            border-bottom: 0.0625rem solid #999999;
+            .price-item {
+              width: 100%;
+              height: 2.25rem;
+              .label {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                font-size: 0.75rem;
+                color: #535353;
+                .txt {
+                  font-size: 0.875rem;
+                  color: #000;
+                  font-weight: 545;
+                }
+              }
+            }
+          }
+          .total-price {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            height: 5.0625rem;
+            padding: 1.25rem 0 1.5625rem;
+            span {
+              font-size: 1rem;
+            }
+            .price {
+              i {
+                color: #7c7b7b;
+                margin: 0 0.375rem 0 0;
+              }
+              span {
+                font-size: 1.5rem;
+              }
+            }
+          }
+        }
+      }
     }
+  }
 }

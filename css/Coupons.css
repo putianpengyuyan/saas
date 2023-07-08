@@ -22,6 +22,7 @@
   height: 100%;
 }
 .page-content-body .container {
+  height: 53.125rem;
   width: 90rem;
   margin: 0 auto;
   padding: 0 1.25rem;
@@ -83,43 +84,55 @@
   margin: 0 auto;
   align-items: center;
 }
-.page-content-body .container .col {
-  height: 31.25rem;
-  width: 16.5625rem;
+.page-content-body .container .row > div {
+  width: 25%;
+  height: 570px;
+}
+.page-content-body .container .row .col {
+  width: 100%;
   padding: 0 0.5625rem;
   margin: 0 0 1.5rem;
 }
-.page-content-body .container .col a {
+.page-content-body .container .row .col a {
   display: block;
   width: 100%;
-  height: 22.5rem;
-  transition: all 0.3s;
 }
-.page-content-body .container .col a img {
+.page-content-body .container .row .col a .common-img-box {
   width: 100%;
-  height: 100%;
+  height: 25rem;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  overflow: hidden;
 }
-.page-content-body .container .col a:hover {
-  transform: scale(1.02);
+.page-content-body .container .row .col a .common-img-box img {
+  max-width: 100%;
+  max-height: 100%;
 }
-.page-content-body .container .col .info-box {
+.page-content-body .container .row .col .info-box {
   padding: 0.625rem 0 0;
-  height: 6.25rem;
   width: 100%;
 }
-.page-content-body .container .col .info-box .pro-title {
-  height: 1.5rem;
-  line-height: 1.5rem;
-  font-size: 1.125rem;
-}
-.page-content-body .container .col .info-box .price {
-  height: 1.5rem;
-  line-height: 1.5rem;
+.page-content-body .container .row .col .info-box .pro-title {
+  width: 100%;
+  height: 5.3125rem;
+  margin: 0 0 0.3125rem;
   font-size: 1rem;
-  margin: 0 0 0.625rem;
+  color: #000;
+  padding: 0.625rem 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+}
+.page-content-body .container .row .col .info-box .price {
+  height: 1.5625rem;
+  font-size: 1.25rem;
+  margin: 0.625rem 0;
   color: #f03d3d;
 }
-.page-content-body .container .col .info-box .price span {
+.page-content-body .container .row .col .info-box .price span {
   font-size: 0.875rem;
   color: #666666;
   text-decoration: line-through;

@@ -1,3 +1,10 @@
+html, body, #app {
+    height: 100%;
+}
+
+#app {
+    position: relative;
+}
 *{
     box-sizing: border-box;
 }
@@ -14,6 +21,7 @@ a{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    height: 100%;
     .page-content-header{
     height: 6.875rem;
     width: 90rem;
@@ -119,7 +127,7 @@ a{
 }
 .page-content-body{
     width: 100%;
-    height: 100%;
+    
 }
 .page-content-footer{
     width: 100%;
@@ -264,20 +272,24 @@ form{
 // yonghu
 .root{
     position: absolute;
-    top: 5.625rem;
-    right: 17.5rem;
-    width: 7.5rem;
+    top: 1.625rem;
+    right: .625rem;
+    width: 6.25rem;
     z-index: 10;
     display: none;
     .row{
+        border-radius: .3125rem;
+        border: 1px solid rgb(165, 163, 163);
+        overflow: hidden;
         a{
             display: block;
             padding: .625rem 1.25rem;
             text-align: left;
             font-size: 1rem;
-            background-color: #fffafa;
+            background-color: #fff;
             &:hover{
-                background-color: #e0dddd;
+                background-color: #999;
+                color: #fff;
             }
         }
     }
@@ -393,7 +405,7 @@ form{
                 flex: 1;
                 height: 100%;
                 margin: 0 .625rem;
-                font-size: .625rem;
+                font-size: 1rem;
                 font-weight: 500;
                 a{
                     text-align: center;

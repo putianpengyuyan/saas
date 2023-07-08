@@ -49,7 +49,7 @@ function Register(username, password) {
     console.log(username);
     console.log(password);
     console.log("~~~~~~~~~~~~~");
-    axios.post("https://goods.adteam.info/api/user/register", { username, password })
+    axios.post(url+"/api/user/register", { username, password })
       .then(
         function (response) {
             var msg = response.data.msg

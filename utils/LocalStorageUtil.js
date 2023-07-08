@@ -137,8 +137,12 @@ class localStorageUtil {
           container1.style.display='block'
         }
         document.querySelector(".price-title-total").innerHTML=`$0`
-        document.querySelector(".products-num").innerHTML=shoppingCartTotalNum
-        document.querySelector('.price-total').innerText = `$${shoppingCartTotal}`
+        const productNumS = document.querySelectorAll(".products-num")
+        for(let i = 0;i<productNumS.length;i++){
+          const productNum = productNumS[i]
+          productNum.innerText=shoppingCartTotalNum
+        }
+        // document.querySelector('.price-total').innerText = ""
         // document.querySelector(".container2").style.display='none'
         // document.querySelector(".container1").style.display='block'
       }
@@ -146,8 +150,11 @@ class localStorageUtil {
     this.setItem(LOCAL_CONSTANTS.shoppingCartTotal,shoppingCartTotal.toFixed(2));
     this.setItem(LOCAL_CONSTANTS.shoppingCartTotalNum, shoppingCartTotalNum);
     this.setItem(LOCAL_CONSTANTS.shoppingCart, JSON.stringify(productArr));
-    document.querySelectorAll(".c-total-item").innerHTML=`$${productArr[item].total}`;
-    document.querySelector(".products-num").innerHTML=shoppingCartTotalNum
+    document.querySelectorAll(".c-total-item").innerHTML="";
+    console.log(3333333333333)
+    console.log( document.querySelector(".products-num"))
+    document.querySelector(".products-num").innerText=shoppingCartTotalNum
+    document.querySelector('.price-title-total').innerText = shoppingCartTotal.toFixed(2);
   }
 
   // 只减数量
@@ -205,8 +212,9 @@ class localStorageUtil {
         console.log( shoppingCartTotal);
         console.log(typeof shoppingCartTotal);
         console.log( item.total);
-        item.total= parseFloat(item.total)
+        // item.total= parseFloat(item.total)
         console.log(typeof item.total);
+        console.log( item.total)
         console.log(shoppingCartTotalNum);
         console.log(item.num);
         // shoppingCartTotal -= parseFloat(item.total);
@@ -214,8 +222,8 @@ class localStorageUtil {
         console.log("直接相减-------");
         if(type){
           item.num++
-          item.total = parseFloat(item.price*item.num)
-          item.total = parseFloat(item.total)
+          item.total = parseFloat(item.price*item.num).toFixed(2)
+          // item.total = parseFloat(item.total)
           shoppingCartTotal += parseFloat(item.price);
           shoppingCartTotal = shoppingCartTotal.toFixed(2)
           shoppingCartTotalNum++
@@ -223,11 +231,10 @@ class localStorageUtil {
           item.num--
           if(item.num===0){
             item.num=1
-            item.total = item.price.toFixed(2)
+            item.total = parseFloat(item.price).toFixed(2)
             return
           }
-          item.total = item.total-item.price;
-          item.total = item.total.toFixed(2)
+          item.total = parseFloat(item.total-item.price).toFixed(2);
           shoppingCartTotal -= parseFloat(item.price);
           shoppingCartTotal = shoppingCartTotal.toFixed(2)
           shoppingCartTotalNum--
@@ -282,7 +289,7 @@ class localStorageUtil {
   }
 
   static getShoppingCartTotal(total) {
-    return parseInt(this.getItem(LOCAL_CONSTANTS.shoppingCartTotal));
+    return parseFloat(this.getItem(LOCAL_CONSTANTS.shoppingCartTotal));
   }
 }
 

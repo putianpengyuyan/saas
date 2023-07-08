@@ -1,3 +1,11 @@
+html,
+body,
+#app {
+  height: 100%;
+}
+#app {
+  position: relative;
+}
 * {
   box-sizing: border-box;
 }
@@ -14,6 +22,7 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  height: 100%;
 }
 .content-box .page-content-header {
   height: 6.875rem;
@@ -112,7 +121,6 @@ a {
 }
 .content-box .page-content-body {
   width: 100%;
-  height: 100%;
 }
 .content-box .page-content-footer {
   width: 100%;
@@ -230,21 +238,27 @@ form .err {
 }
 .root {
   position: absolute;
-  top: 5.625rem;
-  right: 17.5rem;
-  width: 7.5rem;
+  top: 1.625rem;
+  right: 0.625rem;
+  width: 6.25rem;
   z-index: 10;
   display: none;
+}
+.root .row {
+  border-radius: 0.3125rem;
+  border: 1px solid #a5a3a3;
+  overflow: hidden;
 }
 .root .row a {
   display: block;
   padding: 0.625rem 1.25rem;
   text-align: left;
   font-size: 1rem;
-  background-color: #fffafa;
+  background-color: #fff;
 }
 .root .row a:hover {
-  background-color: #e0dddd;
+  background-color: #999;
+  color: #fff;
 }
 .shop-item {
   display: none;
@@ -352,7 +366,7 @@ form .err {
   flex: 1;
   height: 100%;
   margin: 0 0.625rem;
-  font-size: 0.625rem;
+  font-size: 1rem;
   font-weight: 500;
 }
 .pages-item .container ul li a {
