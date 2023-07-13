@@ -1,3 +1,5 @@
+let countryCode, countryName;
+
 //
 function getCountryList() {
   axios.get(`${url}/api/products/country`).then((res) => {
@@ -17,6 +19,9 @@ function getCountryList() {
         option.innerText = optionData.country_name;
         countrySelectorComponent.appendChild(option);
       }
+
+      countryCode = Object.keys(countryObj)[0];
+      countryName = countryObj[countryCode];
     }
   });
 }
@@ -34,7 +39,7 @@ function verifyEmail(e) {
     return false;
   }
   email.style.borderColor = "#999999";
-  console.log(e.target.value);
+  // console.log(e.target.value);
   return true;
 }
 
@@ -44,7 +49,7 @@ email.addEventListener("input", () => {
 
 // country
 const country = document.querySelector("[name=country]");
-let countryCode, countryName;
+
 country.addEventListener("change", function (e) {
   console.log("country--------------");
   console.log(e.target.value);
@@ -57,11 +62,13 @@ country.addEventListener("change", function (e) {
 const FirstName = document.querySelector("[name=first-name]");
 FirstName.addEventListener("blur", VerifyFirst);
 function VerifyFirst(e) {
-  const FirstNameValue = e.target.value;
+  // console.log(e.target.value);
+  const FirstNameValue = FirstName.value;
   if (FirstNameValue.trim() === "") {
     FirstName.style.borderColor = "red";
+    return false;
   }
-  console.log(FirstNameValue);
+  return true;
 }
 FirstName.addEventListener("input", () => {
   FirstName.style.borderColor = "#999999";
@@ -70,11 +77,12 @@ FirstName.addEventListener("input", () => {
 const LastName = document.querySelector("[name=last-name]");
 LastName.addEventListener("blur", VerifyLast);
 function VerifyLast(e) {
-  const LastNameValue = e.target.value;
+  const LastNameValue = LastName.value;
   if (LastNameValue.trim() === "") {
     LastName.style.borderColor = "red";
+    return false
   }
-  console.log(LastNameValue);
+  return true
 }
 LastName.addEventListener("input", () => {
   LastName.style.borderColor = "#999999";
@@ -82,25 +90,29 @@ LastName.addEventListener("input", () => {
 
 // address
 const address = document.querySelector("[name=address]");
-address.addEventListener("blur", function (e) {
-  const addressValue = e.target.value;
+address.addEventListener("blur", VerifyAddress)
+function VerifyAddress(e) {
+  const addressValue = address.value;
   if (addressValue.trim() === "") {
     address.style.borderColor = "red";
+    return false
   }
-  console.log(e.target.value);
-});
+  return true
+}
 address.addEventListener("input", () => {
   address.style.borderColor = "#999999";
 });
 // city
 const city = document.querySelector("[name=city]");
-city.addEventListener("blur", function (e) {
-  const cityValue = e.target.value;
+city.addEventListener("blur", VerifyCity)
+function VerifyCity(e) {
+  const cityValue = city.value;
   if (cityValue.trim() === "") {
     city.style.borderColor = "red";
+    return false
   }
-  console.log(cityValue);
-});
+  return true
+}
 
 // province
 // const province = document.querySelector("[name=province]");
@@ -119,8 +131,6 @@ function verifyPost(e) {
     postCode.style.borderColor = "red";
     return false;
   }
-  const postCodeValue = e.target.value;
-  console.log(postCodeValue);
   postCode.style.borderColor = "#999999";
   return true;
 }
@@ -135,7 +145,6 @@ function verifyTelephone(e) {
     telephone.style.borderColor = "red";
     return false;
   }
-  console.log(telephone.value);
   telephone.style.borderColor = "#999999";
   return true;
 }
@@ -146,17 +155,72 @@ agree.addEventListener("click", function (e) {
   // console.log(!agree);
   if (!agree) {
     // console.log(agree.checked);
-    alert("请勾选");
+    // alert("请勾选");
+    layer.open({
+      type: 1,
+      offset: "auto", // 详细可参考 offset 属性
+      // id: 'ID-demo-layer-offset-'+ offset, // 防止重复弹出
+      content: '<div style="padding: 16px;">' + "Please tick agree" + "</div>",
+      area: "240px",
+      title: "",
+      btn: "close",
+      btnAlign: "c", // 按钮居中
+      shade: 0, // 不显示遮罩
+      yes: function () {
+        layer.closeAll();
+      },
+    });
   }
 });
 // 点击提交
 const button = document.querySelector(".continue");
-button.addEventListener("click", function () {
+button.addEventListener("click", function (e) {
   if (!agree.checked) {
-    alert("请勾选");
-    if (!verifyEmail(e)) if (!verifyPost(e)) if (!verifyTelephone(e)) return;
+    // alert("请勾选");
+    layer.open({
+      type: 1,
+      offset: "auto", // 详细可参考 offset 属性
+      // id: 'ID-demo-layer-offset-'+ offset, // 防止重复弹出
+      content: '<div style="padding: 16px;">' + "Please tick agree" + "</div>",
+      area: "240px",
+      title: "",
+      btn: "close",
+      btnAlign: "c", // 按钮居中
+      shade: 0, // 不显示遮罩
+      yes: function () {
+        layer.closeAll();
+      },
+    });
+    return
   }
-
+  if (!verifyEmail(e)) {
+    email.style.borderColor = "red";
+    return;
+  }
+  if (!VerifyFirst(e)){
+    FirstName.style.borderColor = "red";
+    return
+  }
+  if (!VerifyLast(e)){
+    LastName.style.borderColor = "red";
+    return
+  }
+  if (!VerifyAddress(e)){
+    address.style.borderColor = "red";
+    return
+  }
+  if (!VerifyCity(e)){
+    city.style.borderColor = "red";
+    return
+  }
+  if (!verifyPost(e)){
+    postCode.style.borderColor = "red";
+    return
+  } 
+  if (!verifyTelephone(e)){
+    telephone.style.borderColor = "red";
+    return
+  }
   console.log("========================");
   console.log(email.value);
   console.log(country.value);
@@ -194,7 +258,7 @@ button.addEventListener("click", function () {
     telephone: telephoneComponent,
   };
   localStorage.setItem("user_order", JSON.stringify(user_order));
-  console.log(window.location)
+  console.log(window.location);
   location.href = `order.html${window.location.search}`;
 });
 
@@ -219,10 +283,11 @@ if (locationUrl.indexOf("checkout_flag") > 0) {
     console.log(BuyArr);
     console.log(BuyArr.num);
     console.log("======buyarr=======");
-    const productList = document.querySelector(".product-list");
-
-    const productItem = document.createElement("div");
-    productItem.innerHTML = `
+    const productLists = document.querySelectorAll(".product-list");
+    for(let i=0;i<productLists.length;i++){
+      const productList = productLists[i]
+      const productItem = document.createElement("div");
+      productItem.innerHTML = `
             <div class="product-item checkout-product-item">
                 <div class="left">
                     <div class="img-box">
@@ -240,44 +305,54 @@ if (locationUrl.indexOf("checkout_flag") > 0) {
             </div>
             `;
     productList.appendChild(productItem);
-    document.querySelector(".txt").innerText = `$${BuyArr.total}`;
-    document.querySelector(".price-total").innerText = `$${BuyArr.total}`;
+    }
+    document.querySelector(".txt").innerText = `$${BuyArr.total.toFixed(2)}`;
+    document.querySelector(".price-total").innerText = `$${BuyArr.total.toFixed(2)}`;
+    if(document.querySelector('.mobile-price')){
+      document.querySelector('.mobile-price').innerText = `$${BuyArr.total.toFixed(2)}`;
+    }
   }
 } else {
   console.log("购物车~~~~~~~~~~~~");
   // shopping cart
   const localProductArr = JSON.parse(localStorageUtil.getProductArr());
-  const productList = document.querySelector(".product-list");
+  const productLists = document.querySelectorAll(".product-list");
   let total = 0;
-  localProductArr.map((item, index) => {
-    const productItem = document.createElement("div");
-    productItem.innerHTML = `
-  <div class="product-item checkout-product-item">
-      <div class="left">
-          <div class="img-box">
-              <i>${item.num}</i>
-              <img src=${item.img}  alt="">
-          </div>
-          <div class="info">
-              <div class="title">${item.title}</div>
-              <div class="color">${item.color}</div>
-          </div>
-      </div>
-      <div class="right">
-          <div class="price">$${item.price}</div>
-      </div>
-  </div>
-  `;
-    productList.appendChild(productItem);
-  });
+  for(let i=0;i<productLists.length;i++){
+    const productList = productLists[i]
+    localProductArr.map((item, index) => {
+      const productItem = document.createElement("div");
+      productItem.innerHTML = `
+    <div class="product-item checkout-product-item">
+        <div class="left">
+            <div class="img-box">
+                <i>${item.num}</i>
+                <img src=${item.img}  alt="">
+            </div>
+            <div class="info">
+                <div class="title">${item.title}</div>
+                <div class="color">${item.color}</div>
+            </div>
+        </div>
+        <div class="right">
+            <div class="price">$${item.price}</div>
+        </div>
+    </div>
+    `;
+      productList.appendChild(productItem);
+    });
+  }
+  
   const shoppingCartTotal = parseFloat(
     JSON.parse(localStorageUtil.getShoppingCartTotal())
   ).toFixed(2);
   console.log(shoppingCartTotal);
 
- document.querySelector(".txt").innerText = `$${shoppingCartTotal}`;
+  document.querySelector(".txt").innerText = `$${shoppingCartTotal}`;
   document.querySelector(".price-total").innerText = `$${shoppingCartTotal}`;
-
+  if(document.querySelector('.mobile-price')){
+    document.querySelector('.mobile-price').innerText = `$${shoppingCartTotal}`;
+  }
 }
 // if (!LocalShoppingCart || LocalShoppingCart.length === 0) {
 
@@ -310,3 +385,4 @@ const Return = document.querySelector(".return");
 Return.addEventListener("click", function () {
   location.href = "productDetail.html";
 });
+

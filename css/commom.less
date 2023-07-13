@@ -135,7 +135,7 @@ a{
     background-color: rgb(246, 246, 246);
     .container{
         height: 21.875rem;
-        .item-box{
+        .pc-menu{
             width: 87.5rem;
             margin: 0 auto;
             height: 100%;
@@ -144,7 +144,7 @@ a{
             .item-content{
                 padding: 5rem 2rem;
                 text-align: left;
-                flex: 1;
+                flex: 25%;
                 height: 100%;
                 border-right: .0625rem dotted grey;
                 &:nth-child(4){
@@ -161,6 +161,7 @@ a{
                             font-weight: 500;
                         }
                         ul{
+                            width: 100%;
                             li{
                                 height: 2rem;
                                 line-height: 2rem;
@@ -178,6 +179,64 @@ a{
             }
             
         }
+        .mobile-menu{
+            width:100%;
+            margin: 0 auto;
+            .item-content{
+                .item{
+                    padding: 0 20px;
+                    .menu-link{
+                        display: flex;
+                        justify-content: space-between;
+                        align-content: center;
+                        height: 43px;
+                        line-height: 43px;
+                        margin: 0 0 16px;
+                        p{
+                            font-size: 16px;
+                            font-weight: 550;
+                        }
+                        .from-content{
+                            width: 100%;
+                            .input{
+                                width: 100%;
+                            }
+                        }
+                    }
+                    
+                    ul{
+                        li{
+                            height: 32px;
+                            font-size: 16px;
+                            color: #686767;
+                            a{
+                                color: #686767;
+                            }
+                        }
+                    }
+                    .follow-body{
+                        height: 43px;
+                        ul{
+                            display: flex;
+                            align-items: center;
+                            padding-bottom: 6rem;
+                        li{
+                            a{
+                                display: block;
+                                width: 1.875rem;
+                                height: 1.875rem;
+                                img{
+                                    width: .9375rem;
+                                    height: .9375rem;
+                                    
+                                }
+                            }
+                        }
+                        }
+                        }
+                }
+            }
+        }
     }
     .footer-bottom-container{
         height: 8.125rem;
@@ -190,8 +249,10 @@ a{
             height: 100%;
             width: 88.75rem;
             margin: 0 auto;
+            justify-content: center;
             .item-payment-box{
                 width: 25rem;
+                text-align: center;
                 margin-right: 6.25rem;
                 margin-left: 1.875rem;
                 img{
@@ -268,6 +329,7 @@ form{
     }
     }
     }
+
 
 // yonghu
 .root{

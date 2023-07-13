@@ -9,9 +9,10 @@ function getCourier() {
   axios.post(`${url}/api/products/getCourier`).then(
     (res) => {
       if (res.status === 200) {
-        freight.innerHTML = "德玛快递 · $ 10";
+        freight.innerHTML = ""
         const courierList = res.data.data.list;
-
+        console.log(courierList);
+        console.log('------------------courierList------------');
         for (let [index, key] of Object.keys(courierList).entries()) {
           let courierData = {
             courier_name: key,
@@ -29,7 +30,17 @@ function getCourier() {
           </div>
           `;
           courier.innerHTML += courierItem;
+          
         }
+
+        const type = document.querySelectorAll(".type")[0].innerText;
+          const amount = document.querySelectorAll(".freight-amount")[0].innerText;
+          innerText = `${type} · ${amount}`;
+          console.log(innerText);
+          console.log('------------courierItem------------');
+          freight.innerHTML = innerText;
+          document.querySelector('.ship-txt').innerText = `${amount}`
+
         const ships = document.querySelectorAll(".shipping");
         const shipIs = document.querySelectorAll(".ship-i");
         const freightAmounts = document.querySelectorAll(".freight-amount");
@@ -70,30 +81,28 @@ function getCourier() {
             var shipFreight = parseFloat(shipTxt.innerText.replace("$", ""));
             let totalAmount = shipFreight;
 
-            if (localStorage.getItem("shopping_cart")) {
-              totalAmount += parseFloat(localStorage.getItem("shopping_cart-total")
-              );
-              console.log(111111111111111111);
-              const subtotal = JSON.parse(localStorage.getItem("shopping_cart-total"));
-              document.querySelector(".subtotal").innerText = `$${subtotal}`;
-            } else {
-              console.log(2222222222222222222222);
+            if (locationUrl.indexOf("checkout_flag") > 0) {
               const newProduct =localStorage.getItem("newProduct") && JSON.parse(localStorage.getItem("newProduct"));
               totalAmount += parseFloat(newProduct.total);
               const BuyArr = JSON.parse(localStorage.getItem("newProduct"));
-              document.querySelector(
-                ".subtotal"
-              ).innerText = `$${BuyArr.total.toFixed(2)}`;
+              document.querySelector(".subtotal").innerText = `$${BuyArr.total.toFixed(2)}`;
+              
+              
+            } else {
+              console.log(2222222222222222222222);
+              totalAmount += parseFloat(localStorage.getItem("shopping_cart-total"));
+              console.log(111111111111111111);
+              const subtotal = JSON.parse(localStorage.getItem("shopping_cart-total"));
+              document.querySelector(".subtotal").innerText = `$${subtotal}`;
             }
 
-            document.querySelector(
-              ".price-total"
-            ).innerText = `$${totalAmount.toFixed(2)}`;
+            document.querySelector(".price-total").innerText = `$${totalAmount.toFixed(2)}`;
+            if(document.querySelector('.mobile-price')){
+              document.querySelector('.mobile-price').innerText = `$${totalAmount.toFixed(2)}`;
+            }
           });
         }
-        const selectedFreight = document
-          .querySelector(".ship-active .freight-amount")
-          .innerText.replace("$", "");
+        const selectedFreight = document.querySelector(".ship-active .freight-amount").innerText.replace("$", "");
 
         const locationUrl = window.location.href;
         if (locationUrl.indexOf("checkout_flag") > 0) {
@@ -105,9 +114,10 @@ function getCourier() {
             console.log(BuyArr);
             console.log(BuyArr.num);
             console.log("======buyarr=======");
-            const productList = document.querySelector(".product-list");
-
-            const productItem = document.createElement("div");
+            const productLists = document.querySelectorAll(".product-list");
+            for(let i=0;i<productLists.length;i++){
+              const productList = productLists[i]
+              const productItem = document.createElement("div");
             productItem.innerHTML = `
                       <div class="product-item checkout-product-item">
                           <div class="left">
@@ -126,57 +136,61 @@ function getCourier() {
                       </div>
                       `;
             productList.appendChild(productItem);
+            }
+            
             document.querySelector(".txt").innerText = `$${BuyArr.total}`;
-            console.log(freight.innerText);
-            let FreightCount = parseFloat(freight.innerHTML.replace('德玛快递 · $',''))
-            console.log(FreightCount);
-            FreightCount += (BuyArr.total)
-            FreightCountA = FreightCount.toFixed(2)
-            console.log(BuyArr.total);
-            console.log(FreightCountA);
-            document.querySelector(".price-total").innerText = `$${FreightCountA}`;
+            var freightAmount = parseFloat(amount.replace("$",''))
+            freightAmount += BuyArr.total
+            console.log(freightAmount);
+            console.log('-----------------');
+            document.querySelector(".price-total").innerText = `$${freightAmount.toFixed(2)}`;
             
           }
         } else {
           console.log("购物车~~~~~~~~~~~~");
           // shopping cart
           const localProductArr = JSON.parse(localStorageUtil.getProductArr());
-          const productList = document.querySelector(".product-list");
-          localProductArr.map((item, index) => {
-            const productItem = document.createElement("div");
-            productItem.innerHTML = `
-            <div class="product-item checkout-product-item">
-                <div class="left">
-                    <div class="img-box">
-                        <i>${item.num}</i>
-                        <img src=${item.img}  alt="">
-                    </div>
-                    <div class="info">
-                        <div class="title">${item.title}</div>
-                        <div class="color">${item.color}</div>
-                    </div>
-                </div>
-                <div class="right">
-                    <div class="price">$${item.price}</div>
-                </div>
-            </div>
-            `;
-            productList.appendChild(productItem);
-            
-          });
+          const productLists = document.querySelectorAll(".product-list");
+          for(let i=0;i<productLists.length;i++){
+            const productList = productLists[i]
+            localProductArr.map((item, index) => {
+              const productItem = document.createElement("div");
+              productItem.innerHTML = `
+              <div class="product-item checkout-product-item">
+                  <div class="left">
+                      <div class="img-box">
+                          <i>${item.num}</i>
+                          <img src=${item.img}  alt="">
+                      </div>
+                      <div class="info">
+                          <div class="title">${item.title}</div>
+                          <div class="color">${item.color}</div>
+                      </div>
+                  </div>
+                  <div class="right">
+                      <div class="price">$${item.price}</div>
+                  </div>
+              </div>
+              `;
+              productList.appendChild(productItem);
+              
+            });
+          }
+          
           const shoppingCartTotal = parseFloat(
             JSON.parse(localStorageUtil.getShoppingCartTotal())
-          ).toFixed(2);
+          )
           console.log(shoppingCartTotal);
           console.log(freight.innerText);
-            let FreightCount = parseFloat(freight.innerHTML.replace('德玛快递 · $',''))
-            console.log(FreightCount);
-            shoppingTotal = parseFloat(shoppingCartTotal)
-            FreightCount += shoppingTotal
-            FreightCountA = FreightCount.toFixed(2)
-            console.log(FreightCount);
+          var freightAmount = parseFloat(amount.replace("$",''))
+          freightAmount += shoppingCartTotal
+          console.log(freightAmount);
+          console.log('-----------------');
           document.querySelector(".txt").innerText = `$${shoppingCartTotal}`;
-          document.querySelector(".price-total").innerText = `$${FreightCountA}`;
+          document.querySelector(".price-total").innerText = `$${freightAmount.toFixed(2)}`;
+          if(document.querySelector('.mobile-price')){
+            document.querySelector('.mobile-price').innerText = `$${freightAmount.toFixed(2)}`;
+          }
         }
       }
     },
@@ -235,9 +249,7 @@ orderBtn.addEventListener("click", function () {
   console.log("========================");
   console.log(userManagement);
   console.log("========================");
-  const freight = document
-    .querySelector(".ship-txt")
-    .innerHTML.replace("$", "");
+  const freight = document.querySelector(".ship-txt").innerHTML.replace("$", "");
   console.log(freight);
   console.log("========================");
   console.log(
@@ -247,7 +259,7 @@ orderBtn.addEventListener("click", function () {
 if (locationUrl.indexOf("checkout_flag") > 0) {
   const checkout_method = locationUrl.split("checkout_flag=")[1];
   if (checkout_method === "new_product") {
-    goods = JSON.parse(localStorage.getItem('newProduct'));
+    goods = [JSON.parse(localStorage.getItem('newProduct'))];
   }
 } else {
   goods = JSON.parse(localStorage.getItem('shopping_cart'))
@@ -326,6 +338,7 @@ function PlaceOrder(
     )
     .then(
       function (response) {
+        console.log(response);
         var orderNumber = response.data.data.data;
         console.log(response);
         pay(orderNumber, token);

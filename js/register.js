@@ -55,10 +55,39 @@ function Register(username, password) {
             var msg = response.data.msg
             console.log(msg);
           console.log(response);
-          if(msg==='用户已经存在'){
-            alert('用户已经存在')
+          if(msg==='用户名已经存在'){
+            // alert('用户已经存在')
+            layer.open({
+              type: 1,
+              offset: 'auto', // 详细可参考 offset 属性
+              // id: 'ID-demo-layer-offset-'+ offset, // 防止重复弹出
+              content: '<div style="padding: 16px;">'+ 'User Exists !' +'</div>',
+              area: '240px',
+              title: '',
+              btn: 'close',
+              btnAlign: 'c', // 按钮居中
+              shade: 0, // 不显示遮罩
+              yes: function(){
+                layer.closeAll();
+              }
+            });
           }else if(msg==='注册成功'){
-            alert('注册成功')
+            // alert('注册成功')
+            layer.open({
+              type: 1,
+              offset: 'auto', // 详细可参考 offset 属性
+              // id: 'ID-demo-layer-offset-'+ offset, // 防止重复弹出
+              content: '<div style="padding: 16px;">'+ 'Registered Successfully !' +'</div>',
+              area: '240px',
+              title: '',
+              btn: 'close',
+              btnAlign: 'c', // 按钮居中
+              shade: 0, // 不显示遮罩
+              yes: function(){
+                layer.closeAll();
+                location.href="login.html"
+              }
+            });
           }
         },
         function (err) {

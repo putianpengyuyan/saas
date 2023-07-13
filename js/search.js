@@ -7,22 +7,36 @@ function getProductList() {
       data.map((item) => {
         const col = document.createElement("div");
         col.innerHTML = `
-                <div class="col">
-                    <a href="./productDetail.html">
+                <div class="col" id="${item.id}">
+                    <a href="./productDetail.html?product_id=${item.id}">
                         <div class="common-img-box">
+                        <div class="product-discount">
+                                <P class="dis-tag">${item.discount_tag}%</P>
+                                <p>OFF</p>
+                                <div class="triangle"></div>
+                                <div class="triangle1"></div>
+                              </div>
                             <img src=${url + item.images[0]} alt="">
                         </div>
                     </a>
                     <div class="info-box">
                         <div class="pro-title">${item.title}</div>
-                        <div class="star"><div id="ID-rate-demo-readonly-1"></div></div>
+                        <div class="star"><div class="class-test-rate"></div></div>
                         <div class="price">$${item.price}
                         <span>$${item.costprice}</span></div>
                     </div>
                 </div>
                 `;
         row.appendChild(col);
+        var rate = layui.rate;
+          // 渲染
+          rate.render({
+            elem: '.class-test-rate',
+            value: 5,
+              readonly: true,
+          });     
       });
+      
     }
   });
 }
@@ -56,35 +70,36 @@ function Product(keywords) {
         data.map((item) => {
           const col = document.createElement("div");
           col.innerHTML = `
-                  <div class="col">
-                      <a href="./productDetail.html">
+                  <div class="col" id="${item.id}">
+                      <a href="./productDetail.html?product_id=${item.id}">
                           <div class="common-img-box">
+                          <div class="product-discount">
+                                <P class="dis-tag">${item.discount_tag}%</P>
+                                <p>OFF</p>
+                                <div class="triangle"></div>
+                                <div class="triangle1"></div>
+                              </div>
                               <img src=${url + item.images[0]} alt="">
                           </div>
                       </a>
                       <div class="info-box">
                           <div class="pro-title">${item.title}</div>
-                          <div class="star"><div id="ID-rate-demo-readonly-1"></div></div>
+                          <div class="star"><div class="class-test-rate"></div></div>
                           <div class="price">$${item.price}
                           <span>$${item.costprice}</span></div>
                       </div>
                   </div>
                   `;
           row.appendChild(col);
+          var rate = layui.rate;
+          // 渲染
+          rate.render({
+            elem: '.class-test-rate',
+            value: 5,
+              readonly: true,
+          }); 
         });
-        const colArr = document.querySelectorAll(".col");
-        console.log("!!!!!!!!!!!!!");
-        console.log(colArr);
-        for (let i = 0; i < colArr.length; i++) {
-          const col = colArr[i];
-          col.addEventListener("click", function () {
-            console.log(colArr[i].id);
-            let ProductId = []
-            const id = colArr[i].id
-            const Id = id
-            localStorage.setItem('ProductId',JSON.stringify(Id))
-          });
-        }
+        
       } else if (!data.length) {
         notDefined.style.display = "block";
         find.style.display = "none";

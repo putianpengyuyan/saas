@@ -1,0 +1,240 @@
+@media (max-width: 540px) {
+  #app .page-content-body .drag-item .container1,
+  .content-box .page-content-body .drag-item .container1 {
+    width: 100%;
+  }
+  #app .page-content-body .drag-item .container2,
+  .content-box .page-content-body .drag-item .container2 {
+    width: 100%;
+    padding: 0 1.25rem;
+  }
+  #app .page-content-body .drag-item .container2 h2,
+  .content-box .page-content-body .drag-item .container2 h2 {
+    height: 6.25rem;
+    padding: 1.875rem 1rem;
+    font-size: 1.5rem;
+  }
+  #app .page-content-body .drag-item .container2 .main,
+  .content-box .page-content-body .drag-item .container2 .main {
+    width: 100%;
+  }
+  #app .page-content-body .drag-item .container2 .main .table-header,
+  .content-box .page-content-body .drag-item .container2 .main .table-header {
+    width: 100%;
+    display: none;
+  }
+  #app .page-content-body .drag-item .container2 .main .table-header .c-product,
+  .content-box .page-content-body .drag-item .container2 .main .table-header .c-product {
+    width: 200px;
+  }
+  #app .page-content-body .drag-item .container2 .main .table-header .c-price,
+  .content-box .page-content-body .drag-item .container2 .main .table-header .c-price {
+    width: 100px;
+  }
+  #app .page-content-body .drag-item .container2 .main .table-header .c-qty,
+  .content-box .page-content-body .drag-item .container2 .main .table-header .c-qty {
+    width: 100px;
+  }
+  #app .page-content-body .drag-item .container2 .main .table-header .c-total,
+  .content-box .page-content-body .drag-item .container2 .main .table-header .c-total {
+    width: 100px;
+  }
+  #app .page-content-body .drag-item .container2 .main .pc,
+  .content-box .page-content-body .drag-item .container2 .main .pc {
+    display: none !important;
+  }
+  #app .page-content-body .drag-item .container2 .main .mobile,
+  .content-box .page-content-body .drag-item .container2 .main .mobile {
+    display: block !important;
+  }
+  #app .page-content-body .drag-item .container2 .main .checkout,
+  .content-box .page-content-body .drag-item .container2 .main .checkout {
+    margin: 1.25rem 0;
+    height: 200px;
+  }
+  #app .page-content-body .drag-item .container2 .main .checkout .checkout-box,
+  .content-box .page-content-body .drag-item .container2 .main .checkout .checkout-box {
+    width: 100% !important;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 1.25rem 0 0 1.25rem;
+  }
+  #app .page-content-body .drag-item .container2 .main .checkout .checkout-box .node,
+  .content-box .page-content-body .drag-item .container2 .main .checkout .checkout-box .node {
+    padding: 0.625rem;
+  }
+  #app .page-content-footer,
+  .content-box .page-content-footer {
+    width: 100% !important;
+    margin: 0 auto;
+    height: 600px !important;
+  }
+  #app .page-content-footer .container,
+  .content-box .page-content-footer .container {
+    width: 100%;
+    height: auto !important;
+  }
+  #app .page-content-footer .container .pc-menu,
+  .content-box .page-content-footer .container .pc-menu {
+    display: none !important;
+  }
+  #app .page-content-footer .container .mobile-menu,
+  .content-box .page-content-footer .container .mobile-menu {
+    display: block !important;
+  }
+  #app .page-content-footer .container .mobile-menu .body-show,
+  .content-box .page-content-footer .container .mobile-menu .body-show {
+    display: block !important;
+  }
+  #app .page-content-footer .container .mobile-menu .from-content,
+  .content-box .page-content-footer .container .mobile-menu .from-content {
+    width: 100% !important;
+  }
+  #app .page-content-footer .container .mobile-menu .from-content .input,
+  .content-box .page-content-footer .container .mobile-menu .from-content .input {
+    width: 100%;
+    padding: 0 2px;
+  }
+  #app .page-content-footer .container .mobile-menu .from-content .input input,
+  .content-box .page-content-footer .container .mobile-menu .from-content .input input {
+    padding: 5px;
+  }
+  #app .page-content-footer .container .mobile-menu .from-content .btn,
+  .content-box .page-content-footer .container .mobile-menu .from-content .btn {
+    width: 15px !important;
+  }
+  #app .page-content-footer .container .mobile-menu .from-content .btn i,
+  .content-box .page-content-footer .container .mobile-menu .from-content .btn i {
+    font-size: 0.875rem !important;
+    margin-left: 0 !important;
+  }
+  #app .page-content-footer .footer-bottom-container,
+  .content-box .page-content-footer .footer-bottom-container {
+    width: 100%;
+    margin-top: 0 !important;
+    border-top: 0 !important;
+  }
+  #app .page-content-footer .footer-bottom-container .bottom-box,
+  .content-box .page-content-footer .footer-bottom-container .bottom-box {
+    width: 100%;
+    justify-content: center !important;
+  }
+  #app .page-content-footer .footer-bottom-container .bottom-box .item-payment-box,
+  .content-box .page-content-footer .footer-bottom-container .bottom-box .item-payment-box {
+    flex: 1;
+    padding: 0;
+    margin: 0;
+  }
+  #app .page-content-footer .footer-bottom-container .bottom-box .item-copyright-box,
+  .content-box .page-content-footer .footer-bottom-container .bottom-box .item-copyright-box {
+    flex: 1;
+  }
+  .pay-success {
+    width: 400px !important;
+    background-color: #fff;
+    margin: 50px auto;
+    padding: 50px 20px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    box-shadow: 6px 9px 12px 1px rgba(0, 0, 0, 0.1);
+  }
+  .pay-success .icon {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+  }
+  .pay-success h1 {
+    width: 100%;
+    height: 50px;
+    margin-top: 20px !important;
+    text-align: center;
+  }
+  .pay-success .pay-content {
+    margin: 20px 0 !important;
+    padding: 0 20px;
+    background-color: #272525;
+    width: 100%;
+    height: 170px !important;
+    border-bottom: none;
+    background: radial-gradient(circle at 50% 50%, #fff 0, #fff 50%, transparent 0), radial-gradient(circle at 50% 50%, #fff 0, #fff 50%, transparent 0);
+    background-repeat: repeat-x;
+    background-color: #e9e9e9;
+    background-size: 24px 12px;
+    background-position: 7px calc(100% - -5px), calc(100% + 17px) -5px;
+  }
+  .pay-success .pay-content .line {
+    height: 30px;
+    width: 100%;
+    border-bottom: 3px dashed #fff;
+  }
+  .pay-success .pay-content .list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30px !important;
+    height: 50px;
+    line-height: 50px;
+    justify-content: space-between;
+  }
+  .pay-success .pay-content .list .order-num {
+    font-size: 18px;
+  }
+  .pay-success .pay-content .list .order-price {
+    font-size: 18px;
+  }
+  .pay-error {
+    width: 400px !important;
+    background-color: #fff;
+    margin: 50px auto;
+    padding: 50px 20px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    box-shadow: 6px 9px 12px 1px rgba(0, 0, 0, 0.1);
+  }
+  .pay-error .icon {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+  }
+  .pay-error h1 {
+    width: 100%;
+    height: 50px;
+    margin-top: 20px !important;
+    text-align: center;
+  }
+  .pay-error .pay-content {
+    margin: 20px 0 !important;
+    padding: 0 20px;
+    background-color: #272525;
+    width: 100%;
+    height: 170px !important;
+    border-bottom: none;
+    background: radial-gradient(circle at 50% 50%, #fff 0, #fff 50%, transparent 0), radial-gradient(circle at 50% 50%, #fff 0, #fff 50%, transparent 0);
+    background-repeat: repeat-x;
+    background-color: #e9e9e9;
+    background-size: 24px 12px;
+    background-position: 7px calc(100% - -5px), calc(100% + 17px) -5px;
+  }
+  .pay-error .pay-content .line {
+    height: 30px;
+    width: 100%;
+    border-bottom: 3px dashed #fff;
+  }
+  .pay-error .pay-content .list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30px !important;
+    height: 50px;
+    line-height: 50px;
+    justify-content: space-between;
+  }
+  .pay-error .pay-content .list .order-num {
+    font-size: 18px;
+  }
+  .pay-error .pay-content .list .order-price {
+    font-size: 18px;
+  }
+}

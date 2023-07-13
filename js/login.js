@@ -50,14 +50,7 @@ function loginUser(username, password) {
         var msg = response.data.msg;
         console.log(msg);
         // console.log(response);
-        if(msg==='账户不正确'){
-          alert('账号错误')
-          console.log(response);
-        }else if(msg==='密码不正确'){
-          alert('密码不正确')
-          console.log(response);
-        }
-        else if(msg==='登录成功'){
+        if(msg==='登录成功'){
           const userinfo = response.data.data.userinfo;
           var token = userinfo.token
           const expires_in = userinfo.expires_in;
@@ -65,16 +58,45 @@ function loginUser(username, password) {
           let currentTime = new Date().getTime();
           let expiresTime = currentTime + (expires_in * 1000);
           $.cookie('Token', token, { expires: new Date(expiresTime), path: '/' });
-          alert('登录成功')
+          // alert('登录成功')
+          layer.open({
+            type: 1,
+            offset: 'auto', // 详细可参考 offset 属性
+            // id: 'ID-demo-layer-offset-'+ offset, // 防止重复弹出
+            content: '<div style="padding: 16px;">'+ 'Login Successfully !' +'</div>',
+            area: '240px',
+            title: '',
+            btn: 'close',
+            btnAlign: 'c', // 按钮居中
+            shade: 0, // 不显示遮罩
+            yes: function(){
+              layer.closeAll();
+              location.href="index.html"
+            }
+          });
           console.log(token);
           console.log(response);
           
-          location.href="index.html"
+         
         }
         
       },
       function (err) {
         console.log(err);
+        layer.open({
+          type: 1,
+          offset: 'auto', // 详细可参考 offset 属性
+          // id: 'ID-demo-layer-offset-'+ offset, // 防止重复弹出
+          content: '<div style="padding: 16px;">'+ 'Account password error !' +'</div>',
+          area: '240px',
+          title: '',
+          btn: 'close',
+          btnAlign: 'c', // 按钮居中
+          shade: 0, // 不显示遮罩
+          yes: function(){
+            layer.closeAll();
+          }
+        });
       }
     );
 }

@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="fecify is a privatized saas system, a system to build N e-commerce malls">
+    <!-- icon -->
+    <link rel="shortcut icon" href="#" type="image/x-icon">
+    <!-- 判断屏幕尺寸 -->
+    <link rel="stylesheet" href="./css/style1440.css" media="screen and (max-width:1440px)">
+    <link rel="stylesheet" href="./css/style1024.css" media="screen and (max-width:1024px)">
+    <link rel="stylesheet" href="./css/style820.css" media="screen and (max-width:820px)">
+    <link rel="stylesheet" href="./css/style768.css" media="screen and (max-width:768px)">
+    <link rel="stylesheet" href="./css/style540.css" media="screen and (max-width:540px)">
+    <link rel="stylesheet" href="./css/style375.css" media="screen and (max-width:375px)">
+    <!--公共区 -->
+    <link rel="stylesheet" href="./css/commom.css">
+    <link rel="stylesheet" href="./css/pay.css">
+    <!-- 初始化 -->
+    <link rel="stylesheet" href="./css/初始化.css">
+    <link rel="stylesheet" href="./layui/css/layui.css">
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.4/jquery.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"></script>
+    <title></title>
+    
+</head>
+
+<body>
+    <div id="app">
+        <div class="content-box">
+            <!-- 头部 -->
+            <div class="page-content-header">
+                <header>
+                    <nav class="top-nav">
+                        <a href="#"><img src="./images/facebook.png" alt=""></a>
+                        <a href="#"><img src="./images/staginer.png" alt=""></a>
+                        <a href="#"><img src="./images/pinterest.png" alt=""></a>
+                        <a href="#"><img src="./images/twitter .png" alt=""></a>
+                        <a href="#"><img src="./images/YouTube.png" alt=""></a>
+                        <a href="#"><img src="./images/TikTok.png" alt=""></a>
+                    </nav>
+                    <nav class="bottom-nav">
+                        <div class="hs-mobile-home-nav-toggle" style="display: none;">
+                            <div class="flex">
+                                <div class="menu"><img src="./upload/menu-button.svg" alt=""></div>
+                                <a href="#" class="mobile-logo">
+                                    <img src="#" alt=""class="logo-img">
+                                </a>
+                                <ul class="search-shopping">
+                                    <li>
+                                        <a href="./search.html">
+                                            <i class="layui-icon layui-icon-search"style="font-size: 20px;background-color: #fff;"></i>
+                                        </a>
+                                    </li>
+                                    <li class="user-li" style="display: none;">
+                                        <a href="./order-list.html">
+                                            <i class="layui-icon layui-icon-username "style="font-size: 20px;background-color: #fff;"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <i class="products"><span class="products-num">0</span></i>
+                                        <a href="./shopping-cart.html">
+                                            <i class="layui-icon layui-icon-cart"style="font-size: 20px;background-color: #fff;"></i>
+                                        </a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+                        <a href="#" class="logo"><img src="#" alt="" class="logo-img"></a>
+                        <ul class="tab">
+                            <li><a href="./index.html">Home</a></li>
+                            <li>
+                                <a href="./shop.html" class="shop">Shop</a>
+
+                            </li>
+                            <li>
+                                <i>hot</i>
+                                <a href="./productDetail.html" class="product">Product</a>
+                            </li>
+                            <li><a href="./About Us.html" class="pages">Pages</a></li>
+                            <!-- <li><a href="./Coupons.html">Coupons</a></li> -->
+
+                        </ul>
+
+                        <!-- 显示 shop-->
+                        <div class="shop-item">
+                            <div class="container">
+                                <div class="left">
+                                    <ul>
+                                        <h2><a href="./shop.html">Tops</a></h2>
+                                        <li><a href="./shop.html">Blouses & Shirts</a></li>
+                                        <li><a href="./shop.html">T-shirts</a></li>
+                                        <li><a href="./shop.html">Tank Tops & Camis</a></li>
+                                        <li><a href="./shop.html">Crop Tops</a></li>
+                                        <li><a href="./shop.html">Kimonos</a></li>
+                                    </ul>
+                                    <ul>
+                                        <h2><a href="./shop.html">Outwear & Sweaters</a></h2>
+                                        <li><a href="./shop.html">Coats</a></li>
+                                        <li><a href="./shop.html">Sweaters</a></li>
+                                        <li><a href="./shop.html">Blazers</a></li>
+                                        <li><a href="./shop.html">Jackers</a></li>
+                                        <li><a href="./shop.html">Cardigans</a></li>
+                                    </ul>
+                                    <ul>
+                                        <h2><a href="./shop.html">Hoodies</a></h2>
+                                        <li><a href="./shop.html">Hoodies</a></li>
+                                        <li><a href="./shop.html">Sweat Shirts</a></li>
+                                    </ul>
+                                    <ul>
+                                        <h2><a href="./shop.html">Cover Ups</a></h2>
+                                    </ul>
+
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <!-- product -->
+                        <div class="product-item">
+                            <div class="container">
+                                <ul>
+                                    <li><a href="./productDetail.html">Dresses</a></li>
+                                    <li><a href="./productDetail.html">OuterWears</a></li>
+                                    <li><a href="./productDetail.html">Bottoms</a></li>
+                                    <li><a href="./productDetail.html">Tops</a></li>
+                                    <li><a href="./productDetail.html">New in</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- pages -->
+                        <div class="pages-item">
+                            <div class="container">
+                                <ul>
+                                    <li><a href="./Shipping $ Return.html">Shipping & Return</a></li>
+                                    <li><a href="./Shipping Policies.html">Shipping Policies</a></li>
+                                    <li><a href="./About Us.html">About Us</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <ul class="yonghu">
+                            <li><a href="./search.html"><i class="layui-icon layui-icon-search"
+                                        style="font-size: 20px;background-color: #fff;"></i></a></li>
+                            <li><i class="layui-icon layui-icon-username username"
+                                    style="font-size: 20px;background-color: #fff;"></i>
+                                    <div class="root">
+                                        <div class="row">
+                                            <a href="./login.html" class="Log-out">Log out</a>
+                                        </div>
+                                    </div>    
+                            </li>
+                            <li>
+                                <i class="products"><span class="products-num">0</span></i>
+                                <a href="./shopping-cart.html"><i class="layui-icon layui-icon-cart"
+                                        style="font-size: 20px;background-color: #fff;"></i></a>
+                            </li>
+                            
+                        </ul>
+
+                    </nav>
+                </header>
+
+            </div>
+
+
+            <!-- 内容 -->
+            <div class="page-content-body">
+               <div class="pay-success">
+                <div class="icon">
+                    <i class="layui-icon layui-icon-success"style="font-size: 100px;color: green;"></i>
+                </div>
+                <h1>支付成功</h1>
+                <div class="pay-content">
+                    <div class="line"></div>
+                    <div class="list">
+                    <p class="order-num">订单号：382047498285348</p>
+                    
+                    <p class="order-price">$100.00</p>
+                    </div>
+                </div>
+                
+               </div>
+               <div class="pay-error">
+                <div class="icon">
+                    <i class="layui-icon layui-icon-error"style="font-size: 100px;color: red;"></i>
+                </div>
+                <h1>支付失败</h1>
+                <div class="pay-content">
+                    <div class="line"></div>
+                    <div class="list">
+                    <p class="order-num">订单号：382047498285348</p>
+                    
+                    <p class="order-price">$100.00</p>
+                    </div>
+               </div>
+            </div>
+
+            <!-- 尾 -->
+            <div class="page-content-footer">
+                <div class="container">
+                    <div class="item-box pc-menu">
+                        <div class="item-content menu-1">
+                            <div class="item">
+                                <div class="menu-link">
+                                    <p>SUPPORT</p>
+                                    <ul>
+                                        <li class="menu-item"><a href="./About Us.html">About us</a></li>
+                                        <!-- <li class="menu-item"><a href="#">FAQs</a></li> -->
+                                        <li class="menu-item"><a href="./Shipping Policies.html">Shipping Policies</a>
+                                        </li>
+                                        <li class="menu-item"><a href="./Shipping $ Return.html">Shipping & return</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item-content menu-2">
+                            <div class="item">
+                                <div class="menu-link">
+                                    <p>Quick links</p>
+                                    <ul>
+                                        <li class="menu-item"><a href="#"  class="my-account">My account</a></li>
+                                        <li class="menu-item"><a href="./shopping-cart.html">Cart</a></li>
+                                        <!-- <li class="menu-item"><a href="#">Coupon</a></li> -->
+                                        <!-- <li class="menu-item"><a href="#">Query Order</a></li> -->
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item-content menu-3">
+                            <div class="item">
+                                <div class="menu-link">
+                                    <p>Follow us</p>
+                                    <div class="lg">
+                                        <ul class="clearfix">
+                                            <li class="menu-item"><a href="#"><img src="./images/facebook.png"
+                                                        alt=""></a></li>
+                                            <li class="menu-item"><a href="#"><img src="./images/staginer.png"
+                                                        alt=""></a></li>
+                                            <li class="menu-item"><a href="#"><img src="./images/pinterest.png"
+                                                        alt=""></a></li>
+                                            <li class="menu-item"><a href="#"><img src="./images/twitter .png"
+                                                        alt=""></a></li>
+                                            <li class="menu-item"><a href="#"><img src="./images/YouTube.png"
+                                                        alt=""></a></li>
+                                            <li class="menu-item"><a href="#"><img src="./images/TikTok.png" alt=""></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item-content menu-4">
+                            <div class="item">
+                                <div class="menu-link">
+                                    <p>Newsletter</p>
+                                    <div class="mb-10">
+                                        <span class="address"></span>
+                                    </div>
+                                    <form action="">
+                                        <div class="from-content">
+                                            <i class="layui-icon layui-icon-email"
+                                                style="font-size: 20px; color: black;margin-left: 10px;"></i>
+                                            <div class="input">
+                                                <input type="email" name="Email" id="" autocomplete="off"
+                                                    placeholder="Email">
+                                            </div>
+                                            <div class="btn">
+                                                <i class="layui-icon layui-icon-right"
+                                                    style="font-size: 20px;margin-left: 10px;"></i>
+                                            </div>
+                                        </div>
+                                        <div class="err">Please input the email address</div>
+                                    </form>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mobile-menu" style="display: none;">
+                        <div class="item-content menu-1">
+                            <div class="item">
+                                <div class="menu-link support-btn">
+                                    <p>SUPPORT</p><i class="layui-icon layui-icon-down"style="font-size: 20px;color: #000;"></i>
+                                </div>
+                                <ul class="support-body" style="display: none;">
+                                    <li class="menu-item"><a href="./About Us.html">About us</a></li>
+                                    <!-- <li class="menu-item"><a href="#">FAQs</a></li> -->
+                                    <li class="menu-item"><a href="./Shipping Policies.html">Shipping Policies</a>
+                                    </li>
+                                    <li class="menu-item"><a href="./Shipping $ Return.html">Shipping & return</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="item-content menu-2">
+                            <div class="item">
+                                <div class="menu-link quick-btn">
+                                    <p>Quick links</p><i class="layui-icon layui-icon-down"style="font-size: 20px;color: #000;"></i>
+                                </div>
+                                    <ul class="quick-body" style="display: none;">
+                                        <li class="menu-item"><a href="#"  class="my-account">My account</a></li>
+                                        <li class="menu-item"><a href="./shopping-cart.html">Cart</a></li>
+                                        <!-- <li class="menu-item"><a href="#">Coupon</a></li> -->
+                                        <!-- <li class="menu-item"><a href="#">Query Order</a></li> -->
+                                    </ul>
+                                
+                            </div>
+                        </div>
+                        <div class="item-content menu-3">
+                            <div class="item">
+                                <div class="menu-link follow-btn">
+                                    <p>Follow us</p><i class="layui-icon layui-icon-down"style="font-size: 20px;color: #000;"></i>
+                                </div>
+                                    <div class="follow-body" style="display: none;">
+                                        <ul class="clearfix">
+                                            <li class="menu-item"><a href="#"><img src="./images/facebook.png"
+                                                        alt=""></a></li>
+                                            <li class="menu-item"><a href="#"><img src="./images/staginer.png"
+                                                        alt=""></a></li>
+                                            <li class="menu-item"><a href="#"><img src="./images/pinterest.png"
+                                                        alt=""></a></li>
+                                            <li class="menu-item"><a href="#"><img src="./images/twitter .png"
+                                                        alt=""></a></li>
+                                            <li class="menu-item"><a href="#"><img src="./images/YouTube.png"
+                                                        alt=""></a></li>
+                                            <li class="menu-item"><a href="#"><img src="./images/TikTok.png" alt=""></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                               
+                            </div>
+                        </div>
+                        <div class="item-content menu-4">
+                            <div class="item">
+                                <div class="menu-link newsletter-btn">
+                                    <p>Newsletter</p><i class="layui-icon layui-icon-down"style="font-size: 20px;color: #000;"></i>
+                                </div>
+                                    <div class="news-body" style="display: none;">
+                                        <div class="mb-10">
+                                            <span class="address"></span>
+                                        </div>
+                                        <form action="">
+                                            <div class="from-content">
+                                                <i class="layui-icon layui-icon-email"
+                                                    style="font-size: 20px; color: black;margin-left: 10px;"></i>
+                                                <div class="input">
+                                                    <input type="email" name="Email" id="" autocomplete="off"
+                                                        placeholder="Email">
+                                                </div>
+                                                <div class="btn">
+                                                    <i class="layui-icon layui-icon-right"
+                                                        style="font-size: 20px;margin-left: 10px;"></i>
+                                                </div>
+                                            </div>
+                                            <div class="err">Please input the email address</div>
+                                        </form>
+                                    </div>                              
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom-container" >
+                    <div class="bottom-box">
+                        <div class="item-payment-box">
+                            <img src="./images/visa.svg" alt="">
+                            <img src="./images/mastercard.svg" alt="">
+                            <img src="./images/amex.svg" alt="">
+                            <img src="./images/discover.svg" alt="">
+                            <img src="./images/alipay.svg" alt="">
+                            <img src="./images/jcb.svg" alt="">
+                            <img src="./images/diners.svg" alt="">
+                            <img src="./images/ideal.svg" alt="">
+                            <img src="./images/giropay.svg" alt="">
+                            <img src="./images/eps.svg" alt="">
+                            <img src="./images/bancontact.svg" alt="">
+                            <img src="./images/cod_1.svg" alt="">
+                            <img src="./images/paypal.svg" alt="">
+                        </div>
+                        <!-- <div class="item-copyright-box">
+                            <p>@2022 Fecify 版权信息 鲁ICP备19015289号-6</p> 
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="menu-mask" style="display: none;">
+            <div class="menu-body" style="display: none;">
+                <ul class="menu-ul">
+                    <li><a href="./index.html" class="menu-li">Home</a></li>
+                    <li><a href="./shop.html" class="menu-li">Shop</a>
+                        
+                    </li>
+                    <li><a href="./productDetail.html" class="menu-li">Product</a>
+                        
+                    </li>
+                    <li><a href="./About Us.html" class="menu-li">Pages</a>
+                        <i class="layui-icon layui-icon-right page-i" style="font-size: 20px; "></i>
+                    </li>
+                    <!-- <li><a href="./Coupons.html" class="menu-li">Coupons</a></li> -->
+                </ul>
+                <a href="./login.html" class="login">Log in</a>
+                <a href="./register.html" class="register">Register</a>
+                <a href="#" class="logout" style="display: none;">Log out</a>
+            </div>
+            
+            <!-- page -->
+            <div class="page-body" style="display: none;">
+                <ul class="page-ul">
+                    <a href="#" class="menu-return"><i class="layui-icon layui-icon-return"></i> Return</a>
+                    <li><a href="./Shipping $ Return.html" class="page-li">Shipping & Return</a></li>
+                    <li><a href="./Shipping Policies.html" class="page-li">Shipping Policies</a></li>
+                    <li><a href="./About Us.html" class="page-li">About Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="./layui/layui.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./utils/LocalStorageUtil.js"></script>
+    <script src="./js/icon-title.js"></script>
+    <script src="./js/mobile-nav.js"></script>
+    <script src="./js/tab.js"></script>
+    <script src="./js/root.js"></script>
+    <script src="./js/mobile-footer.js"></script>
+    
+</body>
+
+</html>

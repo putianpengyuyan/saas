@@ -87,7 +87,6 @@ body {
   flex: 1;
   height: 100%;
   padding-left: 1.875rem;
-  overflow: scroll;
   border: 0;
 }
 .page-content-body .drag-item .product-info .top-box .info-box::-webkit-scrollbar {
@@ -95,7 +94,6 @@ body {
 }
 .page-content-body .drag-item .product-info .top-box .info-box div {
   width: 100%;
-  height: 100%;
 }
 .page-content-body .drag-item .product-info .top-box .info-box div .title {
   padding: 0 5rem 0 0;
@@ -206,9 +204,9 @@ body {
   margin: 1.25rem 0 0;
 }
 .page-content-body .drag-item .product-info .top-box .info-box div .product-specification .product-options {
-  height: 7.5rem;
+  height: 8.5rem;
   width: 100%;
-  padding: 0 10px ;
+  padding: 0 10px;
 }
 .page-content-body .drag-item .product-info .top-box .info-box div .product-specification .product-options .name {
   display: block;
@@ -216,7 +214,7 @@ body {
   margin: 0 0 0.4375rem;
   font-size: 1.125rem;
   font-weight: 700;
-  padding: 0 10px ;
+  padding: 0 10px;
 }
 .page-content-body .drag-item .product-info .top-box .info-box div .product-specification .product-options .name span {
   font-weight: normal;
@@ -377,7 +375,7 @@ body {
 .page-content-body .drag-item .product-info .top-box .info-box div .product-specification .product-options1 {
   height: 5rem;
   width: 100%;
-  margin-top: 100px;
+  margin-top: 50px;
 }
 .page-content-body .drag-item .product-info .top-box .info-box div .product-specification .product-options1 .name {
   display: block;
@@ -574,8 +572,14 @@ body {
   padding: 2.5rem 0;
 }
 .page-content-body .drag-item .product-info .tab-box .tab-content .tab-item-content1 {
+  margin: 0 auto;
   display: block;
-  height: 18rem;
+  height: 18.75rem;
+  overflow: scroll;
+  border: 0;
+}
+.page-content-body .drag-item .product-info .tab-box .tab-content .tab-item-content1::-webkit-scrollbar {
+  display: none;
 }
 .page-content-body .drag-item .product-info .tab-box .tab-content .tab-item-content1 h4 {
   margin: 1.875rem 0;
@@ -588,12 +592,12 @@ body {
   line-height: 1.5rem;
 }
 .page-content-body .drag-item .product-info .tab-box .tab-content .tab-item-content2 {
+  margin: 0 auto;
   display: none;
   width: 100%;
 }
 .page-content-body .drag-item .product-info .tab-box .tab-content .tab-item-content2 .review-box {
   width: 100%;
-  height: 9.8125rem;
 }
 .page-content-body .drag-item .product-info .tab-box .tab-content .tab-item-content2 .review-box .list-box {
   width: 100%;
@@ -638,10 +642,17 @@ body {
   transform: scale(1.02);
 }
 .page-content-body .drag-item .product-info .tab-box .tab-content .tab-item-content3 {
-  display: block;
+  display: none;
   width: 100%;
-  height: 10.25rem;
+  height: 18.75rem;
+  overflow: scroll;
+  border: 0;
+  margin: 0 auto;
+  text-align: center;
   padding: 2.5rem 0;
+}
+.page-content-body .drag-item .product-info .tab-box .tab-content .tab-item-content3::-webkit-scrollbar {
+  display: none;
 }
 .page-content-body .drag-item .product-info .tab-box .tab-content .tab-item-content3 p {
   height: 1.5rem;
@@ -652,8 +663,15 @@ body {
 .page-content-body .drag-item .product-info .tab-box .tab-content .tab-item-content4 {
   display: none;
   width: 100%;
-  height: 10.25rem;
+  height: 18rem;
+  overflow: scroll;
+  border: 0;
+  margin: 0 auto;
+  text-align: center;
   padding: 2.5rem 0;
+}
+.page-content-body .drag-item .product-info .tab-box .tab-content .tab-item-content4::-webkit-scrollbar {
+  display: none;
 }
 .page-content-body .drag-item .product-info .tab-box .tab-content .tab-item-content4 p {
   height: 1.5rem;
@@ -662,9 +680,17 @@ body {
   color: #777676;
 }
 .page-content-body .drag-item .product-info .tab-box .tab-content .tab-item-content5 {
+  margin: 0 auto;
   display: none;
   width: 100%;
   padding: 2.5rem 0;
+  height: 18.75rem;
+  overflow: scroll;
+  border: 0;
+  text-align: center;
+}
+.page-content-body .drag-item .product-info .tab-box .tab-content .tab-item-content5::-webkit-scrollbar {
+  display: none;
 }
 .page-content-body .drag-item .product-info .tab-box .tab-content .tab-item-content5 h4 {
   font-size: 1.5rem;
@@ -709,21 +735,57 @@ body {
 }
 .page-content-body .drag-item .product-info .tab-box .like-box .row .col a .common-img-box {
   padding: 0 0 1.25rem;
-  height: 25rem;
+  height: 380px;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  position: relative;
+}
+.page-content-body .drag-item .product-info .tab-box .like-box .row .col a .common-img-box .product-discount {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40px !important;
+  height: 50px !important;
+  background-color: brown;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  font-size: 14px;
+}
+.page-content-body .drag-item .product-info .tab-box .like-box .row .col a .common-img-box .product-discount .triangle {
+  position: absolute;
+  bottom: -24px;
+  left: 0;
+  width: 0;
+  height: 0 !important;
+  border-top: 25px solid brown;
+  border-right: 25px solid transparent;
+}
+.page-content-body .drag-item .product-info .tab-box .like-box .row .col a .common-img-box .product-discount .triangle1 {
+  position: absolute;
+  bottom: -24px;
+  right: 0;
+  width: 0;
+  height: 0 !important;
+  border-top: 25px solid brown;
+  border-left: 25px solid transparent;
 }
 .page-content-body .drag-item .product-info .tab-box .like-box .row .col a .common-img-box img {
   max-width: 100%;
   max-height: 100%;
 }
-.page-content-body .drag-item .product-info .tab-box .like-box .row .col a .pro-title {
+.page-content-body .drag-item .product-info .tab-box .like-box .row .col a .info-box {
+  padding: 0 0.625rem;
+  text-align: center;
+}
+.page-content-body .drag-item .product-info .tab-box .like-box .row .col a .info-box .pro-title {
   font-size: 1rem;
   width: 100%;
   height: 80px;
+  text-align: left;
   margin: 0.625rem 0.3125rem;
   color: #000;
   padding: 0.625rem 0;
@@ -733,13 +795,16 @@ body {
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
 }
-.page-content-body .drag-item .product-info .tab-box .like-box .row .col a .price {
-  padding: 0.625rem;
+.page-content-body .drag-item .product-info .tab-box .like-box .row .col a .info-box .star {
+  height: 2.6875rem;
+}
+.page-content-body .drag-item .product-info .tab-box .like-box .row .col a .info-box .price {
+  padding: 0 0.625rem;
   height: 1.5625rem;
   font-size: 1.25rem;
   color: #f10215;
 }
-.page-content-body .drag-item .product-info .tab-box .like-box .row .col a .price span {
+.page-content-body .drag-item .product-info .tab-box .like-box .row .col a .info-box .price span {
   font-size: 0.875rem;
   margin-left: 0.3125rem;
   color: #666666;

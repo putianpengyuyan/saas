@@ -12,7 +12,7 @@ function ProductSort(){
                 const col = document.createElement('div')
                 col.innerHTML = `
                 <div class="col sort-col" id='${item.id}'>
-                    <a href="./shop.html">
+                    <a href="./shop.html?sort_id=${item.id}">
                         <div class="common-img-box">
                             <img src='${url}${item.image}' alt="">
                         </div>
@@ -27,16 +27,14 @@ function ProductSort(){
                 `
                 rowSort.appendChild(col)
             })
-            const sortCOLs = document.querySelectorAll('.sort-col')  
-            for(let i=0;i<sortCOLs.length;i++){
-                const sortCOL = sortCOLs[i]
-                sortCOL.addEventListener('click',function(){
-                    const id = sortCOL.id
-                    console.log(sortCOL.id);
-                    let SortID 
-                localStorage.setItem('SortID',JSON.stringify(id))
-                })
-            }
+            // const sortCOLs = document.querySelectorAll('.sort-col')  
+            // for(let i=0;i<sortCOLs.length;i++){
+            //     const sortCOL = sortCOLs[i]
+            //     sortCOL.addEventListener('click',function(){
+            //         const id = sortCOL.id
+            //     // localStorage.setItem('SortID',JSON.stringify(id))
+            //     })
+            // }
         }
     },err=>{
         console.log(err);

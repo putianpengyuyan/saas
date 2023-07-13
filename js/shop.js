@@ -115,15 +115,3 @@
 //     filter.style.display = 'none'
 // })
 
-function ShopList(){
-  axios.post(url+'/api/products/category')
-  .then(res=>{
-    console.log(res);
-  }
-  ,err=>{
-    console.log(err);
-  }
-
-  )
-}
-ShopList()

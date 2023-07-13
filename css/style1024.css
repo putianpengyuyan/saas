@@ -110,13 +110,13 @@
   .content-box .page-content-body .drag-item2 .container .row {
     width: 100%;
     display: flex;
-    height: 400px !important;
+    height: 420px ;
     flex-wrap: wrap;
     overflow: hidden;
   }
   #app .page-content-body .drag-item2 .container .row div,
   .content-box .page-content-body .drag-item2 .container .row div {
-    height: 400px !important;
+    height: 420px ;
   }
   #app .page-content-body .drag-item2 .container .row div .col,
   .content-box .page-content-body .drag-item2 .container .row div .col {
@@ -133,11 +133,44 @@
   #app .page-content-body .drag-item2 .container .row div .col a .common-img-box,
   .content-box .page-content-body .drag-item2 .container .row div .col a .common-img-box {
     width: 100%;
-    height: 200px !important;
+    height: 200px ;
+  }
+  #app .page-content-body .drag-item2 .container .row div .col a .common-img-box .product-discount,
+  .content-box .page-content-body .drag-item2 .container .row div .col a .common-img-box .product-discount {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40px !important;
+    height: 50px !important;
+    background-color: brown;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    font-size: 14px;
+  }
+  #app .page-content-body .drag-item2 .container .row div .col a .common-img-box .product-discount .triangle,
+  .content-box .page-content-body .drag-item2 .container .row div .col a .common-img-box .product-discount .triangle {
+    position: absolute;
+    bottom: -24px;
+    left: 0;
+    width: 0;
+    height: 0 !important;
+    border-top: 25px solid brown;
+    border-right: 25px solid transparent;
+  }
+  #app .page-content-body .drag-item2 .container .row div .col a .common-img-box .product-discount .triangle1,
+  .content-box .page-content-body .drag-item2 .container .row div .col a .common-img-box .product-discount .triangle1 {
+    position: absolute;
+    bottom: -24px;
+    right: 0;
+    width: 0;
+    height: 0 !important;
+    border-top: 25px solid brown;
+    border-left: 25px solid transparent;
   }
   #app .page-content-body .drag-item2 .container .row div .col a .info-box,
   .content-box .page-content-body .drag-item2 .container .row div .col a .info-box {
-    padding: 0.625rem;
+    padding: 0.625rem 0;
   }
   #app .page-content-body .drag-item2 .container .row div .col a .info-box .title,
   .content-box .page-content-body .drag-item2 .container .row div .col a .info-box .title {
@@ -156,7 +189,7 @@
   }
   #app .page-content-body .drag-item2 .container .row div .col a .info-box .star,
   .content-box .page-content-body .drag-item2 .container .row div .col a .info-box .star {
-    height: 1.25rem !important;
+    height: 43px !important;
   }
   #app .page-content-body .drag-item2 .container .row div .col a .info-box .price,
   .content-box .page-content-body .drag-item2 .container .row div .col a .info-box .price {
@@ -221,12 +254,12 @@
   #app .page-content-body .drag-item6 .container .row,
   .content-box .page-content-body .drag-item6 .container .row {
     width: 100%;
-    height: 850px !important;
+    height: 900px ;
     display: flex;
   }
   #app .page-content-body .drag-item6 .container .row div,
   .content-box .page-content-body .drag-item6 .container .row div {
-    height: 400px !important;
+    height: 420px !important;
     margin-bottom: 0 !important;
   }
   #app .page-content-body .drag-item6 .container .row div .col,
@@ -246,9 +279,42 @@
     width: 100%;
     height: 200px !important;
   }
+  #app .page-content-body .drag-item6 .container .row div .col a .common-img-box .product-discount,
+  .content-box .page-content-body .drag-item6 .container .row div .col a .common-img-box .product-discount {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40px !important;
+    height: 50px !important;
+    background-color: brown;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    font-size: 14px;
+  }
+  #app .page-content-body .drag-item6 .container .row div .col a .common-img-box .product-discount .triangle,
+  .content-box .page-content-body .drag-item6 .container .row div .col a .common-img-box .product-discount .triangle {
+    position: absolute;
+    bottom: -24px;
+    left: 0;
+    width: 0;
+    height: 0 !important;
+    border-top: 25px solid brown;
+    border-right: 25px solid transparent;
+  }
+  #app .page-content-body .drag-item6 .container .row div .col a .common-img-box .product-discount .triangle1,
+  .content-box .page-content-body .drag-item6 .container .row div .col a .common-img-box .product-discount .triangle1 {
+    position: absolute;
+    bottom: -24px;
+    right: 0;
+    width: 0;
+    height: 0 !important;
+    border-top: 25px solid brown;
+    border-left: 25px solid transparent;
+  }
   #app .page-content-body .drag-item6 .container .row div .col a .info-box,
   .content-box .page-content-body .drag-item6 .container .row div .col a .info-box {
-    padding: 0.625rem;
+    padding: 0.625rem 0;
     height: 12.5rem !important;
   }
   #app .page-content-body .drag-item6 .container .row div .col a .info-box .title,
@@ -268,7 +334,7 @@
   }
   #app .page-content-body .drag-item6 .container .row div .col a .info-box .star,
   .content-box .page-content-body .drag-item6 .container .row div .col a .info-box .star {
-    height: 1.25rem !important;
+    height: 43px !important;
   }
   #app .page-content-body .drag-item6 .container .row div .col a .info-box .price,
   .content-box .page-content-body .drag-item6 .container .row div .col a .info-box .price {
@@ -433,7 +499,7 @@
   }
   #app .page-content-body .drag-item .collection-box .container .info .list-box .main-box .infinite-list .row.shop-product-container .shop-product-item a .bottom-text .star,
   .content-box .page-content-body .drag-item .collection-box .container .info .list-box .main-box .infinite-list .row.shop-product-container .shop-product-item a .bottom-text .star {
-    height: 1.25rem;
+    height: 43px;
   }
   #app .page-content-body .drag-item .collection-box .container .info .list-box .main-box .infinite-list .row.shop-product-container .shop-product-item a .bottom-text .price,
   .content-box .page-content-body .drag-item .collection-box .container .info .list-box .main-box .infinite-list .row.shop-product-container .shop-product-item a .bottom-text .price {
@@ -487,7 +553,7 @@
   }
   #app .page-content-body .container .row div .col .info-box,
   .content-box .page-content-body .container .row div .col .info-box {
-    padding: 0.625rem;
+    padding: 0.625rem 0;
   }
   #app .page-content-body .container .row div .col .info-box .pro-title,
   .content-box .page-content-body .container .row div .col .info-box .pro-title {
@@ -503,10 +569,6 @@
     display: -webkit-box;
     -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
-  }
-  #app .page-content-body .container .row div .col .info-box .star,
-  .content-box .page-content-body .container .row div .col .info-box .star {
-    height: 1.25rem;
   }
   #app .page-content-body .drag-item,
   .content-box .page-content-body .drag-item {
@@ -595,7 +657,7 @@
   }
   #app .page-content-body .drag-item .product-info .top-box .info-box .product-specification .product-options1,
   .content-box .page-content-body .drag-item .product-info .top-box .info-box .product-specification .product-options1 {
-    margin-top: 100px !important;
+    margin-top: 50px !important;
   }
   #app .page-content-body .drag-item .product-info .tab-box,
   .content-box .page-content-body .drag-item .product-info .tab-box {
@@ -616,7 +678,7 @@
   #app .page-content-body .drag-item .product-info .tab-box .like-box .row > div,
   .content-box .page-content-body .drag-item .product-info .tab-box .like-box .row > div {
     width: 25%;
-    height: 400px;
+    height: 420px;
     margin: 0 0 1.5rem;
   }
   #app .page-content-body .drag-item .product-info .tab-box .like-box .row .col,
@@ -657,6 +719,10 @@
     display: -webkit-box;
     -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
+  }
+  #app .page-content-body .drag-item .product-info .tab-box .like-box .row .col a .star,
+  .content-box .page-content-body .drag-item .product-info .tab-box .like-box .row .col a .star {
+    height: 43px;
   }
   #app .page-content-body .drag-item .product-info .tab-box .like-box .row .col a .price,
   .content-box .page-content-body .drag-item .product-info .tab-box .like-box .row .col a .price {
@@ -752,6 +818,10 @@
     display: -webkit-box;
     -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
+  }
+  #app .page-content-body .find .row .col .info-box .star,
+  .content-box .page-content-body .find .row .col .info-box .star {
+    height: 43px;
   }
   #app .page-content-body .find .row .col .info-box .price,
   .content-box .page-content-body .find .row .col .info-box .price {
@@ -880,7 +950,7 @@
   body .content-box .main .checkout-box {
     width: 100%;
     display: flex;
-    height: 59.375rem;
+    height: 1180px;
   }
   body #app .main .checkout-box .left-checkout,
   body .content-box .main .checkout-box .left-checkout {
@@ -984,7 +1054,6 @@
     display: none;
     width: 100%;
     height: 100%;
-    border: 3px solid red;
     background-color: rgba(0, 0, 0, 0.5);
     top: 0;
     left: 0;

@@ -128,7 +128,14 @@ class localStorageUtil {
       this.setItem(LOCAL_CONSTANTS.shoppingCartTotal,shoppingCartTotal.toFixed(2));
       this.setItem(LOCAL_CONSTANTS.shoppingCartTotalNum, shoppingCartTotalNum);
       this.setItem(LOCAL_CONSTANTS.shoppingCart, JSON.stringify(productArr));
-      document.querySelector(".table-body").children[deletedIndex].remove()
+      const TableBodyS = document.querySelectorAll(".table-body")
+      console.log(11111)
+      console.log(TableBodyS)
+      for(let i=0;i<TableBodyS.length;i++){
+        const TableBody = TableBodyS[i]
+        TableBody.children[deletedIndex] && TableBody.children[deletedIndex].remove()
+      }
+      
       const container1 =  document.querySelector(".container1")
       const container2 =  document.querySelector(".container2")
       if(shoppingCartTotalNum==0){
@@ -153,7 +160,12 @@ class localStorageUtil {
     document.querySelectorAll(".c-total-item").innerHTML="";
     console.log(3333333333333)
     console.log( document.querySelector(".products-num"))
-    document.querySelector(".products-num").innerText=shoppingCartTotalNum
+    // document.querySelector(".products-num").innerText=shoppingCartTotalNum
+    const productNumS = document.querySelectorAll(".products-num")
+        for(let i = 0;i<productNumS.length;i++){
+          const productNum = productNumS[i]
+          productNum.innerText=shoppingCartTotalNum
+        }
     document.querySelector('.price-title-total').innerText = shoppingCartTotal.toFixed(2);
   }
 
@@ -250,7 +262,12 @@ class localStorageUtil {
     this.setItem(LOCAL_CONSTANTS.shoppingCartTotal,shoppingCartTotal);
     this.setItem(LOCAL_CONSTANTS.shoppingCartTotalNum, shoppingCartTotalNum);
     this.setItem(LOCAL_CONSTANTS.shoppingCart, JSON.stringify(productArr));
-    document.querySelector(".products-num").innerHTML=shoppingCartTotalNum
+    // document.querySelector(".products-num").innerHTML=shoppingCartTotalNum
+    const productNumS = document.querySelectorAll(".products-num")
+        for(let i = 0;i<productNumS.length;i++){
+          const productNum = productNumS[i]
+          productNum.innerText=shoppingCartTotalNum
+        }
     document.querySelectorAll(".c-input")[index1].innerHTML=productArr[index1].num
     const totals=document.querySelectorAll(".c-total-item");
     console.log(totals);

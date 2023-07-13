@@ -78,12 +78,43 @@
 }
 .page-content-body .drag-item2 .container .row .col a .common-img-box {
   padding: 0 0 1.25rem;
-  height: 25rem;
+  height: 23.75rem;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  position: relative;
+}
+.page-content-body .drag-item2 .container .row .col a .common-img-box .product-discount {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40px !important;
+  height: 50px !important;
+  background-color: brown;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  font-size: 14px;
+}
+.page-content-body .drag-item2 .container .row .col a .common-img-box .product-discount .triangle {
+  position: absolute;
+  bottom: -24px;
+  left: 0;
+  width: 0;
+  height: 0 !important;
+  border-top: 25px solid brown;
+  border-right: 25px solid transparent;
+}
+.page-content-body .drag-item2 .container .row .col a .common-img-box .product-discount .triangle1 {
+  position: absolute;
+  bottom: -24px;
+  right: 0;
+  width: 0;
+  height: 0 !important;
+  border-top: 25px solid brown;
+  border-left: 25px solid transparent;
 }
 .page-content-body .drag-item2 .container .row .col a .common-img-box img {
   max-width: 100%;
@@ -91,10 +122,12 @@
 }
 .page-content-body .drag-item2 .container .row .col a .info-box {
   padding: 0.625rem;
+  text-align: center;
 }
 .page-content-body .drag-item2 .container .row .col a .info-box .title {
   width: 100%;
   height: 5rem;
+  text-align: left;
   margin: 0 0 0.3125rem;
   font-size: 1rem;
   font-weight: 510;
@@ -107,11 +140,9 @@
   -webkit-box-orient: vertical;
 }
 .page-content-body .drag-item2 .container .row .col a .info-box .star {
-  margin: 0 0 0.3125rem;
-  height: 1.5625rem;
+  height: 43px !important;
 }
 .page-content-body .drag-item2 .container .row .col a .info-box .price {
-  margin: 0.625rem 0;
   font-size: 1.25rem;
   font-weight: normal;
   height: 1.5625rem;
@@ -333,12 +364,43 @@
 }
 .page-content-body .drag-item6 .container .row .col a .common-img-box {
   padding: 0 0 1.25rem;
-  height: 25rem;
+  height: 23.75rem;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  position: relative;
+}
+.page-content-body .drag-item6 .container .row .col a .common-img-box .product-discount {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40px !important;
+  height: 50px !important;
+  background-color: brown;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  font-size: 14px;
+}
+.page-content-body .drag-item6 .container .row .col a .common-img-box .product-discount .triangle {
+  position: absolute;
+  bottom: -24px;
+  left: 0;
+  width: 0;
+  height: 0 !important;
+  border-top: 25px solid brown;
+  border-right: 25px solid transparent;
+}
+.page-content-body .drag-item6 .container .row .col a .common-img-box .product-discount .triangle1 {
+  position: absolute;
+  bottom: -24px;
+  right: 0;
+  width: 0;
+  height: 0 !important;
+  border-top: 25px solid brown;
+  border-left: 25px solid transparent;
 }
 .page-content-body .drag-item6 .container .row .col a .common-img-box img {
   max-width: 100%;
@@ -346,6 +408,7 @@
 }
 .page-content-body .drag-item6 .container .row .col a .info-box {
   padding: 0.625rem;
+  text-align: center;
 }
 .page-content-body .drag-item6 .container .row .col a .info-box .title {
   width: 100%;
@@ -353,6 +416,7 @@
   margin: 0 0 0.3125rem;
   font-size: 1rem;
   font-weight: 510;
+  text-align: left;
   color: #000;
   padding: 0.625rem 0;
   overflow: hidden;
@@ -362,11 +426,9 @@
   -webkit-box-orient: vertical;
 }
 .page-content-body .drag-item6 .container .row .col a .info-box .star {
-  margin: 0 0 0.3125rem;
-  height: 1.875rem;
+  height: 43px !important;
 }
 .page-content-body .drag-item6 .container .row .col a .info-box .price {
-  margin: 0.625rem 0;
   font-size: 1.25rem;
   color: #f03d3d;
   font-weight: normal;

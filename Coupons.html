@@ -8,9 +8,11 @@
     <!-- icon -->
     <link rel="shortcut icon" href="#" type="image/x-icon">
     <!-- 判断屏幕尺寸 -->
-    <link rel="stylesheet" href="./css/style820.css" media="screen and (max-width:820px)">
-    <link rel="stylesheet" href="./css/style1024.css" media="screen and (max-width:1024px)">
     <link rel="stylesheet" href="./css/style1440.css" media="screen and (max-width:1440px)">
+    <link rel="stylesheet" href="./css/style1024.css" media="screen and (max-width:1024px)">
+    <link rel="stylesheet" href="./css/style820.css" media="screen and (max-width:820px)">
+    <link rel="stylesheet" href="./css/style768.css" media="screen and (max-width:768px)">
+    <link rel="stylesheet" href="./css/style540.css" media="screen and (max-width:540px)">
     <!--公共区 -->
     <link rel="stylesheet" href="./css/commom.css">
     <!-- 初始化 -->
@@ -205,16 +207,18 @@
         <!-- 尾 -->
         <div class="page-content-footer">
             <div class="container">
-                <div class="item-box pc-menu clearfix">
+                <div class="item-box pc-menu">
                     <div class="item-content menu-1">
                         <div class="item">
                             <div class="menu-link">
                                 <p>SUPPORT</p>
                                 <ul>
-                                    <li class="menu-item"><a href="#">About us</a></li>
-                                    <li class="menu-item"><a href="#">FAQs</a></li>
-                                    <li class="menu-item"><a href="#">Shipping Policies</a></li>
-                                    <li class="menu-item"><a href="#">Shipping & return</a></li>
+                                    <li class="menu-item"><a href="./About Us.html">About us</a></li>
+                                    <!-- <li class="menu-item"><a href="#">FAQs</a></li> -->
+                                    <li class="menu-item"><a href="./Shipping Policies.html">Shipping Policies</a>
+                                    </li>
+                                    <li class="menu-item"><a href="./Shipping $ Return.html">Shipping & return</a>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
@@ -224,10 +228,10 @@
                             <div class="menu-link">
                                 <p>Quick links</p>
                                 <ul>
-                                    <li class="menu-item"><a href="#">My account</a></li>
-                                    <li class="menu-item"><a href="#">Cart</a></li>
-                                    <li class="menu-item"><a href="#">Coupon</a></li>
-                                    <li class="menu-item"><a href="#">Query Order</a></li>
+                                    <li class="menu-item"><a href="#"  class="my-account">My account</a></li>
+                                    <li class="menu-item"><a href="./shopping-cart.html">Cart</a></li>
+                                    <!-- <li class="menu-item"><a href="#">Coupon</a></li> -->
+                                    <!-- <li class="menu-item"><a href="#">Query Order</a></li> -->
                                 </ul>
                             </div>
                         </div>
@@ -238,12 +242,18 @@
                                 <p>Follow us</p>
                                 <div class="lg">
                                     <ul class="clearfix">
-                                        <li class="menu-item"><a href="#"><img src="./images/facebook.png" alt=""></a></li>
-                                        <li class="menu-item"><a href="#"><img src="./images/staginer.png" alt=""></a></li>
-                                        <li class="menu-item"><a href="#"><img src="./images/pinterest.png" alt=""></a></li>
-                                        <li class="menu-item"><a href="#"><img src="./images/twitter .png" alt=""></a></li>
-                                        <li class="menu-item"><a href="#"><img src="./images/YouTube.png" alt=""></a></li>
-                                        <li class="menu-item"><a href="#"><img src="./images/TikTok.png" alt=""></a></li>
+                                        <li class="menu-item"><a href="#"><img src="./images/facebook.png"
+                                                    alt=""></a></li>
+                                        <li class="menu-item"><a href="#"><img src="./images/staginer.png"
+                                                    alt=""></a></li>
+                                        <li class="menu-item"><a href="#"><img src="./images/pinterest.png"
+                                                    alt=""></a></li>
+                                        <li class="menu-item"><a href="#"><img src="./images/twitter .png"
+                                                    alt=""></a></li>
+                                        <li class="menu-item"><a href="#"><img src="./images/YouTube.png"
+                                                    alt=""></a></li>
+                                        <li class="menu-item"><a href="#"><img src="./images/TikTok.png" alt=""></a>
+                                        </li>
                                     </ul>
                                 </div>
                             </div>
@@ -258,24 +268,108 @@
                                 </div>
                                 <form action="">
                                     <div class="from-content">
-                                        <i class="layui-icon layui-icon-email" style="font-size: 20px; color: black;margin-left: 10px;"></i>
-                                    <div class="input">
-                                        <input type="email" name="Email" id="" autocomplete="off" placeholder="Email">
-                                    </div>
-                                    <div class="btn">
-                                        <i class="layui-icon layui-icon-right" 
-                                        style="font-size: 20px;margin-left: 10px;"></i>
-                                    </div>
+                                        <i class="layui-icon layui-icon-email"
+                                            style="font-size: 20px; color: black;margin-left: 10px;"></i>
+                                        <div class="input">
+                                            <input type="email" name="Email" id="" autocomplete="off"
+                                                placeholder="Email">
+                                        </div>
+                                        <div class="btn">
+                                            <i class="layui-icon layui-icon-right"
+                                                style="font-size: 20px;margin-left: 10px;"></i>
+                                        </div>
                                     </div>
                                     <div class="err">Please input the email address</div>
                                 </form>
-                                
+
                             </div>
                         </div>
                     </div>
                 </div>
+                <div class="mobile-menu" style="display: none;">
+                    <div class="item-content menu-1">
+                        <div class="item">
+                            <div class="menu-link support-btn">
+                                <p>SUPPORT</p><i class="layui-icon layui-icon-down"style="font-size: 20px;color: #000;"></i>
+                            </div>
+                            <ul class="support-body" style="display: none;">
+                                <li class="menu-item"><a href="./About Us.html">About us</a></li>
+                                <!-- <li class="menu-item"><a href="#">FAQs</a></li> -->
+                                <li class="menu-item"><a href="./Shipping Policies.html">Shipping Policies</a>
+                                </li>
+                                <li class="menu-item"><a href="./Shipping $ Return.html">Shipping & return</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="item-content menu-2">
+                        <div class="item">
+                            <div class="menu-link quick-btn">
+                                <p>Quick links</p><i class="layui-icon layui-icon-down"style="font-size: 20px;color: #000;"></i>
+                            </div>
+                                <ul class="quick-body" style="display: none;">
+                                    <li class="menu-item"><a href="#"  class="my-account">My account</a></li>
+                                    <li class="menu-item"><a href="./shopping-cart.html">Cart</a></li>
+                                    <!-- <li class="menu-item"><a href="#">Coupon</a></li> -->
+                                    <!-- <li class="menu-item"><a href="#">Query Order</a></li> -->
+                                </ul>
+                            
+                        </div>
+                    </div>
+                    <div class="item-content menu-3">
+                        <div class="item">
+                            <div class="menu-link follow-btn">
+                                <p>Follow us</p><i class="layui-icon layui-icon-down"style="font-size: 20px;color: #000;"></i>
+                            </div>
+                                <div class="follow-body" style="display: none;">
+                                    <ul class="clearfix">
+                                        <li class="menu-item"><a href="#"><img src="./images/facebook.png"
+                                                    alt=""></a></li>
+                                        <li class="menu-item"><a href="#"><img src="./images/staginer.png"
+                                                    alt=""></a></li>
+                                        <li class="menu-item"><a href="#"><img src="./images/pinterest.png"
+                                                    alt=""></a></li>
+                                        <li class="menu-item"><a href="#"><img src="./images/twitter .png"
+                                                    alt=""></a></li>
+                                        <li class="menu-item"><a href="#"><img src="./images/YouTube.png"
+                                                    alt=""></a></li>
+                                        <li class="menu-item"><a href="#"><img src="./images/TikTok.png" alt=""></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                           
+                        </div>
+                    </div>
+                    <div class="item-content menu-4">
+                        <div class="item">
+                            <div class="menu-link newsletter-btn">
+                                <p>Newsletter</p><i class="layui-icon layui-icon-down"style="font-size: 20px;color: #000;"></i>
+                            </div>
+                                <div class="news-body" style="display: none;">
+                                    <div class="mb-10">
+                                        <span class="address"></span>
+                                    </div>
+                                    <form action="">
+                                        <div class="from-content">
+                                            <i class="layui-icon layui-icon-email"
+                                                style="font-size: 20px; color: black;margin-left: 10px;"></i>
+                                            <div class="input">
+                                                <input type="email" name="Email" id="" autocomplete="off"
+                                                    placeholder="Email">
+                                            </div>
+                                            <div class="btn">
+                                                <i class="layui-icon layui-icon-right"
+                                                    style="font-size: 20px;margin-left: 10px;"></i>
+                                            </div>
+                                        </div>
+                                        <div class="err">Please input the email address</div>
+                                    </form>
+                                </div>                              
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="footer-bottom-container">
+            <div class="footer-bottom-container" >
                 <div class="bottom-box">
                     <div class="item-payment-box">
                         <img src="./images/visa.svg" alt="">
@@ -292,7 +386,9 @@
                         <img src="./images/cod_1.svg" alt="">
                         <img src="./images/paypal.svg" alt="">
                     </div>
-                    
+                    <!-- <div class="item-copyright-box">
+                        <p>@2022 Fecify 版权信息 鲁ICP备19015289号-6</p> 
+                    </div> -->
                 </div>
             </div>
         </div>

@@ -75,13 +75,13 @@
   width: 10.5rem;
   text-align: right;
 }
-.page-content-body .drag-item .container2 .main .table-body {
+.page-content-body .drag-item .container2 .main .pc {
   width: 100%;
   display: flex;
   align-items: center;
   flex-direction: column;
 }
-.page-content-body .drag-item .container2 .main .table-body li {
+.page-content-body .drag-item .container2 .main .pc .pc-li {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -92,34 +92,34 @@
   text-align: left;
   border-bottom: 0.0625rem solid #b8b8b8;
 }
-.page-content-body .drag-item .container2 .main .table-body li .c-product-item {
+.page-content-body .drag-item .container2 .main .pc .pc-li .c-product-item {
   height: 100%;
   width: 42rem;
   padding: 0 1.25rem 0 0;
   display: flex;
   justify-content: start;
 }
-.page-content-body .drag-item .container2 .main .table-body li .c-product-item .top {
+.page-content-body .drag-item .container2 .main .pc .pc-li .c-product-item .top {
   height: 100%;
   width: 6.875rem;
 }
-.page-content-body .drag-item .container2 .main .table-body li .c-product-item .top a {
+.page-content-body .drag-item .container2 .main .pc .pc-li .c-product-item .top a {
   display: block;
   width: 100%;
   height: 100%;
 }
-.page-content-body .drag-item .container2 .main .table-body li .c-product-item .top a .img-box {
+.page-content-body .drag-item .container2 .main .pc .pc-li .c-product-item .top a .img-box {
   width: 100%;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.page-content-body .drag-item .container2 .main .table-body li .c-product-item .top a .img-box img {
+.page-content-body .drag-item .container2 .main .pc .pc-li .c-product-item .top a .img-box img {
   max-width: 100%;
   max-height: 100%;
 }
-.page-content-body .drag-item .container2 .main .table-body li .c-product-item .info {
+.page-content-body .drag-item .container2 .main .pc .pc-li .c-product-item .info {
   width: 50%;
   padding: 0 0 0 1.5rem;
   display: flex;
@@ -127,24 +127,25 @@
   justify-content: space-between;
   align-content: start;
 }
-.page-content-body .drag-item .container2 .main .table-body li .c-product-item .info .title {
+.page-content-body .drag-item .container2 .main .pc .pc-li .c-product-item .info .title {
   display: block;
   padding: 5px;
   font-size: 0.875rem;
   font-weight: 510;
-  height: 55px;
+  height: 54px;
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
 }
-.page-content-body .drag-item .container2 .main .table-body li .c-product-item .info .c-color {
+.page-content-body .drag-item .container2 .main .pc .pc-li .c-product-item .info .c-color {
+  padding: 5px;
   height: 1.3125rem;
   font-size: 1rem;
   color: #999999;
 }
-.page-content-body .drag-item .container2 .main .table-body li .c-product-item .info .remove {
+.page-content-body .drag-item .container2 .main .pc .pc-li .c-product-item .info .remove {
   margin: 0.5rem 0 0;
   width: 2.25rem;
   height: 2.25rem;
@@ -153,21 +154,21 @@
   background-color: #f5f5f8;
   text-align: center;
 }
-.page-content-body .drag-item .container2 .main .table-body li .c-price-item {
+.page-content-body .drag-item .container2 .main .pc .pc-li .c-price-item {
   width: 17.5rem;
   padding: 0 1.25rem;
 }
-.page-content-body .drag-item .container2 .main .table-body li .c-qty-item {
+.page-content-body .drag-item .container2 .main .pc .pc-li .c-qty-item {
   width: 17.5rem;
 }
-.page-content-body .drag-item .container2 .main .table-body li .c-qty-item .c-input-box {
-  width: 11.25rem;
+.page-content-body .drag-item .container2 .main .pc .pc-li .c-qty-item .c-input-box {
+  width: 100px;
   height: 2.5rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.page-content-body .drag-item .container2 .main .table-body li .c-qty-item .c-input-box .c-input-number {
+.page-content-body .drag-item .container2 .main .pc .pc-li .c-qty-item .c-input-box .c-input-number {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -175,22 +176,140 @@
   height: 2.5rem;
   border: 0.0625rem solid #9e9d9d;
 }
-.page-content-body .drag-item .container2 .main .table-body li .c-qty-item .c-input-box .c-input-number span {
+.page-content-body .drag-item .container2 .main .pc .pc-li .c-qty-item .c-input-box .c-input-number span {
   display: block;
   width: 2.5rem;
   height: 2.5rem;
   line-height: 2.75rem;
   text-align: center;
 }
-.page-content-body .drag-item .container2 .main .table-body li .c-qty-item .c-input-box .c-input-number .c-input {
-  width: 3.75rem;
+.page-content-body .drag-item .container2 .main .pc .pc-li .c-qty-item .c-input-box .c-input-number .c-input {
+  width: 40px;
   height: 2.5rem;
   line-height: 2.75rem;
   text-align: center;
 }
-.page-content-body .drag-item .container2 .main .table-body li .c-total-item {
+.page-content-body .drag-item .container2 .main .pc .pc-li .c-total-item {
   width: 10.5rem;
   text-align: right;
+}
+.page-content-body .drag-item .container2 .main .mobile {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.page-content-body .drag-item .container2 .main .mobile .mobile-li {
+  border-bottom: 0.0625rem solid #b8b8b8;
+  display: flex;
+  justify-content: start;
+  height: 200px;
+  padding: 0 0 20px;
+}
+.page-content-body .drag-item .container2 .main .mobile .mobile-li .left {
+  padding-right: 20px;
+  height: 100%;
+}
+.page-content-body .drag-item .container2 .main .mobile .mobile-li .left a {
+  display: block;
+  width: 100px;
+  height: 100%;
+}
+.page-content-body .drag-item .container2 .main .mobile .mobile-li .left a .img-box {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.page-content-body .drag-item .container2 .main .mobile .mobile-li .left a .img-box img {
+  max-width: 100%;
+  max-height: 100%;
+}
+.page-content-body .drag-item .container2 .main .mobile .mobile-li .right {
+  flex: 2;
+  height: 100%;
+  padding: 0 10px;
+  text-align: left;
+}
+.page-content-body .drag-item .container2 .main .mobile .mobile-li .right .info {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: start;
+}
+.page-content-body .drag-item .container2 .main .mobile .mobile-li .right .info .title {
+  display: block;
+  padding: 5px 0;
+  font-size: 0.875rem;
+  font-weight: 510;
+  height: 54px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+.page-content-body .drag-item .container2 .main .mobile .mobile-li .right .info .c-color {
+  margin: 5px 0;
+  padding: 5px;
+  height: 1.3125rem;
+  font-size: 1rem;
+  color: #999999;
+}
+.page-content-body .drag-item .container2 .main .mobile .mobile-li .right .info .c-color span {
+  padding: 0 10px;
+}
+.page-content-body .drag-item .container2 .main .mobile .mobile-li .right .c-price-item {
+  height: 24px;
+  line-height: 24px;
+  margin: 5px 0;
+  padding: 0 !important;
+}
+.page-content-body .drag-item .container2 .main .mobile .mobile-li .right .c-qty-item {
+  display: flex;
+  justify-content: space-between;
+  height: 40px;
+  margin-top: 20px;
+  width: 100% !important;
+  align-content: center;
+}
+.page-content-body .drag-item .container2 .main .mobile .mobile-li .right .c-qty-item .c-input-box {
+  width: 100px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.page-content-body .drag-item .container2 .main .mobile .mobile-li .right .c-qty-item .c-input-box .c-input-number {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 2.5rem;
+  border: 0.0625rem solid #9e9d9d;
+}
+.page-content-body .drag-item .container2 .main .mobile .mobile-li .right .c-qty-item .c-input-box .c-input-number span {
+  display: block;
+  width: 2.5rem;
+  height: 2.5rem;
+  line-height: 2.75rem;
+  text-align: center;
+}
+.page-content-body .drag-item .container2 .main .mobile .mobile-li .right .c-qty-item .c-input-box .c-input-number .c-input {
+  width: 40px;
+  height: 2.5rem;
+  line-height: 2.75rem;
+  text-align: center;
+}
+.page-content-body .drag-item .container2 .main .mobile .mobile-li .right .c-qty-item .remove {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 50%;
+  background-color: #f5f5f8;
+  text-align: center;
 }
 .page-content-body .drag-item .container2 .main .checkout {
   height: 25rem;

@@ -4,10 +4,13 @@ function getProductDetails(id) {
       var data = response.data.data.list;
       var color = data.skudata1 && JSON.parse(data.skudata1);
       var size = data.skudata2 && JSON.parse(data.skudata2);
-      var discountTag = data.discount_tag
-
+      var discountTag = data.discount_tag;
+      var content = data.content;
+      console.log("================content===============");
+      console.log(content);
+      console.log("================content===============");
       console.log(discountTag);
-      console.log('------discountTag---------');
+      console.log("------discountTag---------");
       console.log(data);
       console.log(color);
       console.log(size);
@@ -27,10 +30,10 @@ function getProductDetails(id) {
 
       console.log(colorArr);
       if (size) {
-        size.map((item)=>{
-          const name = item.name
-          sizeArr.push(name)
-        })
+        size.map((item) => {
+          const name = item.name;
+          sizeArr.push(name);
+        });
       }
 
       console.log(sizeArr);
@@ -52,6 +55,24 @@ function getProductDetails(id) {
         });
         productPrimary.innerHTML = html;
         bindProductDetailEvent(data, url, colorArr, sizeArr, discountTag);
+        var swiper = new Swiper(".mySwiper", {
+          // 小圆点
+          pagination: {
+            el: ".swiper-pagination",
+          },
+          // //自动轮播
+          // autoplay: {
+          //     delay: 1000,//1秒切换一次
+          // },
+          keyboard: {
+              enabled: true,
+              onlyInViewport: true,
+      },
+      });
+
+        const silhouette = document.querySelector(".silhouette");
+        silhouette.innerHTML = "";
+        silhouette.innerHTML = content;
       }
       console.log(response);
     },
@@ -59,11 +80,6 @@ function getProductDetails(id) {
       console.log(err);
     }
   );
-}
-if (localStorage.getItem("ProductId")) {
-  getProductDetails(JSON.parse(localStorage.getItem("ProductId")));
-} else {
-  getProductDetails(1);
 }
 
 const shopProductList = [
@@ -391,6 +407,7 @@ function bindProductDetailEvent(data, url) {
       const title = Arr[2];
       const total = num * price;
       const img = Arr[3];
+      
       const nowProduct = {
         id: id,
         num: num,
@@ -409,6 +426,7 @@ function bindProductDetailEvent(data, url) {
   // 出现弹窗，禁止页面滚动
   const shoppingCartCom = document.querySelectorAll(".shopping-cart-mask")[0];
   const addToCartBtn = document.querySelectorAll(".add-to-cart")[0];
+  const addToCartBtnMobile = document.querySelectorAll(".add-to-cart")[1];
   addToCartBtn.addEventListener("click", () => {
     shoppingCartCom.style.display = "block";
     document.body.style.overflow = "hidden";
@@ -528,6 +546,53 @@ function bindProductDetailEvent(data, url) {
     }
   });
 
+  addToCartBtnMobile.addEventListener("click", () => {
+    const specialProductArr = [data];
+    //1.点击加购，将商品信息本地存储
+    specialProductArr.map((item, index) => {
+      console.log(item);
+      const id = item.id;
+      const title = item.title;
+      const img = url + item.images[0];
+      console.log(333333333333);
+      console.log(img);
+      const price = +item.price.replace("$", "");
+      const total = num * price;
+      const total1 = +total.toFixed(2);
+
+      const product = {
+        id: id,
+        title: title,
+        price: price,
+        img: img,
+        num: num,
+        color: color && color.innerText ? color.innerText : "",
+        size: size && size.innerText ? size.innerText : "",
+        total: total1,
+      };
+      console.log("============== ==== ==== === === ==");
+      console.log(product);
+      localStorageUtil.addProductToShoppingCartLocal(product);
+      console.log(id);
+      console.log(typeof total);
+    });
+
+    // 删除商品
+    const removeNodeList = document.querySelectorAll(".remove-btn");
+    for (let i = 0; i < removeNodeList.length; i++) {
+      const remove = removeNodeList[i];
+      remove.addEventListener("click", function (e) {
+        const id = remove.getAttribute("data-id");
+        const color = remove.getAttribute("data-color") || "";
+        const size = remove.getAttribute("data-size") || "";
+        localStorageUtil.removeWholeProductFromShoppingCartLocal(
+          id,
+          color,
+          size
+        );
+      });
+    }
+  });
   // close
   const close = document.querySelector(".close");
   close.addEventListener("click", () => {
@@ -549,30 +614,43 @@ function getProductList() {
           const div = document.createElement("div");
           div.innerHTML = `
                 <div class="col" id=${item.id}>
-                    <a href="./productDetail.html">
+                    <a href="./productDetail.html?product_id=${item.id}">
                         <div class="common-img-box">
+                            <div class="product-discount">
+                                <P class="dis-tag">${item.discount_tag}%</P>
+                                <p>OFF</p>
+                                <div class="triangle"></div>
+                                <div class="triangle1"></div>
+                              </div>
                             <img src=${url + item.images[0]} alt="">
                         </div>
+                        <div class="info-box">
                         <div class="pro-title">${item.title}</div>
-                        <div class="star"><div id=${item.star}></div></div>
+                        <div class="star"><div class="class-test-rate"></div></div>
                         <div class="price">$${item.price}<span>$${item.costprice}</span></div>
+                        </div>
                     </a>
                 </div> 
             `;
           likeRow.appendChild(div);
+          var rate = layui.rate;
+          // 渲染
+          rate.render({
+            elem: '.class-test-rate',
+            value: 5,
+              readonly: true,
+          });     
         });
-        const colArr = document.querySelectorAll(".col");
-        console.log("!!!!!!!!!!!!!");
-        console.log(colArr);
-        for (let i = 0; i < colArr.length; i++) {
-          const col = colArr[i];
-          col.addEventListener("click", function () {
-            console.log(colArr[i].id);
-            let ProductId = [];
-            const id = colArr[i].id;
-            const Id = id;
-            localStorage.setItem("ProductId", JSON.stringify(Id));
-          });
+
+        if (window.location.search.indexOf("product_id=") > 0) {
+          id = window.location.search.split("product_id=")[1];
+          getProductDetails(id);
+        } else {
+          const colArr = document.querySelectorAll(".col");
+          console.log("!!!!!!!!!!!!!");
+          console.log(colArr);
+          const id = colArr[0].id;
+          getProductDetails(id);
         }
       }
       console.log(response);
@@ -584,3 +662,10 @@ function getProductList() {
 }
 getProductList();
 
+if (window.location.search.indexOf("sort_id") > 0) {
+  console.log(1111111111);
+  // category_id = JSON.parse(localStorage.getItem("SortID"))
+  category_id = window.location.search.split("sort_id=")[1];
+  console.log("###########");
+  console.log(category_id);
+}

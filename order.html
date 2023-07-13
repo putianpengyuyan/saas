@@ -7,10 +7,13 @@
     <meta name="description" content="fecify is a privatized saas system, a system to build N e-commerce malls">
     <!-- icon -->
     <link rel="shortcut icon" href="#" type="image/x-icon">
-    <!-- 自适应 -->
-    <link rel="stylesheet" href="./css/style820.css" media="screen and (max-width:820px)">
-    <link rel="stylesheet" href="./css/style1024.css" media="screen and (max-width:1024px)">
+    <!-- 判断屏幕尺寸 -->
     <link rel="stylesheet" href="./css/style1440.css" media="screen and (max-width:1440px)">
+    <link rel="stylesheet" href="./css/style1024.css" media="screen and (max-width:1024px)">
+    <link rel="stylesheet" href="./css/style820.css" media="screen and (max-width:820px)">
+    <link rel="stylesheet" href="./css/style768.css" media="screen and (max-width:768px)">
+    <link rel="stylesheet" href="./css/style540.css" media="screen and (max-width:540px)">
+    <link rel="stylesheet" href="./css/style375.css" media="screen and (max-width:375px)">
     <link rel="stylesheet" href="./layui/css/layui.css">
     <link rel="stylesheet" href="./css/初始化.css">
     <link rel="stylesheet" href="./css/checkout.css">
@@ -23,10 +26,91 @@
         <div class="content-box">
             <div class="main">
                 <div class="checkout-box">
+                    <div class="mobile-logo" style="display: none;">
+                        <h1 class="logo">
+                            <a href="#"><img src="#" alt="" class="logo-img"></a>
+                        </h1>
+                    </div>
+                    <div class="mobile-title">
+                        <div class="flex-box">
+                            <h3>
+                                <i class="layui-icon layui-icon-cart" style="font-size: 20px;color: #2277cc;"></i>
+                                <span>Show order summary</span> 
+                                <i class="layui-icon layui-icon-triangle-d" style="font-size: 20px;color: #2277cc;"></i>
+                            </h3>
+                            <div class="price mobile-price">$ 0</div>
+                        </div>  
+                    </div>
+                    <div class="flex-body" style="display: none;">
+                        <div class="checkout-price">
+                            <div class="product-list">
+                                <!-- <div class="product-item">
+                                    <div class="left">
+                                        <div class="img-box">
+                                            <i>1</i>
+                                            <img src="./upload/tin1.webp" alt="">
+                                        </div>
+                                        <div class="info">
+                                            <div class="title">Polarised Sunglasses</div>
+                                            <div class="color">Black</div>
+                                        </div>
+                                    </div>
+                                    <div class="right">
+                                        <div class="price">$199.00</div>
+                                    </div>
+                                </div>
+                                <div class="product-item">
+                                    <div class="left">
+                                        <div class="img-box">
+                                            <i>1</i>
+                                            <img src="./upload/tin1.webp" alt="">
+                                        </div>
+                                        <div class="info">
+                                            <div class="title">Polarised Sunglasses</div>
+                                            <div class="color">Black</div>
+                                        </div>
+                                    </div>
+                                    <div class="right">
+                                        <div class="price">$199.00</div>
+                                    </div>
+                                </div> -->
+                            </div>
+                            <!-- <div class="discount-box">
+                                <form action="">
+                                    <input type="text" placeholder="Coupon Code">
+                                    <div class="btn">Apply</div>
+                                </form>
+                            </div> -->
+                            <div class="price-info">
+                                <div class="price-item">
+                                    <div class="label">Subtotal
+                                        <span class="txt subtotal">$0</span>
+                                    </div>
+                                </div>
+                                <div class="price-item">
+                                    <div class="label">Discount
+                                        <span class="txt">- $0.00</span>
+                                    </div>
+                                </div>
+                                <div class="price-item">
+                                    <div class="label">Shipping
+                                        <span class="txt ship-txt"> $0</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="total-price">
+                                <span>Total</span>
+                                <div class="price">
+                                    <i>USD</i>
+                                    <span class="price-total">$0</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <div class="left-checkout">
                         <div class="payment-info">
-                            <h1 class="logo-box">
-                                <a href="./index.html"><img src="#" alt="" class="logo-img"></a>
+                            <h1 class="logo-box logo">
+                                <a href="#"><img src="#" alt="" class="logo-img"></a>
                             </h1>
                             <div class="bread">
                                 <div class="current">Information</div>
@@ -43,7 +127,7 @@
                                         <h2>Place of delivery</h2> <p class="user-info">tom black 13827893678 country city</p> <a href="./checkout.html">Change</a>
                                     </div>
                                     <div class="row">
-                                        <h2>Shipping & Delivery</h2> <p class="freight">Fedex . $20.00</p> 
+                                        <h2>Shipping & Delivery</h2> <p class="freight"></p> 
                                     </div>
                                     </div>
                                 </div>
@@ -62,13 +146,10 @@
                                     <h2>Payment method</h2>
                                     <p>All transactions are secure and encrypted</p>
                                     <div class="ship pay-ship pay-active">
-                                        <p><i class="pay-i pay-i-active"></i>Stripe Credit Card</p>
+                                        <p><i class="pay-i pay-i-active"></i>Credit Card</p>
                                         <span><img src="./images/visa.svg" alt=""><img src="./images/amex.svg" alt=""><img src="./images/mastercard.svg" alt=""></span>
                                     </div>
-                                    <div class="ship pay-ship">
-                                        <p><i class="pay-i"></i>Stripe Credit Card</p>
-                                        <span><img src="./images/visa.svg" alt=""><img src="./images/amex.svg" alt=""><img src="./images/mastercard.svg" alt=""></span>
-                                    </div>
+                                    
                                 <div class="pay-btn">
                                     <div class="return">
                                         <i class="layui-icon layui-icon-left"></i>
@@ -156,7 +237,7 @@
                                 </div>
                                 <div class="price-item">
                                     <div class="label">Shipping
-                                        <span class="txt ship-txt"> $10</span>
+                                        <span class="txt ship-txt"> $0</span>
                                     </div>
                                 </div>
                             </div>
@@ -177,6 +258,7 @@
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="./js/icon-title.js"></script>
     <script src="./js/order.js"></script>
+    <script src="./js/mobile-order.js"></script>
     <!-- <script src="./js/checkbox.js"></script> -->
 </body>
 </html>

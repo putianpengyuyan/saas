@@ -14,7 +14,7 @@ body {
     .product-info {
       width: 77.5rem;
       // height: 1800px;
-      padding: .625rem 1.25rem;
+      padding: 0.625rem 1.25rem;
       margin: 0 auto;
       .top-box {
         display: flex;
@@ -41,9 +41,9 @@ body {
                 width: 100%;
                 height: 100%;
                 overflow: scroll;
-                  &::-webkit-scrollbar {
-                    display: none;
-                  }
+                &::-webkit-scrollbar {
+                  display: none;
+                }
                 .swiper-list {
                   display: flex;
                   flex-direction: column;
@@ -72,7 +72,7 @@ body {
               width: 28.125rem;
               height: 100%;
               display: flex;
-              align-items:start;
+              align-items: start;
               justify-content: center;
               overflow: hidden;
               img {
@@ -86,14 +86,14 @@ body {
           flex: 1;
           height: 100%;
           padding-left: 1.875rem;
-          overflow: scroll;
+          // overflow: scroll;
           border: 0;
           &::-webkit-scrollbar {
             display: none;
           }
           div {
             width: 100%;
-            height: 100%;
+
             .title {
               padding: 0 5rem 0 0;
               font-size: 1.875rem;
@@ -203,9 +203,9 @@ body {
               position: relative;
               margin: 1.25rem 0 0;
               .product-options {
-                height: 7.5rem;
+                height: 8.5rem;
                 width: 100%;
-                padding:0 10px ;
+                padding: 0 10px;
 
                 .name {
                   display: block;
@@ -213,7 +213,7 @@ body {
                   margin: 0 0 0.4375rem;
                   font-size: 1.125rem;
                   font-weight: 700;
-                  padding:0 10px ;
+                  padding: 0 10px;
                   span {
                     font-weight: normal;
                   }
@@ -378,7 +378,7 @@ body {
                 // top: 16.875rem;
                 height: 5rem;
                 width: 100%;
-                margin-top: 100px;
+                margin-top: 50px;
                 .name {
                   display: block;
                   height: 1.5rem;
@@ -584,8 +584,14 @@ body {
 
           // 1
           .tab-item-content1 {
+            margin: 0 auto;
             display: block;
-            height: 18rem;
+            height: 18.75rem;
+            overflow: scroll;
+            border: 0;
+            &::-webkit-scrollbar {
+              display: none;
+            }
             h4 {
               margin: 1.875rem 0;
               font-size: 1.5rem;
@@ -599,11 +605,12 @@ body {
           }
           // 2
           .tab-item-content2 {
+            margin: 0 auto;
             display: none;
             width: 100%;
             .review-box {
               width: 100%;
-              height: 9.8125rem;
+              // height: 9.8125rem;
               .list-box {
                 width: 100%;
                 height: 100%;
@@ -650,9 +657,16 @@ body {
           }
           // 3
           .tab-item-content3 {
-            display: block;
+            display: none;
             width: 100%;
-            height: 10.25rem;
+            height: 18.75rem;
+            overflow: scroll;
+            border: 0;
+            margin: 0 auto;
+            text-align: center;
+            &::-webkit-scrollbar {
+              display: none;
+            }
             padding: 2.5rem 0;
             p {
               height: 1.5rem;
@@ -665,7 +679,14 @@ body {
           .tab-item-content4 {
             display: none;
             width: 100%;
-            height: 10.25rem;
+            height: 18rem;
+            overflow: scroll;
+            border: 0;
+            margin: 0 auto;
+            text-align: center;
+            &::-webkit-scrollbar {
+              display: none;
+            }
             padding: 2.5rem 0;
             p {
               height: 1.5rem;
@@ -676,9 +697,17 @@ body {
           }
           // 5
           .tab-item-content5 {
+            margin: 0 auto;
             display: none;
             width: 100%;
             padding: 2.5rem 0;
+            height: 18.75rem;
+            overflow: scroll;
+            border: 0;
+            text-align: center;
+            &::-webkit-scrollbar {
+              display: none;
+            }
             h4 {
               font-size: 1.5rem;
               font-weight: normal;
@@ -712,52 +741,90 @@ body {
               width: 25%;
               height: 570px;
               margin: 0 0 1.5rem;
-              
             }
             .col {
               width: 100%;
               padding: 0 0.625rem;
-              
+
               a {
                 display: block;
                 width: 100%;
                 .common-img-box {
                   padding: 0 0 1.25rem;
-                  height: 25rem;
+                  height: 380px;
                   width: 100%;
                   display: flex;
                   align-items: center;
                   justify-content: center;
                   overflow: hidden;
+                  position: relative;
+                  .product-discount {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    width: 40px !important;
+                    height: 50px !important;
+                    background-color: brown;
+                    color: #fff;
+                    text-align: center;
+                    padding: 5px 0;
+                    font-size: 14px;
+               
+                    .triangle {
+                      position: absolute;
+                      bottom: -24px;
+                      left: 0;
+                      width: 0;
+                      height: 0 !important;
+                      border-top: 25px solid brown;
+                      border-right: 25px solid transparent;
+                  }
+                  .triangle1 {
+                      position: absolute;
+                      bottom: -24px;
+                      right: 0;
+                      width: 0;
+                      height: 0 !important;
+                      border-top: 25px solid brown;
+                      border-left: 25px solid transparent;
+                  }
+                }
                   img {
                     max-width: 100%;
                     max-height: 100%;
                   }
                 }
-                .pro-title {
-                  font-size: 1rem;
-                  width: 100%;
-                  height: 80px;
-                  margin: .625rem 0.3125rem;
-                  color: #000;
-                  padding: 0.625rem 0;
-                  overflow: hidden;
-                  text-overflow: ellipsis;
-                  display: -webkit-box;
-                  -webkit-line-clamp: 4;
-                  -webkit-box-orient: vertical;
-                }
-
-                .price {
-                  padding: 0.625rem;
-                  height: 1.5625rem;
-                  font-size: 1.25rem;
-                  color: #f10215;
-                  span {
-                    font-size: 0.875rem;
-                    margin-left: 0.3125rem;
-                    color: #666666;
-                    text-decoration: line-through;
+                .info-box {
+                  padding: 0 0.625rem;
+                  text-align: center;
+                  .pro-title {
+                    font-size: 1rem;
+                    width: 100%;
+                    height: 80px;
+                    text-align: left;
+                    margin: 0.625rem 0.3125rem;
+                    color: #000;
+                    padding: 0.625rem 0;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 4;
+                    -webkit-box-orient: vertical;
+                  }
+                  .star{
+                    height: 2.6875rem;
+                  }
+                  .price {
+                    padding: 0 0.625rem;
+                    height: 1.5625rem;
+                    font-size: 1.25rem;
+                    color: #f10215;
+                    span {
+                      font-size: 0.875rem;
+                      margin-left: 0.3125rem;
+                      color: #666666;
+                      text-decoration: line-through;
+                    }
                   }
                 }
               }
@@ -906,7 +973,7 @@ body {
               justify-content: space-between;
               .title {
                 height: 1.25rem;
-                font-size: .875rem;
+                font-size: 0.875rem;
                 overflow: hidden;
                 text-overflow: ellipsis;
                 display: -webkit-box;
@@ -919,7 +986,7 @@ body {
                 margin: 0 0 0.25rem;
               }
               .price {
-                margin-top: .3125rem;
+                margin-top: 0.3125rem;
                 height: 1rem;
                 font-size: 1rem;
               }

@@ -122,6 +122,38 @@
   justify-content: center;
   align-content: center;
   overflow: hidden;
+  flex-wrap: wrap;
+  position: relative;
+}
+.page-content-body .container .row .col a .common-img-box .product-discount {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40px !important;
+  height: 50px !important;
+  background-color: brown;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  font-size: 14px;
+}
+.page-content-body .container .row .col a .common-img-box .product-discount .triangle {
+  position: absolute;
+  bottom: -24px;
+  left: 0;
+  width: 0;
+  height: 0 !important;
+  border-top: 25px solid brown;
+  border-right: 25px solid transparent;
+}
+.page-content-body .container .row .col a .common-img-box .product-discount .triangle1 {
+  position: absolute;
+  bottom: -24px;
+  right: 0;
+  width: 0;
+  height: 0 !important;
+  border-top: 25px solid brown;
+  border-left: 25px solid transparent;
 }
 .page-content-body .container .row .col a .common-img-box img {
   max-width: 100%;
@@ -130,8 +162,8 @@
 .page-content-body .container .row .col .info-box {
   margin: 1.25rem 0 0;
   padding: 0.625rem 0 0;
-  height: 6.25rem;
   width: 100%;
+  text-align: center;
 }
 .page-content-body .container .row .col .info-box .pro-title {
   width: 100%;
@@ -139,12 +171,16 @@
   margin: 0 0 0.3125rem;
   font-size: 1rem;
   color: #000;
+  text-align: left;
   padding: 0.625rem 0;
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
+}
+.page-content-body .container .row .col .info-box .star {
+  height: 43px;
 }
 .page-content-body .container .row .col .info-box .price {
   height: 1.5rem;

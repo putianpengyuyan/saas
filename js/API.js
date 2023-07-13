@@ -40,6 +40,7 @@ function getProductList() {
   axios.post(url+"/api/products/getProducts").then(
     function (response) {
       var data = response.data.data.list;
+      console.log('-==-=-=-=-=-=-=-=-=data.data.data');
       console.log(data);
       if (data.length) {
         const homeRow1 = document.querySelector(".homeRow1");
@@ -47,56 +48,65 @@ function getProductList() {
         homeRow1.innerHTML = "";
         homeRow2.innerHTML = "";
         data.map((item) => {
-          const swiperSide = document.createElement("div");
-          swiperSide.innerHTML = `
-                <div class="col homeCol" id="${item.id}">
-                <a href="./productDetail.html">
-                        <div class="common-img-box">
-                            <img src=${url + item.images[0]} alt="">
-                        </div>
-                        <div class="info-box">
-                            <div class="title">${item.title}</div>
-                        <div class="star">
-                            <div id=${item.star}></div>
-                        </div>
-                        <div class="price">$${item.price} <span>$${item.costprice}</span></div>
-                        </div>
-                    </a>
-                </div>
-                `;
-          homeRow1.appendChild(swiperSide);
-          const PList = document.createElement("div");
-          PList.innerHTML = `
-                <div class="col homeCol" id="${item.id}">
-                <a href="./productDetail.html">
-                        <div class="common-img-box">
-                            <img src=${url + item.images[0]} alt="">
-                        </div>
-                        <div class="info-box">
-                            <div class="title">${item.title}</div>
-                        <div class="star">
-                            <div id=${item.star}></div>
-                        </div>
-                        <div class="price">$${item.price} <span>$${item.costprice}</span></div>
-                        </div>
-                    </a>
-                </div>
-                `;
-          homeRow2.appendChild(PList);
+              const swiperSide = document.createElement("div");
+              swiperSide.innerHTML = `
+                    <div class="col homeCol" id="${item.id}">
+                    <a href="./productDetail.html?product_id=${item.id}">
+                            <div class="common-img-box">
+                              <div class="product-discount">
+                                <P class="dis-tag">${item.discount_tag}%</P>
+                                <p>OFF</p>
+                                <div class="triangle"></div>
+                                <div class="triangle1"></div>
+                              </div>
+                                <img src=${url + item.images[0]} alt="">
+                            </div>
+                            <div class="info-box">
+                                <div class="title">${item.title}</div>
+                            <div class="star">
+                                <div class="class-test-rate"></div>
+                            </div>
+                            <div class="price">$${item.price} <span>$${item.costprice}</span></div>
+                            </div>
+                        </a>
+                    </div>
+                          `;
+                homeRow1.appendChild(swiperSide);
+                const PList = document.createElement("div");
+                PList.innerHTML = `
+                      <div class="col homeCol" id="${item.id}">
+                      <a href="./productDetail.html?product_id=${item.id}">
+                              <div class="common-img-box">
+                                <div class="product-discount">
+                                <P class="dis-tag">${item.discount_tag}%</P>
+                                <p>OFF</p>
+                                <div class="triangle"></div>
+                                <div class="triangle1"></div>
+                              </div>
+                                  <img src=${url + item.images[0]} alt="">
+                              </div>
+                              <div class="info-box">
+                                  <div class="title">${item.title}</div>
+                              <div class="star">
+                                  <div class="class-test-rate"></div>
+                              </div>
+                              <div class="price">$${item.price} <span>$${item.costprice}</span></div>
+                              </div>
+                          </a>
+                      </div>
+                      `;
+                homeRow2.appendChild(PList);
+          
+            var rate = layui.rate;
+            // 渲染
+            rate.render({
+              elem: '.class-test-rate',
+              value: 5,
+                readonly: true,
+            });        
+        
         });
-        const colArr = document.querySelectorAll(".homeCol");
-        console.log("!!!!!!!!!!!!!");
-        console.log(colArr);
-        for (let i = 0; i < colArr.length; i++) {
-          const col = colArr[i];
-          col.addEventListener("click", function () {
-            console.log(colArr[i].id);
-            let ProductId = []
-            const id = colArr[i].id
-            const Id = id
-            localStorage.setItem('ProductId',JSON.stringify(Id))
-          });
-        }
+        
       }
       console.log(response);
     },
@@ -107,48 +117,6 @@ function getProductList() {
 }
 getProductList();
 
-// function getProductDetails(id){
-//     axios.post(url+"/api/products/getProduct",{id:id})
-//     .then(function(response){
-//         var data =response.data.data.list;
-//         if(data){
-//             // const homeRow1 = document.querySelector('.homeRow1')
-//             // homeRow1.innerHTML='';
-//             // data.map((item)=>{
-//             //     const swiperSide = document.createElement("div");
-//             //     swiperSide.innerHTML = `
-//             //     <div class="col homeCol" id="${item.id}">
-//             //     <a href="./productDetail.html">
-//             //             <div class="common-img-box">
-//             //                 <img src=${url+item.images[0]} alt="">
-//             //             </div>
-//             //             <div class="info-box">
-//             //                 <div class="title">${item.title}</div>
-//             //             <div class="star">
-//             //                 <div id=${item.star}></div>
-//             //             </div>
-//             //             <div class="price">${item.price}</div>
-//             //             </div>
-//             //         </a>
-//             //     </div>
-//             //     `;
-//             //     homeRow1.appendChild(swiperSide);
-//             // })
-//             const productPrimary = document.querySelector(".product-detail-primary");
-
-//             const html = template("product_detail_template", {
-//                 url:url,
-//               specialProduct: data,
-//             });
-//             productPrimary.innerHTML = html;
-
-//         }
-//         console.log(response);
-//     },function(err){
-//         console.log(err);
-//     })
-// }
-// // getProductDetails(1)
 
 let homeImage = 'homeImage'
 function HomeImage(){
