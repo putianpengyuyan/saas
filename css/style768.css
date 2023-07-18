@@ -56,6 +56,7 @@
     background-color: #f56c6c;
     top: -0.625rem;
     right: 0;
+    font-size: 12px;
   }
   #app,
   .content-box {
@@ -178,7 +179,7 @@
   #app .page-content-body .drag-item2 .container .row > div .col a .info-box .title,
   .content-box .page-content-body .drag-item2 .container .row > div .col a .info-box .title {
     width: 100%;
-    height: 5rem !important;
+    height: 114px !important;
     margin: 0 0 0.3125rem;
     font-size: 1rem;
     font-weight: 510;
@@ -236,6 +237,137 @@
   .content-box .page-content-body .drag-item5 .container .main-box .info a {
     width: 8.4375rem;
     height: 3.125rem;
+  }
+  #app .page-content-body .service,
+  .content-box .page-content-body .service {
+    height: 200px !important;
+  }
+  #app .page-content-body .two-picture,
+  .content-box .page-content-body .two-picture {
+    width: 100% !important;
+    display: flex;
+    align-content: center;
+    margin: 50px auto;
+  }
+  #app .page-content-body .two-picture .left-picture,
+  .content-box .page-content-body .two-picture .left-picture {
+    flex: 1;
+    height: 150px !important;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin: 30px 15px !important;
+  }
+  #app .page-content-body .two-picture .left-picture img,
+  .content-box .page-content-body .two-picture .left-picture img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+  #app .page-content-body .two-picture .right-picture,
+  .content-box .page-content-body .two-picture .right-picture {
+    margin: 30px 15px !important;
+    flex: 1;
+    height: 150px !important;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+  }
+  #app .page-content-body .two-picture .right-picture img,
+  .content-box .page-content-body .two-picture .right-picture img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+  #app .page-content-body .company,
+  .content-box .page-content-body .company {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100% !important;
+    margin: 50px auto;
+    flex-wrap: wrap;
+  }
+  #app .page-content-body .company .company-profile,
+  .content-box .page-content-body .company .company-profile {
+    flex: 1;
+    height: 250px !important;
+    padding: 0 !important;
+    padding-left: 30px !important;
+  }
+  #app .page-content-body .company .company-profile h1,
+  .content-box .page-content-body .company .company-profile h1 {
+    font-size: 17px !important;
+    line-height: 17px !important;
+  }
+  #app .page-content-body .company .company-profile p,
+  .content-box .page-content-body .company .company-profile p {
+    font-size: 13px !important;
+    font-weight: 550;
+    color: #666;
+    margin: 10px 0 0 !important;
+    line-height: 13px !important;
+  }
+  #app .page-content-body .company .company-img,
+  .content-box .page-content-body .company .company-img {
+    flex: 1;
+    height: 200px !important;
+    padding: 0 30px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+  }
+  #app .page-content-body .company .company-img img,
+  .content-box .page-content-body .company .company-img img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+  #app .page-content-body .pack,
+  .content-box .page-content-body .pack {
+    width: 100%;
+    margin: 50px auto;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+  }
+  #app .page-content-body .pack .pack-img,
+  .content-box .page-content-body .pack .pack-img {
+    flex: 1;
+    padding: 0 15px !important;
+    height: 250px !important;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+  }
+  #app .page-content-body .pack .pack-img img,
+  .content-box .page-content-body .pack .pack-img img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+  #app .page-content-body .pack .pack-title,
+  .content-box .page-content-body .pack .pack-title {
+    flex: 1;
+    padding: 0 15px !important;
+    font-size: 24px;
+  }
+  #app .page-content-body .pack .pack-title h1,
+  .content-box .page-content-body .pack .pack-title h1 {
+    margin-top: 20px !important;
+    font-size: 24px !important;
+  }
+  #app .page-content-body .pack .pack-title p,
+  .content-box .page-content-body .pack .pack-title p {
+    font-size: 20px !important;
+    margin-top: 20px;
+  }
+  #app .page-content-body .pack .pack-title a,
+  .content-box .page-content-body .pack .pack-title a {
+    margin-top: 20px;
+    display: block;
+    padding: 10px 20px;
+    width: 250px !important;
+    font-size: 14px !important;
+    background-color: #000;
+    color: #fff;
+    border-radius: 5px;
   }
   #app .page-content-body .drag-item6,
   .content-box .page-content-body .drag-item6 {
@@ -321,7 +453,7 @@
   #app .page-content-body .drag-item6 .container .row > div .col a .info-box .title,
   .content-box .page-content-body .drag-item6 .container .row > div .col a .info-box .title {
     width: 100%;
-    height: 5rem !important;
+    height: 114px !important;
     margin: 0 0 0.3125rem;
     font-size: 0.9375rem;
     font-weight: 510;
@@ -544,16 +676,18 @@
   #app .page-content-body .drag-item .product-info .top-box,
   .content-box .page-content-body .drag-item .product-info .top-box {
     width: 100% !important;
+    height: 500px !important;
     flex-wrap: wrap;
   }
   #app .page-content-body .drag-item .product-info .top-box .swiper-box,
   .content-box .page-content-body .drag-item .product-info .top-box .swiper-box {
     width: 500px !important;
-    border-bottom: 1px solid #5a5959;
+    flex: none !important;
+    margin: 0 auto;
   }
   #app .page-content-body .drag-item .product-info .top-box .swiper-box .sticky-box,
   .content-box .page-content-body .drag-item .product-info .top-box .swiper-box .sticky-box {
-    flex: 1 !important;
+    flex: none !important;
     display: flex;
     align-content: center !important;
     justify-content: center;
@@ -566,7 +700,7 @@
   }
   #app .page-content-body .drag-item .product-info .top-box .swiper-box .sticky-box .right-swiper,
   .content-box .page-content-body .drag-item .product-info .top-box .swiper-box .sticky-box .right-swiper {
-    width: 370px !important;
+    width: 360px !important;
     padding-left: 0 !important;
   }
   #app .page-content-body .drag-item .product-info .top-box .swiper-box .sticky-box .right-swiper .a-img,
@@ -615,7 +749,8 @@
     flex: 1 !important;
     padding: 0;
     height: 600px !important;
-    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #5a5959;
   }
   #app .page-content-body .drag-item .product-info .top-box .info-box div h1,
   .content-box .page-content-body .drag-item .product-info .top-box .info-box div h1 {
@@ -657,7 +792,7 @@
   }
   #app .page-content-body .drag-item .product-info .top-box .info-box .product-specification .product-options1,
   .content-box .page-content-body .drag-item .product-info .top-box .info-box .product-specification .product-options1 {
-    margin-top: 50px !important;
+    margin-top: 20px !important;
   }
   #app .page-content-body .drag-item .product-info .top-box .info-box .product-specification .product-options1 .pc,
   .content-box .page-content-body .drag-item .product-info .top-box .info-box .product-specification .product-options1 .pc {
@@ -687,7 +822,7 @@
   #app .page-content-body .drag-item .product-info .tab-box .like-box .row > div,
   .content-box .page-content-body .drag-item .product-info .tab-box .like-box .row > div {
     width: 50% !important;
-    height: 420px;
+    height: 450px;
     margin: 0 0 1.5rem;
   }
   #app .page-content-body .drag-item .product-info .tab-box .like-box .row .col,
@@ -719,7 +854,7 @@
   .content-box .page-content-body .drag-item .product-info .tab-box .like-box .row .col a .pro-title {
     font-size: 1rem;
     width: 100%;
-    height: 80px;
+    height: 114px;
     margin: 0.625rem 0.3125rem;
     color: #000;
     padding: 0.625rem 0;
@@ -990,57 +1125,57 @@
   #app .page-content-footer .container,
   .content-box .page-content-footer .container {
     width: 100%;
+    height: auto !important;
   }
-  #app .page-content-footer .container .item-box,
-  .content-box .page-content-footer .container .item-box {
+  #app .page-content-footer .container .pc-menu,
+  .content-box .page-content-footer .container .pc-menu {
+    display: none !important;
+  }
+  #app .page-content-footer .container .mobile-menu,
+  .content-box .page-content-footer .container .mobile-menu {
+    display: block !important;
+  }
+  #app .page-content-footer .container .mobile-menu .body-show,
+  .content-box .page-content-footer .container .mobile-menu .body-show {
+    display: block !important;
+  }
+  #app .page-content-footer .container .mobile-menu .from-content,
+  .content-box .page-content-footer .container .mobile-menu .from-content {
+    width: 100% !important;
+  }
+  #app .page-content-footer .container .mobile-menu .from-content .input,
+  .content-box .page-content-footer .container .mobile-menu .from-content .input {
     width: 100%;
-    flex-wrap: wrap;
-  }
-  #app .page-content-footer .container .item-box .item-content,
-  .content-box .page-content-footer .container .item-box .item-content {
-    padding: 0.625rem;
-    flex: 50%;
-    height: 83%;
-  }
-  #app .page-content-footer .container .item-box .item-content:nth-child(2n),
-  .content-box .page-content-footer .container .item-box .item-content:nth-child(2n) {
-    border: 0;
-  }
-  #app .page-content-footer .container .item-box .item-content .from-content,
-  .content-box .page-content-footer .container .item-box .item-content .from-content {
-    width: 14.375rem;
-  }
-  #app .page-content-footer .container .item-box .item-content .from-content .input,
-  .content-box .page-content-footer .container .item-box .item-content .from-content .input {
     padding: 0 2px;
   }
-  #app .page-content-footer .container .item-box .item-content .from-content .input input,
-  .content-box .page-content-footer .container .item-box .item-content .from-content .input input {
+  #app .page-content-footer .container .mobile-menu .from-content .input input,
+  .content-box .page-content-footer .container .mobile-menu .from-content .input input {
     padding: 5px;
   }
-  #app .page-content-footer .container .item-box .item-content .from-content .btn,
-  .content-box .page-content-footer .container .item-box .item-content .from-content .btn {
+  #app .page-content-footer .container .mobile-menu .from-content .btn,
+  .content-box .page-content-footer .container .mobile-menu .from-content .btn {
     width: 15px !important;
   }
-  #app .page-content-footer .container .item-box .item-content .from-content .btn i,
-  .content-box .page-content-footer .container .item-box .item-content .from-content .btn i {
+  #app .page-content-footer .container .mobile-menu .from-content .btn i,
+  .content-box .page-content-footer .container .mobile-menu .from-content .btn i {
     font-size: 0.875rem !important;
     margin-left: 0 !important;
   }
   #app .page-content-footer .footer-bottom-container,
   .content-box .page-content-footer .footer-bottom-container {
     width: 100%;
-    height: 120px !important;
-    margin-top: 20px !important;
+    margin-top: 0 !important;
+    border-top: 0 !important;
   }
   #app .page-content-footer .footer-bottom-container .bottom-box,
   .content-box .page-content-footer .footer-bottom-container .bottom-box {
     width: 100%;
+    justify-content: center !important;
   }
   #app .page-content-footer .footer-bottom-container .bottom-box .item-payment-box,
   .content-box .page-content-footer .footer-bottom-container .bottom-box .item-payment-box {
     flex: 1;
-    padding: 0 20px !important;
+    padding: 0;
     margin: 0;
   }
   #app .page-content-footer .footer-bottom-container .bottom-box .item-copyright-box,
@@ -1663,6 +1798,26 @@
     width: 100% !important;
   }
   .content .form-box {
-    width: 100%;
+    width: 100% !important;
+    padding: 0 20px !important;
+  }
+  .content .form-box .form-title {
+    margin: 20px 0 !important;
+  }
+  .content .form-box form {
+    width: 100% !important;
+    padding: 0 !important;
+  }
+  .content .form-box form .form-item {
+    width: 100% !important;
+  }
+  .content .form-box form .form-item .content {
+    width: 100% !important;
+  }
+  .content .form-box form .form-item .content .input {
+    width: 100% !important;
+  }
+  .content .form-box form .form-item .content .input input {
+    width: 100% !important;
   }
 }

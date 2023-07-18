@@ -12,7 +12,7 @@ function ProductSort(){
                 const col = document.createElement('div')
                 col.innerHTML = `
                 <div class="col sort-col" id='${item.id}'>
-                    <a href="./shop.html?sort_id=${item.id}">
+                    <a href="./shop.html?sort_id=${item.id}&sort_name=${item.title}">
                         <div class="common-img-box">
                             <img src='${url}${item.image}' alt="">
                         </div>

@@ -57,13 +57,13 @@
 .page-content-body .drag-item2 .container .row {
   display: flex;
   align-items: center;
-  height: 570px;
+  height: 670px;
   flex-wrap: wrap;
   overflow: hidden;
 }
 .page-content-body .drag-item2 .container .row > div {
   width: 25%;
-  height: 570px;
+  height: 670px;
   margin-bottom: 4.375rem;
 }
 .page-content-body .drag-item2 .container .row .col {
@@ -126,7 +126,7 @@
 }
 .page-content-body .drag-item2 .container .row .col a .info-box .title {
   width: 100%;
-  height: 5rem;
+  height: 114px;
   text-align: left;
   margin: 0 0 0.3125rem;
   font-size: 1rem;
@@ -345,12 +345,12 @@
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  height: 76.25rem;
+  height: 1340px;
   overflow: hidden;
 }
 .page-content-body .drag-item6 .container .row > div {
   width: 25%;
-  height: 35.625rem;
+  height: 670px;
   margin-bottom: 4.375rem;
 }
 .page-content-body .drag-item6 .container .row .col {
@@ -412,7 +412,7 @@
 }
 .page-content-body .drag-item6 .container .row .col a .info-box .title {
   width: 100%;
-  height: 5rem;
+  height: 114px;
   margin: 0 0 0.3125rem;
   font-size: 1rem;
   font-weight: 510;
@@ -536,15 +536,6 @@
   font-size: 1.5rem;
   font-weight: normal;
 }
-.page-content-body .drag-item8 .container .row .col .mt-4 .t-text {
-  font-size: 1rem;
-  color: #666666;
-  height: 5rem;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 4;
-  -webkit-box-orient: vertical;
-}
 .page-content-body .drag-item9 {
   height: 18.3125rem;
 }
@@ -586,4 +577,133 @@
 .page-content-body .drag-item9 .container .row .col .common-img-box img {
   max-width: 100%;
   max-height: 100%;
+}
+.page-content-body .service {
+  width: 100%;
+  height: 500px;
+}
+.page-content-body .service .container {
+  width: 100%;
+  height: 100%;
+}
+.page-content-body .service .container a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.page-content-body .service .container a .common-img-box {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+.page-content-body .service .container a .common-img-box img {
+  max-width: 100%;
+  max-height: 100%;
+}
+.page-content-body .two-picture {
+  width: 1400px;
+  display: flex;
+  align-content: center;
+  margin: 50px auto;
+}
+.page-content-body .two-picture .left-picture {
+  flex: 1;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  margin: 30px 30px;
+}
+.page-content-body .two-picture .left-picture img {
+  max-width: 100%;
+  max-height: 100%;
+}
+.page-content-body .two-picture .right-picture {
+  margin: 30px 30px;
+  flex: 1;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+.page-content-body .two-picture .right-picture img {
+  max-width: 100%;
+  max-height: 100%;
+}
+.page-content-body .company {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1400px;
+  margin: 50px auto;
+  flex-wrap: wrap;
+}
+.page-content-body .company .company-profile {
+  flex: 1;
+  height: 400px;
+  padding: 30px 30px 30px 0;
+}
+.page-content-body .company .company-profile h1 {
+  font-size: 32px;
+  line-height: 48px;
+}
+.page-content-body .company .company-profile p {
+  font-size: 17px;
+  font-weight: 600;
+  color: #666;
+  margin: 20px 0 0;
+  line-height: 25px;
+}
+.page-content-body .company .company-img {
+  flex: 1;
+  height: 400px;
+  padding: 0 0 0 30px;
+}
+.page-content-body .company .company-img img {
+  width: 100%;
+  height: 100%;
+}
+.page-content-body .pack {
+  width: 1400px;
+  margin: 50px auto;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+.page-content-body .pack .pack-img {
+  flex: 1;
+  padding: 0 30px;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+.page-content-body .pack .pack-img img {
+  max-width: 100%;
+  max-height: 100%;
+}
+.page-content-body .pack .pack-title {
+  flex: 1;
+  padding: 0 30px;
+  font-size: 24px;
+}
+.page-content-body .pack .pack-title h1 {
+  margin-top: 50px;
+  font-size: 32px;
+}
+.page-content-body .pack .pack-title p {
+  font-size: 24px;
+  margin-top: 20px;
+}
+.page-content-body .pack .pack-title a {
+  margin-top: 20px;
+  display: block;
+  padding: 10px 20px;
+  width: 350px;
+  font-size: 20px;
+  background-color: #000;
+  color: #fff;
+  border-radius: 5px;
 }

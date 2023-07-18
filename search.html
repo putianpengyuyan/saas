@@ -22,6 +22,47 @@
     <link rel="stylesheet" href="./css/search.css">
     <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.4/jquery.js"></script>
     <script src="https://cdn.bootcdn.net/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"></script>
+    <script src="./js/axios.min.js"></script>
+    <script src="./js/icon-title.js"></script>
+    <!-- Facebook Pixel Code -->
+    <script>
+        // 广告像素id
+        let pixel_id = "pixel_id"
+        function Pixel() {
+            axios
+                .post(url+`/api/products/getConfingText`, { "type": pixel_id })
+                .then(res => {
+                    console.log(res);
+                    var pixelID = res.data.data.list;
+                    if(pixelID){
+                        !function (f, b, e, v, n, t, s) {
+                        if (f.fbq) return; n = f.fbq = function () {
+                            n.callMethod ?
+                                n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+                        };
+                        if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+                        n.queue = []; t = b.createElement(e); t.async = !0;
+                        t.src = v; s = b.getElementsByTagName(e)[0];
+                        s.parentNode.insertBefore(t, s)
+                    }(window, document, 'script',
+                        'https://connect.facebook.net/en_US/fbevents.js');
+                    fbq('init', pixelID);
+                    fbq('track', 'Search');
+                    document.getElementsByClassName('meta_track_img').src = `https://www.facebook.com/tr?id=`+pixelID+`&ev=PageView&noscript=1`
+                    }                   
+                },
+                    err => {
+                        console.log(err);
+                    }
+                )
+        }
+        Pixel()
+    </script>
+    <noscript>
+        <img height="1" width="1" style="display:none" class="meta_track_img"
+            src="https://www.facebook.com/tr?id={your-pixel-id-goes-here}&ev=PageView&noscript=1" />
+    </noscript>
+    <!-- End Facebook Pixel Code -->
     <title></title>
 </head>
 <body>
@@ -31,137 +72,141 @@
         <div class="page-content-header">
             <header>
                 <nav class="top-nav">
-                    <a href="#"><img src="./images/facebook.png" alt=""></a>
+                    <!-- <a href="#"><img src="./images/facebook.png" alt=""></a>
                     <a href="#"><img src="./images/staginer.png" alt=""></a>
                     <a href="#"><img src="./images/pinterest.png" alt=""></a>
                     <a href="#"><img src="./images/twitter .png" alt=""></a>
                     <a href="#"><img src="./images/YouTube.png" alt=""></a>
-                    <a href="#"><img src="./images/TikTok.png" alt=""></a>
+                    <a href="#"><img src="./images/TikTok.png" alt=""></a> -->
+                    🔥🔥🔥Free shipping for more than 2 pieces🔥🔥🔥
                 </nav>
                 <nav class="bottom-nav">
                     <div class="hs-mobile-home-nav-toggle" style="display: none;">
                         <div class="flex">
                             <div class="menu"><img src="./upload/menu-button.svg" alt=""></div>
-                            <a href="#" class="mobile-logo">
-                                <img src="#" alt=""class="logo-img">
+                            <a href="./index.html" class="mobile-logo">
+                                <img src="#" alt="" class="logo-img">
                             </a>
                             <ul class="search-shopping">
                                 <li>
                                     <a href="./search.html">
-                                        <i class="layui-icon layui-icon-search"style="font-size: 20px;background-color: #fff;"></i>
+                                        <i class="layui-icon layui-icon-search"
+                                            style="font-size: 20px;background-color: #fff;"></i>
                                     </a>
                                 </li>
                                 <li class="user-li" style="display: none;">
                                     <a href="./order-list.html">
-                                        <i class="layui-icon layui-icon-username "style="font-size: 20px;background-color: #fff;"></i>
+                                        <i class="layui-icon layui-icon-username "
+                                            style="font-size: 20px;background-color: #fff;"></i>
                                     </a>
                                 </li>
                                 <li>
                                     <i class="products"><span class="products-num">0</span></i>
                                     <a href="./shopping-cart.html">
-                                        <i class="layui-icon layui-icon-cart"style="font-size: 20px;background-color: #fff;"></i>
+                                        <i class="layui-icon layui-icon-cart"
+                                            style="font-size: 20px;background-color: #fff;"></i>
                                     </a>
                                 </li>
 
                             </ul>
                         </div>
                     </div>
-                    <a href="#" class="logo"><img src="#" alt="" class="logo-img"></a>
-                        <ul class="tab">
-                            <li><a href="./index.html">Home</a></li>
-                            <li>
-                                <a href="./Shop.html" class="shop">Shop</a>
-                                
-                            </li>
-                            <li>
-                                <i>hot</i>
-                                <a href="./productDetail.html" class="product">Product</a>
-                            </li>
-                            <li><a href="./About Us.html" class="pages">Pages</a></li>
-                            <!-- <li><a href="./Coupons.html">Coupons</a></li> -->
-                            
-                        </ul>
-                        
-                        <!-- 显示 shop-->
-                        <div class="shop-item">
-                            <div class="container">
-                                <div class="left">
-                                    <ul>
-                                        <h2><a href="./shop.html">Tops</a></h2>
-                                        <li><a href="./shop.html">Blouses & Shirts</a></li>
-                                        <li><a href="./shop.html">T-shirts</a></li>
-                                        <li><a href="./shop.html">Tank Tops & Camis</a></li>
-                                        <li><a href="./shop.html">Crop Tops</a></li>
-                                        <li><a href="./shop.html">Kimonos</a></li>
-                                    </ul>
-                                    <ul>
-                                        <h2><a href="./shop.html">Outwear & Sweaters</a></h2>
-                                        <li><a href="./shop.html">Coats</a></li>
-                                        <li><a href="./shop.html">Sweaters</a></li>
-                                        <li><a href="./shop.html">Blazers</a></li>
-                                        <li><a href="./shop.html">Jackers</a></li>
-                                        <li><a href="./shop.html">Cardigans</a></li>
-                                    </ul>
-                                    <ul>
-                                        <h2><a href="./shop.html">Hoodies</a></h2>
-                                        <li><a href="./shop.html">Hoodies</a></li>
-                                        <li><a href="./shop.html">Sweat Shirts</a></li>
-                                    </ul>
-                                    <ul>
-                                        <h2><a href="./shop.html">Cover Ups</a></h2>
-                                    </ul>
-                                    
-                                </div>
-                               
-                            </div>
-                        </div>
-                        <!-- product -->
-                        <div class="product-item">
-                            <div class="container">
-                                <ul>
-                                    <li><a href="./productDetail.html">Dresses</a></li>
-                                    <li><a href="./productDetail.html">OuterWears</a></li>
-                                    <li><a href="./productDetail.html">Bottoms</a></li>
-                                    <li><a href="./productDetail.html">Tops</a></li>
-                                    <li><a href="./productDetail.html">New in</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <!-- pages -->
-                        <div class="pages-item">
-                            <div class="container">
-                                <ul>
-                                    <li><a href="./Shipping $ Return.html">Shipping & Return</a></li>
-                                    <li><a href="./Shipping Policies.html">Shipping Policies</a></li>
-                                    <li><a href="./About Us.html">About Us</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        
-                        <ul class="yonghu">
-                            <li><a href="./search.html"><i class="layui-icon layui-icon-search"
-                                        style="font-size: 20px;background-color: #fff;"></i></a></li>
-                            <li class="user-root">
-                                <i class="layui-icon layui-icon-username username"
-                                style="font-size: 20px;background-color: #fff;"></i>
-                                    <div class="root">
-                                        <div class="row">
-                                            <a href="./login.html">Log in</a>
-                                            <a href="./register.html">Register</a>
-                                        </div>
-                                    </div>
-                                </li>
-                            <li class="user-user"><i class="layui-icon layui-icon-username username"
-                                    style="font-size: 20px;background-color: #fff;"></i></li>
-                            <li>
-                                <i class="products"><span class="products-num">0</span></i>
-                                <a href="./shopping-cart.html"><i class="layui-icon layui-icon-cart"
-                                        style="font-size: 20px;background-color: #fff;"></i></a>
-                            </li>
-                            
+                    <a href="./index.html" class="logo"><img src="#" alt="" class="logo-img"></a>
+                    <ul class="tab">
+                        <li><a href="./index.html">Home</a></li>
+                        <li>
+                            <a href="./shop.html" class="shop">Shop</a>
 
-                        </ul>
-                        
+                        </li>
+                        <li>
+                            <i>hot</i>
+                            <a href="./productDetail.html" class="product">Product</a>
+                        </li>
+                        <li><a href="./About Us.html" class="pages">Pages</a></li>
+                        <!-- <li><a href="./Coupons.html">Coupons</a></li> -->
+
+                    </ul>
+
+                    <!-- 显示 shop-->
+                    <div class="shop-item">
+                        <div class="container">
+                            <div class="left">
+                                <ul>
+                                    <h2><a href="./shop.html">Tops</a></h2>
+                                    <li><a href="./shop.html">Blouses & Shirts</a></li>
+                                    <li><a href="./shop.html">T-shirts</a></li>
+                                    <li><a href="./shop.html">Tank Tops & Camis</a></li>
+                                    <li><a href="./shop.html">Crop Tops</a></li>
+                                    <li><a href="./shop.html">Kimonos</a></li>
+                                </ul>
+                                <ul>
+                                    <h2><a href="./shop.html">Outwear & Sweaters</a></h2>
+                                    <li><a href="./shop.html">Coats</a></li>
+                                    <li><a href="./shop.html">Sweaters</a></li>
+                                    <li><a href="./shop.html">Blazers</a></li>
+                                    <li><a href="./shop.html">Jackers</a></li>
+                                    <li><a href="./shop.html">Cardigans</a></li>
+                                </ul>
+                                <ul>
+                                    <h2><a href="./shop.html">Hoodies</a></h2>
+                                    <li><a href="./shop.html">Hoodies</a></li>
+                                    <li><a href="./shop.html">Sweat Shirts</a></li>
+                                </ul>
+                                <ul>
+                                    <h2><a href="./shop.html">Cover Ups</a></h2>
+                                </ul>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- product -->
+                    <div class="product-item">
+                        <div class="container">
+                            <ul>
+                                <li><a href="./productDetail.html">Dresses</a></li>
+                                <li><a href="./productDetail.html">OuterWears</a></li>
+                                <li><a href="./productDetail.html">Bottoms</a></li>
+                                <li><a href="./productDetail.html">Tops</a></li>
+                                <li><a href="./productDetail.html">New in</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- pages -->
+                    <div class="pages-item">
+                        <div class="container">
+                            <ul>
+                                <li><a href="./Shipping $ Return.html">Shipping & Return</a></li>
+                                <li><a href="./Shipping Policies.html">Shipping Policies</a></li>
+                                <li><a href="./About Us.html">About Us</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <ul class="yonghu">
+                        <li><a href="./search.html"><i class="layui-icon layui-icon-search"
+                                    style="font-size: 20px;background-color: #fff;"></i></a></li>
+                        <li class="user-root">
+                            <i class="layui-icon layui-icon-username username"
+                                style="font-size: 20px;background-color: #fff;"></i>
+                            <div class="root">
+                                <div class="row">
+                                    <a href="./login.html">Log in</a>
+                                    <a href="./register.html">Register</a>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- <li class="user-user"><i class="layui-icon layui-icon-username username"
+                                style="font-size: 20px;background-color: #fff;"></i></li> -->
+                        <li>
+                            <i class="products"><span class="products-num">0</span></i>
+                            <a href="./shopping-cart.html"><i class="layui-icon layui-icon-cart"
+                                    style="font-size: 20px;background-color: #fff;"></i></a>
+                        </li>
+
+
+                    </ul>
+
                 </nav>
             </header>
             
@@ -358,7 +403,7 @@
                                     <li class="menu-item"><a href="#"  class="my-account">My account</a></li>
                                     <li class="menu-item"><a href="./shopping-cart.html">Cart</a></li>
                                     <!-- <li class="menu-item"><a href="#">Coupon</a></li> -->
-                                    <!-- <li class="menu-item"><a href="#">Query Order</a></li> -->
+                                    <!-- <li class="menu-item"><a href="./query order.html">Query Order</a></li> -->
                                 </ul>
                             </div>
                         </div>
@@ -438,7 +483,7 @@
                                     <li class="menu-item"><a href="#"  class="my-account">My account</a></li>
                                     <li class="menu-item"><a href="./shopping-cart.html">Cart</a></li>
                                     <!-- <li class="menu-item"><a href="#">Coupon</a></li> -->
-                                    <!-- <li class="menu-item"><a href="#">Query Order</a></li> -->
+                                    <!-- <li class="menu-item"><a href="./query order.html">Query Order</a></li> -->
                                 </ul>
                             
                         </div>
@@ -552,8 +597,6 @@
     
 
     <script src="./layui/layui.js"></script>
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="./js/icon-title.js"></script>
     <script src="./utils/LocalStorageUtil.js"></script>
     <script src="./js/root.js"></script>
     <script src="./js/tab.js"></script>

@@ -459,6 +459,7 @@ function bindProductDetailEvent(data, url) {
       localStorageUtil.addProductToShoppingCartLocal(product);
       console.log(id);
       console.log(typeof total);
+      
     });
 
     // 2.渲染数据到小购物车

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport"
-        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
     <meta name="description" content="fecify is a privatized saas system, a system to build N e-commerce malls">
     <!-- icon -->
     <link rel="shortcut icon" href="#" type="image/x-icon">
@@ -27,7 +27,47 @@
     <link rel="stylesheet" href="./css/css/swiper css/swiper.min.css">
     <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.4/jquery.js"></script>
     <script src="https://cdn.bootcdn.net/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"></script>
-    <!-- <script src="./art-template/template-web.js" ></script> -->
+    <script src="./js/axios.min.js"></script>
+    <script src="./js/icon-title.js"></script>
+    <!-- Facebook Pixel Code -->
+    <script>
+        // 广告像素id
+        let pixel_id = "pixel_id"
+        function Pixel() {
+            axios
+                .post(url+`/api/products/getConfingText`, { "type": pixel_id })
+                .then(res => {
+                    console.log(res);
+                    var pixelID = res.data.data.list;
+                    if(pixelID){
+                        !function (f, b, e, v, n, t, s) {
+                        if (f.fbq) return; n = f.fbq = function () {
+                            n.callMethod ?
+                                n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+                        };
+                        if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+                        n.queue = []; t = b.createElement(e); t.async = !0;
+                        t.src = v; s = b.getElementsByTagName(e)[0];
+                        s.parentNode.insertBefore(t, s)
+                    }(window, document, 'script',
+                        'https://connect.facebook.net/en_US/fbevents.js');
+                    fbq('init', pixelID);
+                    fbq('track', 'ViewContent');
+                    document.getElementsByClassName('meta_track_img').src = `https://www.facebook.com/tr?id=`+pixelID+`&ev=PageView&noscript=1`
+                    }                   
+                },
+                    err => {
+                        console.log(err);
+                    }
+                )
+        }
+        Pixel()
+    </script>
+    <noscript>
+        <img height="1" width="1" style="display:none" class="meta_track_img"
+            src="https://www.facebook.com/tr?id={your-pixel-id-goes-here}&ev=PageView&noscript=1" />
+    </noscript>
+    <!-- End Facebook Pixel Code -->
     <title></title>
 </head>
 
@@ -38,18 +78,19 @@
             <div class="page-content-header">
                 <header>
                     <nav class="top-nav">
-                        <a href="#"><img src="./images/facebook.png" alt=""></a>
+                        <!-- <a href="#"><img src="./images/facebook.png" alt=""></a>
                         <a href="#"><img src="./images/staginer.png" alt=""></a>
                         <a href="#"><img src="./images/pinterest.png" alt=""></a>
                         <a href="#"><img src="./images/twitter .png" alt=""></a>
                         <a href="#"><img src="./images/YouTube.png" alt=""></a>
-                        <a href="#"><img src="./images/TikTok.png" alt=""></a>
+                        <a href="#"><img src="./images/TikTok.png" alt=""></a> -->
+                        🔥🔥🔥Free shipping for more than 2 pieces🔥🔥🔥
                     </nav>
                     <nav class="bottom-nav">
                         <div class="hs-mobile-home-nav-toggle" style="display: none;">
                             <div class="flex">
                                 <div class="menu"><img src="./upload/menu-button.svg" alt=""></div>
-                                <a href="#" class="mobile-logo">
+                                <a href="./index.html" class="mobile-logo">
                                     <img src="#" alt="" class="logo-img">
                                 </a>
                                 <ul class="search-shopping">
@@ -76,7 +117,7 @@
                                 </ul>
                             </div>
                         </div>
-                        <a href="#" class="logo"><img src="#" alt="" class="logo-img"></a>
+                        <a href="./index.html" class="logo"><img src="#" alt="" class="logo-img"></a>
                         <ul class="tab">
                             <li><a href="./index.html">Home</a></li>
                             <li>
@@ -161,8 +202,8 @@
                                     </div>
                                 </div>
                             </li>
-                            <li class="user-user"><i class="layui-icon layui-icon-username username"
-                                    style="font-size: 20px;background-color: #fff;"></i></li>
+                            <!-- <li class="user-user"><i class="layui-icon layui-icon-username username"
+                                    style="font-size: 20px;background-color: #fff;"></i></li> -->
                             <li>
                                 <i class="products"><span class="products-num">0</span></i>
                                 <a href="./shopping-cart.html"><i class="layui-icon layui-icon-cart"
@@ -197,6 +238,102 @@
                                 </div>
                                 <div class="swiper-pagination"></div>
                             </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 客服 -->
+                <div class="service">
+                    <div class="container">
+                        <a href="#">
+                            <div class="common-img-box">
+                                <img src="./images/客服.webp" alt="">
+                            </div>
+                        </a>
+                        <!-- <div class="main-box">
+                            <div class="info">
+                                <h2>CHAIN CHOKER</h2>
+                                <p>Use overlay text to give your customers insight into your brand.
+                                    Select imagery and text that relates to your style and story
+                                </p>
+                                <a href="#">Shop Now</a>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+
+                <!-- 不知名俩图 -->
+                <div class="two-picture">
+                    <div class="left-picture">
+                        <img src="./images/1.webp" alt="">
+                    </div>
+                    <div class="right-picture">
+                        <img src="./images/2.webp" alt="">
+                    </div>
+                </div>
+                <!-- 公司简介 -->
+                <div class="company">
+                    <div class="company-profile">
+                        <h1>WHY DO MILLIONS OF PEOPLE ALL AROUND THE GLOBE SHOP QVC?</h1>
+                        <p>Because we deliver a highly engaging, highly differentiated shopping experience.
+                            Every day we strive to surprise and delight our customers with a curated range of products
+                            that are relevant to their lives. We connect with our clients through real stories, fun
+                            personalities and award-winning customer service. We invite customers to tell their stories
+                            and share their feedback.
+                            We do it in real-time across multiple networks and platforms. </p>
+                    </div>
+                    <div class="company-img">
+                        <img src="./images/公司.webp" alt="">
+                    </div>
+                </div>
+
+                <!--分类 -->
+                <div class="drag-item8">
+                    <div class="container">
+                        <h2>Top Categories</h2>
+                        <div class="row sort-row">
+                            <!-- <div class="col">
+                                <a href="#">
+                                    <div class="common-img-box">
+                                        <img src="./upload/杯子.webp" alt="">
+                                    </div>
+                                </a>
+                                <div class="mt-4">
+                                    <h3>Eating</h3>
+                                    <div class="t-text">
+                                        Use this text to describe products,share details on availability and style,
+                                        or as a space to display recent reviews or FAQs.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <a href="#">
+                                    <div class="common-img-box">
+                                        <img src="./upload/小孩.webp" alt="">
+                                    </div>
+                                </a>
+                                <div class="mt-4">
+                                    <h3>Clothing</h3>
+                                    <div class="t-text">
+                                        Use this text to describe products,share details on availability and style,
+                                        or as a space to display recent reviews or FAQs.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <a href="#">
+                                    <div class="common-img-box">
+                                        <img src="./upload/玩具.webp" alt="">
+                                    </div>
+                                </a>
+                                <div class="mt-4">
+                                    <h3>Decor & Toy</h3>
+                                    <div class="t-text">
+                                        Use this text to describe products,share details on availability and style,
+                                        or as a space to display recent reviews or FAQs.
+                                    </div>
+                                </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>
@@ -299,25 +436,7 @@
                     </div>
                 </div> -->
 
-                <!-- CHAIN CHOKER -->
-                <div class="drag-item5">
-                    <div class="container">
-                        <a href="#">
-                            <div class="common-img-box">
-                                <img src="#" alt="" class="chain-img">
-                            </div>
-                        </a>
-                        <!-- <div class="main-box">
-                            <div class="info">
-                                <h2>CHAIN CHOKER</h2>
-                                <p>Use overlay text to give your customers insight into your brand.
-                                    Select imagery and text that relates to your style and story
-                                </p>
-                                <a href="#">Shop Now</a>
-                            </div>
-                        </div> -->
-                    </div>
-                </div>
+
                 <!-- Product List -->
                 <div class="drag-item6">
                     <div class="container">
@@ -402,54 +521,37 @@
                         </div>
                     </div>
                 </div> -->
-                <!-- Top Categories -->
-                <div class="drag-item8">
+
+
+                <!-- CHAIN CHOKER -->
+                <div class="drag-item5">
                     <div class="container">
-                        <h2>Top Categories</h2>
-                        <div class="row sort-row">
-                            <!-- <div class="col">
-                                <a href="#">
-                                    <div class="common-img-box">
-                                        <img src="./upload/杯子.webp" alt="">
-                                    </div>
-                                </a>
-                                <div class="mt-4">
-                                    <h3>Eating</h3>
-                                    <div class="t-text">
-                                        Use this text to describe products,share details on availability and style,
-                                        or as a space to display recent reviews or FAQs.
-                                    </div>
-                                </div>
+                        <a href="#">
+                            <div class="common-img-box">
+                                <img src="#" alt="" class="chain-img">
                             </div>
-                            <div class="col">
-                                <a href="#">
-                                    <div class="common-img-box">
-                                        <img src="./upload/小孩.webp" alt="">
-                                    </div>
-                                </a>
-                                <div class="mt-4">
-                                    <h3>Clothing</h3>
-                                    <div class="t-text">
-                                        Use this text to describe products,share details on availability and style,
-                                        or as a space to display recent reviews or FAQs.
-                                    </div>
-                                </div>
+                        </a>
+                        <!-- <div class="main-box">
+                            <div class="info">
+                                <h2>CHAIN CHOKER</h2>
+                                <p>Use overlay text to give your customers insight into your brand.
+                                    Select imagery and text that relates to your style and story
+                                </p>
+                                <a href="#">Shop Now</a>
                             </div>
-                            <div class="col">
-                                <a href="#">
-                                    <div class="common-img-box">
-                                        <img src="./upload/玩具.webp" alt="">
-                                    </div>
-                                </a>
-                                <div class="mt-4">
-                                    <h3>Decor & Toy</h3>
-                                    <div class="t-text">
-                                        Use this text to describe products,share details on availability and style,
-                                        or as a space to display recent reviews or FAQs.
-                                    </div>
-                                </div>
-                            </div> -->
-                        </div>
+                        </div> -->
+                    </div>
+                </div>
+
+                <!-- 打包 -->
+                <div class="pack">
+                    <div class="pack-img">
+                        <img src="./images/物流.webp" alt="">
+                    </div>
+                    <div class="pack-title">
+                        <h1>QVC - DOONEY & BOURKE</h1>
+                        <p>SHOP DEALS & SERIES YOU CAN'T MISS-ALL IN ONE PLACE.</p>
+                        <a href="./shop.html">CHECK OUT OUR DISCOUNTS</a>
                     </div>
                 </div>
                 <!-- Recommendation -->
@@ -505,10 +607,10 @@
                                 <div class="menu-link">
                                     <p>Quick links</p>
                                     <ul>
-                                        <li class="menu-item"><a href="#"  class="my-account">My account</a></li>
+                                        <li class="menu-item"><a href="#" class="my-account">My account</a></li>
                                         <li class="menu-item"><a href="./shopping-cart.html">Cart</a></li>
                                         <!-- <li class="menu-item"><a href="#">Coupon</a></li> -->
-                                        <!-- <li class="menu-item"><a href="#">Query Order</a></li> -->
+                                        <!-- <li class="menu-item"><a href="./query order.html">Query Order</a></li> -->
                                     </ul>
                                 </div>
                             </div>
@@ -567,7 +669,8 @@
                         <div class="item-content menu-1">
                             <div class="item">
                                 <div class="menu-link support-btn">
-                                    <p>SUPPORT</p><i class="layui-icon layui-icon-down"style="font-size: 20px;color: #000;"></i>
+                                    <p>SUPPORT</p><i class="layui-icon layui-icon-down"
+                                        style="font-size: 20px;color: #000;"></i>
                                 </div>
                                 <ul class="support-body" style="display: none;">
                                     <li class="menu-item"><a href="./About Us.html">About us</a></li>
@@ -582,71 +685,74 @@
                         <div class="item-content menu-2">
                             <div class="item">
                                 <div class="menu-link quick-btn">
-                                    <p>Quick links</p><i class="layui-icon layui-icon-down"style="font-size: 20px;color: #000;"></i>
+                                    <p>Quick links</p><i class="layui-icon layui-icon-down"
+                                        style="font-size: 20px;color: #000;"></i>
                                 </div>
-                                    <ul class="quick-body" style="display: none;">
-                                        <li class="menu-item"><a href="#"  class="my-account">My account</a></li>
-                                        <li class="menu-item"><a href="./shopping-cart.html">Cart</a></li>
-                                        <!-- <li class="menu-item"><a href="#">Coupon</a></li> -->
-                                        <!-- <li class="menu-item"><a href="#">Query Order</a></li> -->
-                                    </ul>
-                                
+                                <ul class="quick-body" style="display: none;">
+                                    <li class="menu-item"><a href="#" class="my-account">My account</a></li>
+                                    <li class="menu-item"><a href="./shopping-cart.html">Cart</a></li>
+                                    <!-- <li class="menu-item"><a href="#">Coupon</a></li> -->
+                                    <!-- <li class="menu-item"><a href="./query order.html">Query Order</a></li> -->
+                                </ul>
+
                             </div>
                         </div>
                         <div class="item-content menu-3">
                             <div class="item">
                                 <div class="menu-link follow-btn">
-                                    <p>Follow us</p><i class="layui-icon layui-icon-down"style="font-size: 20px;color: #000;"></i>
+                                    <p>Follow us</p><i class="layui-icon layui-icon-down"
+                                        style="font-size: 20px;color: #000;"></i>
                                 </div>
-                                    <div class="follow-body" style="display: none;">
-                                        <ul class="clearfix">
-                                            <li class="menu-item"><a href="#"><img src="./images/facebook.png"
-                                                        alt=""></a></li>
-                                            <li class="menu-item"><a href="#"><img src="./images/staginer.png"
-                                                        alt=""></a></li>
-                                            <li class="menu-item"><a href="#"><img src="./images/pinterest.png"
-                                                        alt=""></a></li>
-                                            <li class="menu-item"><a href="#"><img src="./images/twitter .png"
-                                                        alt=""></a></li>
-                                            <li class="menu-item"><a href="#"><img src="./images/YouTube.png"
-                                                        alt=""></a></li>
-                                            <li class="menu-item"><a href="#"><img src="./images/TikTok.png" alt=""></a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                               
+                                <div class="follow-body" style="display: none;">
+                                    <ul class="clearfix">
+                                        <li class="menu-item"><a href="#"><img src="./images/facebook.png" alt=""></a>
+                                        </li>
+                                        <li class="menu-item"><a href="#"><img src="./images/staginer.png" alt=""></a>
+                                        </li>
+                                        <li class="menu-item"><a href="#"><img src="./images/pinterest.png" alt=""></a>
+                                        </li>
+                                        <li class="menu-item"><a href="#"><img src="./images/twitter .png" alt=""></a>
+                                        </li>
+                                        <li class="menu-item"><a href="#"><img src="./images/YouTube.png" alt=""></a>
+                                        </li>
+                                        <li class="menu-item"><a href="#"><img src="./images/TikTok.png" alt=""></a>
+                                        </li>
+                                    </ul>
+                                </div>
+
                             </div>
                         </div>
                         <div class="item-content menu-4">
                             <div class="item">
                                 <div class="menu-link newsletter-btn">
-                                    <p>Newsletter</p><i class="layui-icon layui-icon-down"style="font-size: 20px;color: #000;"></i>
+                                    <p>Newsletter</p><i class="layui-icon layui-icon-down"
+                                        style="font-size: 20px;color: #000;"></i>
                                 </div>
-                                    <div class="news-body" style="display: none;">
-                                        <div class="mb-10">
-                                            <span class="address"></span>
-                                        </div>
-                                        <form action="">
-                                            <div class="from-content">
-                                                <i class="layui-icon layui-icon-email"
-                                                    style="font-size: 20px; color: black;margin-left: 10px;"></i>
-                                                <div class="input">
-                                                    <input type="email" name="Email" id="" autocomplete="off"
-                                                        placeholder="Email">
-                                                </div>
-                                                <div class="btn">
-                                                    <i class="layui-icon layui-icon-right"
-                                                        style="font-size: 20px;margin-left: 10px;"></i>
-                                                </div>
+                                <div class="news-body" style="display: none;">
+                                    <div class="mb-10">
+                                        <span class="address"></span>
+                                    </div>
+                                    <form action="">
+                                        <div class="from-content">
+                                            <i class="layui-icon layui-icon-email"
+                                                style="font-size: 20px; color: black;margin-left: 10px;"></i>
+                                            <div class="input">
+                                                <input type="email" name="Email" id="" autocomplete="off"
+                                                    placeholder="Email">
                                             </div>
-                                            <div class="err">Please input the email address</div>
-                                        </form>
-                                    </div>                              
+                                            <div class="btn">
+                                                <i class="layui-icon layui-icon-right"
+                                                    style="font-size: 20px;margin-left: 10px;"></i>
+                                            </div>
+                                        </div>
+                                        <div class="err">Please input the email address</div>
+                                    </form>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="footer-bottom-container" >
+                <div class="footer-bottom-container">
                     <div class="bottom-box">
                         <div class="item-payment-box">
                             <img src="./images/visa.svg" alt="">
@@ -675,15 +781,13 @@
                 <ul class="menu-ul">
                     <li><a href="./index.html" class="menu-li">Home</a></li>
                     <li><a href="./shop.html" class="menu-li">Shop</a>
-                        <i class="layui-icon layui-icon-right shop-i" style="font-size: 20px; "></i>
                     </li>
                     <li><a href="./productDetail.html" class="menu-li">Product</a>
-                        <i class="layui-icon layui-icon-right product-i" style="font-size: 20px; "></i>
                     </li>
                     <li><a href="./About Us.html" class="menu-li">Pages</a>
                         <i class="layui-icon layui-icon-right page-i" style="font-size: 20px; "></i>
                     </li>
-                    <li><a href="./Coupons.html" class="menu-li">Coupons</a></li>
+                    <!-- <li><a href="./Coupons.html" class="menu-li">Coupons</a></li> -->
                 </ul>
                 <a href="./login.html" class="login">Log in</a>
                 <a href="./register.html" class="register">Register</a>
@@ -760,15 +864,14 @@
 
 
     <script src="./layui/layui.js"></script>
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="./js/icon-title.js"></script>
+    
+    
     <script src="./js/API.js"></script>
     <script src="./swiper/js/js/swiper.min.js"></script>
     <script src="./js/swiper.js"></script>
     <script src="./utils/LocalStorageUtil.js"></script>
     <script src="./js/root.js"></script>
     <script src="./js/tab.js"></script>
-    
     <script src="./js/mobile-nav.js"></script>
     <script src="./js/product-sort.js"></script>
     <script src="./js/my account.js"></script>

@@ -58,7 +58,7 @@ function getProductList(page, per_page, category_id) {
         data.map((item) => {
           productContainer.innerHTML += `
                   <div class="shop-product-item" id=${item.id}>
-                      <a href="./productDetail.html">
+                      <a href="./productDetail.html?product_id=${item.id}">
                           <div class="img-box">
                           <div class="product-discount">
                                 <P class="dis-tag">${item.discount_tag}%</P>
@@ -102,5 +102,11 @@ function getProductList(page, per_page, category_id) {
   );
 }
 getProductList(page, per_page, category_id);
-
+  
 // 分类
+
+console.log(window.location.search);
+console.log(window.location.search.split('sort_name=')[1]);
+if(window.location.search.split('sort_name=')[1]){
+  document.querySelector('.sort-name').innerText = window.location.search.split('sort_name=')[1].replace('%20',' ')
+}

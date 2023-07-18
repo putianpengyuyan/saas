@@ -100,7 +100,7 @@
 }
 .page-content-body .drag-item .collection-box .container .info .list-box .main-box .operation-box .infinite-list.shop-product-list .row .shop-product-item {
   width: 25%;
-  height: 36.625rem;
+  height: 670px;
   margin: 0 0 1.5rem;
   padding: 0 0.625rem;
 }
@@ -158,7 +158,7 @@
 }
 .page-content-body .drag-item .collection-box .container .info .list-box .main-box .operation-box .infinite-list.shop-product-list .row .shop-product-item a .bottom-text .title {
   width: 100%;
-  height: 5rem;
+  height: 114px;
   margin: 0 0 0.3125rem;
   font-size: 1rem;
   text-align: left;

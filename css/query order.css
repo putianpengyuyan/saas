@@ -1,0 +1,93 @@
+.page-content-body .drag-item {
+  width: 100%;
+}
+.page-content-body .drag-item .search-box {
+  width: 100%;
+  height: 700px;
+  padding: 3.5rem 0.625rem;
+  margin: 0 -0.5625rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.page-content-body .drag-item .search-box .search-title {
+  height: 2.5rem;
+  padding: 0 0.5625rem;
+  margin: 50px auto;
+}
+.page-content-body .drag-item .search-box .search-title h1 {
+  font-weight: 400;
+  font-size: 2rem;
+}
+.page-content-body .drag-item .search-box .input-box {
+  width: 43.75rem;
+  height: 2.625rem;
+  padding: 0 0.9375rem;
+  border: 0.0625rem solid #363636;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.page-content-body .drag-item .search-box .input-box .input-search {
+  width: 40rem;
+  height: 2.5rem;
+}
+.page-content-body .drag-item .search-box .input-box .input-search input {
+  width: 100%;
+  height: 100%;
+  padding: 0 1.25rem;
+  border: 0;
+}
+.page-content-body .drag-item .search-box .input-box .input-search input::placeholder {
+  font-size: 1rem;
+  color: #999;
+}
+.page-content-body .drag-item .search-box .input-box button {
+  display: block;
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: #fff;
+  border: 0;
+}
+.page-content-body .find {
+  width: 100%;
+  display: none;
+}
+.page-content-body .find .find-result {
+  width: 500px;
+  height: 200px;
+  margin: 50px auto;
+  background-color: #e9e8e8;
+  border-radius: 10px;
+}
+.page-content-body .find .find-result .order-num {
+  font-size: 20px;
+  color: #0994f0;
+  padding: 10px 10px;
+}
+.page-content-body .not-found {
+  display: none;
+  width: 100%;
+  height: 18.25rem;
+  padding: 0 0 3rem;
+}
+.page-content-body .not-found .list-box {
+  width: 100%;
+  height: 100%;
+  padding: 1.75rem 0 0;
+  margin: 0.625rem 0 3.75rem;
+}
+.page-content-body .not-found .list-box .text {
+  width: 100%;
+  height: 100%;
+  padding: 4rem 0;
+  text-align: center;
+}
+.page-content-body .not-found .list-box .text p {
+  height: 1.75rem;
+  line-height: 1.75rem;
+  font-size: 1.25rem;
+}
+.page-content-body .not-found .list-box .text p a {
+  text-decoration: underline;
+}

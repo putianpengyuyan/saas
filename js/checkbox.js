@@ -111,7 +111,8 @@ function VerifyCity(e) {
     city.style.borderColor = "red";
     return false
   }
-  return true
+  city.style.borderColor = "#999999";
+  return true;
 }
 
 // province
@@ -306,8 +307,15 @@ if (locationUrl.indexOf("checkout_flag") > 0) {
             `;
     productList.appendChild(productItem);
     }
-    document.querySelector(".txt").innerText = `$${BuyArr.total.toFixed(2)}`;
-    document.querySelector(".price-total").innerText = `$${BuyArr.total.toFixed(2)}`;
+    const Txt = document.querySelectorAll(".subtotal")
+    for(let i=0;i<Txt.length;i++){
+      Txt[i].innerText = `$${BuyArr.total.toFixed(2)}`;
+    }
+    const priceTotal = document.querySelectorAll(".price-total")
+    for(let i = 0;i<priceTotal.length;i++){
+      priceTotal[i].innerText = `$${BuyArr.total.toFixed(2)}`;
+    }
+   
     if(document.querySelector('.mobile-price')){
       document.querySelector('.mobile-price').innerText = `$${BuyArr.total.toFixed(2)}`;
     }
@@ -347,9 +355,15 @@ if (locationUrl.indexOf("checkout_flag") > 0) {
     JSON.parse(localStorageUtil.getShoppingCartTotal())
   ).toFixed(2);
   console.log(shoppingCartTotal);
+  const Txt = document.querySelectorAll(".subtotal")
+  for(let i=0;i<Txt.length;i++){
+    Txt[i].innerText = `$${shoppingCartTotal}`;
+  }
+  const priceTotal = document.querySelectorAll(".price-total")
+  for(let i = 0;i<priceTotal.length;i++){
+    priceTotal[i].innerText = `$${shoppingCartTotal}`;
+  }
 
-  document.querySelector(".txt").innerText = `$${shoppingCartTotal}`;
-  document.querySelector(".price-total").innerText = `$${shoppingCartTotal}`;
   if(document.querySelector('.mobile-price')){
     document.querySelector('.mobile-price').innerText = `$${shoppingCartTotal}`;
   }
@@ -383,6 +397,6 @@ console.log(email.innerText);
 // return
 const Return = document.querySelector(".return");
 Return.addEventListener("click", function () {
-  location.href = "productDetail.html";
+  window.history.back()
 });
 

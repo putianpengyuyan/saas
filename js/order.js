@@ -1,6 +1,4 @@
 const freight = document.querySelector(".freight");
-
-const shipTxt = document.querySelector(".ship-txt");
 const courier = document.querySelector(".courier");
 let EndProduct = [];
 // 快递获取
@@ -39,7 +37,14 @@ function getCourier() {
           console.log(innerText);
           console.log('------------courierItem------------');
           freight.innerHTML = innerText;
-          document.querySelector('.ship-txt').innerText = `${amount}`
+
+          const shipTxt = document.querySelectorAll('.ship-txt')
+          for(let i = 0 ;i <shipTxt.length;i++){
+            shipTxt[i].innerText = `${amount}`
+            console.log(amount);
+            console.log('2020202020202202020220');
+          }
+          
 
         const ships = document.querySelectorAll(".shipping");
         const shipIs = document.querySelectorAll(".ship-i");
@@ -76,27 +81,38 @@ function getCourier() {
             shipI.classList.add("i-active");
             // console.log(e.target.tagName);
             freight.innerText = innerText;
-            shipTxt.innerText = freightAmount.innerText;
+            const shipTxt = document.querySelectorAll(".ship-txt");
+            for(let i =0 ; i<shipTxt.length;i++){
+              shipTxt[i].innerText = freightAmount.innerText;
 
-            var shipFreight = parseFloat(shipTxt.innerText.replace("$", ""));
+            }
+            
+            var shipFreight = parseFloat(shipTxt[i].innerText.replace("$", ""));
             let totalAmount = shipFreight;
 
             if (locationUrl.indexOf("checkout_flag") > 0) {
               const newProduct =localStorage.getItem("newProduct") && JSON.parse(localStorage.getItem("newProduct"));
               totalAmount += parseFloat(newProduct.total);
               const BuyArr = JSON.parse(localStorage.getItem("newProduct"));
-              document.querySelector(".subtotal").innerText = `$${BuyArr.total.toFixed(2)}`;
-              
+              const subTotal = document.querySelectorAll(".subtotal")
+              for(let i=0;i<subTotal.length;i++){
+                subTotal[i].innerText = `$${BuyArr.total.toFixed(2)}`;
+              }
               
             } else {
               console.log(2222222222222222222222);
               totalAmount += parseFloat(localStorage.getItem("shopping_cart-total"));
               console.log(111111111111111111);
               const subtotal = JSON.parse(localStorage.getItem("shopping_cart-total"));
-              document.querySelector(".subtotal").innerText = `$${subtotal}`;
+              const subTotal = document.querySelectorAll(".subtotal")
+              for(let i=0;i<subTotal.length;i++){
+                subTotal[i].innerText = `$${subtotal}`;
+              }
             }
-
-            document.querySelector(".price-total").innerText = `$${totalAmount.toFixed(2)}`;
+            const priceTotal = document.querySelectorAll(".price-total")
+            for(let i=0;i<priceTotal.length;i++){
+              priceTotal[i].innerText = `$${totalAmount.toFixed(2)}`;
+            }
             if(document.querySelector('.mobile-price')){
               document.querySelector('.mobile-price').innerText = `$${totalAmount.toFixed(2)}`;
             }
@@ -137,13 +153,21 @@ function getCourier() {
                       `;
             productList.appendChild(productItem);
             }
-            
-            document.querySelector(".txt").innerText = `$${BuyArr.total}`;
+            const Txt = document.querySelectorAll(".subtotal")
+            for(let i=0;i<Txt.length;i++){
+              Txt[i].innerText = `$${BuyArr.total}`;
+            }
             var freightAmount = parseFloat(amount.replace("$",''))
             freightAmount += BuyArr.total
             console.log(freightAmount);
             console.log('-----------------');
-            document.querySelector(".price-total").innerText = `$${freightAmount.toFixed(2)}`;
+            const priceTotal = document.querySelectorAll(".price-total")
+            for(let i=0;i<priceTotal.length;i++){
+              priceTotal[i].innerText = `$${freightAmount.toFixed(2)}`;
+            }
+            if(document.querySelector('.mobile-price')){
+              document.querySelector('.mobile-price').innerText = `$${freightAmount.toFixed(2)}`;
+            }
             
           }
         } else {
@@ -186,8 +210,14 @@ function getCourier() {
           freightAmount += shoppingCartTotal
           console.log(freightAmount);
           console.log('-----------------');
-          document.querySelector(".txt").innerText = `$${shoppingCartTotal}`;
-          document.querySelector(".price-total").innerText = `$${freightAmount.toFixed(2)}`;
+          const Txt = document.querySelectorAll(".subtotal")
+          for(let i=0;i<Txt.length;i++){
+            Txt[i].innerText = `$${shoppingCartTotal}`;
+          }
+          const priceTotal = document.querySelectorAll(".price-total")
+            for(let i=0;i<priceTotal.length;i++){
+              priceTotal[i].innerText = `$${freightAmount.toFixed(2)}`;
+            }
           if(document.querySelector('.mobile-price')){
             document.querySelector('.mobile-price').innerText = `$${freightAmount.toFixed(2)}`;
           }

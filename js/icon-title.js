@@ -1,4 +1,4 @@
-const url = "https://www.ccreoostlbam.xyz"
+const url=window.location.protocol + "//" + window.location.host
 let icon = "iocn";
 function Icon() {
   axios

@@ -212,7 +212,7 @@
   #app .page-content-body .drag-item5 .container a .common-img-box,
   .content-box .page-content-body .drag-item5 .container a .common-img-box {
     width: 100%;
-    height: 150px;
+    height: 150px !important;
     display: flex;
     justify-content: center;
     align-content: center;
@@ -427,6 +427,136 @@
     width: 100%;
     height: 100%;
   }
+  #app .page-content-body .service,
+  .content-box .page-content-body .service {
+    height: 300px !important;
+  }
+  #app .page-content-body .two-picture,
+  .content-box .page-content-body .two-picture {
+    width: 100% !important;
+    display: flex;
+    align-content: center;
+    margin: 50px auto;
+  }
+  #app .page-content-body .two-picture .left-picture,
+  .content-box .page-content-body .two-picture .left-picture {
+    flex: 1;
+    height: 250px !important;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin: 30px 30px;
+  }
+  #app .page-content-body .two-picture .left-picture img,
+  .content-box .page-content-body .two-picture .left-picture img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+  #app .page-content-body .two-picture .right-picture,
+  .content-box .page-content-body .two-picture .right-picture {
+    margin: 30px 30px;
+    flex: 1;
+    height: 250px !important;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+  }
+  #app .page-content-body .two-picture .right-picture img,
+  .content-box .page-content-body .two-picture .right-picture img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+  #app .page-content-body .company,
+  .content-box .page-content-body .company {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100% !important;
+    margin: 50px auto;
+    flex-wrap: wrap;
+  }
+  #app .page-content-body .company .company-profile,
+  .content-box .page-content-body .company .company-profile {
+    flex: 1;
+    height: 300px !important;
+    padding: 0 30px !important;
+  }
+  #app .page-content-body .company .company-profile h1,
+  .content-box .page-content-body .company .company-profile h1 {
+    font-size: 24px;
+    line-height: 24px;
+  }
+  #app .page-content-body .company .company-profile p,
+  .content-box .page-content-body .company .company-profile p {
+    font-size: 14px !important;
+    font-weight: 550;
+    color: #666;
+    margin: 20px 0 0;
+    line-height: 20px;
+  }
+  #app .page-content-body .company .company-img,
+  .content-box .page-content-body .company .company-img {
+    flex: 1;
+    height: 300px !important;
+    padding: 0 30px !important;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+  }
+  #app .page-content-body .company .company-img img,
+  .content-box .page-content-body .company .company-img img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+  #app .page-content-body .pack,
+  .content-box .page-content-body .pack {
+    width: 100%;
+    margin: 50px auto;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+  }
+  #app .page-content-body .pack .pack-img,
+  .content-box .page-content-body .pack .pack-img {
+    flex: 1;
+    padding: 0 30px;
+    height: 350px !important;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+  }
+  #app .page-content-body .pack .pack-img img,
+  .content-box .page-content-body .pack .pack-img img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+  #app .page-content-body .pack .pack-title,
+  .content-box .page-content-body .pack .pack-title {
+    flex: 1;
+    padding: 0 30px;
+    font-size: 24px;
+  }
+  #app .page-content-body .pack .pack-title h1,
+  .content-box .page-content-body .pack .pack-title h1 {
+    margin-top: 50px;
+    font-size: 24px !important;
+  }
+  #app .page-content-body .pack .pack-title p,
+  .content-box .page-content-body .pack .pack-title p {
+    font-size: 20px !important;
+    margin-top: 20px;
+  }
+  #app .page-content-body .pack .pack-title a,
+  .content-box .page-content-body .pack .pack-title a {
+    margin-top: 20px;
+    display: block;
+    padding: 10px 20px;
+    width: 310px !important;
+    font-size: 18px !important;
+    background-color: #000;
+    color: #fff;
+    border-radius: 5px;
+  }
   #app .page-content-body .drag-item,
   .content-box .page-content-body .drag-item {
     width: 100%;
@@ -608,11 +738,12 @@
   }
   #app .page-content-body .drag-item .product-info .top-box .swiper-box .sticky-box .right-swiper,
   .content-box .page-content-body .drag-item .product-info .top-box .swiper-box .sticky-box .right-swiper {
-    width: 200px !important;
+    width: 250px !important;
   }
   #app .page-content-body .drag-item .product-info .top-box .info-box,
   .content-box .page-content-body .drag-item .product-info .top-box .info-box {
-    flex: 2;
+    flex: 1;
+    padding-left: 0 !important;
   }
   #app .page-content-body .drag-item .product-info .top-box .info-box div h1,
   .content-box .page-content-body .drag-item .product-info .top-box .info-box div h1 {
@@ -654,7 +785,7 @@
   }
   #app .page-content-body .drag-item .product-info .top-box .info-box .product-specification .product-options1,
   .content-box .page-content-body .drag-item .product-info .top-box .info-box .product-specification .product-options1 {
-    margin-top: 100px !important;
+    margin-top: 70px !important;
   }
   #app .page-content-body .drag-item .product-info .tab-box,
   .content-box .page-content-body .drag-item .product-info .tab-box {
@@ -675,7 +806,7 @@
   #app .page-content-body .drag-item .product-info .tab-box .like-box .row > div,
   .content-box .page-content-body .drag-item .product-info .tab-box .like-box .row > div {
     width: 25%;
-    height: 420px;
+    height: 480px;
     margin: 0 0 1.5rem;
   }
   #app .page-content-body .drag-item .product-info .tab-box .like-box .row .col,
@@ -707,7 +838,7 @@
   .content-box .page-content-body .drag-item .product-info .tab-box .like-box .row .col a .pro-title {
     font-size: 1rem;
     width: 100%;
-    height: 80px;
+    height: 114px;
     margin: 0.625rem 0.3125rem;
     color: #000;
     padding: 0.625rem 0;

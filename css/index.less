@@ -57,13 +57,13 @@
       .row {
         display: flex;
         align-items: center;
-        height: 570px;
+        height: 670px;
         flex-wrap: wrap;
         overflow: hidden;
         // 只显示一排
         > div {
           width: 25%;
-          height: 570px;
+          height: 670px;
           margin-bottom: 4.375rem;
         }
         .col {
@@ -126,7 +126,7 @@
               text-align: center;
               .title {
                 width: 100%;
-                height: 5rem;
+                height: 114px;
                 text-align: left;
                 margin: 0 0 0.3125rem;
                 font-size: 1rem;
@@ -360,12 +360,12 @@
         display: flex;
         align-items: center;
         flex-wrap: wrap;
-        height: 76.25rem;
+        height: 1340px;
         overflow: hidden;
         // 只显示两排
         > div {
           width: 25%;
-          height: 35.625rem;
+          height: 670px;
           margin-bottom: 4.375rem;
         }
         .col {
@@ -425,7 +425,7 @@
               text-align: center;
               .title {
                 width: 100%;
-                height: 5rem;
+                height: 114px;
                 margin: 0 0 0.3125rem;
                 font-size: 1rem;
                 font-weight: 510;
@@ -559,16 +559,16 @@
               font-size: 1.5rem;
               font-weight: normal;
             }
-            .t-text {
-              font-size: 1rem;
-              color: #666666;
-              height: 5rem;
+            // .t-text {
+            //   font-size: 1rem;
+            //   color: #666666;
+            //   height: 5rem;
              
-              text-overflow: ellipsis;
-              display: -webkit-box;
-              -webkit-line-clamp: 4;
-              -webkit-box-orient: vertical;
-            }
+            //   text-overflow: ellipsis;
+            //   display: -webkit-box;
+            //   -webkit-line-clamp: 4;
+            //   -webkit-box-orient: vertical;
+            // }
           }
         }
       }
@@ -615,6 +615,142 @@
             }
           }
         }
+      }
+    }
+  }
+  // 客服
+  .service{
+    width: 100%;
+    height: 500px;
+    .container{
+      width: 100%;
+      height: 100%;
+      a{
+        display: block;
+        width: 100%;
+        height: 100%;
+        .common-img-box{
+          width: 100%;
+          height: 100%;
+          display: flex;
+          justify-content: center;
+          align-content: center;
+          img{
+            max-width: 100%;
+            max-height: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  // 不知名俩图片
+  .two-picture{
+    width: 1400px;
+    display: flex;
+    align-content: center;
+    margin: 50px auto;
+    .left-picture{
+      flex: 1;
+      height: 400px;
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      margin: 30px 30px;
+      img{
+        max-width: 100%;
+        max-height: 100%;
+      }
+    }
+    .right-picture{
+      margin: 30px 30px;
+      flex: 1;
+      height: 400px;
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      img{
+        max-width: 100%;
+        max-height: 100%;
+      }
+    }
+  }
+
+  // 公司简介
+  .company{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1400px;
+    margin: 50px auto;
+    flex-wrap: wrap;
+    .company-profile{
+      flex: 1;
+      height: 400px;
+      padding: 30px 30px 30px 0;
+      h1{
+        font-size: 32px;
+        line-height: 48px;
+      }
+      p{
+        font-size: 17px;
+        font-weight: 600;
+        color: #666;
+        margin: 20px 0 0;
+        line-height: 25px;      }
+    }
+    .company-img{
+      flex: 1;
+      height: 400px;
+      padding: 0 0 0 30px;
+      img{
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  // 打包
+  .pack{
+    width: 1400px;
+    margin: 50px auto;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    .pack-img{
+      flex: 1;
+      padding: 0 30px;
+      height: 400px;
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      img{
+        max-width: 100%;
+        max-height: 100%;
+      }
+      
+    }
+    .pack-title{
+      flex: 1;
+      padding: 0 30px;
+      font-size: 24px;
+      h1{
+        margin-top: 50px;
+        font-size: 32px;
+      }
+      p{
+        font-size: 24px;
+        margin-top: 20px;
+      }
+      a{
+        margin-top: 20px;
+        display: block;
+        padding: 10px 20px;
+        width: 350px;
+        font-size: 20px;
+        background-color: #000;
+        color:#fff; 
+        border-radius: 5px;
       }
     }
   }

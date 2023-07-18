@@ -77,7 +77,11 @@ class localStorageUtil {
     this.setItem(LOCAL_CONSTANTS.shoppingCartTotal,shoppingCartTotal.toFixed(2));
     this.setItem(LOCAL_CONSTANTS.shoppingCartTotalNum, shoppingCartTotalNum);
     this.setItem(LOCAL_CONSTANTS.shoppingCart, JSON.stringify(productArr));
-    document.querySelector(".products-num").innerHTML=shoppingCartTotalNum
+    const shoppingCartNumComArr = document.querySelectorAll(".products-num");
+    for (let i = 0; i < shoppingCartNumComArr.length; i ++) {
+      shoppingCartNumComArr[i].innerText=shoppingCartTotalNum
+    }
+    
     document.querySelector(".price-title-total").innerHTML=`$${shoppingCartTotal}`
   }
 
