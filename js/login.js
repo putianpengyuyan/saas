@@ -71,7 +71,16 @@ function loginUser(username, password) {
             shade: 0, // 不显示遮罩
             yes: function(){
               layer.closeAll();
-              location.href="index.html"
+              // location.href="index.html"
+              console.log(window.location.href);
+              console.log(window.location.search);
+              const flag = window.location.search.split('?flag=')[1]
+              if(flag==='order'){
+                location.href='order.html'
+              }
+              else{
+                location.href="index.html"
+              }
             }
           });
           console.log(token);
@@ -100,3 +109,15 @@ function loginUser(username, password) {
       }
     );
 }
+
+
+console.log(window.location.href);
+const register = document.querySelectorAll('.register')
+for(let i=0;i<register.length;i++){
+  register[i].addEventListener('click',function(){
+    console.log(window.location.search);
+    location.href=`register.html${window.location.search}`
+    
+  })
+}
+

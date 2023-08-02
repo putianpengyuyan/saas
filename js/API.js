@@ -1,5 +1,5 @@
 function Banner() {
-  axios.post(url+"/api/products/getBander").then(
+  axios.post(url + "/api/products/getBander").then(
     function (response) {
       var data = response.data.data.list;
       if (data.length) {
@@ -20,13 +20,13 @@ function Banner() {
         },
         //自动轮播
         autoplay: {
-            delay: 1000,//1秒切换一次
+          delay: 1000, //1秒切换一次
         },
         keyboard: {
-            enabled: true,
-            onlyInViewport: true,
-    },
-    });
+          enabled: true,
+          onlyInViewport: true,
+        },
+      });
     },
     function (err) {
       console.log(err);
@@ -37,10 +37,10 @@ function Banner() {
 Banner();
 
 function getProductList() {
-  axios.post(url+"/api/products/getProducts").then(
+  axios.post(url + "/api/products/getProducts").then(
     function (response) {
       var data = response.data.data.list;
-      console.log('-==-=-=-=-=-=-=-=-=data.data.data');
+      console.log("-==-=-=-=-=-=-=-=-=data.data.data");
       console.log(data);
       if (data.length) {
         const homeRow1 = document.querySelector(".homeRow1");
@@ -48,8 +48,8 @@ function getProductList() {
         homeRow1.innerHTML = "";
         homeRow2.innerHTML = "";
         data.map((item) => {
-              const swiperSide = document.createElement("div");
-              swiperSide.innerHTML = `
+          const swiperSide = document.createElement("div");
+          swiperSide.innerHTML = `
                     <div class="col homeCol" id="${item.id}">
                     <a href="./productDetail.html?product_id=${item.id}">
                             <div class="common-img-box">
@@ -66,14 +66,16 @@ function getProductList() {
                             <div class="star">
                                 <div class="class-test-rate"></div>
                             </div>
-                            <div class="price">$${item.price} <span>$${item.costprice}</span></div>
+                            <div class="price">$${item.price} <span>$${
+            item.costprice
+          }</span></div>
                             </div>
                         </a>
                     </div>
                           `;
-                homeRow1.appendChild(swiperSide);
-                const PList = document.createElement("div");
-                PList.innerHTML = `
+          homeRow1.appendChild(swiperSide);
+          const PList = document.createElement("div");
+          PList.innerHTML = `
                       <div class="col homeCol" id="${item.id}">
                       <a href="./productDetail.html?product_id=${item.id}">
                               <div class="common-img-box">
@@ -90,23 +92,23 @@ function getProductList() {
                               <div class="star">
                                   <div class="class-test-rate"></div>
                               </div>
-                              <div class="price">$${item.price} <span>$${item.costprice}</span></div>
+                              <div class="price">$${item.price} <span>$${
+            item.costprice
+          }</span></div>
                               </div>
                           </a>
                       </div>
                       `;
-                homeRow2.appendChild(PList);
-          
-            var rate = layui.rate;
-            // 渲染
-            rate.render({
-              elem: '.class-test-rate',
-              value: 5,
-                readonly: true,
-            });        
-        
+          homeRow2.appendChild(PList);
+
+          var rate = layui.rate;
+          // 渲染
+          rate.render({
+            elem: ".class-test-rate",
+            value: 5,
+            readonly: true,
+          });
         });
-        
       }
       console.log(response);
     },
@@ -117,26 +119,66 @@ function getProductList() {
 }
 getProductList();
 
+let homeImage = "homeImage";
+function HomeImage() {
+  axios.post(url + "/api/products/getConfingText", { type: homeImage }).then(
+    (res) => {
+      console.log("---------------------");
+      console.log(res.data.data.list);
+      console.log("---------------------");
+      var data = res.data.data.list;
+      if (data) {
+        const chain = document.querySelector(".chain-img");
+        chain.src = `${url}${data}`;
+      }
 
-let homeImage = 'homeImage'
-function HomeImage(){
-  axios.post(url+"/api/products/getConfingText",{"type":homeImage})
-  .then(res=>{
-    console.log('---------------------');
-    console.log(res.data.data.list);
-    console.log('---------------------');
-    var data = res.data.data.list
-    if(data){
-      const chain = document.querySelector('.chain-img')
-      chain.src=`${url}${data}`
+      console.log(res);
+    },
+    (err) => {
+      console.log(err);
     }
-    
-    console.log(res);
-  },
-  err=>{
-    console.log(err);
-  }
-  )
+  );
 }
 
-HomeImage()
+HomeImage();
+
+let serviceimage = "serviceimage";
+function KEfu() {
+  axios.post(url + "/api/products/getConfingText", { type: serviceimage }).then(
+    (res) => {
+      console.log(res);
+      var data = res.data.data.list;
+      if (data) {
+        const kefu = document.querySelector(".kefu");
+        kefu.src = `${url}${data}`;
+      }
+    },
+    (err) => {
+      console.log(err);
+    }
+  );
+}
+
+KEfu();
+
+let serviceimages = "serviceimages";
+function liaTu() {
+  axios
+    .post(url + "/api/products/getConfingText", { type: serviceimages })
+    .then(
+      (res) => {
+        console.log(res);
+        var data = res.data.data.list;
+        if (data) {
+          const leftTu = document.querySelector(".left-tu");
+          const rightTu = document.querySelector(".right-tu");
+          leftTu.src = `${url}${data[0]}`;
+          rightTu.src = `${url}${data[1]}`;
+        }
+      },
+      (err) => {
+        console.log(err);
+      }
+    );
+}
+liaTu();

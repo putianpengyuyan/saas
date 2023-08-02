@@ -1,5 +1,6 @@
 // 登录
 let Token = $.cookie("Token");
+console.log(Token);
 const username = document.querySelector(".user-root");
 const root = document.querySelector(".root");
 const user = document.querySelector(".user");

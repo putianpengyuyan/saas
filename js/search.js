@@ -1,5 +1,8 @@
 function getProductList() {
-  axios.post(url + "/api/products/getProducts").then(function (response) {
+  LoadingUtil.show()
+  axios.post(url + "/api/products/getProducts")
+  .then(
+    function (response) {
     var data = response.data.data.list;
     if (data.length) {
       const row = document.querySelector(".searchrow");
@@ -38,7 +41,13 @@ function getProductList() {
       });
       
     }
-  });
+    LoadingUtil.close()
+  }
+  ,err=>{
+    console.log(err);
+    LoadingUtil.close()
+  }
+  );
 }
 getProductList();
 
@@ -54,6 +63,7 @@ searchBtn.addEventListener("click", function () {
   Product(keywords);
 });
 function Product(keywords) {
+  LoadingUtil.show()
   console.log(keywords);
   axios.post(url + "/api/products/getProducts", { keywords }).then(
     function (response) {
@@ -104,10 +114,12 @@ function Product(keywords) {
         notDefined.style.display = "block";
         find.style.display = "none";
       }
+      LoadingUtil.close()
     },
 
     function (err) {
       console.log(err);
+      LoadingUtil.close()
     }
   );
 }

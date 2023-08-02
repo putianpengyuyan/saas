@@ -72,6 +72,7 @@
 
 <body>
     <div id="app">
+        <div class="loading-mask"><div class="loading"></div></div>
         <div class="content-box">
             <!-- 头部 -->
             <div class="page-content-header">
@@ -123,10 +124,10 @@
                                 <a href="./shop.html" class="shop">Shop</a>
 
                             </li>
-                            <li>
+                            <!-- <li>
                                 <i>hot</i>
                                 <a href="./productDetail.html" class="product">Product</a>
-                            </li>
+                            </li> -->
                             <li><a href="./About Us.html" class="pages">Pages</a></li>
                             <!-- <li><a href="./Coupons.html">Coupons</a></li> -->
 
@@ -222,12 +223,12 @@
             <div class="page-content-body">
                 <div class="drag-item">
                     <div class="product-info product-box">
-                        <div class="product-detail-primary">
+                        <div class="product-detail-primary" >
 
                         </div>
 
                         <!-- tab -->
-                        <div class="tab-box">
+                        <div class="tab-box" >
                             <div class="tab-nav">
                                 <div class="tab-list">
                                     <div class="tab-item nav-active">Product Description</div>
@@ -601,8 +602,8 @@
                     <li><a href="./index.html" class="menu-li">Home</a></li>
                     <li><a href="./shop.html" class="menu-li">Shop</a>
                     </li>
-                    <li><a href="./productDetail.html" class="menu-li">Product</a>
-                    </li>
+                    <!-- <li><a href="./productDetail.html" class="menu-li">Product</a>
+                    </li> -->
                     <li><a href="./About Us.html" class="menu-li">Pages</a>
                         <i class="layui-icon layui-icon-right page-i" style="font-size: 20px; "></i>
                     </li>
@@ -689,17 +690,17 @@
                     <div class="product-specification">
                         {{if colorArr.length}}
                         <div class="product-options">
-                            <label class="name upppercase">
-                                Color:<span class="color">{{colorArr[0]}}</span>
+                            <label class="name upppercase keyName">
+                                {{colorArr[0]}} : <span class="color">{{colorArr[1]}}</span>
                             </label>
                             <div class="item-box">
                                 
                                 <!-- <div class="product-options-item color-item"> {{specialProduct.color2}} </div> -->
-                                {{each colorArr color}}
-                                {{if color === colorArr[0]}}
+                                {{each colorArr.slice(1, colorArr.length) color}}
+                                {{if color === colorArr[1]}}
                                 <div class="product-options-item color-item color-active"> {{color}} </div>
                                 {{/if}}
-                                {{if color !== colorArr[0]}}
+                                {{if color !== colorArr[1]}}
                                 <div class="product-options-item color-item "> {{color}} </div>
                                 {{/if}}
                                 {{/each}}
@@ -708,16 +709,16 @@
                         {{/if}}
                         {{if sizeArr.length}}
                         <div class="product-options">
-                            <label class="name upppercase">
-                                Size:<span class="size">{{sizeArr[0]}}</span>
+                            <label class="name upppercase keyName">
+                                {{sizeArr[0]}} : <span class="size">{{sizeArr[1]}}</span>
                             </label>
                             <div class="item-box">
                                 <!-- <div class="product-options-item size-active size-item" > M </div> -->
-                                {{each sizeArr size}}
-                                {{if size === sizeArr[0]}}
+                                {{each sizeArr.slice(1, sizeArr.length) size}}
+                                {{if size === sizeArr[1]}}
                                 <div class="product-options-item size-item size-active"> {{size}} </div>
                                 {{/if}}
-                                {{if size !== sizeArr[0]}}
+                                {{if size !== sizeArr[1]}}
                                     <div class="product-options-item size-item"> {{size}} </div>
                                 {{/if}}    
                                 {{/each}}
@@ -779,6 +780,7 @@
     <script src="./layui/layui.js"></script>
     <script src="./swiper/js/js/swiper.min.js"></script>
     <script src="./utils/LocalStorageUtil.js"></script>
+    <script src="./utils/loadingUtil.js"></script>
     <script src="./js/root.js"></script>
     <script src="./js/tab.js"></script>
     <script src="./js/shop-col.js"></script>

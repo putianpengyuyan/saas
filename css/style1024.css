@@ -111,7 +111,7 @@
   .content-box .page-content-body .drag-item2 .container .row {
     width: 100%;
     display: flex;
-    height: 420px ;
+    height: 420px !important;
     flex-wrap: wrap;
     overflow: hidden;
   }
@@ -255,7 +255,7 @@
   #app .page-content-body .drag-item6 .container .row,
   .content-box .page-content-body .drag-item6 .container .row {
     width: 100%;
-    height: 900px ;
+    height: 900px !important ;
     display: flex;
   }
   #app .page-content-body .drag-item6 .container .row div,
@@ -586,7 +586,6 @@
   #app .page-content-body .drag-item .product-info .top-box,
   .content-box .page-content-body .drag-item .product-info .top-box {
     width: 100%;
-    height: 700px !important;
   }
   #app .page-content-body .drag-item .product-info .top-box .swiper-box,
   .content-box .page-content-body .drag-item .product-info .top-box .swiper-box {
@@ -629,18 +628,8 @@
     align-items: center;
     padding-left: 0.625rem;
   }
-  #app .page-content-body .drag-item .product-info .top-box .info-box div .price-box .a-price,
-  .content-box .page-content-body .drag-item .product-info .top-box .info-box div .price-box .a-price {
-    width: 5.3125rem;
-    padding-left: 0.625rem;
-  }
-  #app .page-content-body .drag-item .product-info .top-box .info-box div .price-box .compare-at-price,
-  .content-box .page-content-body .drag-item .product-info .top-box .info-box div .price-box .compare-at-price {
-    width: 3.125rem;
-  }
   #app .page-content-body .drag-item .product-info .top-box .info-box div .price-box .discount-tag,
   .content-box .page-content-body .drag-item .product-info .top-box .info-box div .price-box .discount-tag {
-    width: 4.375rem;
     padding: 0 0.3125rem;
   }
   #app .page-content-body .drag-item .product-info .top-box .info-box .coupon-box,
@@ -878,6 +867,16 @@
   .content-box .page-content-body .drag-item .container2 .main .checkout .checkout-box .node {
     padding: 0.625rem;
   }
+  #app .page-content-body .order-header,
+  .content-box .page-content-body .order-header {
+    width: 100%;
+    padding: 0 100px !important;
+  }
+  #app .page-content-body .order-body,
+  .content-box .page-content-body .order-body {
+    width: 100%;
+    padding: 0 100px !important;
+  }
   #app .page-content-footer,
   .content-box .page-content-footer {
     width: 100% !important;
@@ -1041,7 +1040,7 @@
   body #app .main .checkout-box .right-checkout .checkout-price .product-list div .checkout-product-item .left .info .title,
   body .content-box .main .checkout-box .right-checkout .checkout-price .product-list div .checkout-product-item .left .info .title {
     width: 100%;
-    height: 2.5rem;
+    height: 36px;
     font-size: 0.9375rem;
   }
   body #app .main .checkout-box .right-checkout .checkout-price .product-list div .checkout-product-item .left .info .color,

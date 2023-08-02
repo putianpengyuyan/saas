@@ -1,0 +1,183 @@
+.order-header {
+  width: 100%;
+  padding: 0 300px;
+  height: 60px;
+  margin: 20px 0;
+  // border-bottom: 1px solid #aca9a9;
+  .title {
+    height: 60px;
+    line-height: 60px;
+    font-size: 30px;
+  }
+}
+
+.order-body {
+  width: 100%;
+  padding: 0 300px;
+  .order-num {
+    width: 100%;
+    height: 60px;
+    font-size: 20px;
+    padding: 10px 0;
+    color: rgb(30, 64, 124);
+  }
+  .head {
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    font-size: 20px;
+    padding: 0 20px;
+    background-color: #eff1f3;
+    ul {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      .a {
+        flex: 3;
+        text-align: left;
+      }
+      .b {
+        flex: 1;
+        text-align: right;
+      }
+      .c {
+        flex: 1;
+        text-align: right;
+      }
+    }
+  }
+
+  .body {
+    border: 1px solid rgb(235, 235, 235);
+    margin-bottom: 100px;
+    .product-list {
+      .product-info {
+        display: flex;
+        flex-direction: row;
+        height: 140px;
+        padding: 20px 10px;
+        background-color: #fff;
+        text-align: center;
+        // line-height: 100px;
+        justify-content: space-between;
+        border-bottom: 1px solid rgb(223, 220, 220);
+        .info {
+          flex: 3;
+          display: flex;
+          .img {
+            width: 85px;
+            height: 100%;
+            border: 1px solid rgb(223, 220, 220);
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            flex-wrap: wrap;
+            padding: 0 5px;
+            img {
+              max-width: 100%;
+              max-height: 100%;
+            }
+          }
+          .text {
+            padding-left: 20px;
+            width: 100%;
+            height: 100%;
+            text-align: left;
+            .pro-title {
+              width: 250px;
+              height: 40px;
+              font-size: 14px;
+              line-height: 20px;
+              padding: 0 10px;
+              // border: 1px solid black;
+              text-align: left;
+              font-size: 1rem;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              display: -webkit-box;
+              -webkit-line-clamp: 2;
+              -webkit-box-orient: vertical;
+              color: rgb(105, 103, 103);
+            }
+            // span {
+            //   display: inline-block;
+            //   // border: 1px solid black;
+            //   padding: 0 10px;
+            //   font-size: 14px;
+            //   height: 20px;
+            //   line-height: 20px;
+            // }
+            .pro-property{
+              margin-top: 10px;
+              width: 250px;
+              padding: 0 10px;
+              font-size: 13px;
+              color: rgb(105, 103, 103);
+              height: 40px;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              display: -webkit-box;
+              -webkit-line-clamp: 2;
+              -webkit-box-orient: vertical;
+              
+            }
+          }
+        }
+        .num {
+          flex: 1;
+          text-align: right;
+        }
+        .price {
+          flex: 1;
+          text-align: right;
+        }
+      }
+    }
+    .order-shipping-address {
+      height: 212px;
+      padding: 20px 10px;
+      background-color: rgb(252, 251, 251);
+      border-top: 1px solid rgb(235, 235, 235);
+      display: flex;
+      .shipping {
+        flex: 1;
+        h5 {
+          font-size: 20px;
+        }
+        ul {
+          height: 90%;
+          width: 90%;
+          overflow: scroll;
+          border: 0;
+            &::-webkit-scrollbar {
+              display: none;
+            }
+          li {
+            padding: 2px 0;
+            font-size: 15px;
+            margin: 2px 0;
+          }
+        }
+      }
+      .payment {
+        flex: 1;
+        h5 {
+          font-size: 20px;
+        }
+        ul {
+          li {
+            display: flex;
+            justify-content: space-between;
+            margin: 5px 0;
+            height: 20px;
+            font-size: 16px;
+            span {
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

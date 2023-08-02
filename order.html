@@ -64,6 +64,7 @@
 </head>
 <body>
     <div id="app">
+        <div class="loading-mask"><div class="loading"></div></div>
         <div class="content-box">
             <div class="main">
                 <div class="checkout-box">
@@ -162,10 +163,10 @@
                                 <div class="payment-box">
                                     <div class="col-md-12">
                                     <div class="row">
-                                        <h2>Contact</h2> <p class="user-email">3341782596@qq.com</p> <a href="./checkout.html">Change</a>
+                                        <h2>Contact</h2> <p class="user-email">3341782596@qq.com</p> <a class="change">Change</a>
                                     </div>
                                     <div class="row">
-                                        <h2>Place of delivery</h2> <p class="user-info">tom black 13827893678 country city</p> <a href="./checkout.html">Change</a>
+                                        <h2>Place of delivery</h2> <p class="user-info">tom black 13827893678 country city</p> <a class="change">Change</a>
                                     </div>
                                     <div class="row">
                                         <h2>Shipping & Delivery</h2> <p class="freight"></p> 
@@ -296,6 +297,8 @@
         </div>
     </div>
     <script src="./utils/LocalStorageUtil.js"></script>
+    <script src="./utils/loadingUtil.js"></script>
+    <script src="./layui/layui.js"></script>
     <script src="./js/order.js"></script>
     <script src="./js/mobile-order.js"></script>
     <!-- <script src="./js/checkbox.js"></script> -->

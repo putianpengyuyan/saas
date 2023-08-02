@@ -14,6 +14,7 @@ if (window.location.search.indexOf("sort_id") > 0) {
   
 }
 function getProductList(page, per_page, category_id) {
+  LoadingUtil.show()
   const params = {
     page,
     per_page,
@@ -95,9 +96,11 @@ function getProductList(page, per_page, category_id) {
           });
         }
       }
+      LoadingUtil.close()
     },
     function (err) {
       console.log(err);
+      LoadingUtil.close()
     }
   );
 }

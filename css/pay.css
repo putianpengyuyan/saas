@@ -38,18 +38,25 @@
   border-bottom: 3px dashed #fff;
 }
 .pay-success .pay-content .list {
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: 50px;
-  height: 50px;
-  line-height: 50px;
-  justify-content: space-between;
+  margin: 20px 0;
+  padding: 20px 0;
 }
 .pay-success .pay-content .list .order-num {
   font-size: 18px;
+  height: 30px;
+  line-height: 30px;
 }
 .pay-success .pay-content .list .order-price {
+  text-align: right;
   font-size: 18px;
+  height: 30px;
+  line-height: 30px;
+}
+.pay-success .pay-content .list .order-time {
+  text-align: right;
+  font-size: 18px;
+  height: 30px;
+  line-height: 30px;
 }
 .pay-error {
   width: 500px;
@@ -91,16 +98,23 @@
   border-bottom: 3px dashed #fff;
 }
 .pay-error .pay-content .list {
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: 50px;
-  height: 50px;
-  line-height: 50px;
-  justify-content: space-between;
+  margin: 20px 0;
+  padding: 20px 0;
 }
 .pay-error .pay-content .list .order-num {
   font-size: 18px;
+  height: 30px;
+  line-height: 30px;
 }
 .pay-error .pay-content .list .order-price {
+  text-align: right;
   font-size: 18px;
+  height: 30px;
+  line-height: 30px;
+}
+.pay-error .pay-content .list .order-time {
+  text-align: right;
+  font-size: 18px;
+  height: 30px;
+  line-height: 30px;
 }

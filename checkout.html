@@ -187,7 +187,10 @@
                                 <form action="" autocomplete="off">
                                     <!-- email -->
                                     <input required type="email" placeholder="Email" name="email" id="email">
-                                    <span></span>
+                                    <span>*please enter your vaild email</span>
+                                    <!-- password -->
+                                    <input required type="password" placeholder="password" name="password" id="password">
+                                    <span style="display: block; color: #2277cc;">*password consists of 6-16 digits plus letters</span>
                                     <!-- country -->
                                     <h2>Shipping address</h2>
                                     <select name="country" id="checkout-country-selector">
@@ -444,24 +447,24 @@
                                         <div class="col">
                                             <!-- first name -->
                                             <input type="text" placeholder="First name" name="first-name">
-                                            <span></span>
+                                            <span>*please enter a name</span>
                                         </div>
                                         <div class="col">
                                             <!-- last name -->
                                         <input type="text" placeholder="Last name" name="last-name">
-                                        <span></span>
+                                        <span>*Please enter a last name</span>
                                         </div>
                                     </div>
 
                                     <!-- address -->
                                     <input type="text" placeholder="Address" name="address">
-                                    <span></span>
+                                    <span>*Please enter your address</span>
 
                                     <div class="row">
                                         <div class="col">
                                             <!-- city -->
                                             <input type="text" placeholder="City" name="city">
-                                            <span></span>
+                                            <span>*Please enter a city</span>
                                         </div>
                                         <!-- <div class="col">
                                            province -->
@@ -533,18 +536,19 @@
                                         <div class="col">
                                             <!-- post code -->
                                             <input type="text" placeholder="Post code" name="post-code">
-                                            <span></span>
+                                            <span>*Please enter a zip code</span>
                                         </div>
                                     </div>
 
                                     <!-- telephone -->
                                     <input type="text" placeholder="Telephone" name="telephone">
+                                    
+                                    <span>*Please enter the correct contact number</span>
                                     <p>About the order information,if necessary,we will contact you by this phone</p>
-                                    <span></span>
 
                                     <!-- agree -->
                                     <div class="agree">
-                                        <input type="checkbox" value="1" id="my-checkbox" class="remeber" name="agree"> 
+                                        <input type="checkbox" value="1" id="my-checkbox" class="remeber" name="agree" checked> 
                                         <p>Save this information for next time.</p>
                                     </div>
                                     

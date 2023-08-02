@@ -22,7 +22,7 @@
         justify-content: start !important;
         height: 88px;
         width: 100%;
-        padding: 0 .625rem;
+        padding: 0 0.625rem;
         margin: 0;
         a {
           display: block;
@@ -61,16 +61,15 @@
             padding: 0 10px;
           }
         }
-        
       }
-      .flex-body{
+      .flex-body {
         width: 100%;
         padding: 0 20px;
         .checkout-price {
           width: 100%;
           height: 100%;
           .product-list {
-            display:block !important;
+            display: block !important;
             width: 100%;
             > div {
               width: 100%;
@@ -120,8 +119,8 @@
                   padding: 0 0 0 0.625rem;
                   .title {
                     width: 25rem;
-                    height: 38px;
-                    padding: 5px;
+                    height: 35px;
+                    padding: 0 5px;
                     margin: 0 0 0.625rem;
                     font-size: 0.875rem;
                     overflow: hidden;
@@ -130,9 +129,23 @@
                     -webkit-line-clamp: 2;
                     -webkit-box-orient: vertical;
                   }
-                  .color {
+                  // .color {
+                  //   font-size: 0.75rem;
+                  //   height: 16px;
+                  //   color: #818080;
+                  //   overflow: hidden;
+                  //   text-overflow: ellipsis;
+                  //   display: -webkit-box;
+                  //   -webkit-line-clamp: 1;
+                  //   -webkit-box-orient: vertical;
+                  // }
+                  .product-property {
+                    width: 100%;
+                    height: 16px;
                     font-size: 0.75rem;
-                    color: #818080;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
                   }
                 }
               }
@@ -448,6 +461,7 @@
                 padding: 0 10px;
               }
               span {
+                display: none;
                 color: red;
               }
               .row {
@@ -611,8 +625,8 @@
                   padding: 0 0 0 0.625rem;
                   .title {
                     width: 25rem;
-                    height: 38px;
-                    padding: 5px;
+                    height: 35px;
+                    padding: 0 5px;
                     margin: 0 0 0.625rem;
                     font-size: 0.875rem;
                     overflow: hidden;
@@ -621,9 +635,18 @@
                     -webkit-line-clamp: 2;
                     -webkit-box-orient: vertical;
                   }
-                  .color {
+                  // .color {
+                  //   height: 16px;
+                  //   font-size: 0.75rem;
+                  //   color: #818080;
+                  // }
+                  .product-property {
+                    width: 100%;
+                    height: 16px;
                     font-size: 0.75rem;
-                    color: #818080;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
                   }
                 }
               }

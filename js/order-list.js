@@ -1,103 +1,97 @@
-
 // 登录
 const username = document.querySelector(".username");
 const root = document.querySelector(".root");
 const user = document.querySelector(".user");
 const app = document.querySelector("#app");
 username.addEventListener("click", function (ev) {
-    // 阻止冒泡
-    ev.stopPropagation();
-    root.style.display = "block";
+  // 阻止冒泡
+  ev.stopPropagation();
+  root.style.display = "block";
 });
 root.addEventListener("click", function (ev) {
-    root.style.display = "none";
+  root.style.display = "none";
 });
 app.addEventListener("click", function () {
-    root.style.display = "none";
+  root.style.display = "none";
 });
 let shoppingCartNum = 0;
 const productNum = document.querySelectorAll(".products-num");
-for(let i=0;i<productNum.length;i++){
-
-if (localStorageUtil.getShoppingCartTotalNum()) {
+for (let i = 0; i < productNum.length; i++) {
+  if (localStorageUtil.getShoppingCartTotalNum()) {
     shoppingCartNum = JSON.parse(localStorageUtil.getShoppingCartTotalNum());
+  }
+  productNum[i].innerText = shoppingCartNum;
 }
-productNum[i].innerText = shoppingCartNum;
-}
 
-
-
-
-const container1 = document.querySelector('.container1')
-const container2 = document.querySelector('.container2')
+const order1 = document.querySelector(".order1");
+const order2 = document.querySelector(".order2");
 
 console.log(token);
 const config = {
-    headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
-  }
+  headers: { "Content-Type": "application/x-www-form-urlencoded" },
+};
 function OrderList() {
-    axios.post(url+"/api/products/getOrders",{token:token},config).then(
-        (res) => {
-            var list = res.data.data.list;
-            console.log(res);
-            if (list) {
-                container2.style.display='block'
-                container1.style.display='none'
-                const ul = document.querySelector(".table-body");
-                list.map((item) => {
-                    const li = document.createElement("li");
-                    
-                    li.innerHTML = `
-                    <div class="top">
-                    <div class="order-number">订单编号：${item.orderOn}</div>
-                    </div>
-                    
-                    <div class="bottom">
-                        <div class="left-box">
-                                <div class="img-box">
-                                    <img src="./upload/sun.webp" alt="">
-                                </div>
-                            <div class="info">
-                                <div class="title">商品名称: Tinted Sunglasses</div>
-                                <div class="color">颜色: Black</div>
-                                <div class="size">尺码: L</div>
-                            </div>
-                        </div>
-                        <div class="right-box">
-                            <div class="order-price">应付款： $${item.accout}</div>
-                            <div class="order-status">已支付</div>
-                        <div>
-                    </div>
-                    
+  LoadingUtil.show()
+  axios.post(url + "/api/products/getOrders", { token: token }, config).then(
+    (res) => {
+      var list = res.data.data.list;
+      console.log(list);
+      console.log(res);
+      LoadingUtil.close()
+      if (list) {
+        order2.style.display = "block";
+        order1.style.display = "none";
+        const ul = document.querySelector(".orderList-body");
+        list.map((item) => {
+          // 订单创建时间
+          const time = new Date(
+            parseInt(item.createtime) * 1000
+          ).toLocaleString();
+          console.log(time);
+          const li = document.createElement("li");
+          li.classList.add("order-li");
+          li.innerHTML = `
+             <a href='orderDetails.html?id=${item.id}'>        
+             <div class="bottom" id='${item.id}'>
+             <div class="left-box">
+                 <div class="info">
+                     <div class="order">order num : ${item.orderOn}</div>
+                     <div class="time">time : ${time}</div>
+                 </div>
+             </div>
+             <div class="right-box">
+                 <div class="order-price">Price： $${item.accout}</div>
+                 <div class="order-status">Pay</div>
+             </div>
+         </div>
+                  </a> 
                     `;
-                    ul.appendChild(li)
-                    const status = document.querySelectorAll('.order-status')
-                    for(let i=0;i<status.length;i++){
-                        console.log(status);
-                    if(item.states === 0){
-                        status[i].innerText = `未支付`
-                        status[i].classList.add('err-status')
-                    }else{
-                        status[i].innerText = `已支付`
-                    }
-                    }
-                    
-                });
-                
-    
-                    
-            }else if(!list || list == ''){
-                container1.style.display='block'
-                container2.style.display='none'
+          ul.appendChild(li);
 
+          const status = document.querySelectorAll(".order-status");
+          for (let i = 0; i < status.length; i++) {
+            console.log(status);
+            if (item.states === 0) {
+              status[i].innerText = `non-payment`;
+              status[i].classList.add("err-status");
+            } else {
+              status[i].innerText = `paid`;
             }
-        },
-        (err) => {
-            console.log(err);
-            container1.style.display='block'
-            container2.style.display='none'
-        }
-    );
+          }
+        });
+        
+      } else if (!list || list == "") {
+        // container1.style.display='block'
+        // container2.style.display='none'
+      }
+    },
+    (err) => {
+      console.log(err);
+      LoadingUtil.close()
+      order1.style.display = "block";
+      order2.style.display = "none";
+    }
+  );
 }
 OrderList();
 
@@ -109,8 +103,8 @@ function ServeEmail() {
       var text = res.data.data.list;
       if (text) {
         const emails = document.querySelectorAll("[name=Email]");
-        console.log('*************')
-        console.log(emails)
+        console.log("*************");
+        console.log(emails);
         for (let i = 0; i < emails.length; i++) {
           const email = emails[i];
           email.value = text;
@@ -147,5 +141,3 @@ function ServeEmail() {
 }
 
 ServeEmail();
-
-

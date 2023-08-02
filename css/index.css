@@ -521,6 +521,7 @@
   justify-content: center;
   align-content: center;
   overflow: hidden;
+  flex-wrap: wrap;
 }
 .page-content-body .drag-item8 .container .row .col a .common-img-box img {
   max-width: 100%;
@@ -533,7 +534,7 @@
 }
 .page-content-body .drag-item8 .container .row .col .mt-4 h3 {
   margin: 0 0 0.5rem;
-  font-size: 1.5rem;
+  font-size: 20px;
   font-weight: normal;
 }
 .page-content-body .drag-item9 {

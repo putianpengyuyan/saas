@@ -69,6 +69,7 @@
 
 <body>
     <div id="app">
+        <div class="loading-mask"><div class="loading"></div></div>
         <div class="content-box">
             <!-- 头部 -->
             <div class="page-content-header">
@@ -120,10 +121,10 @@
                                 <a href="./shop.html" class="shop">Shop</a>
 
                             </li>
-                            <li>
+                            <!-- <li>
                                 <i>hot</i>
                                 <a href="./productDetail.html" class="product">Product</a>
-                            </li>
+                            </li> -->
                             <li><a href="./About Us.html" class="pages">Pages</a></li>
                             <!-- <li><a href="./Coupons.html">Coupons</a></li> -->
 
@@ -193,8 +194,7 @@
                                     style="font-size: 20px;background-color: #fff;"></i>
                                 <div class="root">
                                     <div class="row">
-                                        <a href="./login.html">Log in</a>
-                                        <a href="./register.html">Register</a>
+                                        <a href="./login.html" class="Log-out">Log out</a>
                                     </div>
                                 </div>
                             </li>
@@ -219,17 +219,17 @@
             <div class="page-content-body">
                 <div class="drag-item">
                     <!-- 无订单 -->
-                    <div class="container1">
+                    <div class="order1">
                         <h2>No Order</h2>
                         <a href="./index.html">Go shopping</a>
                     </div>
                     <!-- 有订单 -->
-                    <div class="container2">
+                    <div class="order2">
                         <div class="main">
-                            <div class="table-header">
-                                <div class="title">全部订单</div>
+                            <div class="orderList-header">
+                                <div class="title">All Order</div>
                             </div>
-                            <ul class="table-body">
+                            <ul class="orderList-body">
                                 <!-- <li>
                                         <div class="left-box">
                                             <a href="#">
@@ -464,9 +464,9 @@
                     <li><a href="./shop.html" class="menu-li">Shop</a>
                         
                     </li>
-                    <li><a href="./productDetail.html" class="menu-li">Product</a>
+                    <!-- <li><a href="./productDetail.html" class="menu-li">Product</a>
                         
-                    </li>
+                    </li> -->
                     <li><a href="./About Us.html" class="menu-li">Pages</a>
                         <i class="layui-icon layui-icon-right page-i" style="font-size: 20px; "></i>
                     </li>
@@ -492,6 +492,7 @@
 
     <script src="./layui/layui.js"></script>
     <script src="./utils/LocalStorageUtil.js"></script>
+    <script src="/utils/loadingUtil.js"></script>
     <script src="./js/mobile-nav.js"></script>
     <script src="./js/tab.js"></script>
     <!-- <script src="./js/root.js"></script> -->

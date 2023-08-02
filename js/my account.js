@@ -1,15 +1,18 @@
 let token1 = $.cookie("Token");
-const myAccount = document.querySelector('.my-account')
+const myAccount = document.querySelectorAll('.my-account')
 
-if(token1){
-    myAccount.addEventListener('click',function(){
+for(let i=0;i<myAccount.length;i++){
+    if(token1){
+        myAccount[i].addEventListener('click',function(){
+            
+            location.href='order-list.html'
+        })
         
-        location.href='order-list.html'
-    })
+    }else{
+        myAccount[i].addEventListener('click',function(){
     
-}else{
-    myAccount.addEventListener('click',function(){
-
-        location.href='login.html'
-    })
+            location.href='login.html'
+        })
+    }
+    
 }

@@ -1,4 +1,4 @@
-const url=window.location.protocol + "//" + window.location.host
+const url="https://www.yaeniy.shop/"
 let icon = "iocn";
 function Icon() {
   axios

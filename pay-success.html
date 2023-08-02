@@ -121,10 +121,10 @@
                                 <a href="./shop.html" class="shop">Shop</a>
 
                             </li>
-                            <li>
+                            <!-- <li>
                                 <i>hot</i>
                                 <a href="./productDetail.html" class="product">Product</a>
-                            </li>
+                            </li> -->
                             <li><a href="./About Us.html" class="pages">Pages</a></li>
                             <!-- <li><a href="./Coupons.html">Coupons</a></li> -->
 
@@ -222,28 +222,28 @@
                 <div class="icon">
                     <i class="layui-icon layui-icon-success"style="font-size: 100px;color: green;"></i>
                 </div>
-                <h1>支付成功</h1>
+                <h1>Pay Success</h1>
                 <div class="pay-content">
                     <div class="line"></div>
                     <div class="list">
-                    <p class="order-num">订单号：382047498285348</p>
-                    
-                    <p class="order-price">$100.00</p>
+                    <p class="order-num success-num"></p>
+                    <p class="order-price success-price"></p>
+                    <p class="order-time success-time"></p>
                     </div>
                 </div>
                 
                </div>
-               <div class="pay-error">
+               <div class="pay-error" style="display: none;">
                 <div class="icon">
                     <i class="layui-icon layui-icon-error"style="font-size: 100px;color: red;"></i>
                 </div>
-                <h1>支付失败</h1>
+                <h1>Pay Error</h1>
                 <div class="pay-content">
                     <div class="line"></div>
                     <div class="list">
-                    <p class="order-num">订单号：382047498285348</p>
-                    
-                    <p class="order-price">$100.00</p>
+                    <p class="order-num err-num"></p> 
+                    <p class="order-price err-price"></p>
+                    <p class="order-time err-time"></p>
                     </div>
                </div>
             </div>
@@ -444,9 +444,9 @@
                     <li><a href="./shop.html" class="menu-li">Shop</a>
                         
                     </li>
-                    <li><a href="./productDetail.html" class="menu-li">Product</a>
+                    <!-- <li><a href="./productDetail.html" class="menu-li">Product</a>
                         
-                    </li>
+                    </li> -->
                     <li><a href="./About Us.html" class="menu-li">Pages</a>
                         <i class="layui-icon layui-icon-right page-i" style="font-size: 20px; "></i>
                     </li>
@@ -472,11 +472,12 @@
 
     <script src="./layui/layui.js"></script>
     <script src="./utils/LocalStorageUtil.js"></script>
+    <script src="./utils/urlUtil.js"></script>
     <script src="./js/mobile-nav.js"></script>
     <script src="./js/tab.js"></script>
     <script src="./js/root.js"></script>
     <script src="./js/mobile-footer.js"></script>
-    
+    <script src="./js/pay-success.js"></script>
 </body>
 
 </html>

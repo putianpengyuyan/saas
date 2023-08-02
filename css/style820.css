@@ -110,13 +110,13 @@
   .content-box .page-content-body .drag-item2 .container .row {
     width: 100%;
     display: flex;
-    height: 420px ;
+    height: 420px;
     flex-wrap: wrap;
     overflow: hidden;
   }
   #app .page-content-body .drag-item2 .container .row div,
   .content-box .page-content-body .drag-item2 .container .row div {
-    height: 420px ;
+    height: 420px;
   }
   #app .page-content-body .drag-item2 .container .row div .col,
   .content-box .page-content-body .drag-item2 .container .row div .col {
@@ -254,7 +254,7 @@
   #app .page-content-body .drag-item6 .container .row,
   .content-box .page-content-body .drag-item6 .container .row {
     width: 100%;
-    height: 900px ;
+    height: 900px;
     display: flex;
   }
   #app .page-content-body .drag-item6 .container .row div,
@@ -719,7 +719,6 @@
   #app .page-content-body .drag-item .product-info .top-box,
   .content-box .page-content-body .drag-item .product-info .top-box {
     width: 100%;
-    height: 600px !important;
   }
   #app .page-content-body .drag-item .product-info .top-box .swiper-box,
   .content-box .page-content-body .drag-item .product-info .top-box .swiper-box {
@@ -757,17 +756,8 @@
     justify-content: start;
     align-items: center;
   }
-  #app .page-content-body .drag-item .product-info .top-box .info-box div .price-box .a-price,
-  .content-box .page-content-body .drag-item .product-info .top-box .info-box div .price-box .a-price {
-    width: 5.3125rem;
-  }
-  #app .page-content-body .drag-item .product-info .top-box .info-box div .price-box .compare-at-price,
-  .content-box .page-content-body .drag-item .product-info .top-box .info-box div .price-box .compare-at-price {
-    width: 3.125rem;
-  }
   #app .page-content-body .drag-item .product-info .top-box .info-box div .price-box .discount-tag,
   .content-box .page-content-body .drag-item .product-info .top-box .info-box div .price-box .discount-tag {
-    width: 4.375rem;
     padding: 0 0.3125rem;
   }
   #app .page-content-body .drag-item .product-info .top-box .info-box .coupon-box,
@@ -785,11 +775,12 @@
   }
   #app .page-content-body .drag-item .product-info .top-box .info-box .product-specification .product-options1,
   .content-box .page-content-body .drag-item .product-info .top-box .info-box .product-specification .product-options1 {
-    margin-top: 70px !important;
+    margin-top: 20px !important;
   }
   #app .page-content-body .drag-item .product-info .tab-box,
   .content-box .page-content-body .drag-item .product-info .tab-box {
     width: 100%;
+    text-align: left !important;
   }
   #app .page-content-body .drag-item .product-info .tab-box .like-box,
   .content-box .page-content-body .drag-item .product-info .tab-box .like-box {
@@ -1005,6 +996,146 @@
   .content-box .page-content-body .drag-item .container2 .main .checkout .checkout-box .node {
     padding: 0.625rem;
   }
+  #app .page-content-body .drag-item,
+  .content-box .page-content-body .drag-item {
+    width: 100%;
+  }
+  #app .page-content-body .drag-item .order1,
+  .content-box .page-content-body .drag-item .order1 {
+    display: none;
+    width: 100%;
+    margin: 0 auto;
+    height: 37.5rem;
+    text-align: center;
+  }
+  #app .page-content-body .drag-item .order1 h2,
+  .content-box .page-content-body .drag-item .order1 h2 {
+    height: 9.5rem;
+    padding: 3.5rem 1rem;
+    font-size: 1.875rem;
+    font-weight: normal;
+  }
+  #app .page-content-body .drag-item .order1 a,
+  .content-box .page-content-body .drag-item .order1 a {
+    display: block;
+    width: 12.5rem;
+    height: 2.75rem;
+    line-height: 2.75rem;
+    border-radius: 0.375rem;
+    margin: 0 auto;
+    background-color: black;
+    color: #fff;
+    font-size: 1rem;
+    transition: all 0.3s;
+  }
+  #app .page-content-body .drag-item .order1 a:hover,
+  .content-box .page-content-body .drag-item .order1 a:hover {
+    transform: scale(1.02);
+  }
+  #app .page-content-body .drag-item .order2,
+  .content-box .page-content-body .drag-item .order2 {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  #app .page-content-body .drag-item .order2 h2,
+  .content-box .page-content-body .drag-item .order2 h2 {
+    height: 9.5rem;
+    padding: 3.5rem 1rem;
+    font-size: 2.25rem;
+    font-weight: normal;
+  }
+  #app .page-content-body .drag-item .order2 .main,
+  .content-box .page-content-body .drag-item .order2 .main {
+    width: 100%;
+  }
+  #app .page-content-body .drag-item .order2 .main .orderList-header,
+  .content-box .page-content-body .drag-item .order2 .main .orderList-header {
+    width: 100%;
+    height: 3.125rem;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 2rem 0.625rem;
+    font-size: 1rem;
+    border-bottom: 0.0625rem solid #b8b8b8;
+    margin-bottom: 1.25rem;
+  }
+  #app .page-content-body .drag-item .order2 .main .orderList-body,
+  .content-box .page-content-body .drag-item .order2 .main .orderList-body {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 30px auto;
+    padding: 0 100px!important;
+  }
+  #app .page-content-body .drag-item .order2 .main .orderList-body li,
+  .content-box .page-content-body .drag-item .order2 .main .orderList-body li {
+    margin-top: 1.25rem;
+    width: 100%;
+    padding: 0.625rem;
+    font-size: 1rem;
+    text-align: left;
+    background-color: transparent;
+    border-radius: 0.125rem;
+    border: 0.0625rem solid #b8b8b8;
+  }
+  #app .page-content-body .drag-item .order2 .main .orderList-body li .bottom,
+  .content-box .page-content-body .drag-item .order2 .main .orderList-body li .bottom {
+    margin-top: 0.625rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+  }
+  #app .page-content-body .drag-item .order2 .main .orderList-body li .bottom .left-box,
+  .content-box .page-content-body .drag-item .order2 .main .orderList-body li .bottom .left-box {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+  }
+  #app .page-content-body .drag-item .order2 .main .orderList-body li .bottom .left-box .info,
+  .content-box .page-content-body .drag-item .order2 .main .orderList-body li .bottom .left-box .info {
+    color: #5a5a5a;
+  }
+  #app .page-content-body .drag-item .order2 .main .orderList-body li .bottom .left-box .info .order,
+  .content-box .page-content-body .drag-item .order2 .main .orderList-body li .bottom .left-box .info .order {
+    font-size: 1rem;
+  }
+  #app .page-content-body .drag-item .order2 .main .orderList-body li .bottom .left-box .info .time,
+  .content-box .page-content-body .drag-item .order2 .main .orderList-body li .bottom .left-box .info .time {
+    font-size: 0.9375rem;
+  }
+  #app .page-content-body .drag-item .order2 .main .orderList-body li .bottom .right-box,
+  .content-box .page-content-body .drag-item .order2 .main .orderList-body li .bottom .right-box {
+    padding: 10px;
+  }
+  #app .page-content-body .drag-item .order2 .main .orderList-body li .bottom .right-box .order-price,
+  .content-box .page-content-body .drag-item .order2 .main .orderList-body li .bottom .right-box .order-price {
+    color: #070707;
+    font-size: 1.125rem;
+  }
+  #app .page-content-body .drag-item .order2 .main .orderList-body li .bottom .right-box .order-status,
+  .content-box .page-content-body .drag-item .order2 .main .orderList-body li .bottom .right-box .order-status {
+    text-align: right;
+    color: #34cf7a;
+  }
+  #app .page-content-body .drag-item .order2 .main .orderList-body li .bottom .right-box .err-status,
+  .content-box .page-content-body .drag-item .order2 .main .orderList-body li .bottom .right-box .err-status {
+    text-align: right;
+    color: #ec3d1e;
+  }
+  #app .page-content-body .order-header,
+  .content-box .page-content-body .order-header {
+    width: 100%;
+    padding: 0 50px !important;
+  }
+  #app .page-content-body .order-body,
+  .content-box .page-content-body .order-body {
+    width: 100%;
+    padding: 0 50px !important;
+  }
   #app .page-content-footer,
   .content-box .page-content-footer {
     width: 100% !important;
@@ -1145,7 +1276,7 @@
   body #app .main .checkout-box .right-checkout .checkout-price .product-list div .checkout-product-item .left .info .title,
   body .content-box .main .checkout-box .right-checkout .checkout-price .product-list div .checkout-product-item .left .info .title {
     width: 12.5rem;
-    height: 40px;
+    height: 36px;
   }
   body #app,
   body .content-box {

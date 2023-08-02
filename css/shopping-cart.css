@@ -132,7 +132,7 @@
   padding: 5px;
   font-size: 0.875rem;
   font-weight: 510;
-  height: 50px;
+  height: 48px;
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
@@ -141,9 +141,14 @@
 }
 .page-content-body .drag-item .container2 .main .pc .pc-li .c-product-item .info .c-color {
   padding: 5px;
-  height: 1.3125rem;
-  font-size: 1rem;
+  height: 20px;
+  font-size: 0.875rem;
   color: #999999;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
 }
 .page-content-body .drag-item .container2 .main .pc .pc-li .c-product-item .info .remove {
   margin: 0.5rem 0 0;
@@ -244,7 +249,7 @@
   padding: 5px 0;
   font-size: 0.875rem;
   font-weight: 510;
-  height: 50px;
+  height: 48px;
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
@@ -253,10 +258,15 @@
 }
 .page-content-body .drag-item .container2 .main .mobile .mobile-li .right .info .c-color {
   margin: 5px 0;
-  padding: 5px;
-  height: 1.3125rem;
-  font-size: 1rem;
+  padding: 5px 0;
+  height: 20px;
+  font-size: 0.875rem;
   color: #999999;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
 }
 .page-content-body .drag-item .container2 .main .mobile .mobile-li .right .info .c-color span {
   padding: 0 10px;

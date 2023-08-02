@@ -32,19 +32,41 @@ getCountryList();
 const email = document.querySelector("#email");
 email.addEventListener("change", verifyEmail);
 function verifyEmail(e) {
-  const reg =
-    /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/i;
+  const reg =/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/i;
   if (!reg.test(email.value)) {
     email.style.borderColor = "red";
+    email.nextElementSibling.style.display = 'block'
     return false;
   }
   email.style.borderColor = "#999999";
+  email.nextElementSibling.style.display = 'none'
   // console.log(e.target.value);
   return true;
 }
 
 email.addEventListener("input", () => {
   email.style.borderColor = "#999999";
+});
+
+// password
+const password = document.querySelector('#password');
+password.addEventListener('change',verifyPassword)
+function verifyPassword(e){
+  reg = /^(?![\d]+$)(?![a-zA-Z]+$)(?![^\da-zA-Z]+$).{6,20}$/
+  if(!reg.test(password.value)){
+      password.style.borderColor = 'red';
+      password.nextElementSibling.style.color = 'red'
+      return false
+  }
+  password.style.borderColor = '#999999';
+  // password.nextElementSibling.style.display = 'none'
+  password.nextElementSibling.style.color = '#2277cc'
+   console.log(e.target.value);
+  return true;
+}
+
+password.addEventListener("input", () => {
+  password.style.borderColor = "#999999";
 });
 
 // country
@@ -66,8 +88,11 @@ function VerifyFirst(e) {
   const FirstNameValue = FirstName.value;
   if (FirstNameValue.trim() === "") {
     FirstName.style.borderColor = "red";
+    FirstName.nextElementSibling.style.display = 'block'
     return false;
   }
+  FirstName.style.borderColor = "#999999";
+  FirstName.nextElementSibling.style.display = 'none'
   return true;
 }
 FirstName.addEventListener("input", () => {
@@ -80,8 +105,11 @@ function VerifyLast(e) {
   const LastNameValue = LastName.value;
   if (LastNameValue.trim() === "") {
     LastName.style.borderColor = "red";
+    LastName.nextElementSibling.style.display = 'block'
     return false
   }
+  LastName.style.borderColor = "#999999";
+  LastName.nextElementSibling.style.display = 'none'
   return true
 }
 LastName.addEventListener("input", () => {
@@ -95,8 +123,11 @@ function VerifyAddress(e) {
   const addressValue = address.value;
   if (addressValue.trim() === "") {
     address.style.borderColor = "red";
+    address.nextElementSibling.style.display = 'block'
     return false
   }
+  address.style.borderColor = "#999999";
+  address.nextElementSibling.style.display = 'none'
   return true
 }
 address.addEventListener("input", () => {
@@ -109,9 +140,11 @@ function VerifyCity(e) {
   const cityValue = city.value;
   if (cityValue.trim() === "") {
     city.style.borderColor = "red";
+    city.nextElementSibling.style.display = 'block'
     return false
   }
   city.style.borderColor = "#999999";
+  city.nextElementSibling.style.display = 'none'
   return true;
 }
 
@@ -130,9 +163,11 @@ function verifyPost(e) {
 
   if (!reg.test(postCode.value)) {
     postCode.style.borderColor = "red";
+    postCode.nextElementSibling.style.display = 'block'
     return false;
   }
   postCode.style.borderColor = "#999999";
+  postCode.nextElementSibling.style.display = 'none'
   return true;
 }
 
@@ -144,9 +179,11 @@ function verifyTelephone(e) {
   if (!reg.test(telephone.value)) {
     console.log(telephone.value);
     telephone.style.borderColor = "red";
+    telephone.nextElementSibling.style.display = 'block'
     return false;
   }
   telephone.style.borderColor = "#999999";
+  telephone.nextElementSibling.style.display = 'none'
   return true;
 }
 
@@ -198,6 +235,10 @@ button.addEventListener("click", function (e) {
     email.style.borderColor = "red";
     return;
   }
+  if (!verifyPassword(e)) {
+    password.style.borderColor = "red";
+    return;
+  }
   if (!VerifyFirst(e)){
     FirstName.style.borderColor = "red";
     return
@@ -235,6 +276,7 @@ button.addEventListener("click", function (e) {
   console.log(country.innerText);
   console.log("========================");
   const emailComponent = email.value;
+  const passwordComponent = password.value;
   const first_name = FirstName.value;
   const last_name = LastName.value;
   const addressComponent = address.value;
@@ -246,6 +288,7 @@ button.addEventListener("click", function (e) {
   // 本地
   const user_order = {
     email: emailComponent,
+    password:passwordComponent,
     first_name: first_name,
     last_name: last_name,
     address: addressComponent,
@@ -279,11 +322,11 @@ if (locationUrl.indexOf("checkout_flag") > 0) {
   const checkout_method = locationUrl.split("checkout_flag=")[1];
   if (checkout_method === "new_product") {
     console.log(JSON.parse(localStorage.getItem("newProduct")));
-    const BuyArr = JSON.parse(localStorage.getItem("newProduct"));
-    console.log("======buyarr=======");
-    console.log(BuyArr);
-    console.log(BuyArr.num);
-    console.log("======buyarr=======");
+    const newProductObj = JSON.parse(localStorage.getItem("newProduct"));
+    console.log("======newProductObj=======");
+    console.log(newProductObj);
+    console.log(newProductObj.num);
+    console.log("======newProductObj=======");
     const productLists = document.querySelectorAll(".product-list");
     for(let i=0;i<productLists.length;i++){
       const productList = productLists[i]
@@ -292,16 +335,17 @@ if (locationUrl.indexOf("checkout_flag") > 0) {
             <div class="product-item checkout-product-item">
                 <div class="left">
                     <div class="img-box">
-                        <i>${BuyArr.num}</i>
-                        <img src=${url + BuyArr.img}  alt="">
+                        <i>${newProductObj.num}</i>
+                        <img src=${url + newProductObj.img}  alt="">
                     </div>
                     <div class="info">
-                        <div class="title">${BuyArr.title}</div>
-                        <div class="color"></div>
+                        <div class="title">${newProductObj.title}</div>
+                        ${newProductObj.skuData1 && newProductObj.skuData1.name ? `<p class="product-property">${newProductObj.skuData1.value}</p>` : ""}
+                        ${newProductObj.skuData2 && newProductObj.skuData2.name ? `<p class="product-property">${newProductObj.skuData2.value}</p>` : ""}
                     </div>
                 </div>
                 <div class="right">
-                    <div class="price">$${BuyArr.price}</div>
+                    <div class="price">$${newProductObj.price}</div>
                 </div>
             </div>
             `;
@@ -309,15 +353,15 @@ if (locationUrl.indexOf("checkout_flag") > 0) {
     }
     const Txt = document.querySelectorAll(".subtotal")
     for(let i=0;i<Txt.length;i++){
-      Txt[i].innerText = `$${BuyArr.total.toFixed(2)}`;
+      Txt[i].innerText = `$${newProductObj.total.toFixed(2)}`;
     }
     const priceTotal = document.querySelectorAll(".price-total")
     for(let i = 0;i<priceTotal.length;i++){
-      priceTotal[i].innerText = `$${BuyArr.total.toFixed(2)}`;
+      priceTotal[i].innerText = `$${newProductObj.total.toFixed(2)}`;
     }
    
     if(document.querySelector('.mobile-price')){
-      document.querySelector('.mobile-price').innerText = `$${BuyArr.total.toFixed(2)}`;
+      document.querySelector('.mobile-price').innerText = `$${newProductObj.total.toFixed(2)}`;
     }
   }
 } else {
@@ -339,7 +383,8 @@ if (locationUrl.indexOf("checkout_flag") > 0) {
             </div>
             <div class="info">
                 <div class="title">${item.title}</div>
-                <div class="color">${item.color}</div>
+                ${item.skuData1 && item.skuData1.name ? `<p class="product-property">${item.skuData1.value}</p>` : ""}
+                ${item.skuData2 && item.skuData2.name ? `<p class="product-property">${item.skuData2.value}</p>` : ""}
             </div>
         </div>
         <div class="right">
@@ -380,6 +425,7 @@ function Render() {
     console.log(userManagement);
     console.log(userManagement.email);
     email.value = userManagement.email;
+    password.value = userManagement.password;
     country.value = userManagement.country;
     FirstName.value = userManagement.first_name;
     LastName.value = userManagement.last_name;
@@ -400,3 +446,13 @@ Return.addEventListener("click", function () {
   window.history.back()
 });
 
+const token = $.cookie("Token");
+console.log(token);
+if(token){
+  password.style.display = 'none'
+  password.nextElementSibling.style.display = 'none'
+}else{
+  password.style.display = 'block'
+  password.nextElementSibling.style.display = 'block'
+  password.nextElementSibling.style.color = '#2277cc'
+}

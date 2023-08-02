@@ -4,20 +4,20 @@
 .page-content-body .drag-item {
   width: 100%;
 }
-.page-content-body .drag-item .container1 {
+.page-content-body .drag-item .order1 {
   display: none;
   width: 90rem;
   margin: 0 auto;
   height: 37.5rem;
   text-align: center;
 }
-.page-content-body .drag-item .container1 h2 {
+.page-content-body .drag-item .order1 h2 {
   height: 9.5rem;
   padding: 3.5rem 1rem;
   font-size: 1.875rem;
   font-weight: normal;
 }
-.page-content-body .drag-item .container1 a {
+.page-content-body .drag-item .order1 a {
   display: block;
   width: 12.5rem;
   height: 2.75rem;
@@ -29,25 +29,25 @@
   font-size: 1rem;
   transition: all 0.3s;
 }
-.page-content-body .drag-item .container1 a:hover {
+.page-content-body .drag-item .order1 a:hover {
   transform: scale(1.02);
 }
-.page-content-body .drag-item .container2 {
+.page-content-body .drag-item .order2 {
   display: block;
   width: 90rem;
   margin: 0 auto;
   text-align: center;
 }
-.page-content-body .drag-item .container2 h2 {
+.page-content-body .drag-item .order2 h2 {
   height: 9.5rem;
   padding: 3.5rem 1rem;
   font-size: 2.25rem;
   font-weight: normal;
 }
-.page-content-body .drag-item .container2 .main {
+.page-content-body .drag-item .order2 .main {
   width: 100%;
 }
-.page-content-body .drag-item .container2 .main .table-header {
+.page-content-body .drag-item .order2 .main .orderList-header {
   width: 100%;
   height: 3.125rem;
   display: flex;
@@ -58,14 +58,15 @@
   border-bottom: 0.0625rem solid #b8b8b8;
   margin-bottom: 1.25rem;
 }
-.page-content-body .drag-item .container2 .main .table-body {
+.page-content-body .drag-item .order2 .main .orderList-body {
   width: 100%;
   display: flex;
   align-items: center;
   flex-direction: column;
-  margin: 100px auto;
+  margin: 30px auto;
+  padding: 0 200px;
 }
-.page-content-body .drag-item .container2 .main .table-body li {
+.page-content-body .drag-item .order2 .main .orderList-body li {
   margin-top: 1.25rem;
   width: 100%;
   padding: 0.625rem;
@@ -73,60 +74,40 @@
   text-align: left;
   background-color: transparent;
   border-radius: 0.125rem;
-  border-bottom: 0.0625rem solid #b8b8b8;
+  border: 0.0625rem solid #b8b8b8;
 }
-.page-content-body .drag-item .container2 .main .table-body li .top {
-  padding: 0.625rem;
-}
-.page-content-body .drag-item .container2 .main .table-body li .top .order-number {
-  color: #3160c4;
-  font-size: 1rem;
-}
-.page-content-body .drag-item .container2 .main .table-body li .bottom {
+.page-content-body .drag-item .order2 .main .orderList-body li .bottom {
   margin-top: 0.625rem;
   display: flex;
   justify-content: space-between;
   align-items: start;
 }
-.page-content-body .drag-item .container2 .main .table-body li .bottom .left-box {
+.page-content-body .drag-item .order2 .main .orderList-body li .bottom .left-box {
   display: flex;
   align-items: center;
+  padding: 10px;
 }
-.page-content-body .drag-item .container2 .main .table-body li .bottom .left-box .img-box {
-  margin: 0 0.625rem;
-  width: 4.375rem;
-  height: 5.625rem;
-}
-.page-content-body .drag-item .container2 .main .table-body li .bottom .left-box .img-box img {
-  width: 100%;
-  height: 100%;
-}
-.page-content-body .drag-item .container2 .main .table-body li .bottom .left-box .info {
-  margin: 0 0.625rem;
-  height: 5.625rem;
+.page-content-body .drag-item .order2 .main .orderList-body li .bottom .left-box .info {
   color: #5a5a5a;
 }
-.page-content-body .drag-item .container2 .main .table-body li .bottom .left-box .info .title {
-  margin-top: 0.625rem;
+.page-content-body .drag-item .order2 .main .orderList-body li .bottom .left-box .info .order {
   font-size: 1rem;
 }
-.page-content-body .drag-item .container2 .main .table-body li .bottom .left-box .info .color {
+.page-content-body .drag-item .order2 .main .orderList-body li .bottom .left-box .info .time {
   font-size: 0.9375rem;
 }
-.page-content-body .drag-item .container2 .main .table-body li .bottom .left-box .info .size {
-  font-size: 0.875rem;
+.page-content-body .drag-item .order2 .main .orderList-body li .bottom .right-box {
+  padding: 10px;
 }
-.page-content-body .drag-item .container2 .main .table-body li .bottom .right-box .order-price {
-  margin-top: 1.875rem;
+.page-content-body .drag-item .order2 .main .orderList-body li .bottom .right-box .order-price {
   color: #070707;
   font-size: 1.125rem;
 }
-.page-content-body .drag-item .container2 .main .table-body li .bottom .right-box .order-status {
-  margin-top: 1.25rem;
+.page-content-body .drag-item .order2 .main .orderList-body li .bottom .right-box .order-status {
   text-align: right;
   color: #34cf7a;
 }
-.page-content-body .drag-item .container2 .main .table-body li .bottom .right-box .err-status {
+.page-content-body .drag-item .order2 .main .orderList-body li .bottom .right-box .err-status {
   text-align: right;
   color: #ec3d1e;
 }
