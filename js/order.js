@@ -598,7 +598,7 @@ function pay(orderNumber, token) {
             yes: function () {
               layer.closeAll();
               // location.href='order-list.html'
-              location.href = `pay-success.html?orderNum=${orderNumber}&msg=${msg} `;
+              location.href = `pay-success.html?orderNum=${orderNumber}&msg=${msg}`;
             },
           });
         }else if(msg === 'success'){
